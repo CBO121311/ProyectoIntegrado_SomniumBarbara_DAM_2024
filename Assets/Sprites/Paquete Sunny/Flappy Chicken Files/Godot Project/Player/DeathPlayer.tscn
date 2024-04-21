@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/ChickenSprites/chicken1.png" type="Texture" id=1]
+[ext_resource path="res://Player/DeathPlayer.gd" type="Script" id=2]
+
+[node name="DeathPlayer" type="RigidBody2D"]
+mass = 30.6122
+gravity_scale = 3.0
+linear_velocity = Vector2( 0, -100 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )

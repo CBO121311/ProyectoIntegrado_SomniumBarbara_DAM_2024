@@ -1,0 +1,28 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion1.png" type="Texture" id=1]
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion3.png" type="Texture" id=2]
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion2.png" type="Texture" id=3]
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion4.png" type="Texture" id=4]
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion5.png" type="Texture" id=5]
+[ext_resource path="res://BombExplosion/BombExplosion/bomb-explosion6.png" type="Texture" id=6]
+[ext_resource path="res://BombExplosion/BombExplosion.gd" type="Script" id=7]
+[ext_resource path="res://Audio/Explosion.wav" type="AudioStream" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 14.0
+} ]
+
+[node name="BombExplosion" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 7 )
+
+[node name="AudioBombExplosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[connection signal="animation_finished" from="." to="." method="_on_BombExplosion_animation_finished"]

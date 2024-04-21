@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flappy-music.ogg-6bce0a6b7f3896618d2c884e996db51a.oggstr"
+
+[deps]
+
+source_file="res://Audio/flappy-music.ogg"
+dest_files=[ "res://.import/flappy-music.ogg-6bce0a6b7f3896618d2c884e996db51a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

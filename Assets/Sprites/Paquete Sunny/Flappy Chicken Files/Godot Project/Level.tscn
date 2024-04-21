@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemy/EnemySpawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level.gd" type="Script" id=3]
+[ext_resource path="res://UI/heart.png" type="Texture" id=4]
+[ext_resource path="res://UI/eating/eating1.png" type="Texture" id=5]
+[ext_resource path="res://UI/eating/eating3.png" type="Texture" id=6]
+[ext_resource path="res://UI/eating/eating4.png" type="Texture" id=7]
+[ext_resource path="res://UI/eating/eating2.png" type="Texture" id=8]
+[ext_resource path="res://Audio/flappy-music.ogg" type="AudioStream" id=9]
+[ext_resource path="res://bg.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 416.0
+margin_bottom = 240.0
+texture = ExtResource( 10 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 209, -15 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 2 )]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="UI" type="Node2D" parent="."]
+position = Vector2( 7, 7 )
+
+[node name="EatingCursor" type="AnimatedSprite" parent="UI"]
+position = Vector2( 18, 5 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="EggsBar" type="TextureRect" parent="UI"]
+margin_left = 1.0
+margin_right = 11.0
+margin_bottom = 12.0
+texture = ExtResource( 4 )
+stretch_mode = 2
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
