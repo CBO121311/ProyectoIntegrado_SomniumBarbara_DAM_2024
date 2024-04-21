@@ -1,0 +1,677 @@
+fileFormatVersion: 2
+guid: 4ed0c2b4eac20034c8d378291bb6594d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8071047640223875446
+    second: boxdialogv2_0
+  - first:
+      213: -7186629552669066858
+    second: boxdialogv2_1
+  - first:
+      213: -8174411250277045570
+    second: boxdialogv2_2
+  - first:
+      213: 100738033050571931
+    second: boxdialogv2_3
+  - first:
+      213: -4875717270109121491
+    second: boxdialogv2_4
+  - first:
+      213: 1999766957496985299
+    second: boxdialogv2_5
+  - first:
+      213: 6594741815411271481
+    second: boxdialogv2_6
+  - first:
+      213: -1814387651772348557
+    second: boxdialogv2_7
+  - first:
+      213: -8506383413956083498
+    second: boxdialogv2_8
+  - first:
+      213: 946853368325484705
+    second: boxdialogv2_9
+  - first:
+      213: 7904436897088399567
+    second: boxdialogv2_10
+  - first:
+      213: -3455797498883370788
+    second: boxdialogv2_11
+  - first:
+      213: -8092105809862159688
+    second: boxdialogv2_12
+  - first:
+      213: -9020968357726783736
+    second: boxdialogv2_13
+  - first:
+      213: 4518794994986125184
+    second: boxdialogv2_14
+  - first:
+      213: 89338629391908480
+    second: boxdialogv2_15
+  - first:
+      213: 852137231043676901
+    second: boxdialogv2_16
+  - first:
+      213: -2170861173578622296
+    second: boxdialogv2_17
+  - first:
+      213: -2169061521606669416
+    second: boxdialogv2_18
+  - first:
+      213: -5906501075127805139
+    second: boxdialogv2_19
+  - first:
+      213: 1646556885311652507
+    second: boxdialogv2_20
+  - first:
+      213: 3089456708493722173
+    second: boxdialogv2_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boxdialogv2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 320
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6718cc8011f120070800000000000000
+      internalID: 8071047640223875446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 719
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699f5dc8f76f34c90800000000000000
+      internalID: -7186629552669066858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 799
+        width: 320
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebaa74b1748ae8e80800000000000000
+      internalID: -8174411250277045570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 719
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94d95315b4e56100800000000000000
+      internalID: 100738033050571931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 320
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2498e9b9f8f55cb0800000000000000
+      internalID: -4875717270109121491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 558
+        width: 320
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6eb2fd37990cb10800000000000000
+      internalID: 1999766957496985299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 639
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937e00d9dba358b50800000000000000
+      internalID: 6594741815411271481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 559
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37701433b0002d6e0800000000000000
+      internalID: -1814387651772348557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 479
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d08fdf8a5143f980800000000000000
+      internalID: -8506383413956083498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a03c613f16e32d00800000000000000
+      internalID: 946853368325484705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 479
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8e1787a7332bd60800000000000000
+      internalID: 7904436897088399567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 399
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd09f5ffb7a8a00d0800000000000000
+      internalID: -3455797498883370788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b29a46c3a013bf80800000000000000
+      internalID: -8092105809862159688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807f7a3e2151fc280800000000000000
+      internalID: -9020968357726783736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 319
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08706f83b1cf5be30800000000000000
+      internalID: 4518794994986125184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 239
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08eff9592056d3100800000000000000
+      internalID: 89338629391908480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea4e3cfb4663db00800000000000000
+      internalID: 852137231043676901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa982ca34d8fd1e0800000000000000
+      internalID: -2170861173578622296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 159
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b8aacc902f5e1e0800000000000000
+      internalID: -2169061521606669416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 79
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b5b8fe094e70ea0800000000000000
+      internalID: -5906501075127805139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 320
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92897b63ceb9d610800000000000000
+      internalID: 1646556885311652507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxdialogv2_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3247baf184ffda20800000000000000
+      internalID: 3089456708493722173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boxdialogv2_0: 8071047640223875446
+      boxdialogv2_1: -7186629552669066858
+      boxdialogv2_10: 7904436897088399567
+      boxdialogv2_11: -3455797498883370788
+      boxdialogv2_12: -8092105809862159688
+      boxdialogv2_13: -9020968357726783736
+      boxdialogv2_14: 4518794994986125184
+      boxdialogv2_15: 89338629391908480
+      boxdialogv2_16: 852137231043676901
+      boxdialogv2_17: -2170861173578622296
+      boxdialogv2_18: -2169061521606669416
+      boxdialogv2_19: -5906501075127805139
+      boxdialogv2_2: -8174411250277045570
+      boxdialogv2_20: 1646556885311652507
+      boxdialogv2_21: 3089456708493722173
+      boxdialogv2_3: 100738033050571931
+      boxdialogv2_4: -4875717270109121491
+      boxdialogv2_5: 1999766957496985299
+      boxdialogv2_6: 6594741815411271481
+      boxdialogv2_7: -1814387651772348557
+      boxdialogv2_8: -8506383413956083498
+      boxdialogv2_9: 946853368325484705
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

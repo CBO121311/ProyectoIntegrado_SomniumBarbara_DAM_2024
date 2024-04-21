@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 2bb11a97658389c4daf9c2479ddeb69f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1974279968277340216
+    second: portalAqua_0
+  - first:
+      213: 838571252240626611
+    second: portalAqua_1
+  - first:
+      213: 6594162085797808502
+    second: portalAqua_2
+  - first:
+      213: -139469887484022908
+    second: portalAqua_3
+  - first:
+      213: 6823629959765205755
+    second: portalAqua_4
+  - first:
+      213: 1013715857087709143
+    second: portalAqua_5
+  - first:
+      213: 7410987420835019673
+    second: portalAqua_6
+  - first:
+      213: 1870884334525796649
+    second: portalAqua_7
+  - first:
+      213: 4674174606520748427
+    second: portalAqua_8
+  - first:
+      213: -4217340816260417551
+    second: portalAqua_9
+  - first:
+      213: 5662767233650330837
+    second: portalAqua_10
+  - first:
+      213: -9081265897325339758
+    second: portalAqua_11
+  - first:
+      213: 2782545024294279197
+    second: portalAqua_12
+  - first:
+      213: -5473656966917909244
+    second: portalAqua_13
+  - first:
+      213: -9650885768272953
+    second: portalAqua_14
+  - first:
+      213: -4956689640085606781
+    second: portalAqua_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portalAqua_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1025
+        width: 230
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfd8ab34d2f994e0800000000000000
+      internalID: -1974279968277340216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_1
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1009
+        width: 246
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b338a86c1433ab00800000000000000
+      internalID: 838571252240626611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_2
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1002
+        width: 246
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679c35bca7b238b50800000000000000
+      internalID: 6594162085797808502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 504
+        width: 254
+        height: 486
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fa6a350e0801ef0800000000000000
+      internalID: -139469887484022908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_6
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 511
+        width: 252
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b72cd4bcd19d660800000000000000
+      internalID: 7410987420835019673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_8
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 511
+        width: 254
+        height: 472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8902df2a010ed040800000000000000
+      internalID: 4674174606520748427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_10
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 29
+        width: 244
+        height: 431
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc037fdbc0369e40800000000000000
+      internalID: 5662767233650330837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_12
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 37
+        width: 238
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18579005f59d9620800000000000000
+      internalID: 2782545024294279197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalAqua_13
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 29
+        width: 230
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40514804df9a904b0800000000000000
+      internalID: -5473656966917909244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1231cabe832a62e4cb428389602962ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      portalAqua_0: -1974279968277340216
+      portalAqua_1: 838571252240626611
+      portalAqua_10: 5662767233650330837
+      portalAqua_12: 2782545024294279197
+      portalAqua_13: -5473656966917909244
+      portalAqua_2: 6594162085797808502
+      portalAqua_3: -139469887484022908
+      portalAqua_6: 7410987420835019673
+      portalAqua_8: 4674174606520748427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

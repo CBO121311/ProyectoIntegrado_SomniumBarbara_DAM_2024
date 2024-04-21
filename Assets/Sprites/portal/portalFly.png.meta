@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 8228a6688b6214b4798c92098e30ecbc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4993114126306245142
+    second: portalFly_0
+  - first:
+      213: -1373032183355146889
+    second: portalFly_1
+  - first:
+      213: 55387306466077032
+    second: portalFly_2
+  - first:
+      213: 2820315510294848190
+    second: portalFly_3
+  - first:
+      213: 85934528883102040
+    second: portalFly_4
+  - first:
+      213: 2200810383483235542
+    second: portalFly_5
+  - first:
+      213: 8932333995658875936
+    second: portalFly_6
+  - first:
+      213: -4096266478900516276
+    second: portalFly_7
+  - first:
+      213: -2592374313449935256
+    second: portalFly_8
+  - first:
+      213: -3106016984820955807
+    second: portalFly_9
+  - first:
+      213: 1278348011441033592
+    second: portalFly_10
+  - first:
+      213: 34558797225682783
+    second: portalFly_11
+  - first:
+      213: -8679842685209380853
+    second: portalFly_12
+  - first:
+      213: -4993851228608824541
+    second: portalFly_13
+  - first:
+      213: -5174094530386430361
+    second: portalFly_14
+  - first:
+      213: 6678088515787252310
+    second: portalFly_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portalFly_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1025
+        width: 230
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae508822825e4bab0800000000000000
+      internalID: -4993114126306245142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_1
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1009
+        width: 246
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77dffedf08202fce0800000000000000
+      internalID: -1373032183355146889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_2
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1002
+        width: 246
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869e9f63676c4c000800000000000000
+      internalID: 55387306466077032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_3
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 504
+        width: 254
+        height: 486
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb226a19306c32720800000000000000
+      internalID: 2820315510294848190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_6
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 511
+        width: 253
+        height: 472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024946a817606fb70800000000000000
+      internalID: 8932333995658875936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_8
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 511
+        width: 253
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e28f10c49060cd0800000000000000
+      internalID: -2592374313449935256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_10
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 29
+        width: 245
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87115415eba9db110800000000000000
+      internalID: 1278348011441033592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_12
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 37
+        width: 238
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0872d9c0110b8780800000000000000
+      internalID: -8679842685209380853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalFly_13
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 29
+        width: 230
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b7f9124c642bab0800000000000000
+      internalID: -4993851228608824541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8703fe31360ced649b648bc719273f97
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      portalFly_0: -4993114126306245142
+      portalFly_1: -1373032183355146889
+      portalFly_10: 1278348011441033592
+      portalFly_12: -8679842685209380853
+      portalFly_13: -4993851228608824541
+      portalFly_2: 55387306466077032
+      portalFly_3: 2820315510294848190
+      portalFly_6: 8932333995658875936
+      portalFly_8: -2592374313449935256
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
