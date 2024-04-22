@@ -14,7 +14,7 @@ public class Reaper : MonoBehaviour
     [SerializeField] public Transform jugador;
     [SerializeField] private float distancia;
     public Vector3 puntoInicial;
- 
+
 
     void Start()
     {
@@ -25,6 +25,8 @@ public class Reaper : MonoBehaviour
 
     void Update()
     {
+        //if (UIManager.gameIsPaused) return;
+
         distancia = Vector2.Distance(transform.position, jugador.position);
         //animator.SetFloat("Distance", distancia);
 
@@ -60,8 +62,6 @@ public class Reaper : MonoBehaviour
             animator.SetTrigger("Player");
 
             //animator.SetTrigger("Death");
-
-          
             //playerInRange = true;
 
             Debug.Log("Encontrado");

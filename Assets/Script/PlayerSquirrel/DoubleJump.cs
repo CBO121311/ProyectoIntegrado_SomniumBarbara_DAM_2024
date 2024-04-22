@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoubleJump : MonoBehaviour
@@ -31,13 +29,13 @@ public class DoubleJump : MonoBehaviour
     {
         enSuelo = Physics2D.OverlapBox(controlGround.position, dimenBox, 0f, isGroundMask);
         animator.SetBool("Jump", !enSuelo);
-        
-        if (enSuelo )
+
+        if (enSuelo)
         {
             saltosExtrasRestantes = saltosExtra;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (InputManager.GetInstance().GetSubmitPressed())
         {
             salto = true;
         }
@@ -59,7 +57,7 @@ public class DoubleJump : MonoBehaviour
             }
             else
             {
-                if(salto && saltosExtrasRestantes > 0)
+                if (salto && saltosExtrasRestantes > 0)
                 {
                     Salto();
                     saltosExtrasRestantes -= 1;

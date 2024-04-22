@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Video;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -43,7 +40,7 @@ public class PlayerCombat : MonoBehaviour
 
     private IEnumerator DisableCollision()
     {
-        Physics2D.IgnoreLayerCollision(10,11,true);
+        Physics2D.IgnoreLayerCollision(10, 11, true);
         yield return new WaitForSeconds(controlLossTime);
         Physics2D.IgnoreLayerCollision(10, 11, false);
     }

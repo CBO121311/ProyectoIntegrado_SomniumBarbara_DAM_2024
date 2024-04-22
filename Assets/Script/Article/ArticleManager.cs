@@ -14,18 +14,17 @@ public class ArticleManager : MonoBehaviour
 
     public void AllArticleCollected()
     {
-        if(transform.childCount == 0)
+        if (transform.childCount == 0)
         {
             Debug.Log("No quedan artículos");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
-            //levelCreared.gameObject.SetActive(true);
             transition.SetActive(true);
-            Invoke("ChangeScene", 1); //Lo invoca un segundo después
+            Invoke("ChangeScene", 1);
         }
     }
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("SelectionLevel");
+        Debug.Log("Enhorabuena, te lo has pasado");
+        //SceneManager.LoadScene("SelectionLevel");
     }
 }

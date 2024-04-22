@@ -1,14 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-// This script acts as a single point for all other scripts to get
-// the current input from. It uses Unity's new Input System and
-// functions should be mapped to their corresponding controls
-// using a PlayerInput component with Unity Events.
-
 
 public class InputManager : MonoBehaviour
 {
@@ -24,7 +15,7 @@ public class InputManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one Input Manager in the scene.");
+            Debug.LogError("Se encontró más de un Input Manager en la escena.");
         }
         instance = this;
     }
@@ -85,7 +76,7 @@ public class InputManager : MonoBehaviour
         }
     }
 
- 
+
 
     public void ExitPressed(InputAction.CallbackContext context)
     {

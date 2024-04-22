@@ -1,0 +1,1172 @@
+fileFormatVersion: 2
+guid: 1bd60a103bb53fb46b5097328eaaada6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Paper Animated Without Border_Frame_0
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2774
+      y: 332
+      width: 542
+      height: 320
+    spriteID: 0d79b24cd9547444e9c25f33bd9fe086
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2774, y: 332}
+  - name: Paper Animated Without Border_Frame_1
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3324
+      y: 332
+      width: 542
+      height: 320
+    spriteID: 7dbccc5dcc75c004d96a74ffad492144
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3324, y: 332}
+  - name: Paper Animated Without Border_Frame_2
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 660
+      width: 542
+      height: 320
+    spriteID: 6d019a8eb4312314283cff6787f7229b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 660}
+  - name: Paper Animated Without Border_Frame_3
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 554
+      y: 660
+      width: 542
+      height: 320
+    spriteID: 6da3d021df26499419d84b143a7b49ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 554, y: 660}
+  - name: Paper Animated Without Border_Frame_4
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1104
+      y: 660
+      width: 542
+      height: 320
+    spriteID: 71ba25b672ab29e408688060650ee43b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1104, y: 660}
+  - name: Paper Animated Without Border_Frame_5
+    originalName: 
+    pivot: {x: 0.47232473, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1654
+      y: 660
+      width: 542
+      height: 320
+    spriteID: de71f9567dfb42347bf059975624e379
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1654, y: 660}
+  - name: Paper Animated Without Border_Frame_6
+    originalName: 
+    pivot: {x: 0.47672257, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1098
+      y: 1316
+      width: 537
+      height: 320
+    spriteID: 77626edfc050d2047961a44045951c93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1098, y: 1316}
+  - name: Paper Animated Without Border_Frame_8
+    originalName: 
+    pivot: {x: 0.4951644, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1644
+      width: 517
+      height: 320
+    spriteID: 52564e2406907a441b6319548396fcce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1644}
+  - name: Paper Animated Without Border_Frame_9
+    originalName: 
+    pivot: {x: 0.49042147, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2733
+      y: 1316
+      width: 522
+      height: 320
+    spriteID: ac09dcc3686818b45a9ab789a63c00ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2733, y: 1316}
+  - name: Paper Animated Without Border_Frame_10
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 546
+      height: 320
+    spriteID: ce161d9e03a841044848dd14213acfbf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Paper Animated Without Border_Frame_11
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2204
+      y: 660
+      width: 539
+      height: 320
+    spriteID: edd6823261532f2468a613a7d0c2f1e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2204, y: 660}
+  - name: Paper Animated Without Border_Frame_12
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 558
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 9697cfa8c548b5b4494f3b7606b0d125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 558, y: 4}
+  - name: Paper Animated Without Border_Frame_13
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2751
+      y: 660
+      width: 539
+      height: 320
+    spriteID: 017e7f60def299e4da30f4a10f39a25c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2751, y: 660}
+  - name: Paper Animated Without Border_Frame_14
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1112
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 3d91ac0c2f6c9c943b47105505064224
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1112, y: 4}
+  - name: Paper Animated Without Border_Frame_15
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3298
+      y: 660
+      width: 539
+      height: 320
+    spriteID: b258cf493eb1af54182b36243a5c5024
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3298, y: 660}
+  - name: Paper Animated Without Border_Frame_16
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1666
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 072a7ae66cc7cea428f84e99df70d4f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1666, y: 4}
+  - name: Paper Animated Without Border_Frame_17
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 0b1d4eda58befd94a865830b06c5309c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 988}
+  - name: Paper Animated Without Border_Frame_18
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2220
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 2854774a47df4f34a834544fb0fa6dc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2220, y: 4}
+  - name: Paper Animated Without Border_Frame_19
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 551
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 825f361649f6a4e4eb4476d3de902878
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 551, y: 988}
+  - name: Paper Animated Without Border_Frame_20
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2774
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 52e935ff94dac994cb303a8f6ebafb4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2774, y: 4}
+  - name: Paper Animated Without Border_Frame_21
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1098
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 424abe07eb1863545b87351fe341049f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1098, y: 988}
+  - name: Paper Animated Without Border_Frame_22
+    originalName: 
+    pivot: {x: 0.47672257, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1643
+      y: 1316
+      width: 537
+      height: 320
+    spriteID: 9b89fae3e1529ef4b990f6b244975ca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1643, y: 1316}
+  - name: Paper Animated Without Border_Frame_24
+    originalName: 
+    pivot: {x: 0.47672257, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2188
+      y: 1316
+      width: 537
+      height: 320
+    spriteID: a38a4303750c0a14294b53e54f7304f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2188, y: 1316}
+  - name: Paper Animated Without Border_Frame_25
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1645
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 613c771b1e6965d4d8adb9fed52501fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1645, y: 988}
+  - name: Paper Animated Without Border_Frame_26
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3328
+      y: 4
+      width: 546
+      height: 320
+    spriteID: 00699d21806f641428e3263391b2823a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3328, y: 4}
+  - name: Paper Animated Without Border_Frame_27
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2192
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 8716f9be424088a4da55eed79843f2c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2192, y: 988}
+  - name: Paper Animated Without Border_Frame_28
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 332
+      width: 546
+      height: 320
+    spriteID: 75bedd1a8b547c249ab71561a6bd2aac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 332}
+  - name: Paper Animated Without Border_Frame_29
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2739
+      y: 988
+      width: 539
+      height: 320
+    spriteID: b77c5353376730549b12bfb8e94b64aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2739, y: 988}
+  - name: Paper Animated Without Border_Frame_30
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 558
+      y: 332
+      width: 546
+      height: 320
+    spriteID: 3db47b6b10796c24ba9bb8740cbc7ac8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 558, y: 332}
+  - name: Paper Animated Without Border_Frame_31
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3286
+      y: 988
+      width: 539
+      height: 320
+    spriteID: 9cbb20bae09547845aec0414b1f6e001
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3286, y: 988}
+  - name: Paper Animated Without Border_Frame_32
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1112
+      y: 332
+      width: 546
+      height: 320
+    spriteID: c6e0720b60a3dc648acc7fe3e172622c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1112, y: 332}
+  - name: Paper Animated Without Border_Frame_33
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1316
+      width: 539
+      height: 320
+    spriteID: 74c6c8abff5f38c4b9f6ebe6fc728ae9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1316}
+  - name: Paper Animated Without Border_Frame_34
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1666
+      y: 332
+      width: 546
+      height: 320
+    spriteID: de746289002a6ea448e7698b6536c550
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1666, y: 332}
+  - name: Paper Animated Without Border_Frame_35
+    originalName: 
+    pivot: {x: 0.47495362, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 551
+      y: 1316
+      width: 539
+      height: 320
+    spriteID: 7c9e7de99dce0254ea2b32b84e49a26e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 551, y: 1316}
+  - name: Paper Animated Without Border_Frame_36
+    originalName: 
+    pivot: {x: 0.4688645, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2220
+      y: 332
+      width: 546
+      height: 320
+    spriteID: 8ef9dfabc0df32b44a5ea8a049c973a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2220, y: 332}
+  - name: Paper Animated Without Border_Frame_37
+    originalName: 
+    pivot: {x: 0.49042147, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3263
+      y: 1316
+      width: 522
+      height: 320
+    spriteID: fd1d338f7a7177340b7e6406954bfe42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3263, y: 1316}
+  - name: Paper Animated Without Border_Frame_38
+    originalName: 
+    pivot: {x: 0.4951644, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 529
+      y: 1644
+      width: 517
+      height: 320
+    spriteID: 172203e1f0fdfaf458272c2f9c71ecb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 529, y: 1644}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -651420899
+    name: Paper Animated Without Border
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Paper Animated Without Border_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: 0d79b24cd9547444e9c25f33bd9fe086
+    - name: Paper Animated Without Border_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: 7dbccc5dcc75c004d96a74ffad492144
+    - name: Paper Animated Without Border_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: 6d019a8eb4312314283cff6787f7229b
+    - name: Paper Animated Without Border_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: 6da3d021df26499419d84b143a7b49ee
+    - name: Paper Animated Without Border_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: 71ba25b672ab29e408688060650ee43b
+    - name: Paper Animated Without Border_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 96
+        y: 80
+        width: 542
+        height: 320
+      spriteId: de71f9567dfb42347bf059975624e379
+    - name: Paper Animated Without Border_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 96
+        y: 80
+        width: 537
+        height: 320
+      spriteId: 77626edfc050d2047961a44045951c93
+    - name: Paper Animated Without Border_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 96
+        y: 80
+        width: 517
+        height: 320
+      spriteId: 52564e2406907a441b6319548396fcce
+    - name: Paper Animated Without Border_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 96
+        y: 80
+        width: 522
+        height: 320
+      spriteId: ac09dcc3686818b45a9ab789a63c00ea
+    - name: Paper Animated Without Border_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: ce161d9e03a841044848dd14213acfbf
+    - name: Paper Animated Without Border_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: edd6823261532f2468a613a7d0c2f1e3
+    - name: Paper Animated Without Border_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 9697cfa8c548b5b4494f3b7606b0d125
+    - name: Paper Animated Without Border_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 017e7f60def299e4da30f4a10f39a25c
+    - name: Paper Animated Without Border_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 3d91ac0c2f6c9c943b47105505064224
+    - name: Paper Animated Without Border_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: b258cf493eb1af54182b36243a5c5024
+    - name: Paper Animated Without Border_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 072a7ae66cc7cea428f84e99df70d4f0
+    - name: Paper Animated Without Border_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 0b1d4eda58befd94a865830b06c5309c
+    - name: Paper Animated Without Border_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 2854774a47df4f34a834544fb0fa6dc7
+    - name: Paper Animated Without Border_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 825f361649f6a4e4eb4476d3de902878
+    - name: Paper Animated Without Border_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 52e935ff94dac994cb303a8f6ebafb4c
+    - name: Paper Animated Without Border_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 424abe07eb1863545b87351fe341049f
+    - name: Paper Animated Without Border_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 96
+        y: 80
+        width: 537
+        height: 320
+      spriteId: 9b89fae3e1529ef4b990f6b244975ca0
+    - name: Paper Animated Without Border_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 96
+        y: 80
+        width: 537
+        height: 320
+      spriteId: a38a4303750c0a14294b53e54f7304f5
+    - name: Paper Animated Without Border_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 613c771b1e6965d4d8adb9fed52501fc
+    - name: Paper Animated Without Border_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 00699d21806f641428e3263391b2823a
+    - name: Paper Animated Without Border_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 8716f9be424088a4da55eed79843f2c9
+    - name: Paper Animated Without Border_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 75bedd1a8b547c249ab71561a6bd2aac
+    - name: Paper Animated Without Border_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: b77c5353376730549b12bfb8e94b64aa
+    - name: Paper Animated Without Border_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 3db47b6b10796c24ba9bb8740cbc7ac8
+    - name: Paper Animated Without Border_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 9cbb20bae09547845aec0414b1f6e001
+    - name: Paper Animated Without Border_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: c6e0720b60a3dc648acc7fe3e172622c
+    - name: Paper Animated Without Border_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 74c6c8abff5f38c4b9f6ebe6fc728ae9
+    - name: Paper Animated Without Border_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: de746289002a6ea448e7698b6536c550
+    - name: Paper Animated Without Border_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 96
+        y: 80
+        width: 539
+        height: 320
+      spriteId: 7c9e7de99dce0254ea2b32b84e49a26e
+    - name: Paper Animated Without Border_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 96
+        y: 80
+        width: 546
+        height: 320
+      spriteId: 8ef9dfabc0df32b44a5ea8a049c973a3
+    - name: Paper Animated Without Border_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 96
+        y: 80
+        width: 522
+        height: 320
+      spriteId: fd1d338f7a7177340b7e6406954bfe42
+    - name: Paper Animated Without Border_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 96
+        y: 80
+        width: 517
+        height: 320
+      spriteId: 172203e1f0fdfaf458272c2f9c71ecb8
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 704, y: 496}

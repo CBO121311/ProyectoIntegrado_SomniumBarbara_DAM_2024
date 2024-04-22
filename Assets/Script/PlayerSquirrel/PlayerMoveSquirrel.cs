@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveSquirrel : MonoBehaviour
 {
-  
-
     [Header("References")]
     Rigidbody2D rb2D;
     SpriteRenderer spr;
@@ -17,7 +13,7 @@ public class PlayerMoveSquirrel : MonoBehaviour
 
     [Header("Values")]
     public float runSpeed = 2;
-    
+
     private float moveX;
     private float moveY;
     public float fallMutiplier = 0.5f;
@@ -42,12 +38,24 @@ public class PlayerMoveSquirrel : MonoBehaviour
             Move();
         }
 
-    
+        PauseGame();
     }
+
+    private void PauseGame()
+    {
+        if (InputManager.GetInstance().GetInMenuPressed() && !UIManager.gameIsPaused)
+        {
+            UIManager.changeValueGameIsPaused();
+        }
+    }
+
     public void Move()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
+
+        moveX = moveDirection.x;
+        moveY = moveDirection.y;
+
 
         float velocityX = moveX * runSpeed * runSpeed;
 

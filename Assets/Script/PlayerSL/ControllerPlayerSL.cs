@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using static UnityEngine.UI.Image;
 
 
 public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
@@ -42,7 +35,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         if(InputManager.GetInstance().GetInMenuPressed() && !UIManager.gameIsPaused)
         {
             UIManager.changeValueGameIsPaused();
-            Debug.Log("HOLAAA");
+            //Debug.Log("HOLAAA");
         }
     }
 
