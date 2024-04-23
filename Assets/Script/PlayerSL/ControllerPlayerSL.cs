@@ -45,7 +45,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
         MovePlayer();
         PauseGame();
-
+        /*
         // Lanzar un rayo hacia adelante desde el punto de origen en la dirección del movimiento
         RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.position, moveDirection, raycastDistance, interactableLayer);
 
@@ -65,7 +65,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         {
             // El rayo no colisionó con un objeto interactable
             Debug.Log("No hay nada frente al jugador.");
-        }
+        }*/
 
         //Si hay un dialogo te impido moverte
         if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.gameIsPaused)

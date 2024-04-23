@@ -8,6 +8,7 @@ public class GameData
     //Para la última partida de guardado.
     public long lastUpdated;
     public int deathCount;
+    public SerializableDictionary<string, bool> itemsCollected;
     public Vector3 playerPosition;
     //public EjemploAttributesData playerAttributesData;
     public float playedTime;
@@ -19,34 +20,32 @@ public class GameData
         this.deathCount = 0;
         playerPosition = Vector3.zero;
         playedTime = 0f;
-        //coinsCollected = new SerializableDictionary<string,bool>();
+        itemsCollected = new SerializableDictionary<string, bool>();
 
         //playerAttributesData = new EjemploAttributesData();
     }
     public int GetPercentageComplete()
     {
-        //calcula cuantas monedas hemos recolectado
-        /*int totalCollected = 0;
-        foreach(bool collected in coinsCollected.Values)
+        //calcula cuantos objetos hemos recolectado
+        int totalCollected = 0;
+        foreach(bool collected in itemsCollected.Values)
         {
             if(collected)
             {
                 totalCollected++;
             }
-        }*/
+        }
 
         //asegurarnos de no dividir por 0 al calcular el porcentaje
         int percentageCompleted = -1;
-        /*if(coinsCollected.Count != 0)
+        if(itemsCollected.Count != 0)
         {
-            percentageCompleted = (totalCollected * 100/ coinsCollected.Count);
+            percentageCompleted = (totalCollected * 100/ itemsCollected.Count);
 
-        }*/
+        }
 
+        Debug.Log("itemsCollected.Count " + itemsCollected.Count);
 
-
-        //Test
-        percentageCompleted = 0;
         return percentageCompleted;
     }
 }
