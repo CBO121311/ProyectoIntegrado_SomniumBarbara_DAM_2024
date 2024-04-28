@@ -15,6 +15,12 @@ public class Reaper : MonoBehaviour
     [SerializeField] private float distancia;
     public Vector3 puntoInicial;
 
+    private void Awake()
+    {
+        
+        gameObject.SetActive(false);
+    }
+
 
     void Start()
     {

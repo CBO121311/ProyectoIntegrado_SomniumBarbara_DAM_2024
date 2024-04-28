@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")]
+    [Header("Señal Visual")]
     [SerializeField] private GameObject speechBubble;
 
     [Header("Ink JSON")]
