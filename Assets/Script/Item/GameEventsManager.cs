@@ -9,6 +9,7 @@ public class GameEventsManager : MonoBehaviour
     public GameObject transition;
     public event Action onPlayerDeath;
     public event Action onItemCollected;
+    public GameObject collection;
 
     public static GameEventsManager instance { get; private set; }
 
@@ -39,17 +40,19 @@ public class GameEventsManager : MonoBehaviour
 
     private void Update()
     {
-        //AllArticleCollected();
+        AllItemCollected();
     }
 
-    public void AllArticleCollected()
+    public void AllItemCollected()
     {
-        if (transform.childCount == 0)
+        if (collection.transform.childCount == 0)
         {
             Debug.Log("No quedan artículos");
             transition.SetActive(true);
             Invoke("ChangeScene", 1);
         }
+
+        Debug.Log("Quedan = " + collection.transform.childCount + " items");
     }
 
     void ChangeScene()

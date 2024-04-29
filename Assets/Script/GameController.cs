@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject reaper;
     [SerializeField] private Animator bgFront;
     [SerializeField] private Animator bgBack;
+    [SerializeField] private Animator clock;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip audioPersecution;
 
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Derrota");
             StartCoroutine(ActiveReaper());
+            clock.SetTrigger("EndTime");
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
             audioSource.Stop();

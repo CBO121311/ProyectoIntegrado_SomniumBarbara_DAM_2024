@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
 
-    [SerializeField] Animator animator;
+    [SerializeField] private Animator portalAnimator;
+    [SerializeField] private GameObject panelDescription;
     private bool playerInRange;
 
     private void Awake()
@@ -19,18 +20,20 @@ public class Portal : MonoBehaviour
         //No podremos activar el dialogo hasta que finalice
         if (playerInRange)
         {
-            animator.SetBool("Player", true);
+            portalAnimator.SetBool("Player", true);
+
             if (InputManager.GetInstance().GetSubmitPressed())
             {
+                panelDescription.SetActive(true);
+                panelDescription.transform.position = new Vector2(400,300);
                 //DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-
-                
-                SceneManager.LoadScene(2);
+                //SceneManager.LoadScene(2);
             }
         }
         else
         {
-            animator.SetBool("Player", false);
+            portalAnimator.SetBool("Player", false);
+            panelDescription.SetActive(false);
         }
     }
 

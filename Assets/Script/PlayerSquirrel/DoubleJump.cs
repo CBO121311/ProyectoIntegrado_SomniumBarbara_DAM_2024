@@ -4,7 +4,6 @@ public class DoubleJump : MonoBehaviour
 {
 
     Rigidbody2D rb2D;
-    SpriteRenderer spr;
     Animator animator;
 
     [Header("Salto")]
@@ -17,14 +16,16 @@ public class DoubleJump : MonoBehaviour
     [SerializeField] private int saltosExtrasRestantes;
     [SerializeField] private int saltosExtra;
     [SerializeField] private float speedBounce;
+    private AudioSource audioSource;
+    [SerializeField]private AudioClip jumpSound;
 
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
-
     private void Update()
     {
         if (UIManager.gameIsPaused)
@@ -86,6 +87,7 @@ public class DoubleJump : MonoBehaviour
     private void Salto()
     {
         // rb2D.AddForce(new Vector2(0f, jumpSpeed));
+        audioSource.PlayOneShot(jumpSound);
         rb2D.velocity = new Vector2(0f, jumpSpeed);
         salto = false;
     }
