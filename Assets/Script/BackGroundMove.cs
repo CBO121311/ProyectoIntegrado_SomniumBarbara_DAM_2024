@@ -17,7 +17,6 @@ public class BackGroundMove : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("El material es" +material);
         offset = (jugadorRB.velocity.x *0.05f) * velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offset;
     }

@@ -38,7 +38,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
+            Debug.Log("Se encontró más de un administrador de persistencia de datos en la escena. Destruyendo el más nuevo.");
             Destroy(this.gameObject);
             return;
         }
@@ -89,21 +89,21 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void ChangeSelectedProfileId(string newProfileId)
     {
-        //update the profile to use for saving and loading
+        //actualizar el perfil para usarlo para guardar y cargar
         this.selectedProfileId = newProfileId;
-        //Load the game, which will use that profile, updating our game data accordingly
+        //Cargar el juego, que utilizará ese perfil, actualizando nuestros datos del juego en consecuencia.
         LoadGame();
     }
 
     public void DeleteProfileData(string profileId)
     {
-        //delete the data for this profile id
+        //eliminar los datos de esta identificación de perfil
         dataHandler.Delete(profileId);
 
-        //initialize the selected profile id
+        //inicializar la identificación del perfil seleccionado
         InitializeSelectedProfileId();
 
-        //reload the game so that our data matches the newLy selected profile id
+        //Vuelva a cargar el juego para que nuestros datos coincidan con la nueva identificación del perfil seleccionado.
         LoadGame();
     }
     private void InitializeSelectedProfileId()
@@ -126,33 +126,33 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadGame()
     {
-        //return right away if data persistence is disabled
+        //regresar de inmediato si la persistencia de datos está deshabilitada
         if (disableDataPersistence)
         {
             return;
         }
 
 
-        //Load any saved from a file using the data handler
+        //Cargue cualquier archivo guardado desde un archivo usando el controlador de datos
         this.gameData = dataHandler.Load(selectedProfileId);
 
-        //Start a new game if the data is null and we're configured to initialize data for debugging purposes
+        //nicie un nuevo juego si los datos son nulos y estamos configurados para inicializar datos con fines de depuración.
         if (this.gameData == null && initializeDataIfNull)
         {
             NewGame();
         }
 
 
-        //If no data can be Loaded, initialize to a new game
+        //Si no se pueden cargar datos, inicialice a un nuevo juego
 
         if (this.gameData == null)
         {
-            Debug.Log("No data was found.A New Game needs to be started before data can be loaded");
+            Debug.Log("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder cargar los datos.");
             return;
 
         }
 
-        //TODO - push the Loaded data to all other scripts that need it
+        //TODO - envíe los datos cargados a todos los demás scripts que los necesiten
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.LoadData(gameData);
@@ -162,29 +162,29 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        //return right away if data persistence is disabled
+        //regresar de inmediato si la persistencia de datos está deshabilitada
         if (disableDataPersistence)
         {
             return;
         }
 
-        //if we don't have any data to save, Log a warning here
+        //Si no tenemos ningún dato para guardar, registre una advertencia aquí.
 
         if (this.gameData == null)
         {
-            Debug.LogWarning("No data was found. A New Game needs to be started before data can be saved.");
+            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
         }
 
-        //pass the data to other scripts so the can update it.
+        //pasar los datos a otros scripts para que puedan actualizarlos.
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.SaveData(gameData);
         }
 
-        //timestamp the data so we know when it was last saved
+        //marcar la hora de los datos para que sepamos cuándo se guardaron por última vez
         gameData.lastUpdated = System.DateTime.Now.ToBinary();
 
-        // save that data to a file using the data handler.
+        //guarde esos datos en un archivo utilizando el controlador de datos.
         dataHandler.Save(gameData, selectedProfileId);
         Debug.Log("Saved death count = " + gameData.deathCount);
     }
@@ -238,7 +238,7 @@ public class DataPersistenceManager : MonoBehaviour
 
         if (this.gameData == null)
         {
-            Debug.LogWarning("No data was found. A New Game needs to be started before data can be saved.");
+            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
         }
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {

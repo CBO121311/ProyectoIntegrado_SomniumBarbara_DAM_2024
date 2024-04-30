@@ -9,9 +9,11 @@ public class GameData
     public long lastUpdated;
     public int deathCount;
     public SerializableDictionary<string, bool> itemsCollected;
+    public SerializableDictionary<string, bool> itemsCollectedFirstWorld;
     public Vector3 playerPosition;
-    //public EjemploAttributesData playerAttributesData;
+    //public ItemsData playerAttributesData;
     public float playedTime;
+    
 
     //los valores definidos en este constructor serán los valores predeterminados 
     //el juego comienza cuando no hay datos para cargar
@@ -22,8 +24,28 @@ public class GameData
         playedTime = 0f;
         itemsCollected = new SerializableDictionary<string, bool>();
 
+
+        InitializeItemsCollected();
+
         //playerAttributesData = new EjemploAttributesData();
     }
+
+    private void InitializeItemsCollected()
+    {
+        AddItemToCollected("01A01", false);
+        AddItemToCollected("01A02", false);
+        AddItemToCollected("01A03", false);
+        AddItemToCollected("01A04", false);
+    }
+    private void AddItemToCollected(string itemId, bool initialValue)
+    {
+        if (!itemsCollected.ContainsKey(itemId))
+        {
+            itemsCollected.Add(itemId, initialValue);
+        }
+    }
+
+
     public int GetPercentageComplete()
     {
         //calcula cuantos objetos hemos recolectado
@@ -44,7 +66,7 @@ public class GameData
 
         }
 
-        Debug.Log("itemsCollected.Count " + itemsCollected.Count);
+        Debug.Log("Porcentaje: " + itemsCollected.Count);
 
         return percentageCompleted;
     }

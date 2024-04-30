@@ -25,7 +25,6 @@ public class PauseMenuSL : Menu, IPauseMenu
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        //Debug.Log("OPTION MENU SE DESPERTÓ");
     }
 
     public void SetUpOptionMenu()

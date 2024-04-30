@@ -51,6 +51,6 @@ public class ItemCollectText : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        itemCollectedText.text = itemsCollected + " / " + totalItem;
+        itemCollectedText.text = itemsCollected + " / " + itemsCollected;
     }
 }

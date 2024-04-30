@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameEventsManager : MonoBehaviour
+public class GameEventsManager : MonoBehaviour,IDataPersistence
 {
     public GameObject transition;
-    public event Action onPlayerDeath;
-    public event Action onItemCollected;
     public GameObject collection;
 
+    public event Action onPlayerDeath;
+    public event Action onItemCollected;
+  
     public static GameEventsManager instance { get; private set; }
 
     private void Awake()
@@ -40,7 +41,12 @@ public class GameEventsManager : MonoBehaviour
 
     private void Update()
     {
-        AllItemCollected();
+
+        if(collection != null)
+        {
+            AllItemCollected();
+        }
+
     }
 
     public void AllItemCollected()
@@ -59,5 +65,21 @@ public class GameEventsManager : MonoBehaviour
     {
         Debug.Log("Enhorabuena, te lo has pasado");
         //SceneManager.LoadScene("SelectionLevel");
+    }
+
+    public void LoadData(GameData data)
+    {
+        Debug.Log("UTILIZANDO LOAD DATA EN GAME EVENTS MANAGER");
+        //throw new NotImplementedException();
+    }
+
+    public void SaveData(GameData data)
+    {
+        Debug.Log("UTILIZANDO SAVE DATA EN GAME EVENTS MANAGER");
+
+        /*if (data.itemsCollected.ContainsKey(id))
+        {
+            data.itemsCollected.Remove(id);
+        }*/
     }
 }
