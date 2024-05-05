@@ -72,7 +72,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         //Cuando se cargue una escena reiniciamos nuestra lista de objeto de persistencia de datos.
         //Y luego cargamos el juego.
-        //Debug.Log("OnSceneLoaded");
+        Debug.Log("Ha pasado en OnSceneLoaded");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
 
@@ -134,8 +134,12 @@ public class DataPersistenceManager : MonoBehaviour
 
 
         //Cargue cualquier archivo guardado desde un archivo usando el controlador de datos
+        /*if (this.gameData != null)
+        {
+            Debug.Log("Los datos ya están cargados.");
+            return;
+        }*/
         this.gameData = dataHandler.Load(selectedProfileId);
-
         //nicie un nuevo juego si los datos son nulos y estamos configurados para inicializar datos con fines de depuración.
         if (this.gameData == null && initializeDataIfNull)
         {
@@ -217,7 +221,7 @@ public class DataPersistenceManager : MonoBehaviour
         return dataHandler.LoadAllProfiles();
     }
 
-
+    /*
     private IEnumerator AutoSave()
     {
         while (true)
@@ -248,6 +252,6 @@ public class DataPersistenceManager : MonoBehaviour
 
         Debug.Log("Perfil es " + selectedProfileId);
         dataHandler.Save(gameData, "AutoSave");
-    }
+    }*/
 
 }

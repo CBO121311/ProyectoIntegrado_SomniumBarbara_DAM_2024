@@ -6,33 +6,30 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject optionMenuGameObject;
-    [SerializeField] GameObject fadeSL;
     public IPauseMenu optionMenu;
 
-    public static bool gameIsPaused { get; private set; }
+    private static bool gameIsPaused;
     private bool previousPauseState = false;
+
+    public static bool GameIsPaused { get => gameIsPaused;}
+    private LevelTransition levelTransition;
 
     private void Awake()
     {
-        if (fadeSL != null)
-        {
-            StartCoroutine(fadeSl());
-        }
+
 
         gameIsPaused = false;
         if (optionMenuGameObject.activeSelf)
         {
             optionMenuGameObject.SetActive(false);
         }
-
+       
         optionMenu = optionMenuGameObject.GetComponent<IPauseMenu>();
     }
 
-    IEnumerator fadeSl()
+    private void Start()
     {
-        fadeSL.SetActive(true);
-        yield return new WaitForSeconds(0.80f);
-        fadeSL.SetActive(false);
+        levelTransition = FindFirstObjectByType<LevelTransition>();
     }
 
     void Update()
@@ -51,10 +48,12 @@ public class UIManager : MonoBehaviour
 
     public void Pause()
     {
+
         optionMenuGameObject.SetActive(true);
+        levelTransition.OpenPauseMenu();
         optionMenu.SetUpOptionMenu();
     }
-    public static void changeValueGameIsPaused()
+    public static void changeGameIsPaused()
     {
         gameIsPaused = !gameIsPaused;
     }

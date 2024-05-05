@@ -1,0 +1,2952 @@
+fileFormatVersion: 2
+guid: 0713e4e3b3b593b4fb050ad318333e8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -98814454144358407
+    second: RandomItemLineart_0
+  - first:
+      213: 8128700727639344158
+    second: RandomItemLineart_1
+  - first:
+      213: -6275309453271963581
+    second: RandomItemLineart_2
+  - first:
+      213: -4159220110594441217
+    second: RandomItemLineart_3
+  - first:
+      213: -6780580090641770473
+    second: RandomItemLineart_4
+  - first:
+      213: 2374170024068879170
+    second: RandomItemLineart_5
+  - first:
+      213: -3464174824877955459
+    second: RandomItemLineart_6
+  - first:
+      213: -7762429038398927227
+    second: RandomItemLineart_7
+  - first:
+      213: 3307956034920906724
+    second: RandomItemLineart_8
+  - first:
+      213: -6422986994809172425
+    second: RandomItemLineart_9
+  - first:
+      213: 8054857977623733757
+    second: RandomItemLineart_10
+  - first:
+      213: 2091837385926665191
+    second: RandomItemLineart_11
+  - first:
+      213: 4285782929574563215
+    second: RandomItemLineart_12
+  - first:
+      213: -1215139673400507292
+    second: RandomItemLineart_13
+  - first:
+      213: -1606938474505207344
+    second: RandomItemLineart_14
+  - first:
+      213: 4099962166417444067
+    second: RandomItemLineart_15
+  - first:
+      213: -5568637257015749914
+    second: RandomItemLineart_16
+  - first:
+      213: -597546104788430085
+    second: RandomItemLineart_17
+  - first:
+      213: -4712825395134417748
+    second: RandomItemLineart_18
+  - first:
+      213: 4497334016025892727
+    second: RandomItemLineart_19
+  - first:
+      213: 2843825516976045708
+    second: RandomItemLineart_20
+  - first:
+      213: 3964022419254134189
+    second: RandomItemLineart_21
+  - first:
+      213: -4358573752397388612
+    second: RandomItemLineart_22
+  - first:
+      213: -1932271372513759707
+    second: RandomItemLineart_23
+  - first:
+      213: -4217257377031555739
+    second: RandomItemLineart_24
+  - first:
+      213: -3130792414104747594
+    second: RandomItemLineart_25
+  - first:
+      213: -8399985955233063463
+    second: RandomItemLineart_26
+  - first:
+      213: 6274407514576434168
+    second: RandomItemLineart_27
+  - first:
+      213: -578203679801217712
+    second: RandomItemLineart_28
+  - first:
+      213: 7921015786920044011
+    second: RandomItemLineart_29
+  - first:
+      213: -1255193417026322849
+    second: RandomItemLineart_30
+  - first:
+      213: 7092294114167255584
+    second: RandomItemLineart_31
+  - first:
+      213: -5017272226972168004
+    second: RandomItemLineart_32
+  - first:
+      213: 2492744310572500201
+    second: RandomItemLineart_33
+  - first:
+      213: -2062154368356401736
+    second: RandomItemLineart_34
+  - first:
+      213: 4239086137403421300
+    second: RandomItemLineart_35
+  - first:
+      213: -4366495644553925169
+    second: RandomItemLineart_36
+  - first:
+      213: 6966089833333183811
+    second: RandomItemLineart_37
+  - first:
+      213: 5602424429778411609
+    second: RandomItemLineart_38
+  - first:
+      213: -2050849511835992822
+    second: RandomItemLineart_39
+  - first:
+      213: -4603270648023374
+    second: RandomItemLineart_40
+  - first:
+      213: -7214790734895745286
+    second: RandomItemLineart_41
+  - first:
+      213: 4997869447261310297
+    second: RandomItemLineart_42
+  - first:
+      213: 6941734974711277087
+    second: RandomItemLineart_43
+  - first:
+      213: -1730891663578232526
+    second: RandomItemLineart_44
+  - first:
+      213: -1383642276980105785
+    second: RandomItemLineart_45
+  - first:
+      213: -487073468472334568
+    second: RandomItemLineart_46
+  - first:
+      213: -3024551199182488933
+    second: RandomItemLineart_47
+  - first:
+      213: 2818931764671933509
+    second: RandomItemLineart_48
+  - first:
+      213: 6369825881579750523
+    second: RandomItemLineart_49
+  - first:
+      213: -5215437485667900768
+    second: RandomItemLineart_50
+  - first:
+      213: -6476145656559125221
+    second: RandomItemLineart_51
+  - first:
+      213: -745232530637719484
+    second: RandomItemLineart_52
+  - first:
+      213: -4332281262644657044
+    second: RandomItemLineart_53
+  - first:
+      213: 4795312299549500595
+    second: RandomItemLineart_54
+  - first:
+      213: -227069663746692792
+    second: RandomItemLineart_55
+  - first:
+      213: 3882147072295272515
+    second: RandomItemLineart_56
+  - first:
+      213: 7115666033357198083
+    second: RandomItemLineart_57
+  - first:
+      213: 7364159208195749454
+    second: RandomItemLineart_58
+  - first:
+      213: -3968211954175011980
+    second: RandomItemLineart_59
+  - first:
+      213: -1038682427307897458
+    second: RandomItemLineart_60
+  - first:
+      213: -8050546839472244486
+    second: RandomItemLineart_61
+  - first:
+      213: -2728075755307020161
+    second: RandomItemLineart_62
+  - first:
+      213: -127362058042068313
+    second: RandomItemLineart_63
+  - first:
+      213: -3654518855724180357
+    second: RandomItemLineart_64
+  - first:
+      213: 1968546022778403588
+    second: RandomItemLineart_65
+  - first:
+      213: 4286806241589563573
+    second: RandomItemLineart_66
+  - first:
+      213: -3986085974423254855
+    second: RandomItemLineart_67
+  - first:
+      213: 8982722701859175615
+    second: RandomItemLineart_68
+  - first:
+      213: -193988581348416548
+    second: RandomItemLineart_69
+  - first:
+      213: -2938208894924569187
+    second: RandomItemLineart_70
+  - first:
+      213: 8784931106059260164
+    second: RandomItemLineart_71
+  - first:
+      213: 7645284408686904570
+    second: RandomItemLineart_72
+  - first:
+      213: -2144604768838856752
+    second: RandomItemLineart_73
+  - first:
+      213: -8170679004207645463
+    second: RandomItemLineart_74
+  - first:
+      213: -4206442733177819879
+    second: RandomItemLineart_75
+  - first:
+      213: -3363680620356700585
+    second: RandomItemLineart_76
+  - first:
+      213: -3874426649997023833
+    second: RandomItemLineart_77
+  - first:
+      213: 5097876235902154357
+    second: RandomItemLineart_78
+  - first:
+      213: 2966706846675852172
+    second: RandomItemLineart_79
+  - first:
+      213: 7655111998638004205
+    second: RandomItemLineart_80
+  - first:
+      213: -5317409349221179572
+    second: RandomItemLineart_81
+  - first:
+      213: -6292060925024514826
+    second: RandomItemLineart_82
+  - first:
+      213: -6912019442695118712
+    second: RandomItemLineart_83
+  - first:
+      213: 8180736655416775389
+    second: RandomItemLineart_84
+  - first:
+      213: -6668637073092034341
+    second: RandomItemLineart_85
+  - first:
+      213: 5135171147244701574
+    second: RandomItemLineart_86
+  - first:
+      213: -4959948037470874827
+    second: RandomItemLineart_87
+  - first:
+      213: -3523867872960103763
+    second: RandomItemLineart_88
+  - first:
+      213: 2559935648399806609
+    second: RandomItemLineart_89
+  - first:
+      213: 7184186854785988771
+    second: RandomItemLineart_90
+  - first:
+      213: -5988953367927970707
+    second: RandomItemLineart_91
+  - first:
+      213: 457035048919409582
+    second: RandomItemLineart_92
+  - first:
+      213: 3144589069818843306
+    second: RandomItemLineart_93
+  - first:
+      213: 8506038426145779956
+    second: RandomItemLineart_94
+  - first:
+      213: 1984382552512795234
+    second: RandomItemLineart_95
+  - first:
+      213: -5104426491370740835
+    second: RandomItemLineart_96
+  - first:
+      213: -4188226787126820370
+    second: RandomItemLineart_97
+  - first:
+      213: -4177598580247269543
+    second: RandomItemLineart_98
+  - first:
+      213: -5813920511346517293
+    second: RandomItemLineart_99
+  - first:
+      213: 6385791646443194615
+    second: RandomItemLineart_100
+  - first:
+      213: 5745055941307720428
+    second: RandomItemLineart_101
+  - first:
+      213: 1604378483947188915
+    second: RandomItemLineart_102
+  - first:
+      213: -4838392988766120242
+    second: RandomItemLineart_103
+  - first:
+      213: -6283016317884050253
+    second: RandomItemLineart_104
+  - first:
+      213: 8730255939723294353
+    second: RandomItemLineart_105
+  - first:
+      213: -5453217245575633987
+    second: RandomItemLineart_106
+  - first:
+      213: -1301908625567020283
+    second: RandomItemLineart_107
+  - first:
+      213: -6236946555449150416
+    second: RandomItemLineart_108
+  - first:
+      213: -5200717117962311238
+    second: RandomItemLineart_109
+  - first:
+      213: -5067782111383407240
+    second: RandomItemLineart_110
+  - first:
+      213: 2355805147343111617
+    second: RandomItemLineart_111
+  - first:
+      213: -9134120438901449535
+    second: RandomItemLineart_112
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RandomItemLineart_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 49
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f72d0a07c0f0aef0800000000000000
+      internalID: -98814454144358407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 49
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14076c7e32fec070800000000000000
+      internalID: 8128700727639344158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 50
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348e21edc4f99e8a0800000000000000
+      internalID: -6275309453271963581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 49
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff7b5d885b7746c0800000000000000
+      internalID: -4159220110594441217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7181636255a86e1a0800000000000000
+      internalID: -6780580090641770473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 31
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2439109de0fb2f020800000000000000
+      internalID: 2374170024068879170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 48
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d766c4bc957ccefc0800000000000000
+      internalID: -3464174824877955459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 50
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e0e0caaef464490800000000000000
+      internalID: -7762429038398927227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 46
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eff11acc7838ed20800000000000000
+      internalID: 3307956034920906724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 31
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e0271db57fcd6a0800000000000000
+      internalID: -6422986994809172425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 49
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5eb7877aa98cf60800000000000000
+      internalID: 8054857977623733757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_11
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 49
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e36a0cf403b70d10800000000000000
+      internalID: 2091837385926665191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_12
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 16
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d89bd0ed82a7b30800000000000000
+      internalID: 4285782929574563215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_13
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 49
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4648a76b7e4f22fe0800000000000000
+      internalID: -1215139673400507292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_14
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 49
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1853ba8f103b9e0800000000000000
+      internalID: -1606938474505207344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 47
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec4ad92eddf5e830800000000000000
+      internalID: 4099962166417444067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_16
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 48
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2129c2be938b2b0800000000000000
+      internalID: -5568637257015749914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_17
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 47
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2da2fcbf615b7f0800000000000000
+      internalID: -597546104788430085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_18
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 49
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4b292d54ea89eb0800000000000000
+      internalID: -4712825395134417748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_19
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777118da57db96e30800000000000000
+      internalID: 4497334016025892727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 33
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e7c8e8d3c477720800000000000000
+      internalID: 2843825516976045708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_21
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 47
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5c3555369030730800000000000000
+      internalID: 3964022419254134189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_22
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 49
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb42301d34c3383c0800000000000000
+      internalID: -4358573752397388612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 50
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e29af9c613f25e0800000000000000
+      internalID: -1932271372513759707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_24
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 50
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56573a372ca4975c0800000000000000
+      internalID: -4217257377031555739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_25
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 50
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b18cc313e03d84d0800000000000000
+      internalID: -3130792414104747594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_26
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 50
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd101c57414d6b80800000000000000
+      internalID: -8399985955233063463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 50
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3be5a246c231750800000000000000
+      internalID: 6274407514576434168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_28
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 50
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05def9111dec9f7f0800000000000000
+      internalID: -578203679801217712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_29
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 50
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be561af04e91ded60800000000000000
+      internalID: 7921015786920044011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_30
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 30
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ebcbdcc38a49ee0800000000000000
+      internalID: -1255193417026322849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_31
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 50
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02278859be3ec6260800000000000000
+      internalID: 7092294114167255584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_32
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb014e10e711f5ab0800000000000000
+      internalID: -5017272226972168004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_33
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 50
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4cc8b4eb1089220800000000000000
+      internalID: 2492744310572500201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 19
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdb81a1781c163e0800000000000000
+      internalID: -2062154368356401736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_35
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 49
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472b630e16244da30800000000000000
+      internalID: 4239086137403421300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_36
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 18
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcda21198571763c0800000000000000
+      internalID: -4366495644553925169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_37
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 50
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345d845abc58ca060800000000000000
+      internalID: 6966089833333183811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_38
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 47
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950a9e1065fcfbd40800000000000000
+      internalID: 5602424429778411609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_39
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 47
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d7b3f1c3be983e0800000000000000
+      internalID: -2050849511835992822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_40
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 50
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b638388955afeff0800000000000000
+      internalID: -4603270648023374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_41
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 50
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af672cd5d0aefdb90800000000000000
+      internalID: -7214790734895745286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_42
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 50
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95dc9cd48cffb5540800000000000000
+      internalID: 4997869447261310297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_43
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 31
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16229c3e2ff55060800000000000000
+      internalID: 6941734974711277087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_44
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 50
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2390cbfd333aaf7e0800000000000000
+      internalID: -1730891663578232526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_45
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 33
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd53601ea05ccce0800000000000000
+      internalID: -1383642276980105785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_46
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8176034d2419d39f0800000000000000
+      internalID: -487073468472334568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_47
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 15
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9afeb785b2a606d0800000000000000
+      internalID: -3024551199182488933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_48
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 50
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ce55f218bde1720800000000000000
+      internalID: 2818931764671933509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7486a8f3ea266850800000000000000
+      internalID: 6369825881579750523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a222864d3b0f97b0800000000000000
+      internalID: -5215437485667900768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_51
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 32
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1dba1366db1026a0800000000000000
+      internalID: -6476145656559125221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_52
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 15
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448f54836f668a5f0800000000000000
+      internalID: -745232530637719484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 14
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c640cf02525a0e3c0800000000000000
+      internalID: -4332281262644657044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_54
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 31
+        width: 33
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4a5b9312f5c8240800000000000000
+      internalID: 4795312299549500595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_55
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 35
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8496c19085949dcf0800000000000000
+      internalID: -227069663746692792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_56
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3408bf9913820e530800000000000000
+      internalID: 3882147072295272515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_57
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30391929e8cefb260800000000000000
+      internalID: 7115666033357198083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_58
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46fde968cfb23660800000000000000
+      internalID: 7364159208195749454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_59
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 33
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47390fd80441ee8c0800000000000000
+      internalID: -3968211954175011980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_60
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 33
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d4fd5e5dbd591f0800000000000000
+      internalID: -1038682427307897458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_61
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 34
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8fc999d46b64090800000000000000
+      internalID: -8050546839472244486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_62
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 31
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70d194fd8de32ad0800000000000000
+      internalID: -2728075755307020161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_63
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 16
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a23a8c02e48b3ef0800000000000000
+      internalID: -127362058042068313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_64
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 16
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cd793967a884dc0800000000000000
+      internalID: -3654518855724180357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_65
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 33
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bf6bb8d2ea15b10800000000000000
+      internalID: 1968546022778403588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_66
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 33
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b09fd2709bcd7b30800000000000000
+      internalID: 4286806241589563573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_67
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 15
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8c55aece39ea8c0800000000000000
+      internalID: -3986085974423254855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_68
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 32
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc372074ba09ac70800000000000000
+      internalID: 8982722701859175615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 15
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3ee3eb960de4df0800000000000000
+      internalID: -193988581348416548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_70
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 15
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95c02ec3926937d0800000000000000
+      internalID: -2938208894924569187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_71
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40111f0eb485ae970800000000000000
+      internalID: 8784931106059260164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_72
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af48d9ac9a1891a60800000000000000
+      internalID: 7645284408686904570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_73
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df40c94355dc32e0800000000000000
+      internalID: -2144604768838856752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_74
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ecf57c5cbaeb9e80800000000000000
+      internalID: -8170679004207645463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_75
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91da9e0fe96bf95c0800000000000000
+      internalID: -4206442733177819879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_76
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756f5cd1c4ec151d0800000000000000
+      internalID: -3363680620356700585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5ee9a4d754b3ac0800000000000000
+      internalID: -3874426649997023833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_78
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 17
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5767ad54d6b4fb640800000000000000
+      internalID: 5097876235902154357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_79
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 20
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b55d4a82cdb2920800000000000000
+      internalID: 2966706846675852172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_80
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de716a2edcb6c3a60800000000000000
+      internalID: 7655111998638004205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_81
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 18
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f9456ae54c436b0800000000000000
+      internalID: -5317409349221179572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_82
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 19
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc4ccaeceb1ea8a0800000000000000
+      internalID: -6292060925024514826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_83
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 16
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880609530f29310a0800000000000000
+      internalID: -6912019442695118712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_84
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 18
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2522b05a0d78170800000000000000
+      internalID: 8180736655416775389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_85
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 18
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0495af9ed3473a0800000000000000
+      internalID: -6668637073092034341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_86
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 15
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6870b5c73fac34740800000000000000
+      internalID: 5135171147244701574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_87
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 19
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5331722f989ba2bb0800000000000000
+      internalID: -4959948037470874827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_88
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 18
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa3dccf6d4b81fc0800000000000000
+      internalID: -3523867872960103763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190dabab8e7b68320800000000000000
+      internalID: 2559935648399806609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_90
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8bc8781eb53b360800000000000000
+      internalID: 7184186854785988771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_91
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64264884a6f2eca0800000000000000
+      internalID: -5988953367927970707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_92
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3aebc94f6b75600800000000000000
+      internalID: 457035048919409582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_93
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0d0272913d3ab20800000000000000
+      internalID: 3144589069818843306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_94
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0fd34b1e48b0670800000000000000
+      internalID: 8506038426145779956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_95
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2621205fa61f98b10800000000000000
+      internalID: 1984382552512795234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_96
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93e0c7862f6929b0800000000000000
+      internalID: -5104426491370740835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_97
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1c7826ded60e5c0800000000000000
+      internalID: -4188226787126820370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_98
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 0
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f6f22a9303606c0800000000000000
+      internalID: -4177598580247269543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_99
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da55d0391ec05fa0800000000000000
+      internalID: -5813920511346517293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_100
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f847e74ba3ee9850800000000000000
+      internalID: 6385791646443194615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_101
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2e464a0f98abf40800000000000000
+      internalID: 5745055941307720428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_102
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2b3f41bb5e34610800000000000000
+      internalID: 1604378483947188915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_103
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6dadc26339adcb0800000000000000
+      internalID: -4838392988766120242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_104
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4d98e92fd3ec8a0800000000000000
+      internalID: -6283016317884050253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_105
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1967375b589182970800000000000000
+      internalID: 8730255939723294353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_106
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 0
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db32e6abec74254b0800000000000000
+      internalID: -5453217245575633987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_107
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 7
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b8f0bb001beede0800000000000000
+      internalID: -1301908625567020283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_108
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 2
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0347b5f072ae179a0800000000000000
+      internalID: -6236946555449150416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_109
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab92096f55753d7b0800000000000000
+      internalID: -5200717117962311238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_110
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875b9eb150f9ba9b0800000000000000
+      internalID: -5067782111383407240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_111
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c54c67cc4081b020800000000000000
+      internalID: 2355805147343111617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RandomItemLineart_112
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ccd4affad51d3180800000000000000
+      internalID: -9134120438901449535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9003f14a43564614a9927f6ac42988e8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RandomItemLineart_0: -98814454144358407
+      RandomItemLineart_1: 8128700727639344158
+      RandomItemLineart_10: 8054857977623733757
+      RandomItemLineart_100: 6385791646443194615
+      RandomItemLineart_101: 5745055941307720428
+      RandomItemLineart_102: 1604378483947188915
+      RandomItemLineart_103: -4838392988766120242
+      RandomItemLineart_104: -6283016317884050253
+      RandomItemLineart_105: 8730255939723294353
+      RandomItemLineart_106: -5453217245575633987
+      RandomItemLineart_107: -1301908625567020283
+      RandomItemLineart_108: -6236946555449150416
+      RandomItemLineart_109: -5200717117962311238
+      RandomItemLineart_11: 2091837385926665191
+      RandomItemLineart_110: -5067782111383407240
+      RandomItemLineart_111: 2355805147343111617
+      RandomItemLineart_112: -9134120438901449535
+      RandomItemLineart_12: 4285782929574563215
+      RandomItemLineart_13: -1215139673400507292
+      RandomItemLineart_14: -1606938474505207344
+      RandomItemLineart_15: 4099962166417444067
+      RandomItemLineart_16: -5568637257015749914
+      RandomItemLineart_17: -597546104788430085
+      RandomItemLineart_18: -4712825395134417748
+      RandomItemLineart_19: 4497334016025892727
+      RandomItemLineart_2: -6275309453271963581
+      RandomItemLineart_20: 2843825516976045708
+      RandomItemLineart_21: 3964022419254134189
+      RandomItemLineart_22: -4358573752397388612
+      RandomItemLineart_23: -1932271372513759707
+      RandomItemLineart_24: -4217257377031555739
+      RandomItemLineart_25: -3130792414104747594
+      RandomItemLineart_26: -8399985955233063463
+      RandomItemLineart_27: 6274407514576434168
+      RandomItemLineart_28: -578203679801217712
+      RandomItemLineart_29: 7921015786920044011
+      RandomItemLineart_3: -4159220110594441217
+      RandomItemLineart_30: -1255193417026322849
+      RandomItemLineart_31: 7092294114167255584
+      RandomItemLineart_32: -5017272226972168004
+      RandomItemLineart_33: 2492744310572500201
+      RandomItemLineart_34: -2062154368356401736
+      RandomItemLineart_35: 4239086137403421300
+      RandomItemLineart_36: -4366495644553925169
+      RandomItemLineart_37: 6966089833333183811
+      RandomItemLineart_38: 5602424429778411609
+      RandomItemLineart_39: -2050849511835992822
+      RandomItemLineart_4: -6780580090641770473
+      RandomItemLineart_40: -4603270648023374
+      RandomItemLineart_41: -7214790734895745286
+      RandomItemLineart_42: 4997869447261310297
+      RandomItemLineart_43: 6941734974711277087
+      RandomItemLineart_44: -1730891663578232526
+      RandomItemLineart_45: -1383642276980105785
+      RandomItemLineart_46: -487073468472334568
+      RandomItemLineart_47: -3024551199182488933
+      RandomItemLineart_48: 2818931764671933509
+      RandomItemLineart_49: 6369825881579750523
+      RandomItemLineart_5: 2374170024068879170
+      RandomItemLineart_50: -5215437485667900768
+      RandomItemLineart_51: -6476145656559125221
+      RandomItemLineart_52: -745232530637719484
+      RandomItemLineart_53: -4332281262644657044
+      RandomItemLineart_54: 4795312299549500595
+      RandomItemLineart_55: -227069663746692792
+      RandomItemLineart_56: 3882147072295272515
+      RandomItemLineart_57: 7115666033357198083
+      RandomItemLineart_58: 7364159208195749454
+      RandomItemLineart_59: -3968211954175011980
+      RandomItemLineart_6: -3464174824877955459
+      RandomItemLineart_60: -1038682427307897458
+      RandomItemLineart_61: -8050546839472244486
+      RandomItemLineart_62: -2728075755307020161
+      RandomItemLineart_63: -127362058042068313
+      RandomItemLineart_64: -3654518855724180357
+      RandomItemLineart_65: 1968546022778403588
+      RandomItemLineart_66: 4286806241589563573
+      RandomItemLineart_67: -3986085974423254855
+      RandomItemLineart_68: 8982722701859175615
+      RandomItemLineart_69: -193988581348416548
+      RandomItemLineart_7: -7762429038398927227
+      RandomItemLineart_70: -2938208894924569187
+      RandomItemLineart_71: 8784931106059260164
+      RandomItemLineart_72: 7645284408686904570
+      RandomItemLineart_73: -2144604768838856752
+      RandomItemLineart_74: -8170679004207645463
+      RandomItemLineart_75: -4206442733177819879
+      RandomItemLineart_76: -3363680620356700585
+      RandomItemLineart_77: -3874426649997023833
+      RandomItemLineart_78: 5097876235902154357
+      RandomItemLineart_79: 2966706846675852172
+      RandomItemLineart_8: 3307956034920906724
+      RandomItemLineart_80: 7655111998638004205
+      RandomItemLineart_81: -5317409349221179572
+      RandomItemLineart_82: -6292060925024514826
+      RandomItemLineart_83: -6912019442695118712
+      RandomItemLineart_84: 8180736655416775389
+      RandomItemLineart_85: -6668637073092034341
+      RandomItemLineart_86: 5135171147244701574
+      RandomItemLineart_87: -4959948037470874827
+      RandomItemLineart_88: -3523867872960103763
+      RandomItemLineart_89: 2559935648399806609
+      RandomItemLineart_9: -6422986994809172425
+      RandomItemLineart_90: 7184186854785988771
+      RandomItemLineart_91: -5988953367927970707
+      RandomItemLineart_92: 457035048919409582
+      RandomItemLineart_93: 3144589069818843306
+      RandomItemLineart_94: 8506038426145779956
+      RandomItemLineart_95: 1984382552512795234
+      RandomItemLineart_96: -5104426491370740835
+      RandomItemLineart_97: -4188226787126820370
+      RandomItemLineart_98: -4177598580247269543
+      RandomItemLineart_99: -5813920511346517293
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

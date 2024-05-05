@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 1SmallEyeItem
   m_EditorClassIdentifier: 
   id: 01A01
-  image: {fileID: 21300000, guid: b49401aa28e70fb4faad8e8536bf5cb6, type: 2}
+  image: {fileID: 2966706846675852172, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: "Ojo peque\xF1o"
   description: "\xBFQu\xE9 diablos es esto?"

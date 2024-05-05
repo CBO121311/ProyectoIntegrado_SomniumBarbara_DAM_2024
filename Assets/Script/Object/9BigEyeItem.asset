@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 9BigEyeItem
   m_EditorClassIdentifier: 
   id: 01A09
-  image: {fileID: 21300000, guid: 61912532c0d37254383292218a951de9, type: 2}
+  image: {fileID: -5317409349221179572, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Ojo grande
   description: ----

@@ -9,7 +9,6 @@ public class GameData
     public long lastUpdated;
     public int deathCount;
     public SerializableDictionary<string, bool> itemsCollected;
-    public SerializableDictionary<string, bool> itemsCollectedFirstWorld;
     public Vector3 playerPosition;
     //public ItemsData playerAttributesData;
     public float playedTime;
@@ -24,6 +23,7 @@ public class GameData
         playedTime = 0f;
         itemsCollected = new SerializableDictionary<string, bool>();
 
+        //Debug.Log("INICIALIZANDO GAME DATA");
 
         InitializeItemsCollected();
 
@@ -36,13 +36,34 @@ public class GameData
         AddItemToCollected("01A02", false);
         AddItemToCollected("01A03", false);
         AddItemToCollected("01A04", false);
+        AddItemToCollected("01A05", false);
+        AddItemToCollected("01A06", false);
+        AddItemToCollected("01A07", false);
+        AddItemToCollected("01A08", false);
+        AddItemToCollected("01A09", false);
     }
+
+
     private void AddItemToCollected(string itemId, bool initialValue)
     {
         if (!itemsCollected.ContainsKey(itemId))
         {
             itemsCollected.Add(itemId, initialValue);
         }
+    }
+
+    //Obtiene la cantidad de items recolectados.
+    public int GetItemCountCollected()
+    {
+        int count = 0;
+        foreach (bool collected in itemsCollected.Values)
+        {
+            if (collected)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 
 

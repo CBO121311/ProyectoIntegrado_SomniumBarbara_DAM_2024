@@ -3,54 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ItemCollectText : MonoBehaviour, IDataPersistence
+public class ItemCollectText : MonoBehaviour
 {
-    [SerializeField] private int totalItem = 0;
-
-    private int itemsCollected = 0;
-
     private TextMeshProUGUI itemCollectedText;
+    [SerializeField] private GameObject itemParents;
+    private GameController gameController;
 
     private void Awake()
     {
         itemCollectedText = this.GetComponent<TextMeshProUGUI>();
-    }
-
-    private void Start()
-    {
-        // subscribe to events
-        GameEventsManager.instance.onItemCollected += OnItemCollected;
-    }
-
-    public void LoadData(GameData data)
-    {
-        foreach (KeyValuePair<string, bool> pair in data.itemsCollected)
-        {
-            if (pair.Value)
-            {
-                itemsCollected++;
-            }
-        }
-    }
-
-    public void SaveData(GameData data)
-    {
-        // no data needs to be saved for this script
-    }
-
-    private void OnDestroy()
-    {
-        // unsubscribe from events
-        GameEventsManager.instance.onItemCollected -= OnItemCollected;
-    }
-
-    private void OnItemCollected()
-    {
-        itemsCollected++;
+        gameController = FindFirstObjectByType<GameController>();
     }
 
     private void Update()
     {
-        itemCollectedText.text = itemsCollected + " / " + itemsCollected;
+        itemCollectedText.text = gameController.ItemsCollected + " / " + gameController.ItemCount;
     }
 }

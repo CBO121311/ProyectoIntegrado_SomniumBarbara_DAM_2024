@@ -9,15 +9,9 @@ public class PauseMenuLevel : Menu, IPauseMenu
     [Header("Menu Buttons")]
     [SerializeField] private Button backButton;
     [SerializeField] private Button exitButton;
-    Animator animator;
 
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     public void SetUpOptionMenu()
     {
@@ -35,7 +29,7 @@ public class PauseMenuLevel : Menu, IPauseMenu
     private IEnumerator ShowOptionPanel()
     {
         Time.timeScale = 0f;
-        this.animator.SetBool("Pause", true);
+        //this.animator.SetBool("Pause", true);
         yield return new WaitForSecondsRealtime(0.5f);
 
         //Debug.Log("Mostrar Menú");
@@ -45,10 +39,10 @@ public class PauseMenuLevel : Menu, IPauseMenu
     private IEnumerator HideOptionPanel()
     {
         DisableMenuButtons();
-        this.animator.SetBool("Pause", false);
+        // this.animator.SetBool("Pause", false);
         Time.timeScale = 1.0f;
         yield return new WaitForSecondsRealtime(0.5f);
-        UIManager.changeValueGameIsPaused();
+        UIManager.changeGameIsPaused();
         this.gameObject.SetActive(false);
 
         //Debug.Log("Apagar menú");

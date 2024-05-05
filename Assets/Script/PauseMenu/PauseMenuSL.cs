@@ -121,7 +121,7 @@ public class PauseMenuSL : Menu, IPauseMenu
         DisableMenuButtons();
         this.animator.SetBool("showOption", false);
         yield return new WaitForSeconds(0.5f);
-        UIManager.changeValueGameIsPaused();
+        UIManager.changeGameIsPaused();
         this.gameObject.SetActive(false);
     }
 

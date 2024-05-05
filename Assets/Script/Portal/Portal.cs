@@ -34,11 +34,12 @@ public class Portal : MonoBehaviour
             panelInfo.transform.position = new Vector2(400, 300);
             FillLevelInfo();
 
-            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.gameIsPaused)
+            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.GameIsPaused)
             {
                 if (available)
                 {
                     Debug.Log("Entrando en escena");
+                    SceneManager.LoadScene(2);
                 }
                 else
                 {
@@ -65,7 +66,10 @@ public class Portal : MonoBehaviour
         {
             playerInRange = false;
             portalAnimator.SetBool("Player", false);
-            panelInfo.SetActive(false);
+            if (panelInfo != null)
+            {
+                panelInfo.SetActive(false);
+            }
         }
     }
 
@@ -74,7 +78,7 @@ public class Portal : MonoBehaviour
     {
         levelInfo.SetTitleLevel(levelName);
         levelInfo.SetTotalItem(totalItems);
-        levelInfo.SetItemCollected(itemsCollected);
+        //levelInfo.SetItemCollected(itemsCollected);
         levelInfo.SetTimeLevel(timeLevel);
         levelInfo.SetItemMin(minItems);
         levelInfo.SetAvailable(available);

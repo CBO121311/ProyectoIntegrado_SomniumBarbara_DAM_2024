@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 2BalloonItem
   m_EditorClassIdentifier: 
   id: 01A02
-  image: {fileID: 21300000, guid: 6152d07f1c8447d4488a1c84ac001fba, type: 2}
-  itemName: Globo
+  image: {fileID: 7655111998638004205, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
+  itemName: Collar
   description: "Recuerdo cuando fu\xED "

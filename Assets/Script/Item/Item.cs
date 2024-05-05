@@ -10,8 +10,12 @@ public class Item : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject collectAnimation;
     [SerializeField]private ItemTemplate itemTemplate;
     private SpriteRenderer visual;
-    private bool collected = false;
+    bool collected = false;
     private Collider2D collider2D;
+    private GameController gameController;
+
+    public bool Collected { get => collected;}
+    public string Id { get => id;}
 
 
     //Genera un nuevo identificador único global 
@@ -24,10 +28,11 @@ public class Item : MonoBehaviour, IDataPersistence
 
     private void Awake()
     {
-        visual = GetComponentInChildren<SpriteRenderer>();
+        visual = this.GetComponentInChildren<SpriteRenderer>();
         visual.sprite = itemTemplate.image;
-        id = itemTemplate.id;
-        collider2D = GetComponent<Collider2D>();
+        this.id = itemTemplate.id;
+        collider2D = this.GetComponent<Collider2D>();
+        gameController = FindFirstObjectByType<GameController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,17 +49,28 @@ public class Item : MonoBehaviour, IDataPersistence
         GameEventsManager.instance.ItemCollect();
         collectAnimation.SetActive(true);
         clip.Play();
-        Destroy(gameObject, 0.5f);
+        Invoke("DisableCollectAnimation", 0.5f); 
         if (collider2D != null)
         {
             collider2D.enabled = false;
         }
+        
+        if(gameController != null)
+        {
+            gameController.UpdateItemCollectedStatus(id, true);
+        }
     }
 
+    // Método para desactivar la animación de recolección
+    private void DisableCollectAnimation()
+    {
+        collectAnimation.SetActive(false);
+    }
 
     // Método para cargar los datos del objeto desde un objeto GameData
     public void LoadData(GameData data)
     {
+        //Debug.Log("LoadData de Item");
         // Intenta obtener el estado de recolección del objeto desde los datos proporcionados
         //data.itemsCollected.TryGetValue(id, out collected);
 
@@ -68,15 +84,16 @@ public class Item : MonoBehaviour, IDataPersistence
     // Método para guardar los datos del objeto en un objeto GameData
     public void SaveData(GameData data)
     {
-        // Si el objeto ya existe en los datos, se elimina para evitar duplicados
-        /*if (data.itemsCollected.ContainsKey(id))
+        /*Debug.Log("SaveData de Item");
+
+       
+        if (data.itemsCollected.ContainsKey(Id))
         {
-            data.itemsCollected.Remove(id);
-        }*/
-        // Agrega el estado de recolección actual del objeto a los datos
-        //data.itemsCollected.Add(id, collected);
+            data.itemsCollected.Remove(Id);
+        }
+
+        data.itemsCollected.Add(Id, collected);*/
     }
 
-    // Método para recolectar el objeto
- 
+
 }

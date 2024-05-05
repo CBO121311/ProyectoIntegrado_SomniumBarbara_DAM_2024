@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 3EggItem
   m_EditorClassIdentifier: 
   id: 01A03
-  image: {fileID: 21300000, guid: 3bd31912b517ed347af6fc0585932608, type: 2}
+  image: {fileID: 5602424429778411609, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Huevo
   description: "\xBFSaldr\xE1 de aqu\xED una gallina?"

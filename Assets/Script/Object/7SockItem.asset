@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 7SockItem
   m_EditorClassIdentifier: 
   id: 01A07
-  image: {fileID: 21300000, guid: 2210c561a33d30541a1820962f6833a9, type: 2}
+  image: {fileID: -3654518855724180357, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: "Calcet\xEDn sucio"
   description: ---

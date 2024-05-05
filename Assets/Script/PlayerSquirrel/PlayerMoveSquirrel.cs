@@ -43,9 +43,9 @@ public class PlayerMoveSquirrel : MonoBehaviour
 
     private void PauseGame()
     {
-        if (InputManager.GetInstance().GetInMenuPressed() && !UIManager.gameIsPaused)
+        if (InputManager.GetInstance().GetInMenuPressed() && !UIManager.GameIsPaused)
         {
-            UIManager.changeValueGameIsPaused();
+            UIManager.changeGameIsPaused();
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class LevelInfo : MonoBehaviour
+public class LevelInfo : MonoBehaviour, IDataPersistence
 {
     public void Awake()
     {
@@ -17,7 +17,7 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeLevel;
     [SerializeField] private TextMeshProUGUI itemMin;
     [SerializeField] private TextMeshProUGUI available;
-
+    private int itemCount = 0;
 
     // Método para establecer el título del nivel
     public void SetTitleLevel(string title)
@@ -29,12 +29,6 @@ public class LevelInfo : MonoBehaviour
     public void SetTotalItem(int total)
     {
         totalItem.text = total.ToString();
-    }
-
-    // Método para establecer el número de ítems recolectados en el nivel
-    public void SetItemCollected(int collected)
-    {
-        itemCollected.text = collected.ToString();
     }
 
     // Método para establecer el tiempo restante en el nivel
@@ -53,5 +47,25 @@ public class LevelInfo : MonoBehaviour
     public void SetAvailable(bool isAvailable)
     {
         available.text = isAvailable ? "Pulsa acción para continuar" : "Este nivel no está disponible";
+    }
+
+  
+    public void LoadData(GameData data)
+    {
+        foreach (KeyValuePair<string, bool> pair in data.itemsCollected)
+        {
+            //Debug.Log(pair.Key + " " + pair.Value);
+
+            if (pair.Value)
+            {
+                itemCount++;
+            }
+        }
+        itemCollected.text = itemCount.ToString();
+    }
+
+    public void SaveData(GameData data)
+    {
+        // No se utiliza
     }
 }

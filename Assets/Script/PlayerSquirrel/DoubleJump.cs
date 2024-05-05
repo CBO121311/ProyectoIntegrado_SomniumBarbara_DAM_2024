@@ -28,7 +28,7 @@ public class DoubleJump : MonoBehaviour
     }
     private void Update()
     {
-        if (UIManager.gameIsPaused)
+        if (UIManager.GameIsPaused)
         {
             return;
         }
@@ -50,7 +50,7 @@ public class DoubleJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (UIManager.gameIsPaused)
+        if (UIManager.GameIsPaused)
         {
             return;
         }

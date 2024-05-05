@@ -25,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             speechBubble.SetActive(true);
-            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.gameIsPaused)
+            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.GameIsPaused)
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
                 

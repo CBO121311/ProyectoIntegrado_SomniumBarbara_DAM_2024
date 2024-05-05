@@ -32,9 +32,9 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
             return;
         }
 
-        if(InputManager.GetInstance().GetInMenuPressed() && !UIManager.gameIsPaused)
+        if(InputManager.GetInstance().GetInMenuPressed() && !UIManager.GameIsPaused)
         {
-            UIManager.changeValueGameIsPaused();
+            UIManager.changeGameIsPaused();
             //Debug.Log("HOLAAA");
         }
     }
@@ -68,7 +68,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         }*/
 
         //Si hay un dialogo te impido moverte
-        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.gameIsPaused)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.GameIsPaused)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -93,7 +93,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
     private void MovePlayer()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.gameIsPaused)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.GameIsPaused)
         {
             return;
         }
