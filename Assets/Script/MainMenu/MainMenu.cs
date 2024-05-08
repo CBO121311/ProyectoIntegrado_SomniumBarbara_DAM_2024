@@ -70,7 +70,7 @@ public class MainMenu : Menu
             //Carga la siguiente escena, que a su vez cargará el juego debido a
             //onSceneloaded en el datapersistenceManager
             //Invoke("LoadGame", 0.5f);
-            SceneManager.LoadSceneAsync(1);
+            SceneManager.LoadSceneAsync("LevelSelection");
         }));
     }
 

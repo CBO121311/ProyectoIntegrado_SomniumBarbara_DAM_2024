@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a9519c5ca51e544bcdd87faa147fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedX: 0.01
+  moveSpeedX: 0.02
   moveSpeedY: 0
 --- !u!1 &80459509
 GameObject:
@@ -813,7 +813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionMenuGameObject: {fileID: 3050222435921610531}
-  fadeSL: {fileID: 80699733}
 --- !u!4 &172920840
 Transform:
   m_ObjectHideFlags: 0
@@ -5676,7 +5675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a9519c5ca51e544bcdd87faa147fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedX: 0.02
+  moveSpeedX: 0.01
   moveSpeedY: 0
 --- !u!212 &1410481212
 SpriteRenderer:
@@ -14920,8 +14919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d548da4d83f4d489d8401450956af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
-  collection: {fileID: 0}
 --- !u!4 &1920527085
 Transform:
   m_ObjectHideFlags: 0

@@ -67,29 +67,18 @@ public class SaveSlotsMenu : Menu
             StartCoroutine(SaveGameAndLoadScene());
         }
 
-
-        //Create a new - which will initalize out data to a clean slate
         DataPersistenceManager.instance.NewGame();
     }
 
-    /*public void SaveGameAndLoadScene()
-    {
-      
-
-        
-
-        //Carga la escena.
-        
-    }*/
-
+    //Método que Guarda el juego en cualquier momento antes de cargar una nueva escena.
     private IEnumerator SaveGameAndLoadScene()
     {
-        //Guarda el juego en cualquier momento antes de cargar una nueva escena.
+        
         DataPersistenceManager.instance.SaveGame();
         fadeMainMenu.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("He pasado por aquí");
-        SceneManager.LoadSceneAsync(1);
+        //Debug.Log("He pasado por aquí");
+        SceneManager.LoadSceneAsync("LevelSelection");
     }
 
     //Método que se llama cuando intentas borrar la partida.

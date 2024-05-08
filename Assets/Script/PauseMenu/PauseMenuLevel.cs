@@ -70,7 +70,7 @@ public class PauseMenuLevel : Menu, IPauseMenu
             () =>
             {
                 Time.timeScale = 1.0f;
-                SceneManager.LoadSceneAsync(1);
+                SceneManager.LoadSceneAsync("LevelSelection");
             },
 
             () =>

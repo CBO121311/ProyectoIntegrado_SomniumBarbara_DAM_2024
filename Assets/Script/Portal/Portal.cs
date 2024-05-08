@@ -14,7 +14,6 @@ public class Portal : MonoBehaviour
     [Header("Level Data")]
     public string levelName = "Example";
     public int totalItems = 3;
-    public int itemsCollected = 0;
     public int timeLevel = 12;
     public int minItems = 3;
     public bool available = false;
@@ -38,12 +37,12 @@ public class Portal : MonoBehaviour
             {
                 if (available)
                 {
-                    Debug.Log("Entrando en escena");
-                    SceneManager.LoadScene(2);
+                    //Debug.Log("Entrando en escena");
+                    SceneManager.LoadScene("SquirrelLevel");
                 }
                 else
                 {
-                    Debug.Log("No puedes entrar");
+                    //Debug.Log("No puedes entrar");
                 }
 
                 // Lugar para iniciar un diálogo o cargar una nueva escena
@@ -78,7 +77,6 @@ public class Portal : MonoBehaviour
     {
         levelInfo.SetTitleLevel(levelName);
         levelInfo.SetTotalItem(totalItems);
-        //levelInfo.SetItemCollected(itemsCollected);
         levelInfo.SetTimeLevel(timeLevel);
         levelInfo.SetItemMin(minItems);
         levelInfo.SetAvailable(available);

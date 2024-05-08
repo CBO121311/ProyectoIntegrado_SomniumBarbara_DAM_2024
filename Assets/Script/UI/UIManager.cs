@@ -16,8 +16,6 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-
-
         gameIsPaused = false;
         if (optionMenuGameObject.activeSelf)
         {
@@ -50,7 +48,11 @@ public class UIManager : MonoBehaviour
     {
 
         optionMenuGameObject.SetActive(true);
-        levelTransition.OpenPauseMenu();
+
+        if(levelTransition != null)
+        {
+            levelTransition.OpenPauseMenu();
+        }     
         optionMenu.SetUpOptionMenu();
     }
     public static void changeGameIsPaused()

@@ -91,14 +91,18 @@ public class GameController : MonoBehaviour, IDataPersistence
         {
             Debug.Log("Derrota");
             StartCoroutine(ActiveReaper());
+
             levelTransition.ActivateAlarmClock();
+
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
+
             soundAudioSource.PlayOneShot(clockclip);
 
             mainAudioSource.Stop();
             mainAudioSource.clip = audioPersecution;
             mainAudioSource.Play();
+
             //Agregar funcionamiento y código en el futuro
             CambiarTemporador(false);
         }
@@ -167,7 +171,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
     void LoadNextScene()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
     }
 
 

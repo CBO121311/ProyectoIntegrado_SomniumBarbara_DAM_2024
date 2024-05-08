@@ -94,7 +94,7 @@ public class PauseMenuSL : Menu, IPauseMenu
             //Función que se ejecuta si seleccionamos "Confirmar"
             () =>
             {
-                SceneManager.LoadSceneAsync(0);
+                SceneManager.LoadSceneAsync("MainMenuUI");
             },
 
             //Función que se ejecuta si seleccionamos "Cancelar"
