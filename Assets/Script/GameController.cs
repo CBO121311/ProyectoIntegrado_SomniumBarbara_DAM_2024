@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     private float tiempoActual;
     private bool tiempoActivado = false;
     [SerializeField] private GameObject reaper;
+    [SerializeField] private PassLevel passLevel;
     [SerializeField] private Animator bgFront;
     [SerializeField] private Animator bgBack;
     [SerializeField] private AudioSource mainAudioSource;
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     [SerializeField] private AudioClip clockclip;
     [SerializeField] private AudioClip audioPersecution;
     [SerializeField] private LevelTransition levelTransition;
+
 
     public GameObject transition;
     public GameObject collection;
@@ -31,6 +34,19 @@ public class GameController : MonoBehaviour, IDataPersistence
     private int itemsCollected = 0;
     public int ItemCount { get => itemCount;}
     public int ItemsCollected { get => itemsCollected;}
+
+
+    public static GameController instance { get; private set; }
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Se encontró más de un administrador de eventos en la escena.");
+        }
+        instance = this;
+    }
+
 
     private void Start()
     {
@@ -139,8 +155,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 
         if (itemsCollected == itemCount)
         {
-            Debug.Log("¡Todos los artículos han sido recolectados!");
-            transition.SetActive(true);
+            Debug.Log("¡Todos los artículos han sido recolectados!");      
         }
         else
         {
@@ -150,6 +165,7 @@ public class GameController : MonoBehaviour, IDataPersistence
         if (itemsCollected >= 5)
         {
             Debug.Log("Se han recolectado al menos 5 elementos.");
+            passLevel.CompleteObjective();
             Invoke("ChangeScene", 1);
         }
     }
@@ -164,16 +180,11 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     void ChangeScene()
     {
-        Debug.Log("Enhorabuena, te lo has pasado");
-        DataPersistenceManager.instance.SaveGame();
+        //Debug.Log("Enhorabuena, te lo has pasado");
+        //DataPersistenceManager.instance.SaveGame();
        
-        Invoke("LoadNextScene", 1f);
+        //Invoke("LoadNextScene", 1f);
     }
-    void LoadNextScene()
-    {
-        //SceneManager.LoadScene(1);
-    }
-
 
     private void OnDestroy()
     {
@@ -197,5 +208,10 @@ public class GameController : MonoBehaviour, IDataPersistence
                 data.itemsCollected[itemId] = true;
             }
         }
+    }
+
+    public void DeactivateReaper()
+    {
+        reaper.SetActive(false);
     }
 }
