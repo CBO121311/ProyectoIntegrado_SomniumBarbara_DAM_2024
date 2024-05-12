@@ -137,9 +137,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 56
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,9 +158,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 65
         y: 0
-        width: 55
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -179,9 +179,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_2
       rect:
         serializedVersion: 2
-        x: 126
+        x: 127
         y: 0
-        width: 53
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -200,9 +200,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_3
       rect:
         serializedVersion: 2
-        x: 188
+        x: 189
         y: 0
-        width: 53
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -221,9 +221,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_4
       rect:
         serializedVersion: 2
-        x: 247
+        x: 248
         y: 0
-        width: 56
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -242,9 +242,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_5
       rect:
         serializedVersion: 2
-        x: 311
+        x: 312
         y: 0
-        width: 55
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -263,9 +263,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_6
       rect:
         serializedVersion: 2
-        x: 372
+        x: 373
         y: 0
-        width: 58
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -284,9 +284,9 @@ TextureImporter:
       name: spr_enemy_mud_strip8_7
       rect:
         serializedVersion: 2
-        x: 433
+        x: 434
         y: 0
-        width: 56
+        width: 54
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

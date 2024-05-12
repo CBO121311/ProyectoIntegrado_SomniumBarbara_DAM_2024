@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     private bool previousPauseState = false;
 
     public static bool GameIsPaused { get => gameIsPaused;}
-    private LevelTransition levelTransition;
+    private LevelAnimation levelTransition;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        levelTransition = FindFirstObjectByType<LevelTransition>();
+        levelTransition = FindFirstObjectByType<LevelAnimation>();
     }
 
     void Update()

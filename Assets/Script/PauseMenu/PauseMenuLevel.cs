@@ -25,6 +25,7 @@ public class PauseMenuLevel : Menu, IPauseMenu
         StartCoroutine(HideOptionPanel());
     }
 
+
     //Muestra el menú de pause
     private IEnumerator ShowOptionPanel()
     {
@@ -65,16 +66,19 @@ public class PauseMenuLevel : Menu, IPauseMenu
 
     public void GoLevelSelection()
     {
+        DisableMenuButtons();
         confirmationPopMenu.ActivateMenu("¿Estás seguro que quieres salir de la pantalla?\n\n" +
             "Perderás los objetos recogidos.",
             () =>
             {
+                
                 Time.timeScale = 1.0f;
                 SceneManager.LoadSceneAsync("LevelSelection");
             },
 
             () =>
             {
+                ActivateMenuButtons();
                 this.SetFirstSelected(exitButton);
             });
     }

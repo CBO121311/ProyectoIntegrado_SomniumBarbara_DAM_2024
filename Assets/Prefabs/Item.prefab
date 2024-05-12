@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 1732765793836317232}
-  id: 
   collectAnimation: {fileID: 8505062728777256295}
+  itemTemplate: {fileID: 0}
 --- !u!58 &343530092586474825
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1966541533
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -3957917541901648590, guid: 74be5b545476b4b4d901b0238abf468f,
     type: 3}
@@ -271,7 +271,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1966541533
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -4801923697170587870, guid: be1a5bd13766ec048bab6f4c578baa0f,
     type: 3}
@@ -317,8 +317,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 374ed9deb2e36644eb416f14835550b3, type: 3}
-  m_Resource: {fileID: 8300000, guid: 374ed9deb2e36644eb416f14835550b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f2da40d9c69a201488bf170d8ea8ba12, type: 3}
+  m_Resource: {fileID: 8300000, guid: f2da40d9c69a201488bf170d8ea8ba12, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

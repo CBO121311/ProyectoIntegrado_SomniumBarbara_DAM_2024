@@ -16,16 +16,9 @@ public class TimeCountText : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
-        // Suscribirse al evento de actualización de tiempo jugado
-        //GameEventsManager.instance.onTimeUpdate += UpdatePlayedTime;
         StartGame();
     }
 
-    private void OnDestroy()
-    {
-        // Desuscribirse del evento de actualización de tiempo jugado
-        //GameEventsManager.instance.onTimeUpdate -= UpdatePlayedTime;
-    }
 
     private void Update()
     {

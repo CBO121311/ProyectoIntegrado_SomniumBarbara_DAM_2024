@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//La clase desactiva el enemigo que te obstaculiza el paso
 public class PassLevel : MonoBehaviour
 {
     [SerializeField] private GameObject passArea;

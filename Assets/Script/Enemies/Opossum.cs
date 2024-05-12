@@ -24,6 +24,7 @@ public class Opossum : MonoBehaviour
             }
             else
             {
+                GameEventsManager.instance.HitEnemy(4f);
                 other.gameObject.GetComponent<PlayerCombat>().takeDamage(20, other.GetContact(0).normal);
             }
         }
@@ -32,6 +33,8 @@ public class Opossum : MonoBehaviour
     public void Hit()
     {
         Instantiate(effect, transform.position, transform.rotation);
+        GameEventsManager.instance.DeadEnemy();
+ 
         Destroy(gameObject);
     }
 }

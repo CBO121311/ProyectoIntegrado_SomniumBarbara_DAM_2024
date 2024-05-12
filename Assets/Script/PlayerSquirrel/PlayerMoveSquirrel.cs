@@ -7,9 +7,6 @@ public class PlayerMoveSquirrel : MonoBehaviour
     SpriteRenderer spr;
     Animator animator;
 
-    [Header("Jump")]
-    public float jumpSpeed = 3;
-
 
     [Header("Values")]
     public float runSpeed = 2;

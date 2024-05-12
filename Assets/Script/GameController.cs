@@ -1,28 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour, IDataPersistence
 {
-    [SerializeField] private float tiempoMaximo;
-    [SerializeField] private Slider slider;
-    private float tiempoActual;
-    private bool tiempoActivado = false;
+
+    [Header("Timer")]
+    [SerializeField] private float limitTime;
+    [SerializeField] private Slider sliderTime;
+    private float currentTime;
+    private bool endTime = false;
+
+    [Header("End Timer")]
     [SerializeField] private GameObject reaper;
-    [SerializeField] private PassLevel passLevel;
     [SerializeField] private Animator bgFront;
     [SerializeField] private Animator bgBack;
-    [SerializeField] private AudioSource mainAudioSource;
-    [SerializeField] private AudioSource soundAudioSource;
-    [SerializeField] private AudioClip clockclip;
-    [SerializeField] private AudioClip audioPersecution;
-    [SerializeField] private LevelTransition levelTransition;
 
 
-    public GameObject transition;
+    [Header("Transition Animation")]
+    [SerializeField] private LevelAnimation levelAnimation;
+
+    [Header("Level Complete")]
+    private float levelTime = 0f;
+    private bool isGameRunning = true;
+
+
+    [SerializeField] private GameObject levelCompleteTransition;
+    [SerializeField] private ScoreLevel scoreLevel;
+    [SerializeField] private PassLevel passLevel;
     public GameObject collection;
     
 
@@ -32,11 +40,14 @@ public class GameController : MonoBehaviour, IDataPersistence
     private int itemCount;
     //Items recogidos
     private int itemsCollected = 0;
+    //Enemigos derrotados
+    private int deathEnemyCount = 0;
     public int ItemCount { get => itemCount;}
     public int ItemsCollected { get => itemsCollected;}
 
 
     public static GameController instance { get; private set; }
+    public bool IsGameRunning { get => isGameRunning;}
 
     private void Awake()
     {
@@ -50,19 +61,56 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+
+        //AudioManager.instance.PlayMusic("SquirrelMusic");
+
+
         itemsLevel = new Dictionary<string, bool>();
         FillItemsLevelDictionary();
         ActivarTemporizador();
-        GameEventsManager.instance.onItemCollected += OnItemCollected;
+        GameEventsManager.instance.onItemCollected += HandleItemCollected; //Recoger Item
+        GameEventsManager.instance.onDeadEnemy += HandleDeadEnemy; //Matar un enemigo
+        GameEventsManager.instance.onFallPlayer += HandleFallPlayer; //Cae el jugador
+        GameEventsManager.instance.onHitEnemy += HandleHitEnemy; //Es golpeado el jugador
+        GameEventsManager.instance.onPlayerDeath += HandlePlayerDeath; // El jugador muere
+        GameEventsManager.instance.onLevelCompleted += HandleLevelComplete; //Completar el nivel
     }
+    private void HandleHitEnemy(float damage)
+    {
+        Debug.Log("¡El jugador ha sido golpeado! Daño recibido: " + damage);
+
+        float realDamage = damage * 100;
+
+        currentTime -= realDamage;
+    }
+    private void HandlePlayerDeath()
+    {
+        Debug.Log("¡El jugador ha muerto");
+    }
+
+
+
+    private void HandleFallPlayer()
+    {
+        Debug.Log("¡El jugador se ha caído");
+    }
+
     void Update()
     {
-        if (tiempoActivado)
+        if (endTime)
         {
             CambiarContador();
         }
+
+        if (IsGameRunning)
+        {
+            levelTime += Time.deltaTime;
+        }
     }
 
+    
+
+    //Método
     private void FillItemsLevelDictionary()
     {
         itemCount = collection.transform.childCount;
@@ -90,34 +138,27 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     private void CambiarContador()
     {
-        tiempoActual -= Time.deltaTime;
+        currentTime -= Time.deltaTime;
 
-        if(tiempoActual >= 0)
+        if(currentTime >= 0)
         {
-          
-            /*int minutos = Mathf.FloorToInt(tiempoActual / 60);
-            int segundos = Mathf.FloorToInt(tiempoActual % 60);
-            string tiempoFormateado = $"{minutos:00}:{segundos:00}";
-            Debug.Log($"Tiempo restante: {tiempoFormateado}");*/
-
-            slider.value = tiempoActual;
+            sliderTime.value = currentTime;
         }
 
-        if(tiempoActual <= 0)
+        if(currentTime <= 0)
         {
-            Debug.Log("Derrota");
+            sliderTime.value = currentTime;
             StartCoroutine(ActiveReaper());
 
-            levelTransition.ActivateAlarmClock();
+            levelAnimation.ActivateAlarmClock();
 
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
 
-            soundAudioSource.PlayOneShot(clockclip);
+            //mainAudioSource.PlayOneShot(AudioManager.instance.GetAudioClip("AlarmSound"));
+            AudioManager.instance.PlayOneSound("AlarmSound");
+            AudioManager.instance.ChangeMusicTerror();
 
-            mainAudioSource.Stop();
-            mainAudioSource.clip = audioPersecution;
-            mainAudioSource.Play();
 
             //Agregar funcionamiento y código en el futuro
             CambiarTemporador(false);
@@ -132,15 +173,15 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     private void CambiarTemporador(bool estado)
     {
-        tiempoActivado = estado;
+        endTime = estado;
     }
 
 
     public void ActivarTemporizador()
     {
         //tiempoActual = tiempoMaximo +1;
-        tiempoActual = tiempoMaximo;
-        slider.maxValue = tiempoMaximo;
+        currentTime = limitTime;
+        sliderTime.maxValue = limitTime;
         CambiarTemporador(true);
     }
 
@@ -149,7 +190,65 @@ public class GameController : MonoBehaviour, IDataPersistence
         CambiarTemporador(false);
     }
 
-    private void OnItemCollected()
+    //Método que se le llama cuando matas a un enemigo
+    private void HandleDeadEnemy()
+    {
+        deathEnemyCount++;
+    }
+
+
+    // Método llamado cuando se completa el nivel:
+    // - Desactiva al enemigo Reaper.
+    // - Activa la transición de finalización del nivel.
+    // - Pausa el tiempo en el juego.
+    // - Realiza la animación de finalización del nivel.
+    // - Establece los datos del nivel en la pantalla de puntuación.
+    // - Detiene cualquier acción del juego.
+    // - Detecta la tecla para cambiar de escena al siguiente nivel.
+    private void HandleLevelComplete()
+    {
+        DeactivateReaper();
+        levelCompleteTransition.SetActive(true);
+        Time.timeScale = 0;
+
+        levelAnimation.AnimateLevelComplete();
+        scoreLevel.SetLevelData(levelTime,itemsCollected,deathEnemyCount);
+        isGameRunning = false;
+
+        DetectKeyToChangeScene();
+    }
+
+
+    void DetectKeyToChangeScene()
+    {
+        // Espera a que se presione la tecla "Z" para cambiar de escena
+        StartCoroutine(WaitForKeyPress( () =>
+        {
+            SceneManager.LoadScene("LevelSelection");
+            Time.timeScale = 1f;
+        }));
+    }
+
+    IEnumerator WaitForKeyPress(System.Action action)
+    {
+        yield return new WaitForSecondsRealtime(4f);
+
+        while (true)
+        {
+            Debug.Log("Esperando");
+
+            if (InputManager.GetInstance().GetSubmitPressed())
+            {
+                action?.Invoke();
+                break;
+            }
+            yield return null;
+        }
+    }
+
+
+    //Método que se le llama cuando recoges un item
+    private void HandleItemCollected()
     {
         itemsCollected++;
 
@@ -159,14 +258,16 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
         else
         {
-            Debug.Log("Quedan " + (itemCount - itemsCollected) + " artículos por recolectar.");
+            //Debug.Log("Quedan " + (itemCount - itemsCollected) + " artículos por recolectar.");
         }
 
         if (itemsCollected >= 5)
         {
             Debug.Log("Se han recolectado al menos 5 elementos.");
             passLevel.CompleteObjective();
-            Invoke("ChangeScene", 1);
+            levelAnimation.RotatePassMessage();
+            
+            //Invoke("ChangeScene", 1);
         }
     }
 
@@ -178,17 +279,11 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
-    void ChangeScene()
-    {
-        //Debug.Log("Enhorabuena, te lo has pasado");
-        //DataPersistenceManager.instance.SaveGame();
-       
-        //Invoke("LoadNextScene", 1f);
-    }
-
     private void OnDestroy()
     {
-        GameEventsManager.instance.onItemCollected -= OnItemCollected;
+        GameEventsManager.instance.onItemCollected -= HandleItemCollected;
+        GameEventsManager.instance.onDeadEnemy -= HandleDeadEnemy;
+        GameEventsManager.instance.onLevelCompleted -= HandleLevelComplete;
     }
 
     public void LoadData(GameData data)
@@ -213,5 +308,10 @@ public class GameController : MonoBehaviour, IDataPersistence
     public void DeactivateReaper()
     {
         reaper.SetActive(false);
+    }
+
+    private void LoadLevelSelection()
+    {
+        SceneManager.LoadScene("LevelSelection");
     }
 }

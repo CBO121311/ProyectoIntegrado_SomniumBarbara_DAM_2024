@@ -5,19 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PassArea : MonoBehaviour
 {
+    [SerializeField] private ScoreLevel scoreLevel;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Invoke("LoadLevelSelection", 1f);
-            GameController.instance.DeactivateReaper();
-            Debug.Log("Enhorabuena, PassLevelTocado");
+            GameEventsManager.instance.LevelCompleted();
         }
     }
-
-    private void LoadLevelSelection()
-    {
-        SceneManager.LoadScene("LevelSelection");
-    }
-
 }

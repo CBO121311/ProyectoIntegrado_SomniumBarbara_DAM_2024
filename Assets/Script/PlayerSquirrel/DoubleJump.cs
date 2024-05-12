@@ -19,7 +19,7 @@ public class DoubleJump : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField]private AudioClip jumpSound;
 
-
+    [SerializeField] private ParticleSystem particles;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -40,12 +40,14 @@ public class DoubleJump : MonoBehaviour
         {
             saltosExtrasRestantes = saltosExtra;
         }
-
-        if (InputManager.GetInstance().GetSubmitPressed())
-        {
-            //Debug.Log("INTENTO SALTAR");
-            salto = true;
-        }
+        Debug.Log(GameController.instance.IsGameRunning);
+    
+            if (GameController.instance.IsGameRunning  && InputManager.GetInstance().GetSubmitPressed())
+            {
+                Debug.Log("INTENTO SALTAR");
+                salto = true;
+            }
+       
     }
 
     private void FixedUpdate()
@@ -87,6 +89,7 @@ public class DoubleJump : MonoBehaviour
     private void Salto()
     {
         // rb2D.AddForce(new Vector2(0f, jumpSpeed));
+        particles.Play();
         audioSource.PlayOneShot(jumpSound);
         rb2D.velocity = new Vector2(0f, jumpSpeed);
         salto = false;
