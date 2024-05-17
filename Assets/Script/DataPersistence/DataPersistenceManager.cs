@@ -32,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
     //AutoGuardado
     private Coroutine autoSaveCoroutine;
     public static DataPersistenceManager instance { get; private set; }
-
+    private bool gameLoaded = false; 
     //Seguimiento de los datos
     private void Awake()
     {
@@ -59,7 +59,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //Suscribirse al evento.
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -70,22 +69,27 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Cuando se cargue una escena reiniciamos nuestra lista de objeto de persistencia de datos.
-        //Y luego cargamos el juego.
-        Debug.Log("Ha pasado en OnSceneLoaded");
-        this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
 
-
-        //Arrancar el autosave coroutine
-        /*
-        if(autoSaveCoroutine != null)
+            Debug.Log("Ha pasado en OnSceneLoaded");
+            this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+            LoadGame();
+            gameLoaded = true;
+        /*}
+        else
         {
-            StopCoroutine(autoSaveCoroutine);
-        }
+            Debug.Log("Tu no cargas la partida");
 
-        autoSaveCoroutine = StartCoroutine(AutoSave());*/
+        }*/
     }
+    //Arrancar el autosave coroutine
+    /*
+    if(autoSaveCoroutine != null)
+    {
+        StopCoroutine(autoSaveCoroutine);
+    }
+
+    autoSaveCoroutine = StartCoroutine(AutoSave());*/
+
 
     public void ChangeSelectedProfileId(string newProfileId)
     {
@@ -126,6 +130,8 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadGame()
     {
+        Debug.Log("Estoy en load game de datapersistence.");
+
         //regresar de inmediato si la persistencia de datos está deshabilitada
         if (disableDataPersistence)
         {
@@ -140,7 +146,7 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }*/
         this.gameData = dataHandler.Load(selectedProfileId);
-        //nicie un nuevo juego si los datos son nulos y estamos configurados para inicializar datos con fines de depuración.
+        //Inicia un nuevo juego si los datos son nulos y estamos configurados para inicializar datos con fines de depuración.
         if (this.gameData == null && initializeDataIfNull)
         {
             NewGame();
@@ -172,6 +178,7 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("Pasando DataPesistenceManager saveGame");
         //Si no tenemos ningún dato para guardar, registre una advertencia aquí.
 
         if (this.gameData == null)
@@ -190,7 +197,6 @@ public class DataPersistenceManager : MonoBehaviour
 
         //guarde esos datos en un archivo utilizando el controlador de datos.
         dataHandler.Save(gameData, selectedProfileId);
-        Debug.Log("Saved death count = " + gameData.deathCount);
     }
 
 

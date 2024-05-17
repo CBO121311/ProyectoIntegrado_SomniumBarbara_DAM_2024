@@ -54,6 +54,8 @@ public class TimeCountText : MonoBehaviour, IDataPersistence
 
     public void SaveData(GameData data)
     {
+        Debug.Log("Prueba en TimeCountText " + playedTime);
+
         data.playedTime = playedTime;
     }
 }

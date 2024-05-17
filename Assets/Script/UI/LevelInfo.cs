@@ -13,43 +13,39 @@ public class LevelInfo : MonoBehaviour, IDataPersistence
 
     [SerializeField] private TextMeshProUGUI titleLevel;
     [SerializeField] private TextMeshProUGUI totalItem;
-    [SerializeField] private TextMeshProUGUI itemCollected;
     [SerializeField] private TextMeshProUGUI timeLevel;
+    [SerializeField] private TextMeshProUGUI itemCollected;
     [SerializeField] private TextMeshProUGUI itemMin;
+    [SerializeField] private TextMeshProUGUI bestScore;
     [SerializeField] private TextMeshProUGUI available;
     private int itemCount = 0;
 
-    // Método para establecer el título del nivel
-    public void SetTitleLevel(string title)
+
+    public void SetLevelInfo(Level level)
     {
-        titleLevel.text = $"Nivel {title}";
+        titleLevel.text = $"Nivel {level.name}";
+        totalItem.text = level.totalItems.ToString();
+        itemCollected.text = level.collectedItems.ToString();
+        timeLevel.text = level.time.ToString() + " segundos";
+        itemMin.text = level.minItems.ToString() + " objetos";
+        available.text = level.available ? "Pulsa acción para continuar" : "Este nivel no está disponible";
+        bestScore.text = level.bestScore.ToString();
     }
 
-    // Método para establecer el número total de ítems en el nivel
-    public void SetTotalItem(int total)
-    {
-        totalItem.text = total.ToString();
-    }
 
-    // Método para establecer el tiempo restante en el nivel
-    public void SetTimeLevel(int time)
+    // Método para obtener el número de ítems recolectados
+    /*public int GetCollectedItems()
     {
-        timeLevel.text = time.ToString() + "s";
-    }
+        return currentCollectedItems;
+    }*/
 
-    // Método para establecer la cantidad mínima de ítems requeridos en el nivel
-    public void SetItemMin(int min)
+    // Método para actualizar el mejor puntaje
+    /*public void UpdateBestScore(int newScore)
     {
-        itemMin.text = min.ToString() + " objetos";
-    }
+        currentBestScore = newScore;
+        bestScore.text = currentBestScore.ToString();
+    }*/
 
-    // Método para establecer si el nivel está disponible o no
-    public void SetAvailable(bool isAvailable)
-    {
-        available.text = isAvailable ? "Pulsa acción para continuar" : "Este nivel no está disponible";
-    }
-
-  
     public void LoadData(GameData data)
     {
         foreach (KeyValuePair<string, bool> pair in data.itemsCollected)

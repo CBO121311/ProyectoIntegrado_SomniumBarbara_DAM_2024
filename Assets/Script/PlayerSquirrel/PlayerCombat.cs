@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] private float life;
+    [SerializeField] private float maxLife;
+    private float life;
     private PlayerMoveSquirrel playerMovement;
     [SerializeField] private float controlLossTime;
-    private Animator animator;
+    private Animator animatorSquirrel;
+    [SerializeField] private Animator lifePanelAnimator;
     private void Start()
     {
         playerMovement = GetComponent<PlayerMoveSquirrel>();
-        animator = GetComponent<Animator>();
+        animatorSquirrel = GetComponent<Animator>();
+        life = maxLife;
     }
 
     /// <summary>
@@ -30,10 +33,29 @@ public class PlayerCombat : MonoBehaviour
     /// <param name="position">Posición del golpe recibido.</param>
     public void takeDamage(float damage, Vector2 position)
     {
+      
         life -= damage;
-        animator.SetTrigger("Hit");
+
+        if (life == 1)
+        {
+            lifePanelAnimator.SetTrigger("hitOne");
+        }
+
+        animatorSquirrel.SetTrigger("Hit");
         StartCoroutine(LoseControl());
         StartCoroutine(DisableCollision());
+        
+
+
+        if(life <= 0)
+        {
+            lifePanelAnimator.SetTrigger("hitTwo");
+
+            PlayerSpawnSquirrel playerSpawn = GetComponent<PlayerSpawnSquirrel>();
+            playerSpawn.Death();
+            life = maxLife;
+            return;
+        }
         playerMovement.BounceOnDamage(position);
     }
 

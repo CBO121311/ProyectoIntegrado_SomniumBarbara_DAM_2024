@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portal : MonoBehaviour
+public class Portal : MonoBehaviour, IDataPersistence
 {
 
     [SerializeField] private Animator portalAnimator;
@@ -11,12 +11,13 @@ public class Portal : MonoBehaviour
     [SerializeField] private LevelInfo levelInfo;
     private bool playerInRange;
 
+    //public GameData gameData;
+
+
     [Header("Level Data")]
-    public string levelName = "Example";
-    public int totalItems = 3;
-    public int timeLevel = 12;
-    public int minItems = 3;
-    public bool available = false;
+    public string levelName = "Ardilla";
+
+    private Level levelToShow; 
 
     private void Awake()
     {
@@ -31,23 +32,23 @@ public class Portal : MonoBehaviour
             portalAnimator.SetBool("Player", true);
             panelInfo.SetActive(true);
             panelInfo.transform.position = new Vector2(400, 300);
-            FillLevelInfo();
+            //FillLevelInfo();
+
+            
+            if (levelToShow != null)
+            {
+                Debug.Log("Level no es null");
+                levelInfo.SetLevelInfo(levelToShow);
+            }
+
 
             if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.GameIsPaused)
             {
-                if (available)
+                if (levelToShow != null && levelToShow.available)
                 {
-                    //Debug.Log("Entrando en escena");
+                    // Cargar la escena del nivel si está disponible
                     SceneManager.LoadScene("SquirrelLevel");
-                }
-                else
-                {
-                    //Debug.Log("No puedes entrar");
-                }
-
-                // Lugar para iniciar un diálogo o cargar una nueva escena
-                // DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                // SceneManager.LoadScene(2);
+                }                
             }
         }
     }
@@ -72,13 +73,13 @@ public class Portal : MonoBehaviour
         }
     }
 
-    // Método para llenar los campos de texto de LevelInfo con los datos establecidos en el editor
-    private void FillLevelInfo()
+    public void LoadData(GameData data)
     {
-        levelInfo.SetTitleLevel(levelName);
-        levelInfo.SetTotalItem(totalItems);
-        levelInfo.SetTimeLevel(timeLevel);
-        levelInfo.SetItemMin(minItems);
-        levelInfo.SetAvailable(available);
+        levelToShow = data.GetLevelByName(levelName);
+    }
+
+    public void SaveData(GameData data)
+    {
+        //throw new System.NotImplementedException();
     }
 }

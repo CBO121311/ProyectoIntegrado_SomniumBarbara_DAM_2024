@@ -7,14 +7,11 @@ public class PlayerSpawnSquirrel : MonoBehaviour
 {
     private float checkPointPositionX, checkPointPositionY;
     private Animator animator;
-    public ChangePlayer changePlayer;
-    private Collider2D collider2;
     [SerializeField] private bool initCheckpoint = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        changePlayer = GetComponent<ChangePlayer>();
 
         if (initCheckpoint)
         {
@@ -53,6 +50,7 @@ public class PlayerSpawnSquirrel : MonoBehaviour
     //Cuando el jugador recibe daño, invoca la animación hit. 
     public void PlayerDamaged()
     {
+        Debug.Log("GOOOLPE");
         animator.SetTrigger("Hit");
         Invoke("Death",0.2f);
     }
@@ -61,7 +59,15 @@ public class PlayerSpawnSquirrel : MonoBehaviour
     //Cuando muere el jugador, cambia su aspecto.
     public void Death()
     {
-        //changePlayer.changePlay();
         transform.position = new Vector2(checkPointPositionX, checkPointPositionY);
+
+        // Detener el movimiento del jugador
+        Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
+        rb2D.velocity = Vector2.zero;
+
+        transform.position = new Vector2(checkPointPositionX, checkPointPositionY);
+
+        // Restablecer la velocidad del jugador a cero
+        rb2D.velocity = Vector2.zero;
     }
 }

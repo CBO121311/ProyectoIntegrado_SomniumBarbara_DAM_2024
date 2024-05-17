@@ -24,8 +24,8 @@ public class Opossum : MonoBehaviour
             }
             else
             {
-                GameEventsManager.instance.HitEnemy(4f);
-                other.gameObject.GetComponent<PlayerCombat>().takeDamage(20, other.GetContact(0).normal);
+                GameEventsManager.instance.HitEnemy(1f);
+                other.gameObject.GetComponent<PlayerCombat>().takeDamage(1, other.GetContact(0).normal);
             }
         }
     }

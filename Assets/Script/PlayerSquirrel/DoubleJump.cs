@@ -40,14 +40,14 @@ public class DoubleJump : MonoBehaviour
         {
             saltosExtrasRestantes = saltosExtra;
         }
-        Debug.Log(GameController.instance.IsGameRunning);
-    
-            if (GameController.instance.IsGameRunning  && InputManager.GetInstance().GetSubmitPressed())
-            {
-                Debug.Log("INTENTO SALTAR");
-                salto = true;
-            }
-       
+        //Debug.Log(GameController.instance.IsGameRunning);
+
+        if (GameController.instance.IsGameRunning && InputManager.GetInstance().GetSubmitPressed())
+        {
+            //Debug.Log("INTENTO SALTAR");
+            salto = true;
+        }
+
     }
 
     private void FixedUpdate()
