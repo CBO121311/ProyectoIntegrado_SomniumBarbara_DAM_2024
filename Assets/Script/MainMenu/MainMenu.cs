@@ -15,10 +15,12 @@ public class MainMenu : Menu
     [SerializeField] private Button continueGameButton;
     [SerializeField] private Button settingButton;
 
-    //Este quizás se quite
+
     [SerializeField] private Button loadGameButton;
 
     [SerializeField]GameObject panelSetting;
+
+    [SerializeField] private Button backButtonSetting;
 
     [SerializeField] RectTransform fader;
     Animator animator;
@@ -66,10 +68,8 @@ public class MainMenu : Menu
         {
             DisableMenuButtons();
             //guarda el juego en cualquier momento antes de cargar una nueva escena
-            DataPersistenceManager.instance.SaveGame();
-            //Carga la siguiente escena, que a su vez cargará el juego debido a
-            //onSceneloaded en el datapersistenceManager
-            //Invoke("LoadGame", 0.5f);
+            //DataPersistenceManager.instance.SaveGame();
+
             SceneManager.LoadSceneAsync("LevelSelection");
         }));
     }
@@ -93,6 +93,7 @@ public class MainMenu : Menu
         panelSetting.SetActive(true);
         animator.SetBool("showSetting",true);
         setting = true;
+        this.SetFirstSelected(backButtonSetting);
     }
     private void CloseSettingMenu()
     {

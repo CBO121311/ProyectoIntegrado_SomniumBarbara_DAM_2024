@@ -148,7 +148,17 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.transform.position = data.playerPosition;
+        if (TemporaryData.UseTemporaryPosition)
+        {
+            this.transform.position = TemporaryData.PlayerPosition;
+            TemporaryData.UseTemporaryPosition = false; // Restablecer la variable
+        }
+        else
+        {
+            this.transform.position = data.playerPosition;
+        }
+
+        //this.transform.position = data.playerPosition;
     }
 
     public void SaveData(GameData data)

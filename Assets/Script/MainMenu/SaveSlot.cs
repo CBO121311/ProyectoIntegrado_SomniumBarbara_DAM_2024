@@ -54,7 +54,7 @@ public class SaveSlot : MonoBehaviour
             percentageCompleteText.text = data.GetPercentageComplete() + "% COMPLETADO";
             Debug.Log(data.GetPercentageComplete());
 
-            deathCountText.text = "Pesadillas: " + data.deathCount;
+            deathCountText.text = "Pesadillas: " + data.GetTotalDeaths();
             Debug.Log(data.playedTime);
             UpdatePlayedTimeText(data.playedTime);
         }

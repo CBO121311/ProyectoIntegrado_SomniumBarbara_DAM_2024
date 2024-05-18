@@ -23,10 +23,4 @@ public class LoadSetting : MonoBehaviour
 
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -9,15 +9,6 @@ public class LogicVolume : MonoBehaviour
     private float sliderValue;
     public Image imagenMute;
 
-
-    public void Initialize()
-    {
-        //Valor predefinido
-        //slider.value = PlayerPrefs.GetFloat("setVolume", 0.5f);
-        //AudioListener.volume = slider.value;
-        //ToggleMuteImage();
-    }
-
     private void Start()
     {
         slider.value = PlayerPrefs.GetFloat("setVolume", 0.5f);

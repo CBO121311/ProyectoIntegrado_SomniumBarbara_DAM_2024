@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,6 +16,7 @@ public class GameData
     public float playedTime;
 
     public List<Level> informationLevel;
+
 
     //los valores definidos en este constructor serán los valores predeterminados 
     //el juego comienza cuando no hay datos para cargar
@@ -40,6 +43,7 @@ public class GameData
         AddItemToCollected("01A07", false);
         AddItemToCollected("01A08", false);
         AddItemToCollected("01A09", false);
+        AddItemToCollected("01B01", false);
     }
 
     private void InitializeLevel()
@@ -102,5 +106,38 @@ public class GameData
     public Level GetLevelByName(string levelName)
     {
         return informationLevel.Find(level => level.name == levelName);
+    }
+
+    public int GetLevelItemsCollectedPercentage(string levelCode)
+    {
+        if (string.IsNullOrEmpty(levelCode))
+        {
+            return 0;
+        }
+
+        var filteredItems = itemsCollected.Where(item => item.Key.StartsWith(levelCode)).ToList();
+
+        if (filteredItems.Count == 0)
+        {
+            return 0;
+        }
+
+        int collectedCount = filteredItems.Count(item => item.Value);
+
+        int percentageCollected = (collectedCount * 100) / filteredItems.Count;
+
+        return percentageCollected;
+    }
+
+
+    // Método para obtener la suma de todas las muertes de los niveles.
+    public int GetTotalDeaths()
+    {
+        int totalDeaths = 0;
+        foreach (var level in informationLevel)
+        {
+            totalDeaths += level.deaths;
+        }
+        return totalDeaths;
     }
 }

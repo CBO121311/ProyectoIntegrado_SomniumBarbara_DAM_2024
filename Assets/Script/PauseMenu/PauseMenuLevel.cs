@@ -30,10 +30,7 @@ public class PauseMenuLevel : Menu, IPauseMenu
     private IEnumerator ShowOptionPanel()
     {
         Time.timeScale = 0f;
-        //this.animator.SetBool("Pause", true);
         yield return new WaitForSecondsRealtime(0.5f);
-
-        //Debug.Log("Mostrar Menú");
     }
 
     //Oculta el menú de pauseSL
@@ -71,7 +68,8 @@ public class PauseMenuLevel : Menu, IPauseMenu
             "Perderás los objetos recogidos.",
             () =>
             {
-                
+                //TemporaryData.UseTemporaryPosition = true;
+
                 Time.timeScale = 1.0f;
                 SceneManager.LoadSceneAsync("LevelSelection");
             },

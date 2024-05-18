@@ -9,6 +9,19 @@ public class PlayerSpawnSquirrel : MonoBehaviour
     private Animator animator;
     [SerializeField] private bool initCheckpoint = false;
 
+
+    private void Awake()
+    {
+
+        // Eliminar las claves específicas de PlayerPrefs
+        PlayerPrefs.DeleteKey("checkPointPositionX");
+        PlayerPrefs.DeleteKey("checkPointPositionY");
+
+
+        PlayerPrefs.Save();
+
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();

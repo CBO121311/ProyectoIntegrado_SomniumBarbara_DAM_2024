@@ -22,7 +22,7 @@ public class FileDataHandler
     //Cargar datos 
     public GameData Load(string profileId)
     {
-        // base case - if the profileId is null, return right away
+        // Si el ID de perfil es nulo, regrese de inmediato
         if (profileId == null)
         {
             return null;
@@ -31,7 +31,7 @@ public class FileDataHandler
 
 
         //Utilice path.combine para tener en cuenta los diferentes sistemas operativos que tienen diferentes separadores de ruta
-        string fullPath = Path.Combine(dataDirPath, profileId,dataFileName);
+        string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
         GameData loadedData = null;
         if (File.Exists(fullPath))
         {
@@ -40,7 +40,7 @@ public class FileDataHandler
 
                 //Load the serialized data from the file
                 string dataToLoad = "";
-                using(FileStream stream = new FileStream(fullPath, FileMode.Open))
+                using (FileStream stream = new FileStream(fullPath, FileMode.Open))
                 {
                     using (StreamReader reader = new StreamReader(stream))
                     {
@@ -59,7 +59,8 @@ public class FileDataHandler
                 //deserialize the data from Json back into the C# object
                 loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
 
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Debug.Log("Error ocurre cuando intentas cargar los datos del file" + fullPath + "\n" + e);
             }
@@ -77,14 +78,14 @@ public class FileDataHandler
         }
 
         //usamos el Path.Combine para los distintos sistemas operativos.
-        string fullPath = Path.Combine(dataDirPath, profileId,dataFileName);
+        string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
         try
         {
             //Crear directorio si no existe
             Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
 
             //Serializar el c# game data object a Json
-            string dataToStore = JsonUtility.ToJson(data,true);
+            string dataToStore = JsonUtility.ToJson(data, true);
 
             //Opcionalmente encriptamos los datos
             if (useEncryption)
@@ -94,7 +95,7 @@ public class FileDataHandler
 
             //escribe los datos serializados en el archivo
 
-            using (FileStream stream = new FileStream(fullPath,FileMode.Create))
+            using (FileStream stream = new FileStream(fullPath, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(stream))
                 {
@@ -103,7 +104,8 @@ public class FileDataHandler
             }
 
 
-        }catch (Exception e)
+        }
+        catch (Exception e)
         {
             Debug.LogError($"Error ocurre cuando intentas crear save data en {fullPath} \n {e}");
         }
@@ -114,8 +116,8 @@ public class FileDataHandler
     //Borrar datos
     public void Delete(string profileId)
     {
-        //base case - if the profileId is null, return right away
-        if(profileId == null)
+        //Si el ID del perfil es nulo, regresa de inmediato
+        if (profileId == null)
         {
             return;
         }
@@ -123,21 +125,22 @@ public class FileDataHandler
         string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
         try
         {
-            //ensure the data file exists at this path before deleting the directory
+            //Se comprueba que existe el archivo
             if (File.Exists(fullPath))
             {
-                //delete the profile folder and everything within it
-                Directory.Delete(Path.GetDirectoryName(fullPath),true);
+                //Eliminar la carpeta del perfil y todo lo que contiene
+                Directory.Delete(Path.GetDirectoryName(fullPath), true);
             }
             else
             {
-                Debug.LogWarning("Tried to delete profile data, but data was not found at path: " + fullPath);
+                Debug.LogWarning("Se intentó eliminar los datos del perfil, pero no se encontraron datos en la ruta: " + fullPath);
             }
 
 
-        }catch (Exception e)
+        }
+        catch (Exception e)
         {
-            Debug.LogError("Failed to delete profile data for profileId: " + profileId + " at path: " + fullPath);
+            Debug.LogError("No se pudieron eliminar los datos del perfil para perfilId profileId: " + profileId + " con path: " + fullPath);
         }
     }
 
@@ -146,27 +149,27 @@ public class FileDataHandler
     {
         Dictionary<String, GameData> profileDictionary = new Dictionary<string, GameData>();
 
-        //loop over all directory names in the data directory path
+        //recorre todos los nombres de directorio en la ruta del directorio de datos
         IEnumerable<DirectoryInfo> dirInfos = new DirectoryInfo(dataDirPath).EnumerateDirectories();
-        foreach(DirectoryInfo dirInfo in dirInfos)
+        foreach (DirectoryInfo dirInfo in dirInfos)
         {
             string profileId = dirInfo.Name;
 
-            //defensive programming - check if the data file exists
-            // if it doesn't, then this folder isn't a profile and should be skipped
+            //comprobar si el archivo de datos existe
+            // si no es así, entonces esta carpeta no es un perfil y debe omitirse
             string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
 
             if (!File.Exists(fullPath))
             {
-                Debug.LogWarning("Skipping directory when loading all profiles because it does not contain data: " + 
+                Debug.LogWarning("Skipping directory when loading all profiles because it does not contain data: " +
                     profileId);
                 continue;
             }
 
-            //Load the game data for this profile and put it in the dictionary.
+            //Cargue los datos del juego para este perfil y póngalos en el diccionario.
             GameData profileData = Load(profileId);
-            // defensive programming - ensure the profile data isn't null,
-            // because if it is then something went wrong and we should let ourselves know
+
+            // Asegura que los datos de perfil no son nulos
             if (profileData != null)
             {
                 profileDictionary.Add(profileId, profileData);
@@ -174,8 +177,7 @@ public class FileDataHandler
             }
             else
             {
-                Debug.LogError("Tried to load profile but something went wrong. ProfileID: " + profileId);
-                //Debug.Log("Tried to load profile but something went wrong. ProfileID: " + profileId);
+                Debug.LogError("Se intentó cargar el perfil pero algo salió mal. ProfileID: " + profileId);
             }
         }
 
@@ -194,19 +196,19 @@ public class FileDataHandler
             string profileId = pair.Key;
             GameData gameData = pair.Value;
 
-            //Skip this entry if the gamedata is null
+            //Omita esta entrada si los datos del juego son nulos
             if (gameData == null)
             {
                 continue;
             }
 
-            //if this is the first data we've come across that exists, it's the most recent so far
-            if(mostRecentProfileId == null)
+            //Si estos son los primeros datos que encontramos, son los más recientes hasta ahora.
+            if (mostRecentProfileId == null)
             {
-                mostRecentProfileId = profileId;   
+                mostRecentProfileId = profileId;
             }
 
-            //otherwhise, compare to see which data is the most recent
+            //De lo contrario, compare para ver qué datos son los más recientes
             else
             {
                 DateTime mostRecentDateTime = DateTime.FromBinary(profilesGameData[mostRecentProfileId].lastUpdated);
@@ -223,11 +225,11 @@ public class FileDataHandler
         return mostRecentProfileId;
     }
 
-    //the below is a simple implemntation of xor encryption
+    //Implementación del cifrado xor para el guardado.
     private string EncryptDecrypt(string data)
     {
         string modifiedData = "";
-        for (int i = 0; i < data.Length; i++) 
+        for (int i = 0; i < data.Length; i++)
         {
 
             modifiedData += (char)(data[i] ^ encryptionCodeWord[i % encryptionCodeWord.Length]);

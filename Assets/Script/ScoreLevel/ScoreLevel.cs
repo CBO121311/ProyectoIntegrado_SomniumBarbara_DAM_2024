@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ScoreLevel : MonoBehaviour
 {
+    [Header("Scoreboard")]
     [SerializeField] private TextMeshProUGUI timeLevelText;
     [SerializeField] private TextMeshProUGUI timeScoreText;
     [SerializeField] private TextMeshProUGUI itemLevelText;
@@ -13,16 +14,20 @@ public class ScoreLevel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI enemiesScoreText;
     [SerializeField] private TextMeshProUGUI totalScoreLevelText;
 
+    [Header("Score Point")]
+    private const int pointsPerEnemyDefeated = 100;
+    private const int pointsPerItemCollected = 1000;
+    private const int timeBonusThresholdInSeconds = 120;
+    private const int pointsPerSecondUnderThreshold = 200;
 
+    private int totalScore = 0;
 
     private float gameTimeInSeconds;
     private int itemsCollected;
     private int enemiesDefeated;
 
-    private const int pointsPerEnemyDefeated = 100;
-    private const int pointsPerItemCollected = 1000;
-    private const int timeBonusThresholdInSeconds = 120; // 2 minutes
-    private const int pointsPerSecondUnderThreshold = 200;
+    public int TotalScore { get => totalScore;}
+
 
     // Método para establecer los datos del nivel
     public void SetLevelData(float gameTime, int items, int enemies)
@@ -31,11 +36,6 @@ public class ScoreLevel : MonoBehaviour
         itemsCollected = items;
         enemiesDefeated = enemies;
 
-        /*Debug.Log("gameTimeInSeconds = " + gameTimeInSeconds +
-            "itemsCollected = " + itemsCollected +
-            "enemiesDefeated = " + enemiesDefeated);*/
-
-        // Mostrar los datos del nivel en los textos correspondientes
         UpdateLevelUI();
         CalculateAndShowScores();
     }
@@ -47,7 +47,7 @@ public class ScoreLevel : MonoBehaviour
         int itemScore = itemsCollected * pointsPerItemCollected;
         int enemiesScore = enemiesDefeated * pointsPerEnemyDefeated;
 
-        int totalScore = timeScore + itemScore + enemiesScore;
+        totalScore = timeScore + itemScore + enemiesScore;
 
         // Mostrar las puntuaciones en los textos correspondientes
         timeScoreText.text = timeScore.ToString();
@@ -85,5 +85,4 @@ public class ScoreLevel : MonoBehaviour
 
         return string.Format("{0:00}:{1:00}:{2:000}", minutes, remainingSeconds, milliseconds);
     }
-
 }

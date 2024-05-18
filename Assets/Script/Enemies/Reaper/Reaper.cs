@@ -31,21 +31,7 @@ public class Reaper : MonoBehaviour
 
     void Update()
     {
-        //if (UIManager.gameIsPaused) return;
-
         distancia = Vector2.Distance(transform.position, jugador.position);
-        //animator.SetFloat("Distance", distancia);
-
-        /**
-         * 
-        if (playerInRange)
-        {
-            animator.SetBool("Player", true);
-        }
-        else
-        {
-            animator.SetBool("Player", false);
-        }*/
     }
 
 
@@ -67,20 +53,7 @@ public class Reaper : MonoBehaviour
         {
             animator.SetTrigger("Player");
 
-            //animator.SetTrigger("Death");
-            //playerInRange = true;
-
-            Debug.Log("Encontrado");
-            //pr.EndGame();
-            //collision.gameObject.GetComponent<PlayerDeath>().Die();
-            //Invoke("ResetPlayerInRange", 2f);
+            //Debug.Log("Encontrado");
         }
-    }
-
-
-    private void ResetPlayerInRange()
-    {
-        //playerInRange = false;
-        //mainMenuManager.OpenMenuScene();
     }
 }

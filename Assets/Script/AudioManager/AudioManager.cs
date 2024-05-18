@@ -31,12 +31,23 @@ public class AudioManager : MonoBehaviour
         {
             audioClipDict.Add(clip.name, clip);
         }
+    }
 
-        //audioSourceBGM = GetComponent<AudioSource>();
+    private void Start()
+    {
+        LoadVolume();
+    }
+
+    public void LoadVolume()
+    {
+        float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
+        Debug.Log("El volumen es " + volume);
+
+        AudioListener.volume = volume;
     }
 
     // Método para obtener un clip de audio precargado por su nombre
-    
+
     public AudioClip GetAudioClip(string clipName)
     {
         if (audioClipDict.ContainsKey(clipName))

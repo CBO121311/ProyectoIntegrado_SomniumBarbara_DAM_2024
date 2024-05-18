@@ -46,19 +46,33 @@ public class PlayerCombat : MonoBehaviour
         StartCoroutine(DisableCollision());
         
 
-
         if(life <= 0)
         {
             lifePanelAnimator.SetTrigger("hitTwo");
 
-            PlayerSpawnSquirrel playerSpawn = GetComponent<PlayerSpawnSquirrel>();
-            playerSpawn.Death();
-            life = maxLife;
+            StartCoroutine(HandleDeath(position));
+            
             return;
         }
         playerMovement.BounceOnDamage(position);
     }
 
+
+    /// <summary>
+    /// Corrutina que maneja la muerte del jugador.
+    /// </summary>
+    /// <param name="position">Posición del golpe recibido.</param>
+    private IEnumerator HandleDeath(Vector2 position)
+    {
+        
+        yield return new WaitForSeconds(0.2f);
+        lifePanelAnimator.SetTrigger("death");
+        PlayerSpawnSquirrel playerSpawn = GetComponent<PlayerSpawnSquirrel>();
+        playerSpawn.Death();
+        GameEventsManager.instance.HitEnemy(20f);
+        // Restablecer la vida del jugador
+        life = maxLife;
+    }
 
     private IEnumerator DisableCollision()
     {

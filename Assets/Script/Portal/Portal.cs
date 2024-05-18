@@ -10,6 +10,7 @@ public class Portal : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject panelInfo;
     [SerializeField] private LevelInfo levelInfo;
     private bool playerInRange;
+    [SerializeField]private GameObject player;
 
     //public GameData gameData;
 
@@ -17,7 +18,7 @@ public class Portal : MonoBehaviour, IDataPersistence
     [Header("Level Data")]
     public string levelName = "Ardilla";
 
-    private Level levelToShow; 
+    private Level levelToShow;
 
     private void Awake()
     {
@@ -32,12 +33,9 @@ public class Portal : MonoBehaviour, IDataPersistence
             portalAnimator.SetBool("Player", true);
             panelInfo.SetActive(true);
             panelInfo.transform.position = new Vector2(400, 300);
-            //FillLevelInfo();
 
-            
             if (levelToShow != null)
             {
-                Debug.Log("Level no es null");
                 levelInfo.SetLevelInfo(levelToShow);
             }
 
@@ -46,9 +44,12 @@ public class Portal : MonoBehaviour, IDataPersistence
             {
                 if (levelToShow != null && levelToShow.available)
                 {
+                    TemporaryData.PlayerPosition = player.transform.position;
+                    TemporaryData.UseTemporaryPosition = true;
+
                     // Cargar la escena del nivel si está disponible
                     SceneManager.LoadScene("SquirrelLevel");
-                }                
+                }
             }
         }
     }

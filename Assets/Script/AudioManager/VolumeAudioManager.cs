@@ -7,8 +7,8 @@ public class VolumeAudioManager : MonoBehaviour
   
     void Start()
     {
-        /*float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
+        float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
 
-        AudioListener.volume = volume;*/
+        AudioListener.volume = volume;
     }
 }

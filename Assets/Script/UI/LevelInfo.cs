@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class LevelInfo : MonoBehaviour, IDataPersistence
 {
@@ -25,7 +26,7 @@ public class LevelInfo : MonoBehaviour, IDataPersistence
     {
         titleLevel.text = $"Nivel {level.name}";
         totalItem.text = level.totalItems.ToString();
-        itemCollected.text = level.collectedItems.ToString();
+        
         timeLevel.text = level.time.ToString() + " segundos";
         itemMin.text = level.minItems.ToString() + " objetos";
         available.text = level.available ? "Pulsa acción para continuar" : "Este nivel no está disponible";
@@ -33,31 +34,9 @@ public class LevelInfo : MonoBehaviour, IDataPersistence
     }
 
 
-    // Método para obtener el número de ítems recolectados
-    /*public int GetCollectedItems()
-    {
-        return currentCollectedItems;
-    }*/
-
-    // Método para actualizar el mejor puntaje
-    /*public void UpdateBestScore(int newScore)
-    {
-        currentBestScore = newScore;
-        bestScore.text = currentBestScore.ToString();
-    }*/
-
     public void LoadData(GameData data)
     {
-        foreach (KeyValuePair<string, bool> pair in data.itemsCollected)
-        {
-            //Debug.Log(pair.Key + " " + pair.Value);
-
-            if (pair.Value)
-            {
-                itemCount++;
-            }
-        }
-        itemCollected.text = itemCount.ToString();
+        itemCollected.text = data.GetLevelItemsCollectedPercentage("01A").ToString() + " %";
     }
 
     public void SaveData(GameData data)

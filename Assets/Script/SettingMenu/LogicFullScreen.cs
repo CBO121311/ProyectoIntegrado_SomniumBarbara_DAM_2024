@@ -11,12 +11,6 @@ public class LogicFullScreen : MonoBehaviour
     public TMP_Dropdown resolutionDropDown;
     Resolution[] resolutions;
 
-    public void Initialize()
-    {
-        //Comprueba si está en pantalla completa
-
-    }
-
     private void Start()
     {
         fullscreenToggle.isOn = Screen.fullScreen;

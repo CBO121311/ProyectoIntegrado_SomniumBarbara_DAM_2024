@@ -8,7 +8,7 @@ public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IS
     [SerializeField] private List<TKey> keys = new List<TKey>();
     [SerializeField] private List<TValue> values = new List<TValue>();
 
-    // Load the dictionary from Lists
+    //Cargar el diccionario desde Listas
     public void OnBeforeSerialize()
     {
         keys.Clear();
@@ -20,14 +20,14 @@ public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IS
         }
     }
 
-    //save the dictionary to lists
+    //Guardar el diccionario en listas
     public void OnAfterDeserialize()
     {
         this.Clear();
 
         if(keys.Count != values.Count)
         {
-            Debug.LogError($"Intenté deserializar un SerializableDictionary, pero la cantidad de claves" +
+            Debug.LogError($"Se intentó deserializar un SerializableDictionary, pero la cantidad de claves" +
             $"( {keys.Count} ) no coincide con el número de valores ( ${values.Count}");
         }
 
@@ -36,4 +36,5 @@ public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IS
             this.Add(keys[i], values[i]);
         }
     }
+
 }

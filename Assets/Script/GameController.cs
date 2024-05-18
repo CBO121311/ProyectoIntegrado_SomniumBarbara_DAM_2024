@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject reaper;
     [SerializeField] private Animator bgFront;
     [SerializeField] private Animator bgBack;
+    private bool deathPlayer = false;
 
 
     [Header("Transition Animation")]
@@ -77,15 +78,17 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
     private void HandleHitEnemy(float damage)
     {
-        Debug.Log("¡El jugador ha sido golpeado! Daño recibido: " + damage);
+        //Debug.Log("Daño recibido: " + damage);
 
-        float realDamage = damage * 100;
+        float realDamage = damage * 10;
 
         currentTime -= realDamage;
     }
     private void HandlePlayerDeath()
     {
-        Debug.Log("¡El jugador ha muerto");
+        deathPlayer = true;
+        DataPersistenceManager.instance.SaveGameDataOnly();
+        SceneManager.LoadScene("LevelSelection");
     }
 
 
@@ -221,6 +224,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     void DetectKeyToChangeScene()
     {
+        DataPersistenceManager.instance.SaveGameDataOnly();
         // Espera a que se presione la tecla "Z" para cambiar de escena
         StartCoroutine(WaitForKeyPress( () =>
         {
@@ -256,18 +260,12 @@ public class GameController : MonoBehaviour, IDataPersistence
         {
             Debug.Log("¡Todos los artículos han sido recolectados!");      
         }
-        else
-        {
-            //Debug.Log("Quedan " + (itemCount - itemsCollected) + " artículos por recolectar.");
-        }
 
         if (itemsCollected >= 5)
         {
             Debug.Log("Se han recolectado al menos 5 elementos.");
             passLevel.CompleteObjective();
             levelAnimation.RotatePassMessage();
-            
-            //Invoke("ChangeScene", 1);
         }
     }
 
@@ -292,6 +290,14 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
     public void SaveData(GameData data)
     {
+        Level currentLevel = data.informationLevel.Find(level => level.name == "Ardilla");
+
+        if (deathPlayer)
+        {
+            currentLevel.deaths++;
+            return;
+        }
+
         foreach (var kvp in itemsLevel)
         {
             string itemId = kvp.Key;
@@ -303,15 +309,23 @@ public class GameController : MonoBehaviour, IDataPersistence
                 data.itemsCollected[itemId] = true;
             }
         }
+
+        //Puntaje actual
+        int newScore = scoreLevel.TotalScore;
+
+        if (currentLevel != null)
+        {
+            if (newScore > currentLevel.bestScore)
+            {
+                currentLevel.bestScore = newScore;
+            }
+        }
     }
+
+
 
     public void DeactivateReaper()
     {
         reaper.SetActive(false);
-    }
-
-    private void LoadLevelSelection()
-    {
-        SceneManager.LoadScene("LevelSelection");
     }
 }

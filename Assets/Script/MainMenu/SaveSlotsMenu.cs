@@ -21,7 +21,6 @@ public class SaveSlotsMenu : Menu
     [SerializeField]private GameObject fadeMainMenu;
 
     private SaveSlot[] saveSlots;
-
     private bool isLoadingGame = false;
 
     private void Awake()
@@ -34,14 +33,14 @@ public class SaveSlotsMenu : Menu
 
         DisableMenuButtons();
 
-        //case Cargar partida
+        //Cargar partida
         if (isLoadingGame)
         {
             //Actualiza el perfil seleccionado que se utilizará para la persistencia de datos
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
             StartCoroutine(SaveGameAndLoadScene());
         }
-        // case - Nuevo juego pero el juego tiene datos.
+        //Si Nuevo juego pero el juego tiene datos.
         else if (saveSlot.hasData)
         {
             confirmationPopMenu.ActivateMenu("Iniciar un Juego Nuevo con esta ranura sobreescribirá los datos guardados actuales"
@@ -77,7 +76,6 @@ public class SaveSlotsMenu : Menu
         DataPersistenceManager.instance.SaveGame();
         fadeMainMenu.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        //Debug.Log("He pasado por aquí");
         SceneManager.LoadSceneAsync("LevelSelection");
     }
 
@@ -112,10 +110,9 @@ public class SaveSlotsMenu : Menu
 
     public void ActivateMenu(bool isLoadingGame)
     {
-        //set this menu to be active
         this.gameObject.SetActive(true);
 
-        //set mode (para variar si está cargando o iniciando un juego)
+        //Para saber si está cargando o iniciando un juego.
         this.isLoadingGame = isLoadingGame;
 
         //Carga todos los perfiles de guardado.

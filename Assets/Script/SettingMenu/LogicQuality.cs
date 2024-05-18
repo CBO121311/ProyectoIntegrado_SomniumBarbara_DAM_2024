@@ -8,13 +8,6 @@ public class LogicQuality : MonoBehaviour
     public TMP_Dropdown qualityDropdown;
     private int quality;
 
-    public void Initialize()
-    {
-        /*quality = PlayerPrefs.GetInt("setQuality", 2);
-        qualityDropdown.value = quality;
-        SetQualityLevel(); */
-    }
-
     private void Start()
     {
         quality = PlayerPrefs.GetInt("setQuality", 2);

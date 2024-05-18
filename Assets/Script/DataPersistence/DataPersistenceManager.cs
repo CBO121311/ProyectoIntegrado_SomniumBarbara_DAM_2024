@@ -8,11 +8,6 @@ using UnityEngine.SceneManagement;
 public class DataPersistenceManager : MonoBehaviour
 {
 
-    //Para hacer partidas de pruebas
-    [Header("Debugging")]
-    [SerializeField] private bool disableDataPersistence = false;
-    [SerializeField] private bool initializeDataIfNull = false;
-
     [SerializeField] private bool overrideSelectedProfileId = false;
     [SerializeField] private string testSelectedProfileId = "test";
 
@@ -24,15 +19,13 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private float autoSaveTimeSeconds = 60f;
 
     private GameData gameData;
+
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
 
     private string selectedProfileId = ""; //test2
-
-    //AutoGuardado
-    private Coroutine autoSaveCoroutine;
     public static DataPersistenceManager instance { get; private set; }
-    private bool gameLoaded = false; 
+
     //Seguimiento de los datos
     private void Awake()
     {
@@ -46,49 +39,10 @@ public class DataPersistenceManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        if (disableDataPersistence)
-        {
-            Debug.LogWarning("Data Persistence está deshabilitado");
-        }
-
-
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
 
         InitializeSelectedProfileId();
     }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-
-            Debug.Log("Ha pasado en OnSceneLoaded");
-            this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-            LoadGame();
-            gameLoaded = true;
-        /*}
-        else
-        {
-            Debug.Log("Tu no cargas la partida");
-
-        }*/
-    }
-    //Arrancar el autosave coroutine
-    /*
-    if(autoSaveCoroutine != null)
-    {
-        StopCoroutine(autoSaveCoroutine);
-    }
-
-    autoSaveCoroutine = StartCoroutine(AutoSave());*/
 
 
     public void ChangeSelectedProfileId(string newProfileId)
@@ -117,7 +71,7 @@ public class DataPersistenceManager : MonoBehaviour
         if (overrideSelectedProfileId)
         {
             this.selectedProfileId = testSelectedProfileId;
-            Debug.LogWarning("Override selected profile id with test id: " + testSelectedProfileId);
+            Debug.LogWarning("Sustituye el id de perfil seleccionado por el id de prueba: " + testSelectedProfileId);
         }
     }
 
@@ -128,59 +82,88 @@ public class DataPersistenceManager : MonoBehaviour
     }
 
 
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private bool gameLoaded = false;
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+       
+
+        Debug.Log("Ha pasado en OnSceneLoaded");
+        this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+
+        // Carga los datos del juego desde el archivo solo si no se han cargado previamente
+        if (!gameLoaded)
+        {
+            LoadGame();
+            gameLoaded = true;
+        }
+        else
+        {
+            ReloadGameData();
+        }
+
+        if (scene.name == "MainMenuUI")
+        {
+            gameLoaded = false;
+        }
+    }
+
+    [SerializeField] private bool initializeDataIfNull = false;
     public void LoadGame()
     {
         Debug.Log("Estoy en load game de datapersistence.");
 
-        //regresar de inmediato si la persistencia de datos está deshabilitada
-        if (disableDataPersistence)
-        {
-            return;
-        }
-
-
-        //Cargue cualquier archivo guardado desde un archivo usando el controlador de datos
-        /*if (this.gameData != null)
-        {
-            Debug.Log("Los datos ya están cargados.");
-            return;
-        }*/
         this.gameData = dataHandler.Load(selectedProfileId);
-        //Inicia un nuevo juego si los datos son nulos y estamos configurados para inicializar datos con fines de depuración.
+
         if (this.gameData == null && initializeDataIfNull)
         {
             NewGame();
         }
 
-
         //Si no se pueden cargar datos, inicialice a un nuevo juego
-
         if (this.gameData == null)
         {
             Debug.Log("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder cargar los datos.");
             return;
-
         }
 
-        //TODO - envíe los datos cargados a todos los demás scripts que los necesiten
+        //Envía los datos cargados a todos los demás scripts que los necesiten
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.LoadData(gameData);
         }
-        //Debug.Log("Loaded death count = " + gameData.deathCount);
     }
+
+    private void ReloadGameData()
+    {
+        Debug.Log("Recargando datos del juego en los objetos de la escena.");
+
+        // Envía los datos cargados a todos los demás scripts que los necesiten
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        {
+            dataPersistenceObj.LoadData(gameData);
+        }
+    }
+
+
 
     public void SaveGame()
     {
-        //regresar de inmediato si la persistencia de datos está deshabilitada
-        if (disableDataPersistence)
-        {
-            return;
-        }
-
         Debug.Log("Pasando DataPesistenceManager saveGame");
-        //Si no tenemos ningún dato para guardar, registre una advertencia aquí.
-
+        
+        //Si no tenemos ningún dato para guardado.
         if (this.gameData == null)
         {
             Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
@@ -199,26 +182,47 @@ public class DataPersistenceManager : MonoBehaviour
         dataHandler.Save(gameData, selectedProfileId);
     }
 
-
-
-
-    private void OnApplicationQuit()
+    public void SaveGameDataOnly()
     {
-        //SaveGame();
+        Debug.Log("Pasando DataPesistenceManager saveGameDataOnly");
+
+        // Si no tenemos ningún dato para guardado.
+        if (this.gameData == null)
+        {
+            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
+            return;
+        }
+
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        {
+            dataPersistenceObj.SaveData(gameData);
+        }
     }
+
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
-        // FindObjectsofType takes in an optional boolean to include inactive gameobjects
+        // FindObjectsofType toma un booleano opcional para incluir objetos de juego inactivos
         IEnumerable<IDataPersistence> dataPersistencesObjects = FindObjectsOfType<MonoBehaviour>(true)
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistencesObjects);
-
     }
 
+
+    //Comprueba si se tiene datos
     public bool HasGameData()
     {
+        if(gameData != null)
+        {
+            Debug.Log("Hay datos");
+
+        }
+        else
+        {
+            Debug.Log("No hay datos");
+        }
+
         return gameData != null;
     }
 
@@ -226,38 +230,4 @@ public class DataPersistenceManager : MonoBehaviour
     {
         return dataHandler.LoadAllProfiles();
     }
-
-    /*
-    private IEnumerator AutoSave()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(autoSaveTimeSeconds);
-            //SaveGame();
-            AutoSaveGame();
-            Debug.Log("Auto Saved Game");
-        }
-    }
-
-    public void AutoSaveGame()
-    {
-        if (disableDataPersistence)
-        {
-            return;
-        }
-
-        if (this.gameData == null)
-        {
-            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
-        }
-        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
-        {
-            dataPersistenceObj.SaveData(gameData);
-        }
-        gameData.lastUpdated = System.DateTime.Now.ToBinary();
-
-        Debug.Log("Perfil es " + selectedProfileId);
-        dataHandler.Save(gameData, "AutoSave");
-    }*/
-
 }

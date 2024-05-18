@@ -26,12 +26,4 @@ public class Level
         this.deaths = 0;
         this.available = available;
     }
-
-    // Método para actualizar las propiedades del nivel con los datos de GameData
-    public void UpdateLevelData(int collectedItems, int bestScore, int deaths)
-    {
-        this.collectedItems = collectedItems;
-        this.bestScore = bestScore;
-        this.deaths = deaths;
-    }
 }
