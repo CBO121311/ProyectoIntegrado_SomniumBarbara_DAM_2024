@@ -9,6 +9,8 @@ TagManager:
   - Collection
   - Enemy
   - Options
+  - Item
+  - WeaponManager
   layers:
   - Default
   - TransparentFX

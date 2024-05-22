@@ -64,7 +64,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Interact"",
+                    ""name"": ""Inventory"",
                     ""type"": ""Button"",
                     ""id"": ""71e731ff-dad4-4444-8960-29f95a76ded8"",
                     ""expectedControlType"": ""Button"",
@@ -312,7 +312,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Interact"",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""57d4c1b6-4662-4afd-a89f-59e255747b05"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -843,7 +854,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Base_Move = m_Base.FindAction("Move", throwIfNotFound: true);
         m_Base_Exit = m_Base.FindAction("Exit", throwIfNotFound: true);
         m_Base_Menu = m_Base.FindAction("Menu", throwIfNotFound: true);
-        m_Base_Interact = m_Base.FindAction("Interact", throwIfNotFound: true);
+        m_Base_Inventory = m_Base.FindAction("Inventory", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -921,7 +932,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_Move;
     private readonly InputAction m_Base_Exit;
     private readonly InputAction m_Base_Menu;
-    private readonly InputAction m_Base_Interact;
+    private readonly InputAction m_Base_Inventory;
     public struct BaseActions
     {
         private @Controls m_Wrapper;
@@ -930,7 +941,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Base_Move;
         public InputAction @Exit => m_Wrapper.m_Base_Exit;
         public InputAction @Menu => m_Wrapper.m_Base_Menu;
-        public InputAction @Interact => m_Wrapper.m_Base_Interact;
+        public InputAction @Inventory => m_Wrapper.m_Base_Inventory;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -952,9 +963,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Menu.started += instance.OnMenu;
             @Menu.performed += instance.OnMenu;
             @Menu.canceled += instance.OnMenu;
-            @Interact.started += instance.OnInteract;
-            @Interact.performed += instance.OnInteract;
-            @Interact.canceled += instance.OnInteract;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -971,9 +982,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Menu.started -= instance.OnMenu;
             @Menu.performed -= instance.OnMenu;
             @Menu.canceled -= instance.OnMenu;
-            @Interact.started -= instance.OnInteract;
-            @Interact.performed -= instance.OnInteract;
-            @Interact.canceled -= instance.OnInteract;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -1115,7 +1126,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnExit(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
-        void OnInteract(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

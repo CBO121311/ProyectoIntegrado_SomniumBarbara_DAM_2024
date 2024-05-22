@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -63,13 +64,13 @@ public class SettingsManager : Menu
         switch (quality)
         {
             case 0:
-                QualitySettings.SetQualityLevel(0); // "Low" in Unity
+                QualitySettings.SetQualityLevel(0); // "Low" en Unity
                 break;
             case 1:
-                QualitySettings.SetQualityLevel(2); // "Medium" in Unity
+                QualitySettings.SetQualityLevel(2); // "Medium" en Unity
                 break;
             case 2:
-                QualitySettings.SetQualityLevel(5); // "Ultra" in Unity
+                QualitySettings.SetQualityLevel(5); // "Ultra" en Unity
                 break;
         }
         Debug.Log("La calidad actual es: " + QualitySettings.names[QualitySettings.GetQualityLevel()]);
@@ -91,12 +92,17 @@ public class SettingsManager : Menu
     {
         resolutions = Screen.resolutions;
         resolutionDropDown.ClearOptions();
+
         List<string> options = new List<string>();
+        HashSet<string> uniqueResolutions = new HashSet<string>();
 
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
+            if (uniqueResolutions.Add(option))
+            {
+                options.Add(option);
+            }
         }
 
         resolutionDropDown.AddOptions(options);
@@ -105,9 +111,13 @@ public class SettingsManager : Menu
 
     public void ChangeResolution(int index)
     {
-        PlayerPrefs.SetInt("setResolution", resolutionDropDown.value);
-        Resolution resolution = resolutions[index];
+        string[] dimensions = resolutionDropDown.options[index].text.Split('x');
+        int width = int.Parse(dimensions[0].Trim());
+        int height = int.Parse(dimensions[1].Trim());
+
+        Resolution resolution = Array.Find(resolutions, r => r.width == width && r.height == height);
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        PlayerPrefs.SetInt("setResolution", index);
         Debug.Log("Resolución cambiada a: " + resolution.width + " x " + resolution.height);
     }
 
@@ -135,7 +145,7 @@ public class SettingsManager : Menu
         muteImage.enabled = value == 0;
     }
 
-    // Ensure settings are applied when changing scenes
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
