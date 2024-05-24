@@ -11,7 +11,10 @@ public class Menu : MonoBehaviour
     //Para sobreescribirlo
     protected virtual void OnEnable()
     {
-        SetFirstSelected(firstSelected);
+        if (firstSelected != null)
+        {
+            SetFirstSelected(firstSelected);
+        }
     }
 
     public void SetFirstSelected(Selectable firstSelectedButton)

@@ -52,10 +52,10 @@ public class SaveSlot : MonoBehaviour
 
             //Mostramos  los datos en el TextMeshPro
             percentageCompleteText.text = data.GetPercentageComplete() + "% COMPLETADO";
-            Debug.Log(data.GetPercentageComplete());
+            //Debug.Log(data.GetPercentageComplete());
 
             deathCountText.text = "Pesadillas: " + data.GetTotalDeaths();
-            Debug.Log(data.playedTime);
+            //Debug.Log(data.playedTime);
             UpdatePlayedTimeText(data.playedTime);
         }
     }

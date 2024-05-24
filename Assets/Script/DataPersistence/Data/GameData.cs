@@ -54,11 +54,11 @@ public class GameData
     }
 
 
-    private void AddItemToCollected(string itemId, bool initialValue)
+    private void AddItemToCollected(string itemId, bool collected)
     {
         if (!itemsCollected.ContainsKey(itemId))
         {
-            itemsCollected.Add(itemId, initialValue);
+            itemsCollected.Add(itemId, collected);
         }
     }
 
@@ -139,5 +139,30 @@ public class GameData
             totalDeaths += level.deaths;
         }
         return totalDeaths;
+    }
+
+    public void LoadInventory(Inventory inventory)
+    {
+        foreach (var item in itemsCollected)
+        {
+            if (item.Value)
+            {
+                inventory.AddItemById(item.Key);
+            }
+        }
+    }
+
+    public List<String> GetListItemsCollected()
+    {
+        List<String> list = new List<string>();
+
+        foreach(var item in itemsCollected)
+        {
+            if (item.Value)
+            {
+                list.Add(item.Key);
+            }
+        }
+        return list;
     }
 }

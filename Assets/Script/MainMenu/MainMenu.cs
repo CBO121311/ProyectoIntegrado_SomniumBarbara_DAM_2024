@@ -14,23 +14,43 @@ public class MainMenu : Menu
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button continueGameButton;
     [SerializeField] private Button settingButton;
-
-
     [SerializeField] private Button loadGameButton;
 
-    [SerializeField]GameObject panelSetting;
 
-    [SerializeField] private Button backButtonSetting;
 
-    [SerializeField] RectTransform fader;
-    Animator animator;
-    private bool setting = false;
+    [Header("Setting Buttons")]
+    //private GameObject settingUI;
+    //private SettingsManager settingsPanel;
+    private bool settingOpen = false;
+    public static MainMenu Instance { get; private set; }
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
-        animator = panelSetting.GetComponent<Animator>();
         DisableButtonsDependingOnData();
+
+        if (SettingsManager.instance != null)
+        {
+            SettingsManager.instance.OnSettingsClosed += OnSettingClosed;
+        }
+    }
+    private void OnDestroy()
+    {
+        if (SettingsManager.instance != null)
+        {
+            SettingsManager.instance.OnSettingsClosed -= OnSettingClosed;
+        }
     }
 
     private void DisableButtonsDependingOnData()
@@ -67,37 +87,19 @@ public class MainMenu : Menu
         StartCoroutine(DelayedAction(0.2f, () =>
         {
             DisableMenuButtons();
-            //guarda el juego en cualquier momento antes de cargar una nueva escena
-            //DataPersistenceManager.instance.SaveGame();
-
             SceneManager.LoadSceneAsync("LevelSelection");
         }));
     }
 
-    public void SettingGame()
+    //Método que abre el menu Setting
+    public void OpenSettingMenu()
     {
-        //fader.gameObject.SetActive(true);
-        
-        if (!setting)
-        {
-            OpenSettingMenu();
-            //Invoke("OpenSettingMenu", 0.5f);
-        }
-        else
-        {
-            CloseSettingMenu();
-        }    
+        SettingsManager.instance.OpenSetting();
     }
-    private void OpenSettingMenu()
+
+    //Método realiza la corrutina al salir de Setting.
+    public void OnSettingClosed()
     {
-        panelSetting.SetActive(true);
-        animator.SetBool("showSetting",true);
-        setting = true;
-        this.SetFirstSelected(backButtonSetting);
-    }
-    private void CloseSettingMenu()
-    {
-        animator.SetBool("showSetting", false);
         StartCoroutine(HideSettingPanel());
     }
 
@@ -117,8 +119,6 @@ public class MainMenu : Menu
     private IEnumerator HideSettingPanel()
     {
         yield return new WaitForSeconds(0.6f);
-        panelSetting.SetActive(false);
-        setting = false;
         this.SetFirstSelected(settingButton);
     }
 

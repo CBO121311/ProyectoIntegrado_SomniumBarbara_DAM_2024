@@ -6,46 +6,82 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SettingsManager : Menu
+public class SettingsManager: Menu
 {
+
     [Header("Quality Settings")]
-    public TMP_Dropdown qualityDropdown;
+    [SerializeField] private TMP_Dropdown qualityDropdown;
 
     [Header("Fullscreen Settings")]
-    public Toggle fullscreenToggle;
-    public TMP_Dropdown resolutionDropDown;
+    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private TMP_Dropdown resolutionDropDown;
     private Resolution[] resolutions;
 
     [Header("Volume Settings")]
-    public Slider volumeSlider;
-    public Image muteImage;
+    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Image muteImage;
+    public static SettingsManager instance { get; private set; }
 
-    private void Start()
+    [SerializeField] private SettingTransition settingTransition;
+    public event Action OnSettingsClosed;
+
+    private void Awake()
     {
+
+        if (instance != null)
+        {
+            Debug.Log("Se encontró más de un administrador de Configuración en la escena. Destruyendo el más nuevo.");
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
         LoadSettings();
     }
+
 
     public void LoadSettings()
     {
         // Load Quality Settings
         int quality = PlayerPrefs.GetInt("setQuality", 2);
-        qualityDropdown.value = quality;
+
+        if(qualityDropdown!= null)
+        {
+            qualityDropdown.value = quality;
+        }
         AdjustQuality();
+
 
         // Load Fullscreen Settings
         bool isFullscreen = PlayerPrefs.GetInt("setFullscreen", 1) == 1;
-        fullscreenToggle.isOn = isFullscreen;
+
+        if (fullscreenToggle != null)
+        {
+            fullscreenToggle.isOn = isFullscreen;
+        }
+
         Screen.fullScreen = isFullscreen;
 
         // Load Resolution Settings
         LoadResolutions();
         int resolutionIndex = PlayerPrefs.GetInt("setResolution", 0);
-        resolutionDropDown.value = resolutionIndex;
+
+        if (resolutionDropDown != null)
+        {
+            resolutionDropDown.value = resolutionIndex;
+        }
         ChangeResolution(resolutionIndex);
 
         // Load Volume Settings
         float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
-        volumeSlider.value = volume;
+
+
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = volume;
+        }      
         ChangeVolume(volume);
     }
 
@@ -73,7 +109,7 @@ public class SettingsManager : Menu
                 QualitySettings.SetQualityLevel(5); // "Ultra" en Unity
                 break;
         }
-        Debug.Log("La calidad actual es: " + QualitySettings.names[QualitySettings.GetQualityLevel()]);
+        //Debug.Log("La calidad actual es: " + QualitySettings.names[QualitySettings.GetQualityLevel()]);
     }
 
     private void SaveQualityPreference()
@@ -118,7 +154,7 @@ public class SettingsManager : Menu
         Resolution resolution = Array.Find(resolutions, r => r.width == width && r.height == height);
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         PlayerPrefs.SetInt("setResolution", index);
-        Debug.Log("Resolución cambiada a: " + resolution.width + " x " + resolution.height);
+        //Debug.Log("Resolución cambiada a: " + resolution.width + " x " + resolution.height);
     }
 
     private void SaveScreenPreference()
@@ -146,7 +182,7 @@ public class SettingsManager : Menu
     }
 
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
@@ -159,5 +195,20 @@ public class SettingsManager : Menu
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadSettings();
+    }*/
+
+
+    //Método que abre la configuracion
+    public void OpenSetting()
+    {
+        settingTransition.OpenSettingLevel();
+        this.SetFirstSelected(volumeSlider);
+    }
+
+    //Método que cierra la configuracion
+    public void CloseSetting()
+    {
+        settingTransition.CloseSettingLevel();
+        OnSettingsClosed?.Invoke(); // Invoca el evento si hay suscriptores
     }
 }

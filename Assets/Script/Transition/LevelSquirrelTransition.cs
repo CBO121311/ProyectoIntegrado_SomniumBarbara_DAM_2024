@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class LevelAnimation : MonoBehaviour
+public class LevelSquirrelTransition : MonoBehaviour
 {
     [Header("Opening Level")]
     [SerializeField] private GameObject openTransition;
@@ -15,12 +15,12 @@ public class LevelAnimation : MonoBehaviour
 
 
     [Header("Complete Level")]
-    [SerializeField] private GameObject completeBackground;
+    [SerializeField] private GameObject passTransition;
     [SerializeField] private GameObject scoreGroup;
     [SerializeField] private GameObject actionCompleteText;
 
     [Header("Other")]
-    [SerializeField] private GameObject alarmClock;
+    [SerializeField] private GameObject alarmTimer;
     [SerializeField] private GameObject passMessage;
 
     void Start()
@@ -62,14 +62,14 @@ public class LevelAnimation : MonoBehaviour
     public void ActivateAlarmClock()
     {
 
-        Vector3 initialPosition = alarmClock.GetComponent<RectTransform>().anchoredPosition;
+        Vector3 initialPosition = alarmTimer.GetComponent<RectTransform>().anchoredPosition;
 
-        LeanTween.moveX(alarmClock.GetComponent<RectTransform>(), initialPosition.x - 30f, 0.3f).setEaseInOutQuad().setLoopCount(5);
+        LeanTween.moveX(alarmTimer.GetComponent<RectTransform>(), initialPosition.x - 30f, 0.3f).setEaseInOutQuad().setLoopCount(5);
 
-        LeanTween.moveY(alarmClock.GetComponent<RectTransform>(), initialPosition.y - 20f, 0.2f).setEaseInOutQuad().setLoopCount(8)
+        LeanTween.moveY(alarmTimer.GetComponent<RectTransform>(), initialPosition.y - 20f, 0.2f).setEaseInOutQuad().setLoopCount(8)
             .setOnComplete(() =>
             {
-                LeanTween.move(alarmClock.GetComponent<RectTransform>(), initialPosition, 0.3f).setEaseInOutQuad();
+                LeanTween.move(alarmTimer.GetComponent<RectTransform>(), initialPosition, 0.3f).setEaseInOutQuad();
             });
     }
 
@@ -99,7 +99,7 @@ public class LevelAnimation : MonoBehaviour
     public void AnimateLevelComplete()
     {
         
-        LeanTween.moveX(completeBackground.GetComponent<RectTransform>(), 0, 1f)
+        LeanTween.moveX(passTransition.GetComponent<RectTransform>(), 0, 1f)
             .setEase(LeanTweenType.easeOutBack)
             .setOnComplete(ShowScoreGroup)
             .setIgnoreTimeScale(true);

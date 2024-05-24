@@ -17,15 +17,6 @@ public class Item : MonoBehaviour, IDataPersistence
     public bool Collected { get => collected;}
     public string Id { get => id;}
 
-
-    //Genera un nuevo identificador único global 
-    /*[ContextMenu("Generate guid for id")]
-    private void GenerateGuid()
-    {
-        id = System.Guid.NewGuid().ToString();
-    }*/
-
-
     private void Awake()
     {
         visual = this.GetComponentInChildren<SpriteRenderer>();
@@ -81,19 +72,7 @@ public class Item : MonoBehaviour, IDataPersistence
         }*/
     }
 
-    // Método para guardar los datos del objeto en un objeto GameData
     public void SaveData(GameData data)
     {
-        /*Debug.Log("SaveData de Item");
-
-       
-        if (data.itemsCollected.ContainsKey(Id))
-        {
-            data.itemsCollected.Remove(Id);
-        }
-
-        data.itemsCollected.Add(Id, collected);*/
     }
-
-
 }

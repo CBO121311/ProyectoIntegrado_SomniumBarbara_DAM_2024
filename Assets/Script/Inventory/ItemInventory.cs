@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemInventory : MonoBehaviour
 {
-    public int ID;
+    public string ID;
     public string type;
     public string description;
     public Sprite icon;
@@ -29,8 +29,6 @@ public class ItemInventory : MonoBehaviour
         if(!playerWeapon )
         {
             int allweapon = weaponManager.transform.childCount;
-
-
 
             for( int i = 0; i < allweapon; i++ )
             {

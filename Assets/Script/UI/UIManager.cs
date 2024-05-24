@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     private bool previousPauseState = false;
 
     public static bool GameIsPaused { get => gameIsPaused;}
-    private LevelAnimation levelTransition;
+    private LevelSquirrelTransition levelTransition;
 
     private void Awake()
     {
@@ -21,17 +21,19 @@ public class UIManager : MonoBehaviour
         {
             optionMenuGameObject.SetActive(false);
         }
-       
+
         optionMenu = optionMenuGameObject.GetComponent<IPauseMenu>();
     }
 
     private void Start()
     {
-        levelTransition = FindFirstObjectByType<LevelAnimation>();
+        levelTransition = FindFirstObjectByType<LevelSquirrelTransition>();
     }
 
     void Update()
     {
+        Debug.Log(gameIsPaused);
+
         if (gameIsPaused && !previousPauseState)
         {
             Pause();

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, IDataPersistence
 {
     //Esto se utilizará para el inventario, hay que hacer un prefab de item, recordar.
 
@@ -12,18 +12,22 @@ public class Inventory : MonoBehaviour
     public GameObject inventory;
 
     private int allSlots;
-    private int enableSlots;
 
     private GameObject[] slot;
     public GameObject slotHolder;
+    public List<ItemTemplate> itemTemplates;
 
-    private void Start()
+    public GameObject itemPrefab; // Prefab del item
+    [SerializeField] private SLTransition slTranstion;
+
+
+    private void Awake()
     {
         allSlots = slotHolder.transform.childCount; //Recogemos los hijos
-
         slot = new GameObject[allSlots];
+        //Debug.Log("allslot es" + allSlots);
 
-        for (int i = 0;i < allSlots; i++)
+        for (int i = 0; i < allSlots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i).gameObject;
 
@@ -43,11 +47,13 @@ public class Inventory : MonoBehaviour
 
         if (inventoryEnabled)
         {
-            inventory.SetActive(true);
+            //inventory.SetActive(true);
+            slTranstion.OpenInventory();
         }
         else
         {
-            inventory.SetActive(false);
+            //inventory.SetActive(false);
+            slTranstion.CloseInventory();
         }
     }
 
@@ -64,7 +70,7 @@ public class Inventory : MonoBehaviour
 
 
 
-    public void AddItem(GameObject itemObject, int itemId, string itemType, string itemDescription, Sprite itemIcon)
+    public void AddItem(GameObject itemObject, string itemId, string itemType, string itemDescription, Sprite itemIcon)
     {
         for (int i = 0; i < allSlots; i++)
         {
@@ -85,13 +91,41 @@ public class Inventory : MonoBehaviour
 
 
                 slot[i].GetComponent<SlotItem>().UpdateSlot();
-
-
                 slot[i].GetComponent<SlotItem>().empty = false;
                 return;
             }
-            //Para evitar que se añada en todos los slot el inventario.
-           
         }
+    }
+    public void AddItemById(string itemId)
+    {
+        ItemTemplate template = itemTemplates.Find(x => x.id == itemId);
+
+        if (template != null)
+        {
+            GameObject itemObject = Instantiate(itemPrefab);
+
+            ItemInventory itemInventory = itemObject.GetComponent<ItemInventory>();
+            itemInventory.ID = itemId;
+            itemInventory.type = "Generic";
+            itemInventory.description = template.description;
+            itemInventory.icon = template.image;
+            
+            AddItem(itemObject, itemInventory.ID, itemInventory.type, itemInventory.description, itemInventory.icon);
+        }
+        else
+        {
+            Debug.LogWarning("ItemTemplate no encontrado para el ID: " + itemId);
+        }
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.LoadInventory(this);
+        Debug.Log("Intento de cargar");
+    }
+
+    public void SaveData(GameData data)
+    {
+        
     }
 }

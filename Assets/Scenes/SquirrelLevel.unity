@@ -1250,7 +1250,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1589156866}
-        m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSquirrelTransition, Assembly-CSharp
         m_MethodName: ExitPauseMenu
         m_Mode: 1
         m_Arguments:
@@ -43291,7 +43291,7 @@ MonoBehaviour:
   reaper: {fileID: 1080328340}
   bgFront: {fileID: 1569723061}
   bgBack: {fileID: 212721225}
-  levelAnimation: {fileID: 1589156866}
+  levelSquirrelTransition: {fileID: 1589156866}
   levelCompleteTransition: {fileID: 437727523}
   scoreLevel: {fileID: 437727528}
   passLevel: {fileID: 1446462094}
@@ -52529,17 +52529,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1589156861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e6ba19a25cba0429990f6eb3b544c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 88dfad2cc7982c4419eff66527f5e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openTransition: {fileID: 1903829679}
   bookImage: {fileID: 2136824763}
   pauseBackground: {fileID: 1788696537}
   pauseMenu: {fileID: 1245703987}
-  completeBackground: {fileID: 437727523}
+  passTransition: {fileID: 437727523}
   scoreGroup: {fileID: 7392477497200654571}
   actionCompleteText: {fileID: 39351883}
-  alarmClock: {fileID: 539112683}
+  alarmTimer: {fileID: 539112683}
   passMessage: {fileID: 724651568}
 --- !u!114 &1664190615 stripped
 MonoBehaviour:

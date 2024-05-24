@@ -97,10 +97,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-       
-
-        Debug.Log("Ha pasado en OnSceneLoaded");
+        //Debug.Log("Ha pasado en OnSceneLoaded");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
 
         // Carga los datos del juego desde el archivo solo si no se han cargado previamente
@@ -123,7 +120,7 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private bool initializeDataIfNull = false;
     public void LoadGame()
     {
-        Debug.Log("Estoy en load game de datapersistence.");
+        //Debug.Log("Estoy en load game de datapersistence.");
 
         this.gameData = dataHandler.Load(selectedProfileId);
 

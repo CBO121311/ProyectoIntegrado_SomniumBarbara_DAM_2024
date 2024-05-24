@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 
 
     [Header("Transition Animation")]
-    [SerializeField] private LevelAnimation levelAnimation;
+    [SerializeField] private LevelSquirrelTransition levelSquirrelTransition;
 
     [Header("Level Complete")]
     private float levelTime = 0f;
@@ -153,7 +153,7 @@ public class GameController : MonoBehaviour, IDataPersistence
             sliderTime.value = currentTime;
             StartCoroutine(ActiveReaper());
 
-            levelAnimation.ActivateAlarmClock();
+            levelSquirrelTransition.ActivateAlarmClock();
 
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
@@ -214,7 +214,7 @@ public class GameController : MonoBehaviour, IDataPersistence
         levelCompleteTransition.SetActive(true);
         Time.timeScale = 0;
 
-        levelAnimation.AnimateLevelComplete();
+        levelSquirrelTransition.AnimateLevelComplete();
         scoreLevel.SetLevelData(levelTime,itemsCollected,deathEnemyCount);
         isGameRunning = false;
 
@@ -265,7 +265,7 @@ public class GameController : MonoBehaviour, IDataPersistence
         {
             Debug.Log("Se han recolectado al menos 5 elementos.");
             passLevel.CompleteObjective();
-            levelAnimation.RotatePassMessage();
+            levelSquirrelTransition.RotatePassMessage();
         }
     }
 

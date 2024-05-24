@@ -20,11 +20,6 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-
-    }
-
     private void PauseGame()
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying)
@@ -35,7 +30,6 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         if(InputManager.GetInstance().GetInMenuPressed() && !UIManager.GameIsPaused)
         {
             UIManager.changeGameIsPaused();
-            //Debug.Log("HOLAAA");
         }
     }
 
@@ -45,27 +39,6 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
         MovePlayer();
         PauseGame();
-        /*
-        // Lanzar un rayo hacia adelante desde el punto de origen en la dirección del movimiento
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.position, moveDirection, raycastDistance, interactableLayer);
-
-        // Visualizar el rayo en tiempo de ejecución
-        Debug.DrawRay(raycastOrigin.position, moveDirection * raycastDistance, Color.red);
-
-        // Verificar si el rayo colisionó con un objeto interactable
-        if (hit.collider != null)
-        {
-            // El rayo colisionó con un objeto interactable
-            GameObject interactableObject = hit.collider.gameObject;
-            Debug.Log("El jugador está frente a: " + interactableObject.name);
-
-            // Aquí puedes tomar alguna acción, como activar un interruptor, iniciar una conversación, etc.
-        }
-        else
-        {
-            // El rayo no colisionó con un objeto interactable
-            Debug.Log("No hay nada frente al jugador.");
-        }*/
 
         //Si hay un dialogo te impido moverte
         if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.GameIsPaused)
@@ -81,7 +54,6 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
                 hasStoppedMovement = true;
             }
-
             return;
         }
 

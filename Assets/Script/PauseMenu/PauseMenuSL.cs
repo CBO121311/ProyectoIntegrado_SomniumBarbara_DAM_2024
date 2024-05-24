@@ -7,29 +7,34 @@ using UnityEngine.UI;
 public class PauseMenuSL : Menu, IPauseMenu
 {
     [Header("Menu Buttons")]
-    [SerializeField] private Button backButton;
+    [SerializeField] private Button resumeButton;
     [SerializeField] private Button saveButton;
     [SerializeField] private Button settingButton;
     [SerializeField] private Button exitButton;
-    public bool gameIsSetting = false;
-    Animator animator;
 
     [SerializeField] private GameObject panelGameSaved;
-    [SerializeField] private GameObject panelSetting;
-    [SerializeField] private Animator settingMenuAnimator;
-
+    [SerializeField] private SLTransition slTransition;
 
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
 
-    private void Awake()
+    private void Start()
     {
-        animator = GetComponent<Animator>();
+        if(SettingsManager.instance != null)
+        {
+            SettingsManager.instance.OnSettingsClosed += OnSettingClosed;
+        }
+    }
+    private void OnDestroy()
+    {
+        if (SettingsManager.instance != null)
+        {
+            SettingsManager.instance.OnSettingsClosed -= OnSettingClosed;
+        }
     }
 
     public void SetUpOptionMenu()
     {
-        ActivateMenuButtons();
         StartCoroutine(ShowOptionPanel());
     }
 
@@ -45,34 +50,18 @@ public class PauseMenuSL : Menu, IPauseMenu
         StartCoroutine(DisableSaveButtonForSeconds(1f));
     }
 
-    public void SettingGame()
+    public void OpenSetting()
     {
-        if (!gameIsSetting)
-        {
-            OpenSettingMenu();
-        }
-        else
-        {
-            CloseSettingMenu();
-        }
+        SettingsManager.instance.OpenSetting();
     }
-
-    private void OpenSettingMenu()
+    public void OnSettingClosed()
     {
-        panelSetting.gameObject.SetActive(true);
-        gameIsSetting = true;
-        settingMenuAnimator.SetBool("showSetting", true);
-    }
-
-    private void CloseSettingMenu()
-    {
-        settingMenuAnimator.SetBool("showSetting", false);
         StartCoroutine(HideSettingPanel());
     }
 
     private void ActivateMenuButtons()
     {
-        backButton.interactable = true;
+        resumeButton.interactable = true;
         saveButton.interactable = true;
         settingButton.interactable = true;
         exitButton.interactable = true;
@@ -80,7 +69,7 @@ public class PauseMenuSL : Menu, IPauseMenu
 
     private void DisableMenuButtons()
     {
-        backButton.interactable = false;
+        resumeButton.interactable = false;
         saveButton.interactable = false;
         settingButton.interactable = false;
         exitButton.interactable = false;
@@ -110,16 +99,16 @@ public class PauseMenuSL : Menu, IPauseMenu
     //Muestra el menú de pauseSL
     private IEnumerator ShowOptionPanel()
     {
-        this.animator.SetBool("showOption", true);
+        ActivateMenuButtons();
+        slTransition.OpenPauseMenu();
         yield return new WaitForSeconds(0.5f);
-        //Debug.Log("ShowOptionPanel");
     }
 
     //Oculta el menú de pauseSL
     private IEnumerator HideOptionPanel()
     {
         DisableMenuButtons();
-        this.animator.SetBool("showOption", false);
+        slTransition.ClosePauseMenu();
         yield return new WaitForSeconds(0.5f);
         UIManager.changeGameIsPaused();
         this.gameObject.SetActive(false);
@@ -128,8 +117,6 @@ public class PauseMenuSL : Menu, IPauseMenu
     private IEnumerator HideSettingPanel()
     {
         yield return new WaitForSeconds(0.6f);
-        panelSetting.SetActive(false);
-        gameIsSetting = false;
         this.SetFirstSelected(settingButton);
     }
 
@@ -141,6 +128,6 @@ public class PauseMenuSL : Menu, IPauseMenu
         yield return new WaitForSeconds(seconds);
         ActivateMenuButtons();
         panelGameSaved.SetActive(false);
-        this.SetFirstSelected(backButton);
+        this.SetFirstSelected(resumeButton);
     }
 }
