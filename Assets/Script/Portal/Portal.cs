@@ -12,9 +12,6 @@ public class Portal : MonoBehaviour, IDataPersistence
     private bool playerInRange;
     [SerializeField]private GameObject player;
 
-    //public GameData gameData;
-
-
     [Header("Level Data")]
     public string levelName = "Ardilla";
 
@@ -27,29 +24,34 @@ public class Portal : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        //No podremos activar el dialogo hasta que finalice
+        
         if (playerInRange)
         {
-            portalAnimator.SetBool("Player", true);
-            panelInfo.SetActive(true);
-            panelInfo.transform.position = new Vector2(400, 300);
+            ActivatePortal();
+        }
+    }
 
-            if (levelToShow != null)
+    private void ActivatePortal()
+    {
+        portalAnimator.SetBool("Player", true);
+        panelInfo.SetActive(true);
+        panelInfo.transform.position = new Vector2(400, 300);
+
+        if (levelToShow != null)
+        {
+            levelInfo.SetLevelInfo(levelToShow);
+        }
+
+
+        if (InputManager.GetInstance().GetSubmitPressed()) //&& !UIManager.GameIsPaused)
+        {
+            if (levelToShow != null && levelToShow.available)
             {
-                levelInfo.SetLevelInfo(levelToShow);
-            }
+                TemporaryData.PlayerPosition = player.transform.position;
+                TemporaryData.UseTemporaryPosition = true;
 
-
-            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.GameIsPaused)
-            {
-                if (levelToShow != null && levelToShow.available)
-                {
-                    TemporaryData.PlayerPosition = player.transform.position;
-                    TemporaryData.UseTemporaryPosition = true;
-
-                    // Cargar la escena del nivel si está disponible
-                    SceneManager.LoadScene("SquirrelLevel");
-                }
+                // Cargar la escena del nivel si está disponible
+                SceneManager.LoadScene("SquirrelLevel");
             }
         }
     }

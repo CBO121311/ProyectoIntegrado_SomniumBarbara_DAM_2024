@@ -23,6 +23,8 @@ public class SettingsManager: Menu
     public static SettingsManager instance { get; private set; }
 
     [SerializeField] private SettingTransition settingTransition;
+
+    public event Action OnSettingsOpened;
     public event Action OnSettingsClosed;
 
     private void Awake()
@@ -181,34 +183,18 @@ public class SettingsManager: Menu
         muteImage.enabled = value == 0;
     }
 
-
-    /*private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        LoadSettings();
-    }*/
-
-
     //Método que abre la configuracion
     public void OpenSetting()
     {
         settingTransition.OpenSettingLevel();
         this.SetFirstSelected(volumeSlider);
+        OnSettingsOpened?.Invoke();
     }
 
     //Método que cierra la configuracion
     public void CloseSetting()
     {
         settingTransition.CloseSettingLevel();
-        OnSettingsClosed?.Invoke(); // Invoca el evento si hay suscriptores
+        OnSettingsClosed?.Invoke(); 
     }
 }

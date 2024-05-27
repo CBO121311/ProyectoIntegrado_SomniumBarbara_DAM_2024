@@ -3,45 +3,48 @@ using UnityEngine;
 
 public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 {
-
     public Animator animator;
     public Rigidbody2D rb2D;
     private Vector2 moveDirection;
     public float velocidadMovimiento;
     float horizontalInput, verticalInput;
 
-    public Transform raycastOrigin; // Punto desde donde se lanza el rayo
-    public LayerMask interactableLayer; // Capa de los objetos con los que el jugador puede interactuar
-
-    public float raycastDistance = 5f; // Distancia máxima del rayo
+    private bool hasStoppedMovement = false;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    private void PauseGame()
+    private void Update()
     {
+
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             return;
         }
 
-        if(InputManager.GetInstance().GetInMenuPressed() && !UIManager.GameIsPaused)
+        var uiManager = UIManager_SelectionLevel.GetInstance();
+
+        if (InputManager.GetInstance().GetInteractPressed() && !uiManager.gameIsPaused)
         {
-            UIManager.changeGameIsPaused();
+            uiManager.ToggleInventoryUI();
+        }
+
+        if (InputManager.GetInstance().GetInMenuPressed() && !uiManager.inventoryIsActivated)
+        {
+            uiManager.TogglePauseUI();
         }
     }
 
-    private bool hasStoppedMovement = false;
     private void FixedUpdate()
     {
 
         MovePlayer();
-        PauseGame();
 
         //Si hay un dialogo te impido moverte
-        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.GameIsPaused)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || 
+            UIManager_SelectionLevel.GetInstance().gameIsPaused)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -65,7 +68,8 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
     private void MovePlayer()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager.GameIsPaused)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || 
+            UIManager_SelectionLevel.GetInstance().gameIsPaused)
         {
             return;
         }
@@ -129,12 +133,17 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         {
             this.transform.position = data.playerPosition;
         }
-
-        //this.transform.position = data.playerPosition;
     }
 
     public void SaveData(GameData data)
     {
         data.playerPosition = this.transform.position;
+    }
+
+
+    //Trigger para detectar portales, npcs, objetos, etc.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log(collision.name);
     }
 }

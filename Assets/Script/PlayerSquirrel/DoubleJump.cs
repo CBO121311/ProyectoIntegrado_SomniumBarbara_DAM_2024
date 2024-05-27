@@ -28,10 +28,10 @@ public class DoubleJump : MonoBehaviour
     }
     private void Update()
     {
-        if (UIManager.GameIsPaused)
+        /*if (UIManager.GameIsPaused)
         {
             return;
-        }
+        }*/
 
         enSuelo = Physics2D.OverlapBox(controlGround.position, dimenBox, 0f, isGroundMask);
         animator.SetBool("Jump", !enSuelo);
@@ -52,10 +52,10 @@ public class DoubleJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (UIManager.GameIsPaused)
+        /*if (UIManager.GameIsPaused)
         {
             return;
-        }
+        }*/
 
         Movimiento(salto);
         salto = false;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenuSL : Menu, IPauseMenu
+public class PauseMenuSL : Menu
 {
     [Header("Menu Buttons")]
     [SerializeField] private Button resumeButton;
@@ -13,23 +13,62 @@ public class PauseMenuSL : Menu, IPauseMenu
     [SerializeField] private Button exitButton;
 
     [SerializeField] private GameObject panelGameSaved;
-    [SerializeField] private SLTransition slTransition;
+    [SerializeField] private Transition_SelectionLevel slTransition;
 
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
+    private bool pauseIsEnable;
+
+    private bool isSettingOpen = false;
 
     private void Start()
     {
         if(SettingsManager.instance != null)
         {
             SettingsManager.instance.OnSettingsClosed += OnSettingClosed;
+            SettingsManager.instance.OnSettingsOpened += OnSettingOpened;
         }
     }
+
     private void OnDestroy()
     {
         if (SettingsManager.instance != null)
         {
             SettingsManager.instance.OnSettingsClosed -= OnSettingClosed;
+            SettingsManager.instance.OnSettingsOpened -= OnSettingOpened;
+        }
+    }
+
+    //Activa la corrutina para abrir el menú de pause
+
+    public bool IsSettingOpen()
+    {
+        return isSettingOpen;
+    }
+    
+    private void OnSettingOpened()
+    {
+        isSettingOpen = true;
+    }
+
+    private void OnSettingClosed()
+    {
+        isSettingOpen = false;
+        StartCoroutine(HideSettingPanel());
+    }
+
+
+    public void TooglePause()
+    {
+        pauseIsEnable = !pauseIsEnable;
+
+        if (pauseIsEnable)
+        {
+            SetUpOptionMenu();
+        }
+        else
+        {
+            OnBackClicked();
         }
     }
 
@@ -38,11 +77,13 @@ public class PauseMenuSL : Menu, IPauseMenu
         StartCoroutine(ShowOptionPanel());
     }
 
+    //Activa la corrutina para cerrar el menú de pause
     public void OnBackClicked()
     {
         StartCoroutine(HideOptionPanel());
     }
 
+    //Guarda la partida
     public void OnSaveClicked()
     {
         DataPersistenceManager.instance.SaveGame();
@@ -50,15 +91,14 @@ public class PauseMenuSL : Menu, IPauseMenu
         StartCoroutine(DisableSaveButtonForSeconds(1f));
     }
 
+    //Abre setting
     public void OpenSetting()
     {
         SettingsManager.instance.OpenSetting();
     }
-    public void OnSettingClosed()
-    {
-        StartCoroutine(HideSettingPanel());
-    }
 
+
+    //Activa la interactuación de los botones
     private void ActivateMenuButtons()
     {
         resumeButton.interactable = true;
@@ -67,6 +107,7 @@ public class PauseMenuSL : Menu, IPauseMenu
         exitButton.interactable = true;
     }
 
+    //Desactiva la interactuación de los botones
     private void DisableMenuButtons()
     {
         resumeButton.interactable = false;
@@ -77,7 +118,6 @@ public class PauseMenuSL : Menu, IPauseMenu
 
     public void GoMainMenu()
     {
-        //DisableMenuButtons();
         confirmationPopMenu.ActivateMenu("¿Estás seguro que quieres volver al menú principal?\n\n" +
             "Perderás los datos no guardados.",
             //Función que se ejecuta si seleccionamos "Confirmar"
@@ -110,10 +150,10 @@ public class PauseMenuSL : Menu, IPauseMenu
         DisableMenuButtons();
         slTransition.ClosePauseMenu();
         yield return new WaitForSeconds(0.5f);
-        UIManager.changeGameIsPaused();
         this.gameObject.SetActive(false);
     }
 
+    //Oculta el menú setting
     private IEnumerator HideSettingPanel()
     {
         yield return new WaitForSeconds(0.6f);

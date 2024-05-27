@@ -21,15 +21,14 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        //No podremos activar el dialogo hasta que finalice
+        //Activar de nuevo el dialogo hasta que finalice
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             speechBubble.SetActive(true);
-            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager.GameIsPaused)
+            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager_SelectionLevel.GetInstance().gameIsPaused
+                    && !UIManager_SelectionLevel.GetInstance().inventoryIsActivated)
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                
-                //Debug.Log(inkJSON.text);
             }
         }
         else

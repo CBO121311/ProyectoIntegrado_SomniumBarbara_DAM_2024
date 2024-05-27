@@ -1,44 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SlotItem : MonoBehaviour, IPointerClickHandler
+public class SlotItem : MonoBehaviour
 {
-    public GameObject item;
-    public string ID;
-    public string type;
-    public string description;
-    public bool empty;
-    public Sprite icon;
-
+    public ItemTemplate itemTemplate;
+    public bool empty = true;
 
     public Transform slotIconGameObject;
+    private Button button; // Reference to the Button component
 
     private void Awake()
     {
         slotIconGameObject = transform.GetChild(0);
-    }
-
-    private void Start()
-    {
-        
+        button = GetComponent<Button>(); // Get the Button component
+        UpdateSlotInteractivity();
     }
 
     public void UpdateSlot()
     {
-        slotIconGameObject.GetComponent<Image>().sprite = icon;
+        if (itemTemplate != null)
+        {
+            slotIconGameObject.GetComponent<Image>().sprite = itemTemplate.image;
+            empty = false;
+            Debug.Log("Casillas llenas");
+        }
+        else
+        {
+            empty = true;
+            Debug.Log("Casillas vacías");
+            
+        }
+        UpdateSlotInteractivity();
     }
 
-    public void UseItem()
+    private void UpdateSlotInteractivity()
     {
-        item.GetComponent<ItemInventory>().ItemUsage();
+        if (button != null)
+        {
+            button.interactable = !empty;
+        }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public string GetItemName()
     {
-        UseItem();
-        Debug.Log("Se ha hecho click");
+        return empty ? "" : itemTemplate.itemName;
     }
+
+    public string GetItemDescription()
+    {
+        return empty ? "" : itemTemplate.description;
+    }
+
+
 }

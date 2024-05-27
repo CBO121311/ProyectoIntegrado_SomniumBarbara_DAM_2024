@@ -323,7 +323,6 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
 
 
-
     public void DeactivateReaper()
     {
         reaper.SetActive(false);

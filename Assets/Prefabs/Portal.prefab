@@ -206,7 +206,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2872467, y: -0.9618747}
+  m_Offset: {x: 0.038134694, y: -0.9044218}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +216,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7255063, y: 2.652742}
+  m_Size: {x: 2.2237303, y: 2.537836}
   m_EdgeRadius: 0
 --- !u!1 &4517403776663571411
 GameObject:
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 3269282683568608841}
   - component: {fileID: 3936370241873992245}
   - component: {fileID: 5210233707738674093}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: TriggerPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,8 +285,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.24050653, y: -0.8615365}
-  m_Size: {x: 2.3775156, y: 3.6137028}
+  m_Offset: {x: -0.3088094, y: -0.76727176}
+  m_Size: {x: 2.2409098, y: 3.4251733}
   m_Direction: 0
 --- !u!114 &5210233707738674093
 MonoBehaviour:
@@ -303,9 +303,5 @@ MonoBehaviour:
   portalAnimator: {fileID: 3367455263799203804}
   panelInfo: {fileID: 0}
   levelInfo: {fileID: 0}
+  player: {fileID: 0}
   levelName: Ardilla
-  totalItems: 9
-  itemsCollected: 0
-  timeLevel: 120
-  minItems: 5
-  available: 1

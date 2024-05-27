@@ -1,116 +1,134 @@
 using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Inventory : MonoBehaviour, IDataPersistence
 {
     //Esto se utilizará para el inventario, hay que hacer un prefab de item, recordar.
 
-    private bool inventoryEnabled;
+    private bool inventoryEnabled =false;
     public GameObject inventory;
 
     private int allSlots;
-
     private GameObject[] slot;
     public GameObject slotHolder;
     public List<ItemTemplate> itemTemplates;
 
     public GameObject itemPrefab; // Prefab del item
-    [SerializeField] private SLTransition slTranstion;
 
+    [SerializeField] private Transition_SelectionLevel transitionSL;
+
+    // Referencias adicionales
+    [SerializeField] private EventSystem eventSystem; 
+    [SerializeField] private GameObject firstSlot;
+
+    // Referencias a TextMeshPro
+    [SerializeField] private TextMeshProUGUI itemNameText;
+    [SerializeField] private TextMeshProUGUI itemDescriptionText;
 
     private void Awake()
     {
         allSlots = slotHolder.transform.childCount; //Recogemos los hijos
         slot = new GameObject[allSlots];
-        //Debug.Log("allslot es" + allSlots);
 
         for (int i = 0; i < allSlots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i).gameObject;
+            SlotItem slotItem = slot[i].GetComponent<SlotItem>();
+            slotItem.empty = true;
+            slotItem.UpdateSlot();
+        }
+    }
 
-            if (slot[i].GetComponent<SlotItem>().item == null)
+
+    private void Update()
+    {
+        // Maneja la selección del slot
+        if (inventoryEnabled && eventSystem.currentSelectedGameObject != null)
+        {
+            SlotItem selectedSlot = eventSystem.currentSelectedGameObject.GetComponent<SlotItem>();
+
+            if(selectedSlot != null)
             {
-                slot[i].GetComponent<SlotItem>().empty = true;
+                itemNameText.text = selectedSlot.GetItemName();
+                if (InputManager.GetInstance().GetSubmitPressed())
+                {
+                    itemDescriptionText.text = selectedSlot.GetItemDescription();
+                }
+            }   
+        }
+    }
+
+
+    public void ToogleInventory()
+    {
+        inventoryEnabled = !inventoryEnabled;
+
+        if (inventoryEnabled)
+        {
+            transitionSL.OpenInventory();
+            // Selecciona el primer slot
+            if (firstSlot != null && eventSystem != null)
+            {
+                eventSystem.SetSelectedGameObject(firstSlot);
+            }
+        }
+        else
+        {
+            transitionSL.CloseInventory();
+            // Desactiva la selección cuando se cierra el inventario
+            if (eventSystem != null)
+            {
+                eventSystem.SetSelectedGameObject(null);
             }
         }
     }
 
-    private void Update()
-    {
-        if (InputManager.GetInstance().GetInteractPressed())
-        {
-            inventoryEnabled = !inventoryEnabled;
-        }
 
-        if (inventoryEnabled)
-        {
-            //inventory.SetActive(true);
-            slTranstion.OpenInventory();
-        }
-        else
-        {
-            //inventory.SetActive(false);
-            slTranstion.CloseInventory();
-        }
-    }
-
+    //Actualmente usado para temas de test en LevelSelection
+    /*
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Item")
         {
-            GameObject itemPickedUp = other.gameObject;
-            ItemInventory item = itemPickedUp.GetComponent<ItemInventory>();
-
-            AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
+            ItemTemplate itemTemplate = other.GetComponent<ItemTemplateHolder>().itemTemplate;
+            AddItem(itemTemplate);
         }
-    }
+    }*/
 
 
 
-    public void AddItem(GameObject itemObject, string itemId, string itemType, string itemDescription, Sprite itemIcon)
+    //Busca un hueco vacío y añade el item.
+    public void AddItem(ItemTemplate itemTemplate)
     {
         for (int i = 0; i < allSlots; i++)
         {
             if (slot[i].GetComponent<SlotItem>().empty)
             {
-                itemObject.GetComponent<ItemInventory>().pickedUp = true;
-
-                slot[i].GetComponent<SlotItem>().item = itemObject;
-                slot[i].GetComponent<SlotItem>().ID = itemId;
-
-                slot[i].GetComponent<SlotItem>().type = itemType;
-                slot[i].GetComponent<SlotItem>().description = itemDescription;
-                slot[i].GetComponent<SlotItem>().icon = itemIcon;
-
-                itemObject.transform.parent = slot[i].transform;
-                itemObject.SetActive(false);
+                SlotItem slotItem = slot[i].GetComponent<SlotItem>();
+                slotItem.itemTemplate = itemTemplate;
+                slotItem.empty = false;
 
 
-
-                slot[i].GetComponent<SlotItem>().UpdateSlot();
-                slot[i].GetComponent<SlotItem>().empty = false;
+                slotItem.UpdateSlot();
+                Debug.Log("Golaa");
                 return;
             }
         }
     }
+
+    //Busca el id del item y si lo encuentra lo añade al inventario
     public void AddItemById(string itemId)
     {
         ItemTemplate template = itemTemplates.Find(x => x.id == itemId);
 
         if (template != null)
         {
-            GameObject itemObject = Instantiate(itemPrefab);
-
-            ItemInventory itemInventory = itemObject.GetComponent<ItemInventory>();
-            itemInventory.ID = itemId;
-            itemInventory.type = "Generic";
-            itemInventory.description = template.description;
-            itemInventory.icon = template.image;
-            
-            AddItem(itemObject, itemInventory.ID, itemInventory.type, itemInventory.description, itemInventory.icon);
+            AddItem(template);
         }
         else
         {

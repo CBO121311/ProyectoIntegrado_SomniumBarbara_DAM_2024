@@ -43,11 +43,6 @@ public class DialogueManager : MonoBehaviour
     //Para que no pueda pasar la siguiente linea hasta que termine la frase.
     private bool canContinueToNextLine = false;
 
-    //Solución para evitar salto de texto
-    //private bool canSkip;
-
-    //private bool submitSkip;
-
     private Coroutine displayLineCoroutine;
 
     private static DialogueManager instance;
@@ -92,28 +87,16 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //regresar inmediatamente si el diálogo no se reproduce
-
-        //if (controls.UI.Submit.triggered)
-        //Añadido
-        /*if(Input.GetKeyDown(KeyCode.Z))
-        {
-            submitSkip = true;
-        }*/
-
         if (!dialogueIsPlaying)
         {
             return;
         }
         //Manejar continuar a la siguiente línea en el diálogo cuando se presiona enviar
-        //Note: the 'currentStory.currentChoices.Count == 0' part was to fix a bug
-        //after the youtube was made
         if (canContinueToNextLine && currentStory.currentChoices.Count == 0 &&
             InputManager.GetInstance().GetSubmitPressed())
         {
-            
+          
             ContinueStory();
-            //Debug.Log("Continuar historia");
         }
     }
 
@@ -128,14 +111,11 @@ public class DialogueManager : MonoBehaviour
 
         //reset portrait, layout , and speaker
         displayNameText.text = "???";
-        
         portaitAnimator.Play("default");
         layoutAnimator.Play("left");
 
         ContinueStory();
     }
-
-
    
     private IEnumerator ExitDialogueMode()
     {
@@ -157,7 +137,6 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             //Es como sacar linea de pila como tal para dar la siguiente linea de dialogo
-
             //Si intentamos parar una corrutina = null dará error.
             if (displayLineCoroutine!= null)
             {
@@ -179,33 +158,22 @@ public class DialogueManager : MonoBehaviour
     //para hacer el efecto de dialogo
     private IEnumerator DisplayLine(string line)
     {
-        //set the text to the full line, but set the visible character to 0
+        //establezca el texto en la línea completa, pero establezca el carácter visible en 0
         dialogueText.text = line;
         dialogueText.maxVisibleCharacters = 0;
 
-
-        //hide items while text is typing
+        //ocultar elementos mientras se escribe texto
         continueIcon.SetActive(false);
         HideChoices();
-        //submitSkip = false;
         canContinueToNextLine = false;
 
         bool isAddingRichTextTag = false;
 
         //StartCoroutine(CanSkip());
 
-        //display each letter one at a time
+        //mostrar cada letra una a la vez
         foreach (char letter in line.ToCharArray())
         {
-            //if the submit button is pressed, finish up displaying the line right away
-            //if(InputManager.GetInstance().GetSubmitPressed())
-
-            /*if(canSkip && submitSkip)
-            {
-                submitSkip =false;
-                dialogueText.maxVisibleCharacters = line.Length;
-                break;
-            }*/
 
             if (InputManager.GetInstance().GetSubmitPressed())
             {
@@ -213,7 +181,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
 
-            //check for rich text tag, if found, add it without waiting
+            //verifique la etiqueta de texto enriquecido; si la encuentra, agréguela sin esperar
             if (letter == '<' || isAddingRichTextTag)
             {
                 isAddingRichTextTag = true;
@@ -231,16 +199,16 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-    
 
-        //actions to take after the entire lines has finished displaying
+
+        //Acciones a tomar después de que todas las líneas hayan terminado de mostrarse.
         continueIcon.SetActive(true);
         DisplayChoices();
 
         canContinueToNextLine= true;
-        //añadido
-        //canSkip = false;
     }
+
+
     //Para tener oculto las opciones hasta que aparezcan
     private void HideChoices()
     {
@@ -252,7 +220,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleTags(List<string> currentTags)
     {
-        //Recorre cada tag del archivo INK y manejala en consecuencia
+        //Recorre cada tag del archivo INK y maneja en consecuencia
         foreach (string tag in currentTags)
         {
             //parseo the tag
@@ -260,7 +228,7 @@ public class DialogueManager : MonoBehaviour
             //Primera es la clave y el segundo es el valor
             if(splitTag.Length != 2)
             {
-                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+                Debug.LogError("La etiqueta no se pudo parsear adecuadamente: " + tag);
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
@@ -269,7 +237,7 @@ public class DialogueManager : MonoBehaviour
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    Debug.Log("speaker =" + tagValue);
+                    //Debug.Log("speaker =" + tagValue);
                     break;
                 case PORTRAIT_TAG:
                     portaitAnimator.Play(tagValue);
@@ -280,7 +248,7 @@ public class DialogueManager : MonoBehaviour
                     //Debug.Log("layout =" + tagValue);
                     break;
                 default:
-                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    Debug.LogWarning("La etiqueta llegó pero no se está manejando actualmente: " + tag);
                     break;
             }
 
@@ -290,7 +258,7 @@ public class DialogueManager : MonoBehaviour
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
-        ///verificación para asegurarnos de que nuestra interfaz de usuario pueda admitir la cantidad de opciones entrantes.
+        //verificación para asegurarnos de que nuestra interfaz de usuario pueda admitir la cantidad de opciones entrantes.
         if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("Se ofrecieron más opciones de las que la interfaz de usuario puede admitir. Número de opciones: " + currentChoices.Count);
@@ -329,7 +297,6 @@ public class DialogueManager : MonoBehaviour
         {
             currentStory.ChooseChoiceIndex(choiceIndex);
 
-            //Note: The below two lines were added to fix a bug
             InputManager.GetInstance().RegisterSubmitPressed();
             ContinueStory();
         }
@@ -345,13 +312,4 @@ public class DialogueManager : MonoBehaviour
         }
         return variableValue;
     }
-
-
-
-    /*private IEnumerator CanSkip()
-    {
-        canSkip = false; 
-        yield return new WaitForSeconds(0.04f);
-        canSkip = true;
-    }*/
 }

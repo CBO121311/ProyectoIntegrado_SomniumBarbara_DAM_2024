@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenuLevel : Menu, IPauseMenu
+public class PauseMenuLevel : Menu
 {
     [Header("Menu Buttons")]
     [SerializeField] private Button backButton;
@@ -40,10 +40,8 @@ public class PauseMenuLevel : Menu, IPauseMenu
         // this.animator.SetBool("Pause", false);
         Time.timeScale = 1.0f;
         yield return new WaitForSecondsRealtime(0.5f);
-        UIManager.changeGameIsPaused();
+        //UIManager.changeGameIsPaused();
         this.gameObject.SetActive(false);
-
-        //Debug.Log("Apagar menú");
     }
 
 

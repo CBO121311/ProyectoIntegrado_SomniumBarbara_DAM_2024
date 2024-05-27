@@ -10,3 +10,8 @@ public class ItemTemplate : ScriptableObject
     public string itemName; // Nombre del objeto
     public string description; // Descripción del objeto
 }
+
+public class ItemTemplateHolder : MonoBehaviour
+{
+    public ItemTemplate itemTemplate;
+}
