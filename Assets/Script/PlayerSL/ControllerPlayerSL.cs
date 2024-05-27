@@ -26,12 +26,12 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
         var uiManager = UIManager_SelectionLevel.GetInstance();
 
-        if (InputManager.GetInstance().GetInteractPressed() && !uiManager.gameIsPaused)
+        if (!uiManager.gameIsPaused && InputManager.GetInstance().GetInteractPressed())
         {
             uiManager.ToggleInventoryUI();
         }
 
-        if (InputManager.GetInstance().GetInMenuPressed() && !uiManager.inventoryIsActivated)
+        if ( !uiManager.inventoryIsActivated && InputManager.GetInstance().GetInMenuPressed())
         {
             uiManager.TogglePauseUI();
         }

@@ -16,12 +16,8 @@ public class MainMenu : Menu
     [SerializeField] private Button settingButton;
     [SerializeField] private Button loadGameButton;
 
-
-
-    [Header("Setting Buttons")]
-    //private GameObject settingUI;
-    //private SettingsManager settingsPanel;
-    private bool settingOpen = false;
+    [Header("Transition")]
+    [SerializeField] private MainMenuTransition mainMenuTransition;
     public static MainMenu Instance { get; private set; }
 
     private void Awake()
@@ -87,7 +83,7 @@ public class MainMenu : Menu
         StartCoroutine(DelayedAction(0.2f, () =>
         {
             DisableMenuButtons();
-            SceneManager.LoadSceneAsync("LevelSelection");
+            mainMenuTransition.FadeOutAndLoadScene("LevelSelection");
         }));
     }
 

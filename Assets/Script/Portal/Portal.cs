@@ -12,6 +12,9 @@ public class Portal : MonoBehaviour, IDataPersistence
     private bool playerInRange;
     [SerializeField]private GameObject player;
 
+
+    [SerializeField] private Transition_SelectionLevel transition_SelectionLevel;
+
     [Header("Level Data")]
     public string levelName = "Ardilla";
 
@@ -43,15 +46,15 @@ public class Portal : MonoBehaviour, IDataPersistence
         }
 
 
-        if (InputManager.GetInstance().GetSubmitPressed()) //&& !UIManager.GameIsPaused)
+        if (!UIManager_SelectionLevel.GetInstance().gameIsPaused && !UIManager_SelectionLevel.GetInstance().inventoryIsActivated &&
+                InputManager.GetInstance().GetSubmitPressed())
         {
             if (levelToShow != null && levelToShow.available)
             {
                 TemporaryData.PlayerPosition = player.transform.position;
                 TemporaryData.UseTemporaryPosition = true;
 
-                // Cargar la escena del nivel si está disponible
-                SceneManager.LoadScene("SquirrelLevel");
+                transition_SelectionLevel.FadeOutAndLoadScene("SquirrelLevel");
             }
         }
     }

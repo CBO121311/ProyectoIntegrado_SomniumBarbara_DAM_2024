@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSquirrelTransition : MonoBehaviour
 {
     [Header("Opening Level")]
-    [SerializeField] private GameObject openTransition;
+    [SerializeField] private GameObject backgroundOpeningLevel;
     [SerializeField] private GameObject bookImage;
 
     [Header("Pause Menu")]
@@ -22,23 +24,57 @@ public class LevelSquirrelTransition : MonoBehaviour
     [Header("Other")]
     [SerializeField] private GameObject alarmTimer;
     [SerializeField] private GameObject passMessage;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject fadeGameobject;
+    private Image fadeImage;
+
+    private void Awake()
+    {
+        if (!fadeGameobject.activeSelf)
+        {
+            fadeGameobject.SetActive(true);
+        }
+
+        fadeImage = fadeGameobject.GetComponent<Image>();
+    }
 
     void Start()
     {
-        if (openTransition.activeSelf && bookImage.activeSelf)
-        {
-            Time.timeScale = 0;
-            LeanTween.moveY(bookImage.GetComponent<RectTransform>(), 0, 1.5f)
-               .setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
-
-            LeanTween.alpha(openTransition.GetComponent<RectTransform>(), 0f, 0.5f).setDelay(3f)
-                .setIgnoreTimeScale(true)
-                    .setOnComplete(() =>
-                    {
-                        Time.timeScale = 1;
-                    });
-        }
+        FadeIn();
     }
+
+
+    public void FadeIn()
+    {
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
+        LeanTween.alpha(fadeImage.rectTransform, 0f, 0.8f)
+            .setEase(LeanTweenType.easeInOutQuad).setOnComplete(()=>
+            {
+                audioSource.Play();
+
+                if (backgroundOpeningLevel.activeSelf && bookImage.activeSelf)
+                {
+                    Time.timeScale = 0;
+                    LeanTween.moveY(bookImage.GetComponent<RectTransform>(), 0, 1.5f)
+                       .setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
+
+                    LeanTween.alpha(backgroundOpeningLevel.GetComponent<RectTransform>(), 0f, 0.5f).setDelay(3f)
+                        .setIgnoreTimeScale(true)
+                            .setOnComplete(() =>
+                            {
+                                Time.timeScale = 1;
+                            });
+                }
+            });
+    }
+
+    public void FadeOutAndLoadScene(string sceneName)
+    {
+        LeanTween.alpha(fadeImage.rectTransform, 1f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnComplete(() => SceneManager.LoadScene(sceneName));
+    }
+
 
 
     public void OpenPauseMenu()

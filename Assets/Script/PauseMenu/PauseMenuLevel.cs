@@ -13,6 +13,7 @@ public class PauseMenuLevel : Menu
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
 
+    [SerializeField] private LevelSquirrelTransition levelSquirrelTransition;
     public void SetUpOptionMenu()
     {
         ActivateMenuButtons();
@@ -66,10 +67,8 @@ public class PauseMenuLevel : Menu
             "Perderás los objetos recogidos.",
             () =>
             {
-                //TemporaryData.UseTemporaryPosition = true;
-
                 Time.timeScale = 1.0f;
-                SceneManager.LoadSceneAsync("LevelSelection");
+                levelSquirrelTransition.FadeOutAndLoadScene("LevelSelection");
             },
 
             () =>

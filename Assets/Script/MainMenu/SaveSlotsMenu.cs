@@ -17,8 +17,8 @@ public class SaveSlotsMenu : Menu
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
 
-    [Header("Fade")]
-    [SerializeField]private GameObject fadeMainMenu;
+    [Header("Transition")]
+    [SerializeField] private MainMenuTransition mainMenuTransition;
 
     private SaveSlot[] saveSlots;
     private bool isLoadingGame = false;
@@ -38,7 +38,7 @@ public class SaveSlotsMenu : Menu
         {
             //Actualiza el perfil seleccionado que se utilizará para la persistencia de datos
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
-            StartCoroutine(SaveGameAndLoadScene());
+            SaveGameAndLoadScene();
         }
         //Si Nuevo juego pero el juego tiene datos.
         else if (saveSlot.hasData)
@@ -49,7 +49,7 @@ public class SaveSlotsMenu : Menu
                 {
                     DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
                     DataPersistenceManager.instance.NewGame();
-                    StartCoroutine(SaveGameAndLoadScene());
+                    SaveGameAndLoadScene();
                 },
                 //Función que se ejecuta si seleccionamos "Cancelar"
                 () =>
@@ -63,20 +63,17 @@ public class SaveSlotsMenu : Menu
         {
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
             DataPersistenceManager.instance.NewGame();
-            StartCoroutine(SaveGameAndLoadScene());
+            SaveGameAndLoadScene();
         }
 
         DataPersistenceManager.instance.NewGame();
     }
 
     //Método que Guarda el juego en cualquier momento antes de cargar una nueva escena.
-    private IEnumerator SaveGameAndLoadScene()
+    private void SaveGameAndLoadScene()
     {
-        
         DataPersistenceManager.instance.SaveGame();
-        fadeMainMenu.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadSceneAsync("LevelSelection");
+        mainMenuTransition.FadeOutAndLoadScene("LevelSelection");
     }
 
     //Método que se llama cuando intentas borrar la partida.

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OpenTransition : MonoBehaviour
 {
@@ -10,11 +11,45 @@ public class OpenTransition : MonoBehaviour
     [SerializeField] private AudioClip boingClip;
     [SerializeField] private AudioClip finalClip;
 
+    [SerializeField] private GameObject fadeGameobject;
+    private Image fadeImage;
+
+    private void Awake()
+    {
+        if (!fadeGameobject.activeSelf)
+        {
+            fadeGameobject.SetActive(true);
+        }
+
+        fadeImage = fadeGameobject.GetComponent<Image>();
+    }
+
     void Start()
     {
-        LeanTween.rotateAroundLocal(ringLogo.GetComponent
-           <RectTransform>(), Vector3.forward, 720f, 2.5f);
-        MoveUp();
+        FadeIn();
+        LeanTween.rotateAroundLocal(ringLogo.GetComponent<RectTransform>(), Vector3.forward, 720f, 2.5f);
+    }
+
+    public void FadeIn()
+    {
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
+        LeanTween.alpha(fadeImage.rectTransform, 0f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnComplete(() =>
+            {
+                LeanTween.rotateAroundLocal(ringLogo.GetComponent<RectTransform>(), Vector3.forward, 720f, 2.5f);
+                MoveUp();
+            });
+    }
+
+    public void FadeOutAndLoadScene(string sceneName)
+    {
+        LeanTween.alpha(fadeImage.rectTransform, 1f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnComplete(() =>
+            {
+                SceneManager.LoadScene(sceneName);
+            }).setDelay(0.8f);
     }
 
     void MoveUp()
@@ -73,20 +108,9 @@ public class OpenTransition : MonoBehaviour
             .setEaseOutQuad()       
             .setOnComplete(() =>
             {
-                
                 PlayFinalSound();
-                FadeOutCanvas();
+                FadeOutAndLoadScene("MainMenuUI");
             });
-    }
-
-
-    void FadeOutCanvas()
-    {
-        LeanTween.alpha(groupLogo.GetComponent<RectTransform>(), 0f, 1f)
-            .setOnComplete(() =>
-            {
-                SceneManager.LoadScene("MainMenuUI");
-            }).setDelay(0.8f);
     }
 
     // Método para reproducir el sonido del bote
