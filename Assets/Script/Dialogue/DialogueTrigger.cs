@@ -12,6 +12,9 @@ public class DialogueTrigger : MonoBehaviour
 
 
     private bool playerInRange;
+    private Transform playerTransform;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
 
     private void Awake()
     {
@@ -42,6 +45,8 @@ public class DialogueTrigger : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             playerInRange=true;
+            playerTransform = collision.transform;
+            FlipTowardsPlayer();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -49,6 +54,22 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = false;
+        }
+    }
+
+
+    private void FlipTowardsPlayer()
+    {
+        if (playerTransform != null)
+        {
+            if (playerTransform.position.x < transform.position.x && spriteRenderer.flipX == false)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (playerTransform.position.x > transform.position.x && spriteRenderer.flipX == true)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 }

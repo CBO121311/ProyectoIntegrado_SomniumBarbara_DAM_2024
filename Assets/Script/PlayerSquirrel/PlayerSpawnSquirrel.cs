@@ -12,14 +12,11 @@ public class PlayerSpawnSquirrel : MonoBehaviour
 
     private void Awake()
     {
-
         // Eliminar las claves específicas de PlayerPrefs
         PlayerPrefs.DeleteKey("checkPointPositionX");
         PlayerPrefs.DeleteKey("checkPointPositionY");
 
-
         PlayerPrefs.Save();
-
     }
 
     void Start()

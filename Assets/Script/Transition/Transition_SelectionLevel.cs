@@ -9,6 +9,7 @@ public class Transition_SelectionLevel : MonoBehaviour
     Vector3 initPosPauseMenu, initPosInventoryLevel;
     [SerializeField] private GameObject fadeGameobject;
     private Image fadeImage;
+    [SerializeField] private AudioSource audioSource;
 
 
     private void Awake()
@@ -30,8 +31,15 @@ public class Transition_SelectionLevel : MonoBehaviour
 
     public void FadeIn()
     {
+        
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
-        LeanTween.alpha(fadeImage.rectTransform, 0f, 1f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.alpha(fadeImage.rectTransform, 0f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad);
+
+        LeanTween.delayedCall(0.5f, () =>
+        {
+            audioSource.Play();
+        });
     }
 
     public void FadeOutAndLoadScene(string sceneName)

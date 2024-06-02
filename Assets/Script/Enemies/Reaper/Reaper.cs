@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class Reaper : MonoBehaviour
 {
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     private bool playerInRange = false;
-    //public MainMenuManager mainMenuManager;
-    //public PlayerRespawn pr;
+    [SerializeField] public Transform player;
+    [SerializeField] private float distancePlayer;
+    public Vector3 startPosition;
 
-    [SerializeField] public Transform jugador;
-    [SerializeField] private float distancia;
-    public Vector3 puntoInicial;
+    [SerializeField] private GameObject weapon;
+
 
     private void Awake()
     {
-        
         gameObject.SetActive(false);
+        weapon.SetActive(false);
     }
 
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        puntoInicial = transform.position;
+        startPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        distancia = Vector2.Distance(transform.position, jugador.position);
+        distancePlayer = Vector2.Distance(transform.position, player.position);
     }
 
 
@@ -52,8 +53,16 @@ public class Reaper : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             animator.SetTrigger("Player");
-
-            //Debug.Log("Encontrado");
         }
+    }
+
+    public void ActivateWeaponCollider()
+    {
+        weapon.SetActive(true);
+    }
+
+    public void DeactivateWeaponCollider()
+    {
+        weapon.SetActive(false);
     }
 }

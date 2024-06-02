@@ -65,7 +65,7 @@ public class UIManager_SelectionLevel : MonoBehaviour
             pauseMenu.TooglePause();
         }
 
-        StartCoroutine(CooldownCoroutinePause());
+        StartCoroutine(CooldownCoroutine(cooldownPause));
     }
 
     public void ToggleInventoryUI()
@@ -83,19 +83,12 @@ public class UIManager_SelectionLevel : MonoBehaviour
             inventory.ToogleInventory();
         }
 
-        StartCoroutine(CooldownCoroutineInventory());
+        StartCoroutine(CooldownCoroutine(cooldownInventory));
     }
-    private IEnumerator CooldownCoroutineInventory()
+    private IEnumerator CooldownCoroutine(float cooldown)
     {
         isCooldown = true;
-        yield return new WaitForSecondsRealtime(cooldownInventory);
-        isCooldown = false;
-    }
-
-    private IEnumerator CooldownCoroutinePause()
-    {
-        isCooldown = true;
-        yield return new WaitForSecondsRealtime(cooldownPause);
+        yield return new WaitForSecondsRealtime(cooldown);
         isCooldown = false;
     }
 }

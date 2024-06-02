@@ -12,6 +12,7 @@ TagManager:
   - Item
   - WeaponManager
   - SettingUI
+  - OneWayPlatform
   layers:
   - Default
   - TransparentFX

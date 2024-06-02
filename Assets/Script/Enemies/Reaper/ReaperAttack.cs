@@ -9,12 +9,12 @@ public class ReaperAttack : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             Debug.Log("Muerto");
-            Invoke("OutPlayer", 0.3f);
+            ControllerPlayerSquirrel Squirrelplayer = collision.GetComponent<ControllerPlayerSquirrel>();
+            if (Squirrelplayer != null)
+            {
+                Squirrelplayer.Die();
+                GameEventsManager.instance.PlayerDeath();
+            }
         }
-    }
-
-    void OutPlayer()
-    {
-        GameEventsManager.instance.PlayerDeath();
     }
 }

@@ -14,9 +14,9 @@ public class PlayerSpawnManager : MonoBehaviour
                 player.transform.position = TemporaryData.PlayerPosition;
                 TemporaryData.UseTemporaryPosition = false;
 
-                Debug.Log("Mover posición del jugador");
+                //Debug.Log("Mover posición del jugador");
             }
         }
-        Debug.Log("Player: " + TemporaryData.PlayerPosition);
+        //Debug.Log("Player: " + TemporaryData.PlayerPosition);
     }
 }

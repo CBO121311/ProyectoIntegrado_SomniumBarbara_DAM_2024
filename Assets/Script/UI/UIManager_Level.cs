@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class UIManager_Level : MonoBehaviour
 {
-    private static UIManager_Level instance;
 
     [Header("Pause Game")]
     [SerializeField] private GameObject panelPause;
     private PauseMenuLevel pauseMenu;
+    public bool gameIsPaused { get; private set; }
 
     private bool isCooldown = false;
     private float cooldownPause = 0.1f;
+
+    private static UIManager_Level instance;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class UIManager_Level : MonoBehaviour
         }
 
         instance = this;
+        gameIsPaused = false;
     }
 
     private void Start()
@@ -38,28 +41,30 @@ public class UIManager_Level : MonoBehaviour
     // Activar/desactivar la UI del inventario según sea necesario
     public void TogglePauseUI()
     {
-        /*if (isCooldown || pauseMenu.IsSettingOpen()) return;
+        if (isCooldown) return;
 
         gameIsPaused = !gameIsPaused;
 
 
         if (gameIsPaused)
         {
+            Debug.Log("Pause true");
             panelPause.SetActive(true);
             pauseMenu.TooglePause();
         }
         else
         {
+            Debug.Log("Pause false");
             pauseMenu.TooglePause();
         }
 
-        StartCoroutine(CooldownCoroutinePause());*/
+        StartCoroutine(CooldownCoroutine(cooldownPause));
     }
 
-    private IEnumerator CooldownCoroutinePause()
+    private IEnumerator CooldownCoroutine(float cooldown)
     {
         isCooldown = true;
-        yield return new WaitForSecondsRealtime(cooldownPause);
+        yield return new WaitForSecondsRealtime(cooldown);
         isCooldown = false;
     }
 }

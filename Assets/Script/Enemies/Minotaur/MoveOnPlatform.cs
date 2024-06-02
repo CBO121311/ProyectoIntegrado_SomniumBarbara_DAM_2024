@@ -6,19 +6,19 @@ using UnityEngine;
 public class MoveOnPlatform : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    public float velocidadDeMovimiento;
-    public LayerMask capaAbajo;
-    public LayerMask capaEnfrente;
+    public float moveSpeed;
+    public LayerMask groundLayer; // Capa que detecta el suelo debajo
+    public LayerMask obstacleLayer; // Capa que detecta el obstáculos enfrente
 
-    public float distanciaAbajo;
-    public float distanciaEnfrente;
+    public float groundCheckDistance; //Distancia de chequeo hacia abajo
+    public float obstacleCheckDistance; // Distancia de chequeo hacia adelanta
 
-    public Transform controladorAbajo;
-    public Transform controladorEnfrente;
-    public bool informacionAbajo;
-    public bool informacionEnfrente;
+    public Transform groundCheck;  // Punto de chequeo hacia abajo
+    public Transform obstacleCheck; // Punto de chequeo hacia adelante
+    public bool isGrounded;
+    public bool isObstacleAhead;
 
-    private bool mirandoAlaDerecha = true;
+    private bool facingRight = true;
 
 
     private void Start()
@@ -29,52 +29,32 @@ public class MoveOnPlatform : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        rb2D.velocity = new Vector2(velocidadDeMovimiento, rb2D.velocity.y);
-        informacionEnfrente = Physics2D.Raycast(controladorEnfrente.position, transform.right, distanciaEnfrente, capaEnfrente);
+        rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y);
+        isObstacleAhead = Physics2D.Raycast(obstacleCheck.position, transform.right, obstacleCheckDistance, obstacleLayer);
 
-        //informacionAbajo = Physics2D.Raycast(controladorAbajo.position, Vector2.down, distanciaAbajo, capaAbajo);
-        informacionAbajo= Physics2D.Raycast(controladorAbajo.position, transform.up * -1, distanciaAbajo, capaAbajo);
+        isGrounded= Physics2D.Raycast(groundCheck.position, transform.up * -1, groundCheckDistance, groundLayer);
 
-        /*if (informacionEnfrente)
+
+        if (isObstacleAhead || !isGrounded)
         {
-            Debug.Log("¡Hay un obstáculo frente al objeto!");
-        }
-        else
-        {
-            Debug.Log("¡No hay obstáculo!");
-        }
-
-        if (!informacionAbajo)
-        {
-            Debug.Log("¡No hay suelo debajo del objeto!");
-        }
-        else
-        {
-            Debug.Log("¡Hay suelo!");
-        }*/
-
-
-
-        if (informacionEnfrente || !informacionAbajo)
-        {
-            Girar();
+            Turn();
         }
     }
 
-    private void Girar()
+    private void Turn()
     {
-        mirandoAlaDerecha = !mirandoAlaDerecha;
+        // Cambia la dirección a la que está mirando el enemigo
+        facingRight = !facingRight;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
-        velocidadDeMovimiento *= -1;
+        moveSpeed *= -1; // Invierte la velocidad para moverse en la dirección opuesta
     }
 
+    // Dibuja líneas en el editor para mostrar las distancias de chequeo
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(controladorAbajo.transform.position, controladorAbajo.transform.position + Vector3.down * distanciaAbajo);
+        Gizmos.DrawLine(groundCheck.transform.position, groundCheck.transform.position + Vector3.down * groundCheckDistance);
     
-
-        //Gizmos.DrawLine(controladorAbajo.transform.position, controladorAbajo.transform.position + transform.up * -1 *distanciaAbajo);
-        Gizmos.DrawLine(controladorEnfrente.transform.position, controladorEnfrente.transform.position + transform.right * -1 * distanciaEnfrente);
+        Gizmos.DrawLine(obstacleCheck.transform.position, obstacleCheck.transform.position + transform.right * -1 * obstacleCheckDistance);
     }
 }

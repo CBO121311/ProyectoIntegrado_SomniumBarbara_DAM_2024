@@ -61,28 +61,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Método para reproducir una pista de música por su nombre
-
-    /*
-    public void PlayMusic(string clipName)
-    {
-        if (audioClipDict.ContainsKey(clipName))
-        {
-            normalBGM.clip = audioClipDict[clipName];
-            normalBGM.Play();
-        }
-        else
-        {
-            Debug.LogWarning($"El clip de audio '{clipName}' no fue encontrado en la lista de precarga.");
-        }
-    }*/
-
     // Método para cambiar la música (por ejemplo, al presionar un botón)
     public void ChangeMusicTerror()
     {
         normalBGM.Stop(); 
         terrorBGM.Play();
     }
+
+    public void StopMusic()
+    {
+        normalBGM.Stop();
+        terrorBGM.Stop();
+    }
+
     public void PlayOneSound(string clipName)
     {
         audioSourceSFX.PlayOneShot(GetAudioClip(clipName));

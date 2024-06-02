@@ -9,7 +9,7 @@ public class FinalTime : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameController.DesactivarTemporizador();
+            gameController.DesactivateTimer();
         }
     }
 }

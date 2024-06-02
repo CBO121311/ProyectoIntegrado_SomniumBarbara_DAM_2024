@@ -12,25 +12,37 @@ public class PauseMenuLevel : Menu
 
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
-
     [SerializeField] private LevelSquirrelTransition levelSquirrelTransition;
+    private bool pauseIsEnable = false;
+
+
+    public void TooglePause()
+    {
+        pauseIsEnable = !pauseIsEnable;
+
+        if (pauseIsEnable)
+        {
+            SetUpOptionMenu();
+        }
+        else
+        {
+            OnBackClicked();
+        }
+    }
     public void SetUpOptionMenu()
     {
-        ActivateMenuButtons();
         StartCoroutine(ShowOptionPanel());
     }
 
     public void OnBackClicked()
     {
-        DisableMenuButtons();
         StartCoroutine(HideOptionPanel());
     }
 
-
-    //Muestra el menú de pause
     private IEnumerator ShowOptionPanel()
     {
-        Time.timeScale = 0f;
+        ActivateMenuButtons();
+        levelSquirrelTransition.OpenPauseMenu();
         yield return new WaitForSecondsRealtime(0.5f);
     }
 
@@ -38,13 +50,9 @@ public class PauseMenuLevel : Menu
     private IEnumerator HideOptionPanel()
     {
         DisableMenuButtons();
-        // this.animator.SetBool("Pause", false);
-        Time.timeScale = 1.0f;
+        levelSquirrelTransition.ClosePauseMenu();
         yield return new WaitForSecondsRealtime(0.5f);
-        //UIManager.changeGameIsPaused();
-        this.gameObject.SetActive(false);
     }
-
 
     //Muestra el menú de pause 
 

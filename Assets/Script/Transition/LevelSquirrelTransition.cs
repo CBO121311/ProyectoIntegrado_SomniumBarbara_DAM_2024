@@ -79,17 +79,24 @@ public class LevelSquirrelTransition : MonoBehaviour
 
     public void OpenPauseMenu()
     {
+        Time.timeScale = 0;
         LeanTween.alpha(pauseBackground.GetComponent<RectTransform>(), 0.5f, 0.2f)
-    .setIgnoreTimeScale(true);
+        .setIgnoreTimeScale(true);
 
         LeanTween.scale(pauseMenu.GetComponent<RectTransform>(), new Vector3(2, 2, 1), 0.5f)
             .setIgnoreTimeScale(true)
             .setEase(LeanTweenType.easeOutBack);
     }
 
-    public void ExitPauseMenu()
+    public void ClosePauseMenu()
     {
-        LeanTween.scale(pauseMenu.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.5f);
+        LeanTween.scale(pauseMenu.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.5f)
+            .setIgnoreTimeScale(true)
+            .setOnComplete(() =>
+            {
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+            });
 
         LeanTween.alpha(pauseBackground.GetComponent<RectTransform>(), 0, 0.5f);
     }

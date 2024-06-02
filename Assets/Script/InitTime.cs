@@ -11,7 +11,7 @@ public class InitTime : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameController.ActivarTemporizador();
+            gameController.ActivateTimer();
         }
     }
 }

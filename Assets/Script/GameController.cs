@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 {
 
     [Header("Timer")]
-    [SerializeField] private float limitTime;
+    [SerializeField] private float maxTime;
     [SerializeField] private Slider sliderTime;
     private float currentTime;
     private bool endTime = false;
@@ -63,12 +63,9 @@ public class GameController : MonoBehaviour, IDataPersistence
     private void Start()
     {
 
-        //AudioManager.instance.PlayMusic("SquirrelMusic");
-
-
         itemsLevel = new Dictionary<string, bool>();
         FillItemsLevelDictionary();
-        ActivarTemporizador();
+        ActivateTimer();
         GameEventsManager.instance.onItemCollected += HandleItemCollected; //Recoger Item
         GameEventsManager.instance.onDeadEnemy += HandleDeadEnemy; //Matar un enemigo
         GameEventsManager.instance.onFallPlayer += HandleFallPlayer; //Cae el jugador
@@ -76,33 +73,13 @@ public class GameController : MonoBehaviour, IDataPersistence
         GameEventsManager.instance.onPlayerDeath += HandlePlayerDeath; // El jugador muere
         GameEventsManager.instance.onLevelCompleted += HandleLevelComplete; //Completar el nivel
     }
-    private void HandleHitEnemy(float damage)
-    {
-        //Debug.Log("Daño recibido: " + damage);
 
-        float realDamage = damage * 10;
-
-        currentTime -= realDamage;
-    }
-    private void HandlePlayerDeath()
-    {
-        deathPlayer = true;
-        DataPersistenceManager.instance.SaveGameDataOnly();
-        SceneManager.LoadScene("LevelSelection");
-    }
-
-
-
-    private void HandleFallPlayer()
-    {
-        Debug.Log("¡El jugador se ha caído");
-    }
 
     void Update()
     {
         if (endTime)
         {
-            CambiarContador();
+            UpdateTimer();
         }
 
         if (IsGameRunning)
@@ -111,7 +88,7 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
-    
+
 
     //Método
     private void FillItemsLevelDictionary()
@@ -137,9 +114,28 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
- 
+    private void HandleHitEnemy(float damage)
+    {
+        //Debug.Log("Daño recibido: " + damage);
 
-    private void CambiarContador()
+        float realDamage = damage * 2;
+
+        currentTime -= realDamage;
+    }
+    private void HandlePlayerDeath()
+    {
+        AudioManager.instance.StopMusic();
+        deathPlayer = true;
+        DataPersistenceManager.instance.SaveGameDataOnly();
+        //SceneManager.LoadScene("LevelSelection");
+    }
+    private void HandleFallPlayer()
+    {
+        Debug.Log("¡El jugador se ha caído");
+    }
+
+
+    private void UpdateTimer()
     {
         currentTime -= Time.deltaTime;
 
@@ -158,39 +154,38 @@ public class GameController : MonoBehaviour, IDataPersistence
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
 
-            //mainAudioSource.PlayOneShot(AudioManager.instance.GetAudioClip("AlarmSound"));
             AudioManager.instance.PlayOneSound("AlarmSound");
             AudioManager.instance.ChangeMusicTerror();
 
 
             //Agregar funcionamiento y código en el futuro
-            CambiarTemporador(false);
+            ChangeTimerState(false);
         }
     }
 
     IEnumerator ActiveReaper()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         reaper.SetActive(true);
     }
 
-    private void CambiarTemporador(bool estado)
+    private void ChangeTimerState(bool estado)
     {
         endTime = estado;
     }
 
 
-    public void ActivarTemporizador()
+    public void ActivateTimer()
     {
         //tiempoActual = tiempoMaximo +1;
-        currentTime = limitTime;
-        sliderTime.maxValue = limitTime;
-        CambiarTemporador(true);
+        currentTime = maxTime;
+        sliderTime.maxValue = maxTime;
+        ChangeTimerState(true);
     }
 
-    public void DesactivarTemporizador()
+    public void DesactivateTimer()
     {
-        CambiarTemporador(false);
+        ChangeTimerState(false);
     }
 
     //Método que se le llama cuando matas a un enemigo

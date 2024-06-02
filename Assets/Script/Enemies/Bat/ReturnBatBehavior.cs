@@ -5,32 +5,33 @@ using UnityEngine;
 public class ReturnBatBehavior : StateMachineBehaviour
 {
 
-    [SerializeField] private float velocidadMovimiento;
-    private Vector3 puntoInicial;
+    [SerializeField] private float moveSpeed;
+    private Vector3 startingPoint;
     private Bat bat;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         bat = animator.gameObject.GetComponent<Bat>();
-        puntoInicial = bat.puntoInicial;
+        startingPoint = bat.startPoint;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, puntoInicial, velocidadMovimiento*Time.deltaTime);
-        bat.Spin(puntoInicial);
-        if(animator.transform.position == puntoInicial)
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, startingPoint, moveSpeed*Time.deltaTime);
+        bat.Spin(startingPoint);
+        if(animator.transform.position == startingPoint)
         {
             animator.SetTrigger("Arrive");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //bat.ArriveAtInitialPoint();
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
