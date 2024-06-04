@@ -65,8 +65,6 @@ public class GameEventsManager : MonoBehaviour
         }
     }
 
-
-
     public void FallPlayer()
     {
         if (onFallPlayer != null)

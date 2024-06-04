@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 53cb8f07d52ff884d8b96009cf8e21e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6562055891756502313
+    second: beeEnemy_0
+  - first:
+      213: 164462462512279495
+    second: beeEnemy_1
+  - first:
+      213: -473587833144734556
+    second: beeEnemy_2
+  - first:
+      213: 7957819563878522555
+    second: beeEnemy_3
+  - first:
+      213: 1571489704959464815
+    second: beeEnemy_4
+  - first:
+      213: -905014919752848695
+    second: beeEnemy_5
+  - first:
+      213: -1925374962406843000
+    second: beeEnemy_6
+  - first:
+      213: 314045048160501617
+    second: beeEnemy_7
+  - first:
+      213: -4261904561701662103
+    second: beeEnemy_8
+  - first:
+      213: 6892366090009470406
+    second: beeEnemy_9
+  - first:
+      213: 2912062265361682247
+    second: beeEnemy_10
+  - first:
+      213: 4996574115576483917
+    second: beeEnemy_11
+  - first:
+      213: 3333220681395844188
+    second: beeEnemy_12
+  - first:
+      213: 5521592504793315404
+    second: beeEnemy_13
+  - first:
+      213: 9088597913244380454
+    second: beeEnemy_14
+  - first:
+      213: -2182763526179135777
+    second: beeEnemy_15
+  - first:
+      213: -7084452500695394763
+    second: beeEnemy_16
+  - first:
+      213: -1181602390285618224
+    second: beeEnemy_17
+  - first:
+      213: 2561154189245590072
+    second: beeEnemy_18
+  - first:
+      213: 439223637988227350
+    second: beeEnemy_19
+  - first:
+      213: -3247339716408856275
+    second: beeEnemy_20
+  - first:
+      213: -8556478432919254162
+    second: beeEnemy_21
+  - first:
+      213: -3987814666501676350
+    second: beeEnemy_22
+  - first:
+      213: -8554330503326502848
+    second: beeEnemy_23
+  - first:
+      213: 5657557066959811028
+    second: beeEnemy_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beeEnemy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d238970fe4eee4a0800000000000000
+      internalID: -6562055891756502313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf2ee00db9484200800000000000000
+      internalID: 164462462512279495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac067bff5a7d69f0800000000000000
+      internalID: -473587833144734556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe12a32bbadf6e60800000000000000
+      internalID: 7957819563878522555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65da408f8d0fc510800000000000000
+      internalID: 1571489704959464815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cae3b7b9bdb073f0800000000000000
+      internalID: -905014919752848695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d1f4a3ca1b745e0800000000000000
+      internalID: -1925374962406843000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 294
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fb313be46bb5400800000000000000
+      internalID: 314045048160501617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962d725b16caad4c0800000000000000
+      internalID: -4261904561701662103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 234
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c566f8017a96af50800000000000000
+      internalID: 6892366090009470406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_10
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 234
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fc3ba9339b96820800000000000000
+      internalID: 2912062265361682247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_11
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 234
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4019d46fa5675540800000000000000
+      internalID: 4996574115576483917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_12
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 234
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c54b590bc8af14e20800000000000000
+      internalID: 3333220681395844188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c483aa2e023a0ac40800000000000000
+      internalID: 5521592504793315404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_14
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 174
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62da94d06af212e70800000000000000
+      internalID: 9088597913244380454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_15
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 174
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fded961432445b1e0800000000000000
+      internalID: -2182763526179135777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 174
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5365ce35cf7fead90800000000000000
+      internalID: -7084452500695394763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 174
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3f54de2ea1a9fe0800000000000000
+      internalID: -1181602390285618224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83aacf06a2c0b8320800000000000000
+      internalID: 2561154189245590072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6193e37529f681600800000000000000
+      internalID: 439223637988227350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beeEnemy_20
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 54
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21be6aabb12fe2d0800000000000000
+      internalID: -3247339716408856275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6741ed1cd64dcb74681379cc99b601b9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      beeEnemy_0: -6562055891756502313
+      beeEnemy_1: 164462462512279495
+      beeEnemy_10: 2912062265361682247
+      beeEnemy_11: 4996574115576483917
+      beeEnemy_12: 3333220681395844188
+      beeEnemy_13: 5521592504793315404
+      beeEnemy_14: 9088597913244380454
+      beeEnemy_15: -2182763526179135777
+      beeEnemy_16: -7084452500695394763
+      beeEnemy_17: -1181602390285618224
+      beeEnemy_18: 2561154189245590072
+      beeEnemy_19: 439223637988227350
+      beeEnemy_2: -473587833144734556
+      beeEnemy_20: -3247339716408856275
+      beeEnemy_3: 7957819563878522555
+      beeEnemy_4: 1571489704959464815
+      beeEnemy_5: -905014919752848695
+      beeEnemy_6: -1925374962406843000
+      beeEnemy_7: 314045048160501617
+      beeEnemy_8: -4261904561701662103
+      beeEnemy_9: 6892366090009470406
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

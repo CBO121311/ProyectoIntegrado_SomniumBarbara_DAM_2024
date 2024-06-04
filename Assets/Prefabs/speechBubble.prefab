@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6734574991065187973}
   - component: {fileID: 6843272740317652289}
   m_Layer: 0
-  m_Name: GloboExclamation
+  m_Name: speechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7183898243451241292
 Transform:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1966541533
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 1547947157269826694, guid: 74be5b545476b4b4d901b0238abf468f,
     type: 3}

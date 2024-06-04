@@ -45,7 +45,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (life == 2 || life == 1)
         {
-            Debug.Log("Vida es " + life);
+            //Debug.Log("Vida es " + life);
             lifePanelAnimator.SetInteger("Life", life);
         }
 
@@ -56,7 +56,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (life <= 0)
         {
-            Debug.Log("Vida es " + life);
+            //Debug.Log("Vida es " + life);
             lifePanelAnimator.SetInteger("Life", life);
             StartCoroutine(HandleDeath(position));
             return;

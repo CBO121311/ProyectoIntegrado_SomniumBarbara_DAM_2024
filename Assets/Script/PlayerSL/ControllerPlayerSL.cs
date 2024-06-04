@@ -42,9 +42,10 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
         MovePlayer();
 
-        //Si hay un dialogo te impido moverte
+        //Si hay un dialogo, pausa, o selección de nivel te impido moverte
         if (DialogueManager.GetInstance().dialogueIsPlaying || 
-            UIManager_SelectionLevel.GetInstance().gameIsPaused)
+            UIManager_SelectionLevel.GetInstance().gameIsPaused ||
+            UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -69,7 +70,8 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
     private void MovePlayer()
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying || 
-            UIManager_SelectionLevel.GetInstance().gameIsPaused)
+            UIManager_SelectionLevel.GetInstance().gameIsPaused || 
+            UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
         {
             return;
         }
@@ -138,12 +140,5 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
     public void SaveData(GameData data)
     {
         data.playerPosition = this.transform.position;
-    }
-
-
-    //Trigger para detectar portales, npcs, objetos, etc.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log(collision.name);
     }
 }

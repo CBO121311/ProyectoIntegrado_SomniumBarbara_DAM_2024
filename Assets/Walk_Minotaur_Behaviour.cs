@@ -8,7 +8,7 @@ public class Walk_Minotaur_Behaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         int randomValue = Random.Range(0, 10);
-        Debug.Log("Random generado: " + randomValue);
+        //Debug.Log("Random generado: " + randomValue);
 
         animator.SetInteger("RandomAttack", randomValue);
     }

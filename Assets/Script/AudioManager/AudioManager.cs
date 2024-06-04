@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
     public void LoadVolume()
     {
         float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
-        Debug.Log("El volumen es " + volume);
+        //Debug.Log("El volumen es " + volume);
 
         AudioListener.volume = volume;
     }

@@ -1,21 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Minotaur : MonoBehaviour
 {
+
+    [Header("References")]
+    private SpriteRenderer spr;
     private Animator animator;
     private Rigidbody2D rb2D;
     private Collider2D col2D;
-    private AudioSource audioSource;
+
+
+
+
     private bool isDead = false;
     private bool facingRight = true; // Información si está mirando hacia la derecha
     private bool isAttacking = false;
 
+    [Header("Audio")]
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip audioHit;
+
     [Header("Health")]
     public float health = 100f;
-    [SerializeField] private AudioClip audioHit;
+    
 
     [Header("Movement")]
     public float moveSpeed; // Velocidad de movimiento del enemigo
@@ -39,6 +50,7 @@ public class Minotaur : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        spr = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
         col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
@@ -78,11 +90,27 @@ public class Minotaur : MonoBehaviour
         animator.SetTrigger("Death");
         GameEventsManager.instance.DeadEnemy();
 
-        // Desactiva el comportamiento del enemigo
+        StartCoroutine(FadeOutMinotaur());
+    }
+
+
+    private IEnumerator FadeOutMinotaur()
+    {
+        yield return new WaitForSeconds(0.5f);
         rb2D.velocity = Vector2.zero;
         rb2D.isKinematic = true;
         col2D.enabled = false;
+
+        Color color = spr.color;
+        while (color.a > 0)
+        {
+            color.a -= Time.deltaTime / 2;
+            spr.color = color;
+            yield return null;
+        }
+        Destroy(gameObject);
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {

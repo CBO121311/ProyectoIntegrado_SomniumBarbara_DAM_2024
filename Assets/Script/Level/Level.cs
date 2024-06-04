@@ -7,6 +7,7 @@ using UnityEngine;
 public class Level
 {
     public string name;
+    public int numlevel;
     public int totalItems;
     public int time;
     public int minItems;
@@ -15,9 +16,10 @@ public class Level
     public int deaths;
     public bool available;
 
-    public Level(string name, int totalItems, int time, int minItems, bool available)
+    public Level(string name, int numlevel,int totalItems, int time, int minItems, bool available)
     {
         this.name = name;
+        this.numlevel = numlevel;
         this.totalItems = totalItems;
         this.time = time;
         this.minItems = minItems;

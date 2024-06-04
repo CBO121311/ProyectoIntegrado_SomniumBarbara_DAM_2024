@@ -11,6 +11,7 @@ public class Transition_SelectionLevel : MonoBehaviour
     private Image fadeImage;
     [SerializeField] private AudioSource audioSource;
 
+    [SerializeField] private GameObject levelInfoPanel;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class Transition_SelectionLevel : MonoBehaviour
         FadeIn();
     }
 
+    //Animación al empezar escena
     public void FadeIn()
     {
         
@@ -42,11 +44,26 @@ public class Transition_SelectionLevel : MonoBehaviour
         });
     }
 
+    //Animación al salir de la escena.
     public void FadeOutAndLoadScene(string sceneName)
     {
         LeanTween.alpha(fadeImage.rectTransform, 1f, 1f)
             .setEase(LeanTweenType.easeInOutQuad)
             .setOnComplete(() => SceneManager.LoadScene(sceneName));
+    }
+
+    //Animación al mostrar la info del nivel.
+    public void ShowLevelInfoPanel()
+    {
+        LeanTween.alphaCanvas(levelInfoPanel.GetComponent<CanvasGroup>(), 1f, 0.6f)
+            .setEase(LeanTweenType.easeOutQuad);
+    }
+
+    //Animación para ocultar la info del nivel.
+    public void HideLevelInfoPanel()
+    {
+        LeanTween.alphaCanvas(levelInfoPanel.GetComponent<CanvasGroup>(), 0f, 0.6f)
+            .setEase(LeanTweenType.easeOutQuad);
     }
 
     //Animación al abrir el menú pause

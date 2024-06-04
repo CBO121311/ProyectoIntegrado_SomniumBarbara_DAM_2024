@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f697a2eac2f3ff42969da8f3a846b1f, type: 3}
   m_Name: 1SmallEyeItem
   m_EditorClassIdentifier: 
-  id: 01A01
+  id: 1A01
   image: {fileID: 2966706846675852172, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: "Ojo peque\xF1o"
-  description: "\xBFQu\xE9 diablos es esto?"
+  description: "No s\xE9 ni como mirar esto."

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death
+  m_Name: Attack_Bee
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -908703875478637884, guid: a2abbd8f1b32f1947ba6c3e50527818b,
+      value: {fileID: -1181602390285618224, guid: 53cb8f07d52ff884d8b96009cf8e21e2,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -45,7 +45,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -908703875478637884, guid: a2abbd8f1b32f1947ba6c3e50527818b, type: 3}
+    - {fileID: -1181602390285618224, guid: 53cb8f07d52ff884d8b96009cf8e21e2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

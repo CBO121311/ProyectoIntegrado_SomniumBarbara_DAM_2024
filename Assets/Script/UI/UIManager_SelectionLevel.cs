@@ -7,6 +7,8 @@ public class UIManager_SelectionLevel : MonoBehaviour
 {
     public bool gameIsPaused { get; private set; }
     public bool inventoryIsActivated { get; private set; }
+    public bool levelSelectionIsActive { get; private set; }
+
     private static UIManager_SelectionLevel instance;
 
     [Header("Inventory")]
@@ -16,6 +18,11 @@ public class UIManager_SelectionLevel : MonoBehaviour
     [Header("Pause Game")]
     [SerializeField] private GameObject panelPause;
     private PauseMenuSL pauseMenu;
+
+
+    [Header("Level Game")]
+    [SerializeField] private GameObject levelInfoPanel;
+    private LevelSelection levelSelection;
 
     [Header("Cooldown")]
     private bool isCooldown = false;
@@ -40,6 +47,7 @@ public class UIManager_SelectionLevel : MonoBehaviour
     {
         pauseMenu = panelPause.GetComponent<PauseMenuSL>();
         inventory = panelInventory.GetComponent<Inventory>();
+        levelSelection = levelInfoPanel.GetComponentInChildren<LevelSelection>();
     }
 
     public static UIManager_SelectionLevel GetInstance()
@@ -90,5 +98,19 @@ public class UIManager_SelectionLevel : MonoBehaviour
         isCooldown = true;
         yield return new WaitForSecondsRealtime(cooldown);
         isCooldown = false;
+    }
+
+
+    public void ActivateSelectLevel()
+    {
+        levelInfoPanel.SetActive(true);
+        levelSelection.OpenLevelSelection();
+        levelSelectionIsActive = true;
+    }
+
+    public void DisableSelectLevel()
+    {
+        levelSelectionIsActive = false;
+        levelInfoPanel.SetActive(false);
     }
 }

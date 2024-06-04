@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SquirrelLevel.unity
     guid: aeac29e68bd4d04468b581f57d43db32
+  - enabled: 1
+    path: Assets/Scenes/SquirrelLevel2.unity
+    guid: 17039b3bafa95764b983ac3d0a2e4c51
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ad9c466e78be7e4b9d207c0a1e1de51,
       type: 2}

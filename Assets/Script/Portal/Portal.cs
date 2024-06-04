@@ -2,43 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Portal : MonoBehaviour, IDataPersistence
 {
 
     [SerializeField] private Animator portalAnimator;
     [SerializeField] private GameObject panelInfo;
+    [SerializeField] private LevelSelection levelSelection;
     [SerializeField] private LevelInfo levelInfo;
-    private bool playerInRange;
-    [SerializeField]private GameObject player;
-
-
-    [SerializeField] private Transition_SelectionLevel transition_SelectionLevel;
+    [SerializeField] private GameObject speechBubble;
+    [SerializeField] private GameObject player;
 
     [Header("Level Data")]
     public string levelName = "Ardilla";
 
+    private bool playerInRange = false;
     private Level levelToShow;
+    //private ControllerPlayerSquirrel playerMovement;
 
-    private void Awake()
+    private void Start()
     {
-        playerInRange = false;
+        //playerMovement = player.GetComponent<ControllerPlayerSquirrel>();
+        if (panelInfo != null) panelInfo.SetActive(false);
     }
 
     private void Update()
     {
-        
-        if (playerInRange)
+        if (playerInRange && !UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
         {
-            ActivatePortal();
+            if (InputManager.GetInstance().GetSubmitPressed())
+            {
+                ActivatePortal();
+            }
         }
     }
 
     private void ActivatePortal()
     {
-        portalAnimator.SetBool("Player", true);
-        panelInfo.SetActive(true);
-        panelInfo.transform.position = new Vector2(400, 300);
+        UIManager_SelectionLevel.GetInstance().ActivateSelectLevel();
 
         if (levelToShow != null)
         {
@@ -46,42 +48,42 @@ public class Portal : MonoBehaviour, IDataPersistence
         }
 
 
-        if (!UIManager_SelectionLevel.GetInstance().gameIsPaused && !UIManager_SelectionLevel.GetInstance().inventoryIsActivated &&
+        /*if (!UIManager_SelectionLevel.GetInstance().gameIsPaused && !UIManager_SelectionLevel.GetInstance().inventoryIsActivated &&
                 InputManager.GetInstance().GetSubmitPressed())
         {
             if (levelToShow != null && levelToShow.available)
             {
-                TemporaryData.PlayerPosition = player.transform.position;
+                //TemporaryData.PlayerPosition = player.transform.position;
                 TemporaryData.UseTemporaryPosition = true;
 
-                transition_SelectionLevel.FadeOutAndLoadScene("SquirrelLevel");
+                //slTransition.FadeOutAndLoadScene("SquirrelLevel");
             }
-        }
+        }*/
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = true;
+            speechBubble.SetActive(true);
+            portalAnimator.SetBool("Player", true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            speechBubble.SetActive(false);
             playerInRange = false;
-            portalAnimator.SetBool("Player", false);
-            if (panelInfo != null)
-            {
-                panelInfo.SetActive(false);
-            }
+            portalAnimator.SetBool("Player", false);     
         }
     }
 
     public void LoadData(GameData data)
     {
-        levelToShow = data.GetLevelByName(levelName);
+        levelToShow = data.GetLevelByName(levelName,2);
     }
 
     public void SaveData(GameData data)

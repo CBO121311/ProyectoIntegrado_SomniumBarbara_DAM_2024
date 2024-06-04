@@ -34,23 +34,25 @@ public class GameData
 
     private void InitializeItemsCollected()
     {
-        AddItemToCollected("01A01", false);
-        AddItemToCollected("01A02", false);
-        AddItemToCollected("01A03", false);
-        AddItemToCollected("01A04", false);
-        AddItemToCollected("01A05", false);
-        AddItemToCollected("01A06", false);
-        AddItemToCollected("01A07", false);
-        AddItemToCollected("01A08", false);
-        AddItemToCollected("01A09", false);
-        AddItemToCollected("01B01", false);
+        AddItemToCollected("1A_01", false);
+        AddItemToCollected("1A_02", false);
+        AddItemToCollected("1A_03", false);
+        AddItemToCollected("1A_04", false);
+        AddItemToCollected("1A_05", false);
+        AddItemToCollected("2A_01", false);
+        AddItemToCollected("2A_02", false);
+        AddItemToCollected("2A_03", false);
+        AddItemToCollected("2A_04", false);
     }
 
     private void InitializeLevel()
     {
-        informationLevel.Add(new Level("Ardilla",9,120,5, true));
-        informationLevel.Add(new Level("Mariposa", 12, 70, 7, false));
-        informationLevel.Add(new Level("Pez", 7, 120, 3, false));
+        informationLevel.Add(new Level("Ardilla", 1, 4, 20, 2, true));
+        informationLevel.Add(new Level("Ardilla", 2, 5, 30, 3, true));
+        informationLevel.Add(new Level("Mariposa", 1, 0, 0, 0, false));
+        informationLevel.Add(new Level("Mariposa", 2, 0, 0, 0, false));
+        informationLevel.Add(new Level("Pez", 1, 0, 0, 0, false));
+        informationLevel.Add(new Level("Pez", 2, 0, 0, 0, false));
     }
 
 
@@ -103,10 +105,12 @@ public class GameData
     }
 
     //Método que te devuelve el Level en base al nombre
-    public Level GetLevelByName(string levelName)
+    public Level GetLevelByName(string nameLevel, int numLevel)
     {
-        return informationLevel.Find(level => level.name == levelName);
+        return informationLevel.Find(level => level.name == nameLevel);
     }
+
+
 
     public int GetLevelItemsCollectedPercentage(string levelCode)
     {

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f697a2eac2f3ff42969da8f3a846b1f, type: 3}
-  m_Name: 2BalloonItem
+  m_Name: 2NecklaceItem
   m_EditorClassIdentifier: 
-  id: 01A02
+  id: 1A02
   image: {fileID: 7655111998638004205, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Collar
-  description: "Recuerdo cuando fu\xED "
+  description: Un collar que no es de mi estilo.

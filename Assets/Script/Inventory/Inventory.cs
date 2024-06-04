@@ -18,8 +18,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
     public GameObject slotHolder;
     public List<ItemTemplate> itemTemplates;
 
-    public GameObject itemPrefab; // Prefab del item
-
     [SerializeField] private Transition_SelectionLevel transitionSL;
 
     // Referencias adicionales
