@@ -849,9 +849,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: e239ba0dcbb77e5419ef8850aed5a84c, type: 3}
   m_Resource: {fileID: 8300000, guid: e239ba0dcbb77e5419ef8850aed5a84c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.767
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2139,6 +2139,7 @@ MonoBehaviour:
   level1Button: {fileID: 1763389987}
   level2Button: {fileID: 401389111}
   cancelButton: {fileID: 2039296120}
+  levelInfo: {fileID: 532882564}
   slTransition: {fileID: 484478583}
 --- !u!1 &340033302
 GameObject:
@@ -5630,6 +5631,11 @@ PrefabInstance:
       propertyPath: speechBubble
       value: 
       objectReference: {fileID: 10620312}
+    - target: {fileID: 5210233707738674093, guid: 2597c78c91909ee479bc2bd85ab2a54d,
+        type: 3}
+      propertyPath: levelSelection
+      value: 
+      objectReference: {fileID: 325851669}
     - target: {fileID: 6344013364179250657, guid: 2597c78c91909ee479bc2bd85ab2a54d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7265,6 +7271,11 @@ PrefabInstance:
       propertyPath: speechBubble
       value: 
       objectReference: {fileID: 743152809}
+    - target: {fileID: 5210233707738674093, guid: 2597c78c91909ee479bc2bd85ab2a54d,
+        type: 3}
+      propertyPath: levelSelection
+      value: 
+      objectReference: {fileID: 325851669}
     - target: {fileID: 5210233707738674093, guid: 2597c78c91909ee479bc2bd85ab2a54d,
         type: 3}
       propertyPath: transition_SelectionLevel

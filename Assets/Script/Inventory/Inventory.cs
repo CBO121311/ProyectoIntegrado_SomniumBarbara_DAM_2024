@@ -137,7 +137,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         data.LoadInventory(this);
-        Debug.Log("Intento de cargar");
+        //Debug.Log("Intento de cargar");
     }
 
     public void SaveData(GameData data)

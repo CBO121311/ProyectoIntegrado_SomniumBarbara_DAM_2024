@@ -104,7 +104,7 @@ public class UIManager_SelectionLevel : MonoBehaviour
     public void ActivateSelectLevel()
     {
         levelInfoPanel.SetActive(true);
-        levelSelection.OpenLevelSelection();
+        //levelSelection.OpenLevelSelection();
         levelSelectionIsActive = true;
     }
 

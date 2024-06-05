@@ -47,12 +47,18 @@ public class GameData
 
     private void InitializeLevel()
     {
-        informationLevel.Add(new Level("Ardilla", 1, 4, 20, 2, true));
-        informationLevel.Add(new Level("Ardilla", 2, 5, 30, 3, true));
-        informationLevel.Add(new Level("Mariposa", 1, 0, 0, 0, false));
-        informationLevel.Add(new Level("Mariposa", 2, 0, 0, 0, false));
-        informationLevel.Add(new Level("Pez", 1, 0, 0, 0, false));
-        informationLevel.Add(new Level("Pez", 2, 0, 0, 0, false));
+        var level1A = new Level("Ardilla", 1, "SquirrelLevel1", 4, 20, 2, true);
+        level1A.items.AddRange(new List<string> { "1A_01", "1A_02", "1A_03", "1A_04", "1A_05" });
+        informationLevel.Add(level1A);
+
+        var level2A = new Level("Ardilla", 2, "SquirrelLevel2", 5, 30, 3, true);
+        level2A.items.AddRange(new List<string> { "2A_01", "2A_02", "2A_03", "2A_04" });
+        informationLevel.Add(level2A);
+
+        informationLevel.Add(new Level("Mariposa", 1, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Mariposa", 2, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Pez", 1, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Pez", 2, "", 0, 0, 0, false));
     }
 
 
@@ -105,9 +111,11 @@ public class GameData
     }
 
     //Método que te devuelve el Level en base al nombre
-    public Level GetLevelByName(string nameLevel, int numLevel)
+    public Level GetLevelByName(string nameLevel,int numLevel)
     {
-        return informationLevel.Find(level => level.name == nameLevel);
+        //Debug.Log("GetLevelByName" + " " + nameLevel + numLevel);
+
+        return informationLevel.Find(level => level.name == nameLevel && level.numLevel == numLevel);
     }
 
 

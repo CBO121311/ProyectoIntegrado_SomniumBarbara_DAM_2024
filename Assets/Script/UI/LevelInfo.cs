@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
 
-public class LevelInfo : MonoBehaviour, IDataPersistence
+public class LevelInfo : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI titleLevel;
@@ -17,39 +18,42 @@ public class LevelInfo : MonoBehaviour, IDataPersistence
 
     private int itemCount = 0;
 
-
     public void SetLevelInfo(Level level)
     {
-        if (level.available)
+        if (level != null)
         {
-            available.SetActive(false);
-            titleLevel.text = level.name;
-            totalItem.text = level.totalItems.ToString();
-            timeLevel.text = level.time.ToString() + " segundos";
-            itemMin.text = level.minItems.ToString() + " objetos";
-            bestScore.text = level.bestScore.ToString();
+            if (level.available)
+            {
+                available.SetActive(false);
+                titleLevel.text = level.name;
+                totalItem.text = level.totalItems.ToString();
+                timeLevel.text = level.time.ToString() + " segundos";
+                itemMin.text = level.minItems.ToString() + " objetos";
+                bestScore.text = level.bestScore.ToString();
+                itemCollected.text = GetCollectedItemsPercentage(level).ToString() + " %";
+            }
+            else
+            {
+                available.SetActive(true);
+                titleLevel.text = level.name;
+                totalItem.text = "";
+                timeLevel.text = "";
+                itemMin.text = "";
+                bestScore.text = "";
+                itemCollected.text = "";
+                itemCollected.text = "";
+            }
         }
         else
         {
-            available.SetActive(true);
-            titleLevel.text = level.name;
-            totalItem.text = "";
-            timeLevel.text = "";
-            itemMin.text = "";
-            bestScore.text = "";
-            itemCollected.text = "";
+            Debug.LogWarning("Se intentó establecer la información del nivel con un objeto Level nulo.");
         }
     }
 
-
-    public void LoadData(GameData data)
+    private float GetCollectedItemsPercentage(Level level)
     {
-
-        itemCollected.text = data.GetLevelItemsCollectedPercentage("01A").ToString() + " %";
-    }
-
-    public void SaveData(GameData data)
-    {
-        // No se utiliza
+        GameData gameData = DataPersistenceManager.instance.GetGameData();
+        int collectedCount = level.items.Count(item => gameData.itemsCollected.ContainsKey(item) && gameData.itemsCollected[item]);
+        return (float)collectedCount / level.items.Count * 100;
     }
 }

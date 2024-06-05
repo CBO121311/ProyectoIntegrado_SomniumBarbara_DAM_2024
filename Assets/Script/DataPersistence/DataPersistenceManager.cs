@@ -44,6 +44,11 @@ public class DataPersistenceManager : MonoBehaviour
         InitializeSelectedProfileId();
     }
 
+    //Recoge datos del gameData para consultar información o pedir información
+    public GameData GetGameData()
+    {
+        return gameData;
+    }
 
     public void ChangeSelectedProfileId(string newProfileId)
     {

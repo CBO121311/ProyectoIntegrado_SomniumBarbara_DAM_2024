@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,23 +12,82 @@ public class LevelSelection : Menu
     [SerializeField] private Button level1Button;
     [SerializeField] private Button level2Button;
     [SerializeField] private Button cancelButton;
+    [SerializeField] private LevelInfo levelInfo;
 
     [SerializeField] private Transition_SelectionLevel slTransition;
+
+    private Level levelOne;
+    private Level levelTwo;
+
+    private void Awake()
+    {
+        AddButtonSelectionHandler(level1Button);
+        AddButtonSelectionHandler(level2Button);
+
+        // Subscribe to the OnButtonSelected event
+        level1Button.GetComponent<ButtonSelectionHandler>().OnButtonSelected += HandleButtonSelected;
+        level2Button.GetComponent<ButtonSelectionHandler>().OnButtonSelected += HandleButtonSelected;
+    }
+
+    private void AddButtonSelectionHandler(Button button)
+    {
+        if (button.GetComponent<ButtonSelectionHandler>() == null)
+        {
+            button.gameObject.AddComponent<ButtonSelectionHandler>();
+        }
+    }
+
+    private void HandleButtonSelected(Button selectedButton)
+    {
+        if (selectedButton == level1Button)
+        {
+            ShowLevelInfo(levelOne);
+        }
+        else if (selectedButton == level2Button)
+        {
+            ShowLevelInfo(levelTwo);
+        }
+    }
+
+
+    public void ShowLevelOptions(Level level1, Level level2)
+    {
+        levelOne = level1;
+        levelTwo = level2;
+        OpenLevelSelection();
+
+        //Poner el primer nivel de forma predeterminada
+        ShowLevelInfo(level1);
+    }
 
     public void OpenLevelSelection()
     {
         StartCoroutine(ActivateLevelInfoPanel());
     }
 
+
+    private void ShowLevelInfo(Level level)
+    {
+
+        levelInfo.SetLevelInfo(level);
+    }
+
     public void SelectLevelOne()
     {
-        slTransition.FadeOutAndLoadScene("SquirrelLevel");
+        if (levelOne.available)
+        {
+            slTransition.FadeOutAndLoadScene(levelOne.sceneName);
+        }
+        
     }
 
 
     public void SelectLevelTwo()
     {
-        slTransition.FadeOutAndLoadScene("SquirrelLevel2");
+        if (levelOne.available)
+        {
+            slTransition.FadeOutAndLoadScene(levelTwo.sceneName);
+        }
     }
 
     public void SelectCancel()

@@ -26,12 +26,12 @@ public class SlotItem : MonoBehaviour
         {
             slotIconGameObject.GetComponent<Image>().sprite = itemTemplate.image;
             empty = false;
-            Debug.Log("Casillas llenas");
+            //Debug.Log("Casillas llenas");
         }
         else
         {
             empty = true;
-            Debug.Log("Casillas vacías");
+            //Debug.Log("Casillas vacías");
             
         }
         UpdateSlotInteractivity();
