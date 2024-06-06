@@ -1,13 +1,19 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
 
     [SerializeField] private int maxLife;
     [SerializeField] private float controlLossTime;
-    [SerializeField] private Animator lifePanelAnimator;
+    [SerializeField] private Image heartLifePanel;
+    [SerializeField] private Image faceLifePanel;
+
+    [SerializeField] private List<Sprite> faceSprites;
+    [SerializeField] private List<Sprite> heartSprites;
 
     private int life = 3;
     private ControllerPlayerSquirrel playerMovement;
@@ -36,18 +42,14 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     /// <param name="damage">Cantidad de daño que se aplica al jugador.</param>
     /// <param name="position">Posición del golpe recibido.</param>
-    public void takeDamage(int damage, Vector2 position)
+    public void takeDamage(int damage, Vector2 position, bool ignoreInvulnerability = false)
     {
-        if (isInvulnerable) return;
+        if (isInvulnerable && !ignoreInvulnerability) return;
 
         audioSource.PlayOneShot(damageSound);
         life -= damage;
 
-        if (life == 2 || life == 1)
-        {
-            //Debug.Log("Vida es " + life);
-            lifePanelAnimator.SetInteger("Life", life);
-        }
+        UpdateLifeSprite();
 
         squirrelAnimator.SetTrigger("Hit");
         StartCoroutine(LoseControl());
@@ -56,14 +58,20 @@ public class PlayerCombat : MonoBehaviour
 
         if (life <= 0)
         {
-            //Debug.Log("Vida es " + life);
-            lifePanelAnimator.SetInteger("Life", life);
             StartCoroutine(HandleDeath(position));
             return;
         }
         playerMovement.BounceOnDamage(position);
     }
 
+    private void UpdateLifeSprite()
+    {
+        if (life >= 0 && life < heartSprites.Count)
+        {
+            heartLifePanel.sprite = heartSprites[life];
+            faceLifePanel.sprite = faceSprites[life];
+        }
+    }
 
     /// <summary>
     /// Corrutina que maneja la muerte del jugador.
@@ -73,13 +81,12 @@ public class PlayerCombat : MonoBehaviour
     {
         
         yield return new WaitForSeconds(0.5f);
-        //audioSource.PlayOneShot(teleportSound);
-        lifePanelAnimator.SetInteger("Life", 3);
         PlayerSpawnSquirrel playerSpawn = GetComponent<PlayerSpawnSquirrel>();
         playerSpawn.Death();
         GameEventsManager.instance.HitEnemy(20f);
         // Restablecer la vida del jugador
         life = maxLife;
+        UpdateLifeSprite();
     }
 
     private IEnumerator DisableCollision()

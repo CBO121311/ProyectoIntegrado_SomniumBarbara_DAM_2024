@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f697a2eac2f3ff42969da8f3a846b1f, type: 3}
   m_Name: 3EggItem
   m_EditorClassIdentifier: 
-  id: 1A03
+  id: 1A_03
   image: {fileID: 5602424429778411609, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Huevo
   description: "\xBFSaldr\xE1 de aqu\xED una gallina?"

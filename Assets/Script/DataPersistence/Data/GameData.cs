@@ -47,11 +47,11 @@ public class GameData
 
     private void InitializeLevel()
     {
-        var level1A = new Level("Ardilla", 1, "SquirrelLevel1", 4, 20, 2, true);
+        var level1A = new Level("Ardilla", 1, "SquirrelLevel1", 5, 120, 3, true);
         level1A.items.AddRange(new List<string> { "1A_01", "1A_02", "1A_03", "1A_04", "1A_05" });
         informationLevel.Add(level1A);
 
-        var level2A = new Level("Ardilla", 2, "SquirrelLevel2", 5, 30, 3, true);
+        var level2A = new Level("Ardilla", 2, "SquirrelLevel2", 4, 100, 2, true);
         level2A.items.AddRange(new List<string> { "2A_01", "2A_02", "2A_03", "2A_04" });
         informationLevel.Add(level2A);
 

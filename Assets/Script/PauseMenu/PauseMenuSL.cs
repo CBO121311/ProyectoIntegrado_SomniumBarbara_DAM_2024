@@ -123,7 +123,7 @@ public class PauseMenuSL : Menu
             //Función que se ejecuta si seleccionamos "Confirmar"
             () =>
             {
-                SceneManager.LoadSceneAsync("MainMenuUI");
+                slTransition.FadeOutAndLoadScene("MainMenuUI");
             },
 
             //Función que se ejecuta si seleccionamos "Cancelar"

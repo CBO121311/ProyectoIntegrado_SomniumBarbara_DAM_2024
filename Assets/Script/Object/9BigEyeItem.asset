@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f697a2eac2f3ff42969da8f3a846b1f, type: 3}
   m_Name: 9BigEyeItem
   m_EditorClassIdentifier: 
-  id: 2A04
+  id: 2A_04
   image: {fileID: -5317409349221179572, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Ojo grande
   description: "\xBFQu\xE9 animal tiene el ojo tan grande?"

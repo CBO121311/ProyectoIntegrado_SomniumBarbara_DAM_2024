@@ -1591,7 +1591,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeGameobject: {fileID: 582667383}
-  fadeDuration: 1
 --- !u!224 &1315608300 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4197992659145680156, guid: 2db65490cc8755c41be90977d48fdb00,
@@ -1634,6 +1633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DataPersistenceController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5199533107150768275, guid: 3ad47a99faee0e2498917b32dde17a7a,
+        type: 3}
+      propertyPath: useEncryption
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5199533107150768275, guid: 3ad47a99faee0e2498917b32dde17a7a,
         type: 3}

@@ -6,23 +6,32 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour
 {
+    [Header("References")]
+    private Animator animator;
+    private Rigidbody2D rb2D;
+    private Collider2D col2D;
+    private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
+
+
     [SerializeField] public Transform player;
     [SerializeField] private float detectDistance;
     [SerializeField] private float chaseTime;
     [SerializeField] private AudioClip detectionSound;
 
     public Vector3 startPoint;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+
     public bool followPlayer;
-    private AudioSource audioSource;
+
 
     [Header("Health")]
     public float health = 50f;
     [SerializeField] private AudioClip audioHit;
-    private bool isDead = false;
+
     void Start()
     {
+        rb2D = GetComponent<Rigidbody2D>();
+        col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         startPoint = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -34,58 +43,20 @@ public class Bat : MonoBehaviour
     {
         detectDistance = Vector2.Distance(transform.position, player.position);
         animator.SetFloat("Distance", detectDistance);
-
-        if (health <= 0 && !isDead)
-        {
-            Die();
-        }
     }
 
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0 && !isDead)
+        if (health <= 0)
         {
-            Die();
+            StartCoroutine(ActiveDeath());
         }
     }
-
-
-    private void Die()
-    {
-        isDead = true;
-        //animator.SetTrigger("Death");
-        GameEventsManager.instance.DeadEnemy();
-
-        Destroy(this.gameObject);
-    }
-
 
     public void Spin(Vector3 target)
     {
-        spriteRenderer.flipX = transform.position.x < target.x;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("LE DI WEAPON COLLIDER");
-
-            PlayerCombat playerCombat = other.GetComponent<PlayerCombat>();
-            if (playerCombat != null)
-            {
-
-                Vector2 contactPoint = other.ClosestPoint(transform.position);
-                Vector2 pushDirection = ((Vector2)other.transform.position - contactPoint).normalized;
-                Vector2 pushVector = pushDirection * new Vector2(-1, -1); // Magnitud ajustada
-
-                playerCombat.takeDamage(1, pushVector);
-
-                followPlayer = false;
-                animator.SetTrigger("Return");
-            }
-        }
+        spriteRenderer.flipX = transform.position.x > target.x;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -100,7 +71,8 @@ public class Bat : MonoBehaviour
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
                 TakeDamage(50f);
                 audioSource.PlayOneShot(audioHit);
-                Debug.Log("Golpe");
+
+                //Debug.Log("Golpe");
             }
             else
             {
@@ -116,7 +88,6 @@ public class Bat : MonoBehaviour
     public void StartChasing()
     {
         followPlayer = true;
-        //PlayDetectionSound();
     }
 
     public void StopChasing()
@@ -132,10 +103,21 @@ public class Bat : MonoBehaviour
         }
     }
 
-    public void Hit()
+    IEnumerator ActiveDeath()
+    {
+        col2D.enabled = false;
+        if (rb2D != null)
+        {
+            rb2D.velocity = Vector2.zero;
+            rb2D.isKinematic = true;
+        }
+        yield return new WaitForSeconds(0.5f);
+        animator.SetTrigger("Death");
+    }
+
+    public void Death()
     {
         GameEventsManager.instance.DeadEnemy();
-
         Destroy(gameObject);
     }
 }

@@ -1,13 +1,20 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Opossum : MonoBehaviour
 {
+    [Header("References")]
     private Animator animator;
-    [SerializeField] private GameObject effect;
+    private Rigidbody2D rb2D;
+    private Collider2D col2D;
+    private PlatformEnemies platformEnemies;
 
     private void Start()
     {
+        rb2D = GetComponent<Rigidbody2D>();
+        col2D = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
+        platformEnemies = GetComponent<PlatformEnemies>();
     }
 
 
@@ -18,6 +25,7 @@ public class Opossum : MonoBehaviour
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
+                platformEnemies.StopMovement();
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
             }
             else
@@ -28,10 +36,14 @@ public class Opossum : MonoBehaviour
     }
 
     public void Hit()
+    { 
+        col2D.enabled = false;
+        animator.SetTrigger("Death");
+    }
+
+    public void Death()
     {
-        Instantiate(effect, transform.position, transform.rotation);
         GameEventsManager.instance.DeadEnemy();
- 
         Destroy(gameObject);
     }
 }

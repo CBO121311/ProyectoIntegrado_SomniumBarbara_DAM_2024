@@ -10,7 +10,7 @@ public class FallPlayer : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             Vector2 normal = Vector2.up; // Puedes ajustar esta dirección según sea necesario
-            other.gameObject.GetComponent<PlayerCombat>().takeDamage(3, normal);
+            other.gameObject.GetComponent<PlayerCombat>().takeDamage(3, normal, true);
         }
         Debug.Log("Me caigooo");
     }

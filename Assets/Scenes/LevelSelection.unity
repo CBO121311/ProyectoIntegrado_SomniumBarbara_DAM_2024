@@ -132,6 +132,16 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Completar Nivel:'
       objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 5677046002744691168, guid: 0fde00b53278aaa42b0b5abd6982101c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4284,6 +4294,16 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Coleccionados:'
       objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 5677046002744691168, guid: 0fde00b53278aaa42b0b5abd6982101c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6495,6 +6515,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "Tiempo L\xEDmite:"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 5677046002744691168, guid: 0fde00b53278aaa42b0b5abd6982101c,
         type: 3}
@@ -21568,6 +21598,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 847640245}
     m_Modifications:
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501710291203058927, guid: 0fde00b53278aaa42b0b5abd6982101c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 5677046002744691168, guid: 0fde00b53278aaa42b0b5abd6982101c,
         type: 3}
       propertyPath: m_AnchoredPosition.x

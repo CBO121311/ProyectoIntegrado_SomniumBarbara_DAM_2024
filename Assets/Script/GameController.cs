@@ -2,15 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour, IDataPersistence
 {
 
     [Header("Timer")]
-    [SerializeField] private float maxTime;
     [SerializeField] private Slider sliderTime;
+    private float maxTime;
     private float currentTime;
     private bool endTime = false;
 
@@ -46,6 +45,14 @@ public class GameController : MonoBehaviour, IDataPersistence
     public int ItemCount { get => itemCount;}
     public int ItemsCollected { get => itemsCollected;}
 
+    [Header("Information Level")]
+    [SerializeField] private string nameCurrentLevel;
+    [SerializeField] private int numCurrentLevel;
+    private Level currentLevel;
+    private int numItemMinComplete;
+
+
+    private bool objectiveCompleted = false;
 
     public static GameController instance { get; private set; }
     public bool IsGameRunning { get => isGameRunning;}
@@ -127,7 +134,6 @@ public class GameController : MonoBehaviour, IDataPersistence
         AudioManager.instance.StopMusic();
         deathPlayer = true;
         DataPersistenceManager.instance.SaveGameDataOnly();
-        //SceneManager.LoadScene("LevelSelection");
     }
     private void HandleFallPlayer()
     {
@@ -177,7 +183,6 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     public void ActivateTimer()
     {
-        //tiempoActual = tiempoMaximo +1;
         currentTime = maxTime;
         sliderTime.maxValue = maxTime;
         ChangeTimerState(true);
@@ -223,7 +228,7 @@ public class GameController : MonoBehaviour, IDataPersistence
         // Espera a que se presione la tecla "Z" para cambiar de escena
         StartCoroutine(WaitForKeyPress( () =>
         {
-            SceneManager.LoadScene("LevelSelection");
+            levelSquirrelTransition.FadeOutAndLoadScene("LevelSelection");
             Time.timeScale = 1f;
         }));
     }
@@ -245,22 +250,21 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
-
     //Método que se le llama cuando recoges un item
     private void HandleItemCollected()
     {
         itemsCollected++;
 
-        if (itemsCollected == itemCount)
+        /*if (itemsCollected == itemCount)
         {
             Debug.Log("¡Todos los artículos han sido recolectados!");      
-        }
+        }*/
 
-        if (itemsCollected >= 5)
+        if (!objectiveCompleted && itemsCollected >= numItemMinComplete)
         {
-            Debug.Log("Se han recolectado al menos 5 elementos.");
             passLevel.CompleteObjective();
             levelSquirrelTransition.RotatePassMessage();
+            objectiveCompleted = true;
         }
     }
 
@@ -281,12 +285,12 @@ public class GameController : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        //throw new System.NotImplementedException();
+        currentLevel = data.GetLevelByName(nameCurrentLevel,numCurrentLevel);
+        numItemMinComplete = currentLevel.minItems;
+        maxTime = currentLevel.time;
     }
     public void SaveData(GameData data)
     {
-        Level currentLevel = data.informationLevel.Find(level => level.name == "Ardilla");
-
         if (deathPlayer)
         {
             currentLevel.deaths++;
