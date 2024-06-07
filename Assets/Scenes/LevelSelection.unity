@@ -9500,6 +9500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7caa65bc6948240ac4b30911c62ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadPosition: 1
   animator: {fileID: 1380033305}
   rb2D: {fileID: 1380033306}
   velocidadMovimiento: 5

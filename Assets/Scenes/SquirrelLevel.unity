@@ -974,8 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cefd6f825e0e154bb4eb9cfd34b2003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &204636448
-CircleCollider2D:
+--- !u!70 &204636448
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1008,8 +1008,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.14608207, y: 0.09648261}
-  m_Radius: 0.31067193
+  m_Offset: {x: 0.09926763, y: -0.024520218}
+  m_Size: {x: 0.8341239, y: 0.35820666}
+  m_Direction: 1
 --- !u!1 &212721221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3181705484817130427, guid: 17cbc5798e7633443822716b0b08c14d,
@@ -22878,7 +22879,7 @@ SpriteRenderer:
   m_SortingLayerID: 1581475573
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4243389574673483943, guid: d85ef40a50edcb04188490b5a8323374,
+  m_Sprite: {fileID: -7585472409127448927, guid: 1161a01f9692e214fbad428a0ffdb447,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24462,8 +24463,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.05343194, y: -0.0001390934}
-  m_Radius: 0.104995586
+  m_Offset: {x: 0.052902747, y: -0.013896084}
+  m_Radius: 0.065311864
 --- !u!82 &1355957317
 AudioSource:
   m_ObjectHideFlags: 0

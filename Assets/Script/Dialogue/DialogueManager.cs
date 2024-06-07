@@ -51,8 +51,6 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
 
-    private DialogueVariables dialogueVariables;
-
     private void Awake()
     {
         if (instance != null)
@@ -61,7 +59,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         instance = this; 
-        dialogueVariables = new DialogueVariables(loadGlobalsJson);
     }
 
     public static DialogueManager GetInstance()
@@ -107,7 +104,6 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        dialogueVariables.StartListening(currentStory);
 
         //reset portrait, layout , and speaker
         displayNameText.text = "???";
@@ -122,8 +118,7 @@ public class DialogueManager : MonoBehaviour
         //Da un poco espacio al terminar el dialogo
         yield return new WaitForSeconds(0.2f);
 
-        //Deja de escuchar la historia.
-        dialogueVariables.StopListening(currentStory);
+
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -197,8 +192,6 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
-
-
 
 
         //Acciones a tomar después de que todas las líneas hayan terminado de mostrarse.
@@ -300,16 +293,5 @@ public class DialogueManager : MonoBehaviour
             InputManager.GetInstance().RegisterSubmitPressed();
             ContinueStory();
         }
-    }
-
-    public Ink.Runtime.Object GetVariableState(string variableName)
-    {
-        Ink.Runtime.Object variableValue = null;
-        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
-        if(variableValue == null)
-        {
-            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
-        }
-        return variableValue;
     }
 }

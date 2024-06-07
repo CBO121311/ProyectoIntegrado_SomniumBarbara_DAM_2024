@@ -356,7 +356,7 @@ TextureImporter:
       name: SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 290
         width: 23
         height: 36
@@ -377,7 +377,7 @@ TextureImporter:
       name: SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 290
         width: 23
         height: 36
@@ -398,7 +398,7 @@ TextureImporter:
       name: SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 290
         width: 23
         height: 36
@@ -419,7 +419,7 @@ TextureImporter:
       name: SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 290
         width: 23
         height: 36
@@ -440,7 +440,7 @@ TextureImporter:
       name: SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 290
         width: 23
         height: 36
@@ -461,7 +461,7 @@ TextureImporter:
       name: SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 290
         width: 23
         height: 36
@@ -482,7 +482,7 @@ TextureImporter:
       name: SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 290
         width: 23
         height: 36
@@ -503,7 +503,7 @@ TextureImporter:
       name: SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 290
         width: 23
         height: 36
@@ -524,7 +524,7 @@ TextureImporter:
       name: SpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 290
         width: 23
         height: 36
@@ -545,7 +545,7 @@ TextureImporter:
       name: SpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 254
         width: 23
         height: 36
@@ -566,7 +566,7 @@ TextureImporter:
       name: SpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 254
         width: 23
         height: 36
@@ -587,7 +587,7 @@ TextureImporter:
       name: SpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 254
         width: 23
         height: 36
@@ -608,7 +608,7 @@ TextureImporter:
       name: SpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 254
         width: 23
         height: 36
@@ -629,7 +629,7 @@ TextureImporter:
       name: SpriteSheet_13
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 254
         width: 23
         height: 36
@@ -650,7 +650,7 @@ TextureImporter:
       name: SpriteSheet_14
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 254
         width: 23
         height: 36
@@ -671,7 +671,7 @@ TextureImporter:
       name: SpriteSheet_15
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 254
         width: 23
         height: 36
@@ -692,7 +692,7 @@ TextureImporter:
       name: SpriteSheet_16
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 254
         width: 23
         height: 36
@@ -713,7 +713,7 @@ TextureImporter:
       name: SpriteSheet_17
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 254
         width: 23
         height: 36
@@ -734,7 +734,7 @@ TextureImporter:
       name: SpriteSheet_18
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 218
         width: 23
         height: 36
@@ -755,7 +755,7 @@ TextureImporter:
       name: SpriteSheet_19
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 218
         width: 23
         height: 36
@@ -776,7 +776,7 @@ TextureImporter:
       name: SpriteSheet_20
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 218
         width: 23
         height: 36
@@ -797,7 +797,7 @@ TextureImporter:
       name: SpriteSheet_21
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 218
         width: 23
         height: 36
@@ -818,7 +818,7 @@ TextureImporter:
       name: SpriteSheet_22
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 218
         width: 23
         height: 36
@@ -839,7 +839,7 @@ TextureImporter:
       name: SpriteSheet_23
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 218
         width: 23
         height: 36
@@ -860,7 +860,7 @@ TextureImporter:
       name: SpriteSheet_24
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 218
         width: 23
         height: 36
@@ -881,7 +881,7 @@ TextureImporter:
       name: SpriteSheet_25
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 218
         width: 23
         height: 36
@@ -902,7 +902,7 @@ TextureImporter:
       name: SpriteSheet_26
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 218
         width: 23
         height: 36
@@ -923,7 +923,7 @@ TextureImporter:
       name: SpriteSheet_27
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 182
         width: 23
         height: 36
@@ -944,7 +944,7 @@ TextureImporter:
       name: SpriteSheet_28
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 182
         width: 23
         height: 36
@@ -965,7 +965,7 @@ TextureImporter:
       name: SpriteSheet_29
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 182
         width: 23
         height: 36
@@ -986,7 +986,7 @@ TextureImporter:
       name: SpriteSheet_30
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 182
         width: 23
         height: 36
@@ -1007,7 +1007,7 @@ TextureImporter:
       name: SpriteSheet_31
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 182
         width: 23
         height: 36
@@ -1028,7 +1028,7 @@ TextureImporter:
       name: SpriteSheet_32
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 182
         width: 23
         height: 36
@@ -1049,7 +1049,7 @@ TextureImporter:
       name: SpriteSheet_33
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 182
         width: 23
         height: 36
@@ -1070,7 +1070,7 @@ TextureImporter:
       name: SpriteSheet_34
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 182
         width: 23
         height: 36
@@ -1091,7 +1091,7 @@ TextureImporter:
       name: SpriteSheet_35
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 182
         width: 23
         height: 36
@@ -1112,7 +1112,7 @@ TextureImporter:
       name: SpriteSheet_36
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 146
         width: 23
         height: 36
@@ -1133,7 +1133,7 @@ TextureImporter:
       name: SpriteSheet_37
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 146
         width: 23
         height: 36
@@ -1154,7 +1154,7 @@ TextureImporter:
       name: SpriteSheet_38
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 146
         width: 23
         height: 36
@@ -1175,7 +1175,7 @@ TextureImporter:
       name: SpriteSheet_39
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 146
         width: 23
         height: 36
@@ -1196,7 +1196,7 @@ TextureImporter:
       name: SpriteSheet_40
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 146
         width: 23
         height: 36
@@ -1217,7 +1217,7 @@ TextureImporter:
       name: SpriteSheet_41
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 146
         width: 23
         height: 36
@@ -1238,7 +1238,7 @@ TextureImporter:
       name: SpriteSheet_42
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 146
         width: 23
         height: 36
@@ -1259,7 +1259,7 @@ TextureImporter:
       name: SpriteSheet_43
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 146
         width: 23
         height: 36
@@ -1280,7 +1280,7 @@ TextureImporter:
       name: SpriteSheet_44
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 146
         width: 23
         height: 36
@@ -1301,7 +1301,7 @@ TextureImporter:
       name: SpriteSheet_45
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 110
         width: 23
         height: 36
@@ -1322,7 +1322,7 @@ TextureImporter:
       name: SpriteSheet_46
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 110
         width: 23
         height: 36
@@ -1343,7 +1343,7 @@ TextureImporter:
       name: SpriteSheet_47
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 110
         width: 23
         height: 36
@@ -1364,7 +1364,7 @@ TextureImporter:
       name: SpriteSheet_48
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 110
         width: 23
         height: 36
@@ -1385,7 +1385,7 @@ TextureImporter:
       name: SpriteSheet_49
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 110
         width: 23
         height: 36
@@ -1406,7 +1406,7 @@ TextureImporter:
       name: SpriteSheet_50
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 110
         width: 23
         height: 36
@@ -1427,7 +1427,7 @@ TextureImporter:
       name: SpriteSheet_51
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 110
         width: 23
         height: 36
@@ -1448,7 +1448,7 @@ TextureImporter:
       name: SpriteSheet_52
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 110
         width: 23
         height: 36
@@ -1469,7 +1469,7 @@ TextureImporter:
       name: SpriteSheet_53
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 110
         width: 23
         height: 36
@@ -1490,7 +1490,7 @@ TextureImporter:
       name: SpriteSheet_54
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 74
         width: 23
         height: 36
@@ -1511,7 +1511,7 @@ TextureImporter:
       name: SpriteSheet_55
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 74
         width: 23
         height: 36
@@ -1532,7 +1532,7 @@ TextureImporter:
       name: SpriteSheet_56
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 74
         width: 23
         height: 36
@@ -1553,7 +1553,7 @@ TextureImporter:
       name: SpriteSheet_57
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 74
         width: 23
         height: 36
@@ -1574,7 +1574,7 @@ TextureImporter:
       name: SpriteSheet_58
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 74
         width: 23
         height: 36
@@ -1595,7 +1595,7 @@ TextureImporter:
       name: SpriteSheet_59
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 74
         width: 23
         height: 36
@@ -1616,7 +1616,7 @@ TextureImporter:
       name: SpriteSheet_60
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 74
         width: 23
         height: 36
@@ -1637,7 +1637,7 @@ TextureImporter:
       name: SpriteSheet_61
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 74
         width: 23
         height: 36
@@ -1658,7 +1658,7 @@ TextureImporter:
       name: SpriteSheet_62
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 74
         width: 23
         height: 36
@@ -1679,7 +1679,7 @@ TextureImporter:
       name: SpriteSheet_63
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 38
         width: 23
         height: 36
@@ -1700,7 +1700,7 @@ TextureImporter:
       name: SpriteSheet_64
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 38
         width: 23
         height: 36
@@ -1721,7 +1721,7 @@ TextureImporter:
       name: SpriteSheet_65
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 38
         width: 23
         height: 36
@@ -1742,7 +1742,7 @@ TextureImporter:
       name: SpriteSheet_66
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 38
         width: 23
         height: 36
@@ -1763,7 +1763,7 @@ TextureImporter:
       name: SpriteSheet_67
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 38
         width: 23
         height: 36
@@ -1784,7 +1784,7 @@ TextureImporter:
       name: SpriteSheet_68
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 38
         width: 23
         height: 36
@@ -1805,7 +1805,7 @@ TextureImporter:
       name: SpriteSheet_69
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 38
         width: 23
         height: 36
@@ -1826,7 +1826,7 @@ TextureImporter:
       name: SpriteSheet_70
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 38
         width: 23
         height: 36
@@ -1847,7 +1847,7 @@ TextureImporter:
       name: SpriteSheet_71
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 38
         width: 23
         height: 36
@@ -1868,7 +1868,7 @@ TextureImporter:
       name: SpriteSheet_72
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 2
         width: 23
         height: 36
@@ -1889,7 +1889,7 @@ TextureImporter:
       name: SpriteSheet_73
       rect:
         serializedVersion: 2
-        x: 23
+        x: 24
         y: 2
         width: 23
         height: 36
@@ -1910,7 +1910,7 @@ TextureImporter:
       name: SpriteSheet_74
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 2
         width: 23
         height: 36
@@ -1931,7 +1931,7 @@ TextureImporter:
       name: SpriteSheet_75
       rect:
         serializedVersion: 2
-        x: 69
+        x: 70
         y: 2
         width: 23
         height: 36
@@ -1952,7 +1952,7 @@ TextureImporter:
       name: SpriteSheet_76
       rect:
         serializedVersion: 2
-        x: 92
+        x: 93
         y: 2
         width: 23
         height: 36
@@ -1973,7 +1973,7 @@ TextureImporter:
       name: SpriteSheet_77
       rect:
         serializedVersion: 2
-        x: 115
+        x: 116
         y: 2
         width: 23
         height: 36
@@ -1994,7 +1994,7 @@ TextureImporter:
       name: SpriteSheet_78
       rect:
         serializedVersion: 2
-        x: 138
+        x: 139
         y: 2
         width: 23
         height: 36
@@ -2015,7 +2015,7 @@ TextureImporter:
       name: SpriteSheet_79
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 2
         width: 23
         height: 36
@@ -2036,7 +2036,7 @@ TextureImporter:
       name: SpriteSheet_80
       rect:
         serializedVersion: 2
-        x: 184
+        x: 185
         y: 2
         width: 23
         height: 36
