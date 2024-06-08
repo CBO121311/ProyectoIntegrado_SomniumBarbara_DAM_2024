@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e86d760d56af6449ecccc27983adba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: ca1001b4c7495d0489d074f3335f2234, type: 3}
 --- !u!114 &227051365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4903,7 +4903,7 @@ Transform:
   m_GameObject: {fileID: 1168092352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.318634, y: -3.3553486, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4921,7 +4921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e86d760d56af6449ecccc27983adba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: e388e1ed23c73254b92f6ff32a0e08f4, type: 3}
+  inkJSON: {fileID: 4900000, guid: c411af026af3e63499af1081ab058bdd, type: 3}
 --- !u!61 &1168092355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4956,7 +4956,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.84428716, y: -0.8255663}
+  m_Offset: {x: 0.029234648, y: -0.29381227}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4966,7 +4966,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0309477, y: 0.28150368}
+  m_Size: {x: 1.4950442, y: 0.16444683}
   m_EdgeRadius: 0
 --- !u!1001 &1184200262
 PrefabInstance:
@@ -5547,7 +5547,7 @@ Transform:
   m_GameObject: {fileID: 1380033300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.92, y: -13.98, z: 0}
+  m_LocalPosition: {x: -4.92, y: -13.73, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5782,6 +5782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee646b536333c0640ad8c14d1e450d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 484478583}
   typingSpeed: 0.04
   dialoguePanel: {fileID: 302935736}
   continueIcon: {fileID: 1607249577}
@@ -6113,7 +6114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e86d760d56af6449ecccc27983adba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: e388e1ed23c73254b92f6ff32a0e08f4, type: 3}
+  inkJSON: {fileID: 4900000, guid: ad6d368958a919844bdb5078450e1aac, type: 3}
 --- !u!61 &1544045243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17916,7 +17917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e86d760d56af6449ecccc27983adba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: 71568d76c078dcf49b5036defae5c8a4, type: 3}
 --- !u!1 &5958601977504149538
 GameObject:
   m_ObjectHideFlags: 0

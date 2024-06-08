@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+
+    [SerializeField] private TopDown_Transition transition;
+
     [Header("Params")]
 
     [SerializeField] private float typingSpeed = 0.04f;
@@ -250,7 +253,7 @@ public class DialogueManager : MonoBehaviour
 
     private void ChangeScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        transition.FadeOutAndLoadScene(sceneName);
     }
 
 
