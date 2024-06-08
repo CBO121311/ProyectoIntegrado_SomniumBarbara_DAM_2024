@@ -1,0 +1,2177 @@
+fileFormatVersion: 2
+guid: 1e7d9f2ab68c8894ab90442940e86c74
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6956489323153808221
+    second: SpriteSheet BarbaraAdult 2_0
+  - first:
+      213: 3573566197538142975
+    second: SpriteSheet BarbaraAdult 2_1
+  - first:
+      213: -2227482912622258578
+    second: SpriteSheet BarbaraAdult 2_2
+  - first:
+      213: 1747768905557783593
+    second: SpriteSheet BarbaraAdult 2_3
+  - first:
+      213: 6177748605424855787
+    second: SpriteSheet BarbaraAdult 2_4
+  - first:
+      213: 2327765690794740744
+    second: SpriteSheet BarbaraAdult 2_5
+  - first:
+      213: -3979895998033120151
+    second: SpriteSheet BarbaraAdult 2_6
+  - first:
+      213: -685278273309629187
+    second: SpriteSheet BarbaraAdult 2_7
+  - first:
+      213: -334954652587100456
+    second: SpriteSheet BarbaraAdult 2_8
+  - first:
+      213: 6063828298426248494
+    second: SpriteSheet BarbaraAdult 2_9
+  - first:
+      213: -4523399955546105325
+    second: SpriteSheet BarbaraAdult 2_10
+  - first:
+      213: 2802456132800888244
+    second: SpriteSheet BarbaraAdult 2_11
+  - first:
+      213: -19449524832382045
+    second: SpriteSheet BarbaraAdult 2_12
+  - first:
+      213: 1680412968825923408
+    second: SpriteSheet BarbaraAdult 2_13
+  - first:
+      213: -8056247937851204907
+    second: SpriteSheet BarbaraAdult 2_14
+  - first:
+      213: -3954926783137441144
+    second: SpriteSheet BarbaraAdult 2_15
+  - first:
+      213: -2050080510101439464
+    second: SpriteSheet BarbaraAdult 2_16
+  - first:
+      213: -808802247764523153
+    second: SpriteSheet BarbaraAdult 2_17
+  - first:
+      213: 645983975759605111
+    second: SpriteSheet BarbaraAdult 2_18
+  - first:
+      213: -848166813259999611
+    second: SpriteSheet BarbaraAdult 2_19
+  - first:
+      213: -1855032323546110938
+    second: SpriteSheet BarbaraAdult 2_20
+  - first:
+      213: -1661449902673556722
+    second: SpriteSheet BarbaraAdult 2_21
+  - first:
+      213: 8099676250674588471
+    second: SpriteSheet BarbaraAdult 2_22
+  - first:
+      213: 7297425365532481388
+    second: SpriteSheet BarbaraAdult 2_23
+  - first:
+      213: 4060501447981467716
+    second: SpriteSheet BarbaraAdult 2_24
+  - first:
+      213: -8913202376582628498
+    second: SpriteSheet BarbaraAdult 2_25
+  - first:
+      213: 8999514191805658025
+    second: SpriteSheet BarbaraAdult 2_26
+  - first:
+      213: -1910354895200088722
+    second: SpriteSheet BarbaraAdult 2_27
+  - first:
+      213: -4772122270739828865
+    second: SpriteSheet BarbaraAdult 2_28
+  - first:
+      213: 1842654478143085982
+    second: SpriteSheet BarbaraAdult 2_29
+  - first:
+      213: -8650903910844554727
+    second: SpriteSheet BarbaraAdult 2_30
+  - first:
+      213: 8788958871351105128
+    second: SpriteSheet BarbaraAdult 2_31
+  - first:
+      213: -7063168637957299559
+    second: SpriteSheet BarbaraAdult 2_32
+  - first:
+      213: 2364412292660785494
+    second: SpriteSheet BarbaraAdult 2_33
+  - first:
+      213: 7756204400012758796
+    second: SpriteSheet BarbaraAdult 2_34
+  - first:
+      213: -2801106633631252336
+    second: SpriteSheet BarbaraAdult 2_35
+  - first:
+      213: 8184124676771003326
+    second: SpriteSheet BarbaraAdult 2_36
+  - first:
+      213: -1290286733915311653
+    second: SpriteSheet BarbaraAdult 2_37
+  - first:
+      213: -7520545841402391814
+    second: SpriteSheet BarbaraAdult 2_38
+  - first:
+      213: -6815080180089715152
+    second: SpriteSheet BarbaraAdult 2_39
+  - first:
+      213: -5089738698190673347
+    second: SpriteSheet BarbaraAdult 2_40
+  - first:
+      213: -6351410819276276655
+    second: SpriteSheet BarbaraAdult 2_41
+  - first:
+      213: 8225302161247066769
+    second: SpriteSheet BarbaraAdult 2_42
+  - first:
+      213: -553159323452018260
+    second: SpriteSheet BarbaraAdult 2_43
+  - first:
+      213: 8040371618389274098
+    second: SpriteSheet BarbaraAdult 2_44
+  - first:
+      213: -3565768814333693558
+    second: SpriteSheet BarbaraAdult 2_45
+  - first:
+      213: 8843682283258197010
+    second: SpriteSheet BarbaraAdult 2_46
+  - first:
+      213: -817219141913299522
+    second: SpriteSheet BarbaraAdult 2_47
+  - first:
+      213: 5074615320241396787
+    second: SpriteSheet BarbaraAdult 2_48
+  - first:
+      213: -8208272645642515315
+    second: SpriteSheet BarbaraAdult 2_49
+  - first:
+      213: 7098305754116717934
+    second: SpriteSheet BarbaraAdult 2_50
+  - first:
+      213: 5935522346565640261
+    second: SpriteSheet BarbaraAdult 2_51
+  - first:
+      213: 6897851506520810656
+    second: SpriteSheet BarbaraAdult 2_52
+  - first:
+      213: 1414034930641082641
+    second: SpriteSheet BarbaraAdult 2_53
+  - first:
+      213: 7961304608069779145
+    second: SpriteSheet BarbaraAdult 2_54
+  - first:
+      213: 6231712986735515255
+    second: SpriteSheet BarbaraAdult 2_55
+  - first:
+      213: 8369696873115366944
+    second: SpriteSheet BarbaraAdult 2_56
+  - first:
+      213: 1953555228591184786
+    second: SpriteSheet BarbaraAdult 2_57
+  - first:
+      213: 1037037259840126782
+    second: SpriteSheet BarbaraAdult 2_58
+  - first:
+      213: 5513980325961293325
+    second: SpriteSheet BarbaraAdult 2_59
+  - first:
+      213: 1040942375304440766
+    second: SpriteSheet BarbaraAdult 2_60
+  - first:
+      213: -1872187866204955310
+    second: SpriteSheet BarbaraAdult 2_61
+  - first:
+      213: -7210517632323728625
+    second: SpriteSheet BarbaraAdult 2_62
+  - first:
+      213: -4489283320138692017
+    second: SpriteSheet BarbaraAdult 2_63
+  - first:
+      213: 5693376159750213014
+    second: SpriteSheet BarbaraAdult 2_64
+  - first:
+      213: -7669982469671749355
+    second: SpriteSheet BarbaraAdult 2_65
+  - first:
+      213: -81175680430370620
+    second: SpriteSheet BarbaraAdult 2_66
+  - first:
+      213: -2682727301415242643
+    second: SpriteSheet BarbaraAdult 2_67
+  - first:
+      213: 6192388608595074842
+    second: SpriteSheet BarbaraAdult 2_68
+  - first:
+      213: 8781703105291461963
+    second: SpriteSheet BarbaraAdult 2_69
+  - first:
+      213: -3415058702509124028
+    second: SpriteSheet BarbaraAdult 2_70
+  - first:
+      213: -856327684531198290
+    second: SpriteSheet BarbaraAdult 2_71
+  - first:
+      213: -4768837361870711575
+    second: SpriteSheet BarbaraAdult 2_72
+  - first:
+      213: 320325965069881770
+    second: SpriteSheet BarbaraAdult 2_73
+  - first:
+      213: -2716626795463777609
+    second: SpriteSheet BarbaraAdult 2_74
+  - first:
+      213: -5211250868550566491
+    second: SpriteSheet BarbaraAdult 2_75
+  - first:
+      213: -435124351219407765
+    second: SpriteSheet BarbaraAdult 2_76
+  - first:
+      213: -1636324429194339584
+    second: SpriteSheet BarbaraAdult 2_77
+  - first:
+      213: 9148222242353129409
+    second: SpriteSheet BarbaraAdult 2_78
+  - first:
+      213: 8873030686137768008
+    second: SpriteSheet BarbaraAdult 2_79
+  - first:
+      213: -3214810590917846943
+    second: SpriteSheet BarbaraAdult 2_80
+  - first:
+      213: -5212811852452954459
+    second: SpriteSheet BarbaraAdult 2_81
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4ae9151d5957f90800000000000000
+      internalID: -6956489323153808221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaba99e58bd79130800000000000000
+      internalID: 3573566197538142975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66d5e9b7146611e0800000000000000
+      internalID: -2227482912622258578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924be3d3f82514810800000000000000
+      internalID: 1747768905557783593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea630220a5cbb550800000000000000
+      internalID: 6177748605424855787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c89201092ed4020800000000000000
+      internalID: 2327765690794740744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964bc3a1da194c8c0800000000000000
+      internalID: -3979895998033120151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4261b8a076d76f0800000000000000
+      internalID: -685278273309629187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d67ea4a4800a5bf0800000000000000
+      internalID: -334954652587100456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d68aab5bb072450800000000000000
+      internalID: 6063828298426248494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_10
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 252
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a18a8d4b7a931c0800000000000000
+      internalID: -4523399955546105325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd3636310354e620800000000000000
+      internalID: 2802456132800888244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3d05d92c6eabff0800000000000000
+      internalID: -19449524832382045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05724d221b6025710800000000000000
+      internalID: 1680412968825923408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dad7e13f25723090800000000000000
+      internalID: -8056247937851204907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a1a6a7b074d19c0800000000000000
+      internalID: -3954926783137441144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_16
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cb37a43a6ac83e0800000000000000
+      internalID: -2050080510101439464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_17
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67457014ae86c4f0800000000000000
+      internalID: -808802247764523153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77deebdd00ff6f800800000000000000
+      internalID: 645983975759605111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_19
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586dc51f6c4ba34f0800000000000000
+      internalID: -848166813259999611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_20
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624aa2c1ee99146e0800000000000000
+      internalID: -1855032323546110938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_21
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 216
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b0903cd1851f8e0800000000000000
+      internalID: -1661449902673556722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b6025d2a4d76070800000000000000
+      internalID: 8099676250674588471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_23
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c671d7fd4b9a54560800000000000000
+      internalID: 7297425365532481388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44805e0bd8cc95830800000000000000
+      internalID: 4060501447981467716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_25
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bff94a9a1fd4480800000000000000
+      internalID: -8913202376582628498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_26
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3b9a9d972b4ec70800000000000000
+      internalID: 8999514191805658025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_27
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d8ba4285e0d75e0800000000000000
+      internalID: -1910354895200088722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_28
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f62db141406cdb0800000000000000
+      internalID: -4772122270739828865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_29
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d508d2c7c629910800000000000000
+      internalID: 1842654478143085982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_30
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912a2104ab0d1f780800000000000000
+      internalID: -8650903910844554727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_31
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86696601787a8f970800000000000000
+      internalID: 8788958871351105128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_32
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 180
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99220e9cb859afd90800000000000000
+      internalID: -7063168637957299559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651fc96f37410d020800000000000000
+      internalID: 2364412292660785494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_34
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f0514cec293ab60800000000000000
+      internalID: 7756204400012758796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_35
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0904b6c8b587029d0800000000000000
+      internalID: -2801106633631252336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_36
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbb17c380ad39170800000000000000
+      internalID: 8184124676771003326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_37
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1349e3d0bf71ee0800000000000000
+      internalID: -1290286733915311653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_38
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af25b2e1767a1a790800000000000000
+      internalID: -7520545841402391814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_39
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03682fd1fa8fb61a0800000000000000
+      internalID: -6815080180089715152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_40
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a29cede9d9d59b0800000000000000
+      internalID: -5089738698190673347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_41
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cf676d2814bd7a0800000000000000
+      internalID: -6351410819276276655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_42
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a52637cb4262270800000000000000
+      internalID: 8225302161247066769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_43
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 144
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1727da688c258f0800000000000000
+      internalID: -553159323452018260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fda9302363259f60800000000000000
+      internalID: 8040371618389274098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_45
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a817976d728d38ec0800000000000000
+      internalID: -3565768814333693558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_46
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21435084e221bba70800000000000000
+      internalID: 8843682283258197010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_47
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5bb9e2587a8a4f0800000000000000
+      internalID: -817219141913299522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_48
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c5ebe4fb7ac6640800000000000000
+      internalID: 5074615320241396787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_49
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c0ce0a48b561e80800000000000000
+      internalID: -8208272645642515315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_50
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dfc35997f328260800000000000000
+      internalID: 7098305754116717934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_51
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540207f50263f5250800000000000000
+      internalID: 5935522346565640261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_52
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4e09716671abf50800000000000000
+      internalID: 6897851506520810656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_53
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1191bdc0749af9310800000000000000
+      internalID: 1414034930641082641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_54
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 108
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cefda83c5c3c7e60800000000000000
+      internalID: 7961304608069779145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7761f84c1fd7b7650800000000000000
+      internalID: 6231712986735515255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_56
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0263db726f2272470800000000000000
+      internalID: 8369696873115366944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_57
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29bd849412c6c1b10800000000000000
+      internalID: 1953555228591184786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_58
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f7d93b4eb446e00800000000000000
+      internalID: 1037037259840126782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_59
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e5a6364e7958c40800000000000000
+      internalID: 5513980325961293325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_60
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb2caf339b227e00800000000000000
+      internalID: 1040942375304440766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_61
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d9e021e07a406e0800000000000000
+      internalID: -1872187866204955310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_62
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b47a69a681feb90800000000000000
+      internalID: -7210517632323728625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_63
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a0c070b9cd2b1c0800000000000000
+      internalID: -4489283320138692017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_64
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dc696d37fe20f40800000000000000
+      internalID: 5693376159750213014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_65
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 72
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519fdb5c49fbe8590800000000000000
+      internalID: -7669982469671749355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c01c83162b9fdef0800000000000000
+      internalID: -81175680430370620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_67
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64f6e9abb905cad0800000000000000
+      internalID: -2682727301415242643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_68
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f1c7e71a8cfe550800000000000000
+      internalID: 6192388608595074842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_69
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45a7d16270eed970800000000000000
+      internalID: 8781703105291461963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_70
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44656dd24364b90d0800000000000000
+      internalID: -3415058702509124028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_71
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea66f280286bd14f0800000000000000
+      internalID: -856327684531198290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_72
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4d51e8fafa1ddb0800000000000000
+      internalID: -4768837361870711575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_73
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa11350a4c6027400800000000000000
+      internalID: 320325965069881770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_74
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2e215a25a9c4ad0800000000000000
+      internalID: -2716626795463777609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_75
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adf89802faeda7b0800000000000000
+      internalID: -5211250868550566491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_76
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 36
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64e17c35b026f9f0800000000000000
+      internalID: -435124351219407765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bd39ce99b9a49e0800000000000000
+      internalID: -1636324429194339584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_78
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c729c9f8a305fe70800000000000000
+      internalID: 9148222242353129409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_79
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848d160d566532b70800000000000000
+      internalID: 8873030686137768008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_80
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1689d24ecc2b263d0800000000000000
+      internalID: -3214810590917846943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet BarbaraAdult 2_81
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae78952d3f58a7b0800000000000000
+      internalID: -5212811852452954459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ad06c2c6e595d334eabda4efc02759c4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheet BarbaraAdult 2_0: -6956489323153808221
+      SpriteSheet BarbaraAdult 2_1: 3573566197538142975
+      SpriteSheet BarbaraAdult 2_10: -4523399955546105325
+      SpriteSheet BarbaraAdult 2_11: 2802456132800888244
+      SpriteSheet BarbaraAdult 2_12: -19449524832382045
+      SpriteSheet BarbaraAdult 2_13: 1680412968825923408
+      SpriteSheet BarbaraAdult 2_14: -8056247937851204907
+      SpriteSheet BarbaraAdult 2_15: -3954926783137441144
+      SpriteSheet BarbaraAdult 2_16: -2050080510101439464
+      SpriteSheet BarbaraAdult 2_17: -808802247764523153
+      SpriteSheet BarbaraAdult 2_18: 645983975759605111
+      SpriteSheet BarbaraAdult 2_19: -848166813259999611
+      SpriteSheet BarbaraAdult 2_2: -2227482912622258578
+      SpriteSheet BarbaraAdult 2_20: -1855032323546110938
+      SpriteSheet BarbaraAdult 2_21: -1661449902673556722
+      SpriteSheet BarbaraAdult 2_22: 8099676250674588471
+      SpriteSheet BarbaraAdult 2_23: 7297425365532481388
+      SpriteSheet BarbaraAdult 2_24: 4060501447981467716
+      SpriteSheet BarbaraAdult 2_25: -8913202376582628498
+      SpriteSheet BarbaraAdult 2_26: 8999514191805658025
+      SpriteSheet BarbaraAdult 2_27: -1910354895200088722
+      SpriteSheet BarbaraAdult 2_28: -4772122270739828865
+      SpriteSheet BarbaraAdult 2_29: 1842654478143085982
+      SpriteSheet BarbaraAdult 2_3: 1747768905557783593
+      SpriteSheet BarbaraAdult 2_30: -8650903910844554727
+      SpriteSheet BarbaraAdult 2_31: 8788958871351105128
+      SpriteSheet BarbaraAdult 2_32: -7063168637957299559
+      SpriteSheet BarbaraAdult 2_33: 2364412292660785494
+      SpriteSheet BarbaraAdult 2_34: 7756204400012758796
+      SpriteSheet BarbaraAdult 2_35: -2801106633631252336
+      SpriteSheet BarbaraAdult 2_36: 8184124676771003326
+      SpriteSheet BarbaraAdult 2_37: -1290286733915311653
+      SpriteSheet BarbaraAdult 2_38: -7520545841402391814
+      SpriteSheet BarbaraAdult 2_39: -6815080180089715152
+      SpriteSheet BarbaraAdult 2_4: 6177748605424855787
+      SpriteSheet BarbaraAdult 2_40: -5089738698190673347
+      SpriteSheet BarbaraAdult 2_41: -6351410819276276655
+      SpriteSheet BarbaraAdult 2_42: 8225302161247066769
+      SpriteSheet BarbaraAdult 2_43: -553159323452018260
+      SpriteSheet BarbaraAdult 2_44: 8040371618389274098
+      SpriteSheet BarbaraAdult 2_45: -3565768814333693558
+      SpriteSheet BarbaraAdult 2_46: 8843682283258197010
+      SpriteSheet BarbaraAdult 2_47: -817219141913299522
+      SpriteSheet BarbaraAdult 2_48: 5074615320241396787
+      SpriteSheet BarbaraAdult 2_49: -8208272645642515315
+      SpriteSheet BarbaraAdult 2_5: 2327765690794740744
+      SpriteSheet BarbaraAdult 2_50: 7098305754116717934
+      SpriteSheet BarbaraAdult 2_51: 5935522346565640261
+      SpriteSheet BarbaraAdult 2_52: 6897851506520810656
+      SpriteSheet BarbaraAdult 2_53: 1414034930641082641
+      SpriteSheet BarbaraAdult 2_54: 7961304608069779145
+      SpriteSheet BarbaraAdult 2_55: 6231712986735515255
+      SpriteSheet BarbaraAdult 2_56: 8369696873115366944
+      SpriteSheet BarbaraAdult 2_57: 1953555228591184786
+      SpriteSheet BarbaraAdult 2_58: 1037037259840126782
+      SpriteSheet BarbaraAdult 2_59: 5513980325961293325
+      SpriteSheet BarbaraAdult 2_6: -3979895998033120151
+      SpriteSheet BarbaraAdult 2_60: 1040942375304440766
+      SpriteSheet BarbaraAdult 2_61: -1872187866204955310
+      SpriteSheet BarbaraAdult 2_62: -7210517632323728625
+      SpriteSheet BarbaraAdult 2_63: -4489283320138692017
+      SpriteSheet BarbaraAdult 2_64: 5693376159750213014
+      SpriteSheet BarbaraAdult 2_65: -7669982469671749355
+      SpriteSheet BarbaraAdult 2_66: -81175680430370620
+      SpriteSheet BarbaraAdult 2_67: -2682727301415242643
+      SpriteSheet BarbaraAdult 2_68: 6192388608595074842
+      SpriteSheet BarbaraAdult 2_69: 8781703105291461963
+      SpriteSheet BarbaraAdult 2_7: -685278273309629187
+      SpriteSheet BarbaraAdult 2_70: -3415058702509124028
+      SpriteSheet BarbaraAdult 2_71: -856327684531198290
+      SpriteSheet BarbaraAdult 2_72: -4768837361870711575
+      SpriteSheet BarbaraAdult 2_73: 320325965069881770
+      SpriteSheet BarbaraAdult 2_74: -2716626795463777609
+      SpriteSheet BarbaraAdult 2_75: -5211250868550566491
+      SpriteSheet BarbaraAdult 2_76: -435124351219407765
+      SpriteSheet BarbaraAdult 2_77: -1636324429194339584
+      SpriteSheet BarbaraAdult 2_78: 9148222242353129409
+      SpriteSheet BarbaraAdult 2_79: 8873030686137768008
+      SpriteSheet BarbaraAdult 2_8: -334954652587100456
+      SpriteSheet BarbaraAdult 2_80: -3214810590917846943
+      SpriteSheet BarbaraAdult 2_81: -5212811852452954459
+      SpriteSheet BarbaraAdult 2_9: 6063828298426248494
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

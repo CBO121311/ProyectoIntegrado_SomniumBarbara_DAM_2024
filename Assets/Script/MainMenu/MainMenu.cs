@@ -83,7 +83,7 @@ public class MainMenu : Menu
         StartCoroutine(DelayedAction(0.2f, () =>
         {
             DisableMenuButtons();
-            mainMenuTransition.FadeOutAndLoadScene("LevelSelection");
+            mainMenuTransition.FadeOutAndLoadScene("BedroomScene");
         }));
     }
 

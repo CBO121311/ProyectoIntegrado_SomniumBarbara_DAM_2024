@@ -5,17 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Params")]
 
     [SerializeField] private float typingSpeed = 0.04f;
-
-    [Header("Load Globals JSON")]
-
-    [SerializeField] private TextAsset loadGlobalsJson;
-
 
     [Header("Dialogue UI")]
 
@@ -50,6 +46,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
+    private const string CHANGE_SCENE_TAG = "change_scene";
 
     private void Awake()
     {
@@ -240,6 +237,9 @@ public class DialogueManager : MonoBehaviour
                     layoutAnimator.Play(tagValue);
                     //Debug.Log("layout =" + tagValue);
                     break;
+                case CHANGE_SCENE_TAG:
+                    ChangeScene(tagValue);
+                    break;
                 default:
                     Debug.LogWarning("La etiqueta llegó pero no se está manejando actualmente: " + tag);
                     break;
@@ -247,6 +247,12 @@ public class DialogueManager : MonoBehaviour
 
         }
     }
+
+    private void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
 
     private void DisplayChoices()
     {

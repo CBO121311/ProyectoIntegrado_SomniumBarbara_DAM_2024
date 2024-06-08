@@ -14,7 +14,7 @@ public class SaveSlot : MonoBehaviour
     [SerializeField] private GameObject hasDataContent;
     [SerializeField] private TextMeshProUGUI timeGameText;
     [SerializeField] private TextMeshProUGUI percentageCompleteText;
-    [SerializeField] private TextMeshProUGUI deathCountText;
+    [SerializeField] private TextMeshProUGUI daysCountText;
 
 
     [Header("Clear Data Button")]
@@ -54,7 +54,7 @@ public class SaveSlot : MonoBehaviour
             percentageCompleteText.text = data.GetPercentageComplete() + "% COMPLETADO";
             //Debug.Log(data.GetPercentageComplete());
 
-            deathCountText.text = "Pesadillas: " + data.GetTotalDeaths();
+            daysCountText.text = "Días: " + data.daysGame;
             //Debug.Log(data.playedTime);
             UpdatePlayedTimeText(data.playedTime);
         }

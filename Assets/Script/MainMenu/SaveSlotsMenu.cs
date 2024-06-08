@@ -73,7 +73,7 @@ public class SaveSlotsMenu : Menu
     private void SaveGameAndLoadScene()
     {
         DataPersistenceManager.instance.SaveGame();
-        mainMenuTransition.FadeOutAndLoadScene("LevelSelection");
+        mainMenuTransition.FadeOutAndLoadScene("BedroomScene");
     }
 
     //Método que se llama cuando intentas borrar la partida.

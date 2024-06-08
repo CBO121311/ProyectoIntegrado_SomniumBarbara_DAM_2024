@@ -1,0 +1,1 @@
+No voy a continuar trabajando. Estoy cansada.  #speaker:Barbara #portrait:barbara_adult_neutral #layout:left

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuUI.unity
     guid: cc0335300e6d78543a69a53359d9b24e
   - enabled: 1
+    path: Assets/Scenes/BedroomScene.unity
+    guid: b5062e53f71910442b3d02d4fdf715e6
+  - enabled: 1
     path: Assets/Scenes/LevelSelection.unity
     guid: 3b45d710b8f7960499262524c62416eb
   - enabled: 1

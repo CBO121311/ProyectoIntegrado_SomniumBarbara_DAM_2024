@@ -82,11 +82,11 @@ public class InputManager : MonoBehaviour
     {
         if (context.performed)
         {
-            interactPressed = true;
+            exitPressed = true;
         }
         else if (context.canceled)
         {
-            interactPressed = false;
+            exitPressed = false;
         }
     }
 
@@ -120,7 +120,7 @@ public class InputManager : MonoBehaviour
         return result;
     }
 
-    public bool GetInExitPressed()
+    public bool GetExitPressed()
     {
         bool result = exitPressed;
         exitPressed = false;

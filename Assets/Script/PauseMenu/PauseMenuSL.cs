@@ -13,7 +13,7 @@ public class PauseMenuSL : Menu
     [SerializeField] private Button exitButton;
 
     [SerializeField] private GameObject panelGameSaved;
-    [SerializeField] private Transition_SelectionLevel slTransition;
+    [SerializeField] private TopDown_Transition transition;
 
     [Header("Confirmation Popup")]
     [SerializeField] private ConfirmationPopMenu confirmationPopMenu;
@@ -123,7 +123,7 @@ public class PauseMenuSL : Menu
             //Función que se ejecuta si seleccionamos "Confirmar"
             () =>
             {
-                slTransition.FadeOutAndLoadScene("MainMenuUI");
+                transition.FadeOutAndLoadScene("MainMenuUI");
             },
 
             //Función que se ejecuta si seleccionamos "Cancelar"
@@ -140,7 +140,7 @@ public class PauseMenuSL : Menu
     private IEnumerator ShowOptionPanel()
     {
         ActivateMenuButtons();
-        slTransition.OpenPauseMenu();
+        transition.OpenPauseMenu();
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -148,7 +148,7 @@ public class PauseMenuSL : Menu
     private IEnumerator HideOptionPanel()
     {
         DisableMenuButtons();
-        slTransition.ClosePauseMenu();
+        transition.ClosePauseMenu();
         yield return new WaitForSeconds(0.5f);
         this.gameObject.SetActive(false);
     }

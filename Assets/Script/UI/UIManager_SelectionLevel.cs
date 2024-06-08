@@ -6,14 +6,9 @@ using UnityEngine.SceneManagement;
 public class UIManager_SelectionLevel : MonoBehaviour
 {
     public bool gameIsPaused { get; private set; }
-    public bool inventoryIsActivated { get; private set; }
     public bool levelSelectionIsActive { get; private set; }
 
     private static UIManager_SelectionLevel instance;
-
-    [Header("Inventory")]
-    [SerializeField] private GameObject panelInventory;
-    private Inventory inventory;
 
     [Header("Pause Game")]
     [SerializeField] private GameObject panelPause;
@@ -26,7 +21,6 @@ public class UIManager_SelectionLevel : MonoBehaviour
 
     [Header("Cooldown")]
     private bool isCooldown = false;
-    private float cooldownInventory = 0.5f;
     private float cooldownPause = 0.1f;
 
     private void Awake()
@@ -40,13 +34,11 @@ public class UIManager_SelectionLevel : MonoBehaviour
 
         instance = this;
         gameIsPaused = false;
-        inventoryIsActivated = false;
     }
 
     private void Start()
     {
         pauseMenu = panelPause.GetComponent<PauseMenuSL>();
-        inventory = panelInventory.GetComponent<Inventory>();
         levelSelection = levelInfoPanel.GetComponentInChildren<LevelSelection>();
     }
 
@@ -75,24 +67,6 @@ public class UIManager_SelectionLevel : MonoBehaviour
 
         StartCoroutine(CooldownCoroutine(cooldownPause));
     }
-
-    public void ToggleInventoryUI()
-    {
-        if (isCooldown) return;
-
-        inventoryIsActivated = !inventoryIsActivated;
-
-        if (inventoryIsActivated)
-        {
-            inventory.ToogleInventory();
-        }
-        else
-        {
-            inventory.ToogleInventory();
-        }
-
-        StartCoroutine(CooldownCoroutine(cooldownInventory));
-    }
     private IEnumerator CooldownCoroutine(float cooldown)
     {
         isCooldown = true;
@@ -104,7 +78,6 @@ public class UIManager_SelectionLevel : MonoBehaviour
     public void ActivateSelectLevel()
     {
         levelInfoPanel.SetActive(true);
-        //levelSelection.OpenLevelSelection();
         levelSelectionIsActive = true;
     }
 

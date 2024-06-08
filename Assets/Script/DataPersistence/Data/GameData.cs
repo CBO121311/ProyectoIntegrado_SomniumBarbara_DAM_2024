@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 [System.Serializable]
 public class GameData
@@ -10,9 +8,9 @@ public class GameData
     //Para la última partida de guardado.
     public long lastUpdated;
     public int deathCount;
+    public int daysGame;
     public SerializableDictionary<string, bool> itemsCollected;
-    public Vector3 playerPosition;
-    //public ItemsData playerAttributesData;
+    //public Vector3 playerPosition;
     public float playedTime;
 
     public List<Level> informationLevel;
@@ -23,7 +21,8 @@ public class GameData
     public GameData()
     {
         this.deathCount = 0;
-        playerPosition = new Vector3(0.58f, -9.63f, 0f);
+        //playerPosition = new Vector3(0.58f, -9.63f, 0f);
+        daysGame = 1;
         playedTime = 0f;
         itemsCollected = new SerializableDictionary<string, bool>();
         informationLevel = new List<Level>();
@@ -34,6 +33,7 @@ public class GameData
 
     private void InitializeItemsCollected()
     {
+        AddItemToCollected("0Z_00", true);
         AddItemToCollected("1A_01", false);
         AddItemToCollected("1A_02", false);
         AddItemToCollected("1A_03", false);

@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
     public GameObject slotHolder;
     public List<ItemTemplate> itemTemplates;
 
-    [SerializeField] private Transition_SelectionLevel transitionSL;
+    private TopDown_Transition transition;
 
     // Referencias adicionales
     [SerializeField] private EventSystem eventSystem; 
@@ -42,6 +42,10 @@ public class Inventory : MonoBehaviour, IDataPersistence
         }
     }
 
+    private void Start()
+    {
+        transition = FindFirstObjectByType<TopDown_Transition>();
+    }
 
     private void Update()
     {
@@ -68,7 +72,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
         if (inventoryEnabled)
         {
-            transitionSL.OpenInventory();
+            transition.OpenInventory();
             // Selecciona el primer slot
             if (firstSlot != null && eventSystem != null)
             {
@@ -77,7 +81,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
         }
         else
         {
-            transitionSL.CloseInventory();
+            transition.CloseInventory();
             // Desactiva la selección cuando se cierra el inventario
             if (eventSystem != null)
             {
@@ -113,7 +117,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
 
                 slotItem.UpdateSlot();
-                Debug.Log("Golaa");
                 return;
             }
         }

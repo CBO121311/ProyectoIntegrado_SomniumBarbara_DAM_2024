@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 {
-    [SerializeField] private bool loadPosition = false;
 
     public Animator animator;
     public Rigidbody2D rb2D;
@@ -12,10 +11,15 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
     float horizontalInput, verticalInput;
 
     private bool hasStoppedMovement = false;
-
+    private UIManager_SelectionLevel uiManager;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+       
+    }
+    private void Start()
+    {
+        uiManager = UIManager_SelectionLevel.GetInstance();
     }
 
     private void Update()
@@ -26,14 +30,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
             return;
         }
 
-        var uiManager = UIManager_SelectionLevel.GetInstance();
-
-        if (!uiManager.gameIsPaused && InputManager.GetInstance().GetInteractPressed())
-        {
-            uiManager.ToggleInventoryUI();
-        }
-
-        if ( !uiManager.inventoryIsActivated && InputManager.GetInstance().GetInMenuPressed())
+        if (InputManager.GetInstance().GetInMenuPressed())
         {
             uiManager.TogglePauseUI();
         }
@@ -45,9 +42,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         MovePlayer();
 
         //Si hay un dialogo, pausa, o selección de nivel te impido moverte
-        if (DialogueManager.GetInstance().dialogueIsPlaying || 
-            UIManager_SelectionLevel.GetInstance().gameIsPaused ||
-            UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -71,9 +66,7 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
 
     private void MovePlayer()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying || 
-            UIManager_SelectionLevel.GetInstance().gameIsPaused || 
-            UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive)
         {
             return;
         }
@@ -129,9 +122,9 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
 
-        if (!loadPosition) return;
+        //if (!loadPosition) return;
 
-        if (TemporaryData.UseTemporaryPosition)
+        /*if (TemporaryData.UseTemporaryPosition)
         {
             this.transform.position = TemporaryData.PlayerPosition;
             TemporaryData.UseTemporaryPosition = false; // Restablecer la variable
@@ -139,11 +132,11 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         else
         {
             this.transform.position = data.playerPosition;
-        }
+        }*/
     }
 
     public void SaveData(GameData data)
     {
-        data.playerPosition = this.transform.position;
+        //data.playerPosition = this.transform.position;
     }
 }

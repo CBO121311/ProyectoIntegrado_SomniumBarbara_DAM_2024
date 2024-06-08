@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class DataPersistenceManager : MonoBehaviour
@@ -31,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Se encontró más de un administrador de persistencia de datos en la escena. Destruyendo el más nuevo.");
+            Debug.Log("Hay más de un DataPersistenceManager en la escena.");
             Destroy(this.gameObject);
             return;
         }
@@ -141,6 +142,23 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
+        if (this.gameData.lastUpdated > DateTime.MinValue.Ticks && this.gameData.lastUpdated < DateTime.MaxValue.Ticks)
+        {
+            DateTime lastUpdated = new DateTime(this.gameData.lastUpdated);
+            DateTime now = DateTime.Now;
+
+            if (now.Date > lastUpdated.Date)
+            {
+                // Incrementa el día del juego si la fecha actual es posterior a la última actualización
+                this.gameData.daysGame++;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("lastUpdated tiene un valor no válido. Asignando fecha por defecto.");
+            this.gameData.lastUpdated = DateTime.Now.Ticks;
+        }
+
         //Envía los datos cargados a todos los demás scripts que los necesiten
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
@@ -176,6 +194,9 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.SaveData(gameData);
         }
+
+
+        gameData.daysGame++;
 
         //marcar la hora de los datos para que sepamos cuándo se guardaron por última vez
         gameData.lastUpdated = System.DateTime.Now.ToBinary();

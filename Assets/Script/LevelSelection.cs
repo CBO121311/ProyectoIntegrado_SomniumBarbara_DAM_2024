@@ -14,7 +14,7 @@ public class LevelSelection : Menu
     [SerializeField] private Button cancelButton;
     [SerializeField] private LevelInfo levelInfo;
 
-    [SerializeField] private Transition_SelectionLevel slTransition;
+    [SerializeField] private TopDown_Transition slTransition;
 
     private Level levelOne;
     private Level levelTwo;

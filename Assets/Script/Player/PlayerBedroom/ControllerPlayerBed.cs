@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ControllerPlayerBed : MonoBehaviour
 {
-    [SerializeField] private bool loadPosition = false;
+
+    [Header("Visual Signal")]
+    [SerializeField] private GameObject speechBubble;
 
     private Animator animator;
     private Rigidbody2D rb2D;
@@ -12,28 +14,32 @@ public class ControllerPlayerBed : MonoBehaviour
     public float velocidadMovimiento;
     float horizontalInput, verticalInput;
 
+
     private bool hasStoppedMovement = false;
 
     private void Awake()
     {
+        speechBubble.SetActive(false);
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
+
+        animator.SetFloat("Horizontal", 0);
+        animator.SetFloat("Vertical", -1);
+        animator.SetFloat("LastX", 0);
+        animator.SetFloat("LastY", -1);
     }
 
     private void Update()
     {
-
-        /*if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || UIManager_Bedroom.GetInstance().inventoryIsActivated)
         {
             return;
         }
 
-        var uiManager = UIManager_SelectionLevel.GetInstance();
-
-        if (!uiManager.gameIsPaused && InputManager.GetInstance().GetInteractPressed())
+        if (InputManager.GetInstance().GetInMenuPressed())
         {
-            uiManager.ToggleInventoryUI();
-        }*/
+            UIManager_Bedroom.GetInstance().TogglePauseUI();
+        }
     }
 
     private void FixedUpdate()
@@ -42,7 +48,7 @@ public class ControllerPlayerBed : MonoBehaviour
         MovePlayer();
 
         //Si hay un dialogo, pausa, o selección de nivel te impido moverte
-        /*if (DialogueManager.GetInstance().dialogueIsPlaying ||
+        if (DialogueManager.GetInstance().dialogueIsPlaying ||
             UIManager_Bedroom.GetInstance().gameIsPaused)
         {
             // Solo ejecutar una vez
@@ -57,7 +63,7 @@ public class ControllerPlayerBed : MonoBehaviour
                 hasStoppedMovement = true;
             }
             return;
-        }*/
+        }
 
         // Restablecer el estado si ya no está en diálogo o pausa
         hasStoppedMovement = false;
@@ -69,11 +75,11 @@ public class ControllerPlayerBed : MonoBehaviour
 
     private void MovePlayer()
     {
-        /*if (DialogueManager.GetInstance().dialogueIsPlaying ||
+        if (DialogueManager.GetInstance().dialogueIsPlaying ||
             UIManager_Bedroom.GetInstance().gameIsPaused)
         {
             return;
-        }*/
+        }
 
         moveDirection = InputManager.GetInstance().GetMoveDirection();
 
@@ -121,24 +127,12 @@ public class ControllerPlayerBed : MonoBehaviour
         }
     }
 
-    public void LoadData(GameData data)
+    public void ActivateSpeechBubble()
     {
-
-        if (!loadPosition) return;
-
-        if (TemporaryData.UseTemporaryPosition)
-        {
-            this.transform.position = TemporaryData.PlayerPosition;
-            TemporaryData.UseTemporaryPosition = false; // Restablecer la variable
-        }
-        else
-        {
-            this.transform.position = data.playerPosition;
-        }
+        speechBubble.SetActive(true);
     }
-
-    public void SaveData(GameData data)
+    public void DisableSpeechBubble()
     {
-        data.playerPosition = this.transform.position;
+        speechBubble.SetActive(false);
     }
 }
