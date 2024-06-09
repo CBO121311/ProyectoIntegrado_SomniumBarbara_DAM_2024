@@ -8,7 +8,6 @@ public class Interact_DialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
 
     private bool playerInRange;
-    private Transform playerTransform;
 
     private ControllerPlayerBed controllerPlayerBed;
 
@@ -41,17 +40,13 @@ public class Interact_DialogueTrigger : MonoBehaviour
                 controllerPlayerBed.ActivateSpeechBubble();
             }
         }
-        
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            
             playerInRange = true;
-            playerTransform = collision.transform;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

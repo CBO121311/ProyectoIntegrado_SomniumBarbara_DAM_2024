@@ -14,7 +14,7 @@ public class LevelSelection : Menu
     [SerializeField] private Button cancelButton;
     [SerializeField] private LevelInfo levelInfo;
 
-    [SerializeField] private TopDown_Transition slTransition;
+    [SerializeField] private TopDown_Transition transition;
 
     private Level levelOne;
     private Level levelTwo;
@@ -76,7 +76,7 @@ public class LevelSelection : Menu
     {
         if (levelOne.available)
         {
-            slTransition.FadeOutAndLoadScene(levelOne.sceneName);
+            transition.FadeOutAndLoadScene(levelOne.sceneName);
         }
         
     }
@@ -86,7 +86,7 @@ public class LevelSelection : Menu
     {
         if (levelOne.available)
         {
-            slTransition.FadeOutAndLoadScene(levelTwo.sceneName);
+            transition.FadeOutAndLoadScene(levelTwo.sceneName);
         }
     }
 
@@ -115,7 +115,7 @@ public class LevelSelection : Menu
     private IEnumerator ActivateLevelInfoPanel()
     {
         ActivateMenuButtons();
-        slTransition.ShowLevelInfoPanel();
+        transition.ShowLevelInfoPanel();
         yield return new WaitForSeconds(0.6f);
 
     }
@@ -123,7 +123,7 @@ public class LevelSelection : Menu
     private IEnumerator DisableLevelInfoPanel()
     {
         DisableMenuButtons();
-        slTransition.HideLevelInfoPanel();
+        transition.HideLevelInfoPanel();
         yield return new WaitForSeconds(0.6f);
         UIManager_SelectionLevel.GetInstance().DisableSelectLevel();
     }

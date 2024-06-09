@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class NPC_DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Signal")]
-    [SerializeField] private GameObject speechBubble;
-
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
@@ -14,28 +11,35 @@ public class NPC_DialogueTrigger : MonoBehaviour
     private bool playerInRange;
     private Transform playerTransform;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
+    private ControllerPlayerSL controllerPlayerSL;
 
     private void Awake()
     {
         playerInRange = false;
-        speechBubble.SetActive(false);
+
+        controllerPlayerSL = FindFirstObjectByType<ControllerPlayerSL>();
+        if (controllerPlayerSL == null)
+        {
+            Debug.LogError("ControllerPlayerBed no encontrado en la escena.");
+        }
     }
 
     private void Update()
     {
-        //Activar de nuevo el dialogo hasta que finalice
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            speechBubble.SetActive(true);
-            if (!UIManager_SelectionLevel.GetInstance().gameIsPaused && InputManager.GetInstance().GetSubmitPressed())
+
+            if (!UIManager_Bedroom.GetInstance().gameIsPaused
+                && InputManager.GetInstance().GetSubmitPressed())
             {
+                controllerPlayerSL.DisableSpeechBubble();
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+
             }
-        }
-        else
-        {
-            speechBubble.SetActive(false);
+            else
+            {
+                controllerPlayerSL.ActivateSpeechBubble();
+            }
         }
     }
 

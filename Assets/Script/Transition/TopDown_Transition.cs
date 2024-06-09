@@ -39,7 +39,6 @@ public class TopDown_Transition : MonoBehaviour
 
     private void Start()
     {
-
         FadeIn();
     }
 

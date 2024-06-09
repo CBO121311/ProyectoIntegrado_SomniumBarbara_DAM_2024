@@ -10,7 +10,6 @@ public class Portal : MonoBehaviour, IDataPersistence
     [SerializeField] private Animator portalAnimator;
     [SerializeField] private GameObject panelInfo;
     [SerializeField] private LevelSelection levelSelection;
-    [SerializeField] private GameObject speechBubble;
     [SerializeField] private GameObject player;
 
     [Header("Level Data")]
@@ -54,7 +53,6 @@ public class Portal : MonoBehaviour, IDataPersistence
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = true;
-            speechBubble.SetActive(true);
             portalAnimator.SetBool("Player", true);
         }
     }
@@ -62,7 +60,6 @@ public class Portal : MonoBehaviour, IDataPersistence
     {
         if (collision.gameObject.tag == "Player")
         {
-            speechBubble.SetActive(false);
             playerInRange = false;
             portalAnimator.SetBool("Player", false);     
         }

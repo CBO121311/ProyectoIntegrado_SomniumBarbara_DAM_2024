@@ -1,8 +1,10 @@
 using UnityEngine;
 
 
-public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
+public class ControllerPlayerSL : MonoBehaviour
 {
+    [Header("Visual Signal")]
+    [SerializeField] private GameObject speechBubble;
 
     public Animator animator;
     public Rigidbody2D rb2D;
@@ -14,8 +16,15 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
     private UIManager_SelectionLevel uiManager;
     private void Awake()
     {
+        speechBubble.SetActive(false);
         animator = GetComponent<Animator>();
-       
+        rb2D = GetComponent<Rigidbody2D>();
+
+        animator.SetFloat("Horizontal", 0);
+        animator.SetFloat("Vertical", -1);
+        animator.SetFloat("LastX", 0);
+        animator.SetFloat("LastY", -1);
+
     }
     private void Start()
     {
@@ -119,24 +128,12 @@ public class ControllerPlayerSL : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void LoadData(GameData data)
+    public void ActivateSpeechBubble()
     {
-
-        //if (!loadPosition) return;
-
-        /*if (TemporaryData.UseTemporaryPosition)
-        {
-            this.transform.position = TemporaryData.PlayerPosition;
-            TemporaryData.UseTemporaryPosition = false; // Restablecer la variable
-        }
-        else
-        {
-            this.transform.position = data.playerPosition;
-        }*/
+        speechBubble.SetActive(true);
     }
-
-    public void SaveData(GameData data)
+    public void DisableSpeechBubble()
     {
-        //data.playerPosition = this.transform.position;
+        speechBubble.SetActive(false);
     }
 }

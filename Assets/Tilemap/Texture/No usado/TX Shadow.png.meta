@@ -214,7 +214,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -245,7 +245,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -258,7 +258,7 @@ TextureImporter:
     overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -271,873 +271,705 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Shadow Chest
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 451
-        width: 36
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d48f7f178dc17134e97b168dbc215b4f
-      internalID: 21300000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Cube
+      name: TX Shadow_0
       rect:
         serializedVersion: 2
         x: 32
         y: 448
         width: 39
         height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eee887cbf42f324c923038905ea021c
-      internalID: 21300002
+      spriteID: a483750b084a9e747be0abda193aea9f
+      internalID: 1839897112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Crate
+      name: TX Shadow_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 451
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e10870b721fc2e47944a724a9fb91a8
+      internalID: -1994674779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_2
       rect:
         serializedVersion: 2
         x: 160
         y: 448
         width: 39
         height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b12e88a6cdd4d9146ba077b645e0bd59
-      internalID: 21300004
+      spriteID: 5dc9771a148cf9649865d3c35fa3f00d
+      internalID: -1621415696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Crate Small
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 387
-        width: 31
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ac038459861e48409de5ef178895bc0
-      internalID: 21300006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Chest Opened
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 387
-        width: 38
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d8cedb90f2fb274dabc83bdbad0a97f
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar X2
+      name: TX Shadow_3
       rect:
         serializedVersion: 2
         x: 228
         y: 452
         width: 31
         height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e594faac354e9574cb1deb4d5fc419e5
-      internalID: 21300010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar X3
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 355
-        width: 36
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 550c795517c571442a0f2dc672422162
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Rune Pillar Broken
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 291
-        width: 31
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bcc06ba2c3ba064eac74d7965f2977e
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 3
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 160
-        width: 32
-        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e788dd9c76750a84588254a99a9f99f4
-      internalID: 21300016
+      spriteID: a80b5c7cc8bfe4542bc608bd828cb792
+      internalID: -1773315684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Tileset Wall 2
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 842ea99e4c7509f478e4b5e44ad29a0d
-      internalID: 21300018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 1
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71c95277e1559a742a344c7f876cf41e
-      internalID: 21300020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Barrel
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 321
-        width: 30
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5481478eeb4acc14dbe179e1f0c05498
-      internalID: 21300022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone A
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 232
-        width: 35
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6e1eed197a1a1d479b9fe5959f68024
-      internalID: 21300024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone C
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 232
-        width: 32
-        height: 20
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85dd7a856385c1442b59c18064a71420
-      internalID: 21300026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Gravestone B
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 169
-        width: 30
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a94d3c0b1611547b9412f8d2c1b90a
-      internalID: 21300028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Coffin Vert
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 300
-        width: 35
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a60c5745d7b6b1046a7a3cb3ea7d263f
-      internalID: 21300036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Coffin Hori
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 392
-        width: 67
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11794b8fa4203c444a9b6d2c6a7db992
-      internalID: 21300038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Tileset Wall 4
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53e9bcff4d3bc7e4cb271bda9c1a9ffa
-      internalID: 21300034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Road Sign E
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 320
-        width: 26
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68eff846fee593b42a69c656368a9834
-      internalID: 21300042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Road Sign W
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 256
-        width: 26
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9afe8389c7e7619478aeddf69601a21c
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pot A
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 261
-        width: 23
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9ddd23dce7747540b7bfb19e88a047a
-      internalID: 21300046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pot B
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 197
-        width: 28
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ab9f470ae8256e46b6e77c4193af665
-      internalID: 21300048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Pot C
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 132
-        width: 22
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b08130338c2bee498db794259d2a53a
-      internalID: 21300050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Bench S
+      name: TX Shadow_4
       rect:
         serializedVersion: 2
         x: 295
         y: 452
         width: 60
         height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90bbec193fe3b8f43802ed0a4c5ae9bb
-      internalID: 21300052
+      spriteID: 72a8c8d4d1697a24b8d15f44682319ed
+      internalID: 674384999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone Bench W
+      name: TX Shadow_5
       rect:
         serializedVersion: 2
         x: 387
         y: 449
         width: 32
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 651ca72ed8ab5a248843afc3e431e00d
-      internalID: 21300054
+      spriteID: 718f59291bb595c46a3a0179e88b21c0
+      internalID: 170496490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone Bench E
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 353
-        width: 25
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c7532952ddc38d4baeded4fdc5daa59
-      internalID: 21300056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 10
-        width: 12
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e6268853104b4f41877bf0c35ba3a0b
-      internalID: 21300058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 8
-        width: 17
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32ce3578069c9df4cba79da1d6653ce9
-      internalID: 21300060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 6
-        width: 24
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8426eb361a48b0844ab88b726c59255c
-      internalID: 21300062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T4
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 6
-        width: 25
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f93351bb458f1f4889e9e76998ca10b
-      internalID: 21300064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T5
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 6
-        width: 29
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af515e5d5bbcfa44094ac67c9523cc1c
-      internalID: 21300066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone T6
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 3
-        width: 29
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 168159c21cf1ead40af8b33c4a3701b0
-      internalID: 21300068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Statue
+      name: TX Shadow_6
       rect:
         serializedVersion: 2
         x: 446
         y: 419
         width: 38
         height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8365f5e45fda07a4daae5d6d38507873
-      internalID: 21300070
+      spriteID: b4f1c6ecbc92bea44a2246322ab2d7bb
+      internalID: -1504529550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone Lantern
+      name: TX Shadow_7
       rect:
         serializedVersion: 2
-        x: 453
-        y: 357
-        width: 28
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 97
+        y: 387
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d4ff5dae6c48e64ebc93c0113e70b14
-      internalID: 21300072
+      spriteID: 396bb54602d20a3408aa43b09459aba2
+      internalID: -29571546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Bridge Gate
+      name: TX Shadow_8
       rect:
         serializedVersion: 2
-        x: 480
-        y: 269
-        width: 32
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 163
+        y: 387
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6e619191113293498e197ea704e35b1
-      internalID: 21300074
+      spriteID: e064a2eb9415aab42882ff62d0ffb41c
+      internalID: -1888800336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Pillar
+      name: TX Shadow_9
       rect:
         serializedVersion: 2
-        x: 352
-        y: 261
-        width: 44
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 228
+        y: 355
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01617b7021499b547b1b216956c1f08d
-      internalID: 21300076
+      spriteID: 48b251a86f65a9b43aa3b498c2f8c24c
+      internalID: -1753113591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Pillar Broken
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 261
-        width: 35
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8afb977edda7d0d47a1e918cbd54270f
-      internalID: 21300078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Shadow Stone Cube
+      name: TX Shadow_10
       rect:
         serializedVersion: 2
         x: 288
-        y: 160
-        width: 39
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 392
+        width: 67
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8e1f11767e2dd449da7824be541e0c
-      internalID: 21300084
+      spriteID: f5356d21b3d27a2428958d64ea9dd467
+      internalID: -735763476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Altar
+      name: TX Shadow_11
       rect:
         serializedVersion: 2
-        x: 353
-        y: 171
-        width: 97
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 393
+        y: 353
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d0bb951837e944bb3a6a5c3f50dc10
-      internalID: 21300096
+      spriteID: a6d3570aa64b55943a4eb548ab0f7063
+      internalID: 445918069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Wooden Door
+      name: TX Shadow_12
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 352
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c538b13149268241984dc5029b67f0a
+      internalID: -673177759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_13
       rect:
         serializedVersion: 2
         x: 29
         y: 359
         width: 47
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8cc49b3468d8094ea128f9c17abfac5
-      internalID: 21300098
+      spriteID: 0d3c80e5c250e4b448270dfae3f6b5d8
+      internalID: 1595357782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Wooden Door Opened
+      name: TX Shadow_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 320
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88b0feddc2573d40af42599cc65ba30
+      internalID: -384920481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 321
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fb91f2c7acce140a9a84c3b3b8a7e1
+      internalID: 1791173222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 300
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bea4613dc82d048ae190026b5e1307
+      internalID: -189028154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_17
       rect:
         serializedVersion: 2
         x: 29
         y: 293
-        width: 45
+        width: 17
         height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de79f95d7fbf6ea4fa5c4e9a5c265ad7
-      internalID: 21300100
+      spriteID: 48ae3abe3441db046891e0a0d7cd4b4b
+      internalID: 33455828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Well
+      name: TX Shadow_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 293
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183198f0be4ed46419007f680f6d839a
+      internalID: -21373373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_19
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 291
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75d9cec2acf19b4c90972909a4e9d8e
+      internalID: 1628094244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_20
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 261
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84f5ee13b071ea428b97f0d0ff01b0e
+      internalID: 793199994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_21
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 261
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d87eeb565070248a91464316ac27c3
+      internalID: 204811167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 275
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db18c2d36e4ebf40a79d086f239ded3
+      internalID: 1736427428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 256
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76e348d77165fa418048a16cbf6f439
+      internalID: -1475053911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_24
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 261
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8fe759bd860774595a20daf87c7c34
+      internalID: -347695059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 232
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5ac0c9441ebc84e978a333a3da2f4c
+      internalID: -1527394619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_26
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 232
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8374b38a057f58742b424b33b8ca2029
+      internalID: 512463641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 169
+        width: 99
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f2f1e3425678d4c853417d8637e2cc
+      internalID: 1100818540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_28
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 18
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36a45b4410f62f45b71272485cc4425
+      internalID: -1596766006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_29
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 197
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48be7535a2726524591d9e279c9036db
+      internalID: 1128520254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_30
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 169
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bced2fb92d61524b81a6036b68dafdd
+      internalID: -1005139401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441e7480df4d8864aa1253b67ebbb5e5
+      internalID: 1831167796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_32
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 132
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45971fab74b05eb49b5ca492a6bed707
+      internalID: 2122155244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_34
       rect:
         serializedVersion: 2
         x: 420
@@ -1145,35 +977,161 @@ TextureImporter:
         width: 58
         height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490b408573a5a954b94f5d72ba01cbac
-      internalID: 21300102
+      spriteID: 36c34a1d995738f429f8aa624c091e68
+      internalID: 1151044800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Shadow Stone T7
+      name: TX Shadow_35
       rect:
         serializedVersion: 2
         x: 3
         y: 40
         width: 60
         height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 110ac675a6e079f42a2591210ec39735
-      internalID: 21300104
+      spriteID: a0de788c11df71c48935bcd73ab12e1f
+      internalID: 1294273664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_36
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 10
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0d6c189763a904093cf30bacb95ab3
+      internalID: -720034442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_37
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02baf57338f1d664c95fed30b8a91bae
+      internalID: 2087970068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79241380b412fd748b661f1ca1e17ded
+      internalID: 1599938914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_39
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 6
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf283c139574ae41bb5a490bc9755d9
+      internalID: -1800153663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_40
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 6
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e73f3ffb9a2574da40f3c84513d88e
+      internalID: -2118351213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Shadow_41
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 3
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69e536e1aa79e741bc2d6f12b5d3708
+      internalID: -1229316096
       vertices: []
       indices: 
       edges: []
@@ -1189,49 +1147,48 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Shadow Altar: 21300096
-      TX Shadow Barrel: 21300022
-      TX Shadow Bridge Gate: 21300074
-      TX Shadow Chest: 21300000
-      TX Shadow Chest Opened: 21300008
-      TX Shadow Crate: 21300004
-      TX Shadow Crate Small: 21300006
-      TX Shadow Cube: 21300002
-      TX Shadow Gravestone A: 21300024
-      TX Shadow Gravestone B: 21300028
-      TX Shadow Gravestone C: 21300026
-      TX Shadow Pillar: 21300076
-      TX Shadow Pillar Broken: 21300078
-      TX Shadow Pot A: 21300046
-      TX Shadow Pot B: 21300048
-      TX Shadow Pot C: 21300050
-      TX Shadow Road Sign E: 21300042
-      TX Shadow Road Sign W: 21300044
-      TX Shadow Rune Pillar Broken: 21300014
-      TX Shadow Rune Pillar X2: 21300010
-      TX Shadow Rune Pillar X3: 21300012
-      TX Shadow Statue: 21300070
-      TX Shadow Stone Bench E: 21300056
-      TX Shadow Stone Bench S: 21300052
-      TX Shadow Stone Bench W: 21300054
-      TX Shadow Stone Coffin Hori: 21300038
-      TX Shadow Stone Coffin Vert: 21300036
-      TX Shadow Stone Cube: 21300084
-      TX Shadow Stone Lantern: 21300072
-      TX Shadow Stone T1: 21300058
-      TX Shadow Stone T2: 21300060
-      TX Shadow Stone T3: 21300062
-      TX Shadow Stone T4: 21300064
-      TX Shadow Stone T5: 21300066
-      TX Shadow Stone T6: 21300068
-      TX Shadow Stone T7: 21300104
-      TX Shadow Tileset Wall 1: 21300020
-      TX Shadow Tileset Wall 2: 21300018
-      TX Shadow Tileset Wall 3: 21300016
-      TX Shadow Tileset Wall 4: 21300034
-      TX Shadow Well: 21300102
-      TX Shadow Wooden Door: 21300098
-      TX Shadow Wooden Door Opened: 21300100
+      TX Shadow_0: 1839897112
+      TX Shadow_1: -1994674779
+      TX Shadow_10: -735763476
+      TX Shadow_11: 445918069
+      TX Shadow_12: -673177759
+      TX Shadow_13: 1595357782
+      TX Shadow_14: -384920481
+      TX Shadow_15: 1791173222
+      TX Shadow_16: -189028154
+      TX Shadow_17: 33455828
+      TX Shadow_18: -21373373
+      TX Shadow_19: 1628094244
+      TX Shadow_2: -1621415696
+      TX Shadow_20: 793199994
+      TX Shadow_21: 204811167
+      TX Shadow_22: 1736427428
+      TX Shadow_23: -1475053911
+      TX Shadow_24: -347695059
+      TX Shadow_25: -1527394619
+      TX Shadow_26: 512463641
+      TX Shadow_27: 1100818540
+      TX Shadow_28: -1596766006
+      TX Shadow_29: 1128520254
+      TX Shadow_3: -1773315684
+      TX Shadow_30: -1005139401
+      TX Shadow_31: 1831167796
+      TX Shadow_32: 2122155244
+      TX Shadow_33: 1402435303
+      TX Shadow_34: 1151044800
+      TX Shadow_35: 1294273664
+      TX Shadow_36: -720034442
+      TX Shadow_37: 2087970068
+      TX Shadow_38: 1599938914
+      TX Shadow_39: -1800153663
+      TX Shadow_4: 674384999
+      TX Shadow_40: -2118351213
+      TX Shadow_41: -1229316096
+      TX Shadow_5: 170496490
+      TX Shadow_6: -1504529550
+      TX Shadow_7: -29571546
+      TX Shadow_8: -1888800336
+      TX Shadow_9: -1753113591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
