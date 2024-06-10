@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerPlayerBed : MonoBehaviour
+public class ControllerPlayerBed : MonoBehaviour, IControllerPlayer
 {
 
     [Header("Visual Signal")]

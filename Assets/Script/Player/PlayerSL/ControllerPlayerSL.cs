@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class ControllerPlayerSL : MonoBehaviour
+public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
 {
     [Header("Visual Signal")]
     [SerializeField] private GameObject speechBubble;

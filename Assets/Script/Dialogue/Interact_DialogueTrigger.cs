@@ -22,6 +22,7 @@ public class Interact_DialogueTrigger : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         //Activar de nuevo el dialogo hasta que finalice
@@ -33,7 +34,6 @@ public class Interact_DialogueTrigger : MonoBehaviour
             {
                 controllerPlayerBed.DisableSpeechBubble();
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                
             }
             else
             {

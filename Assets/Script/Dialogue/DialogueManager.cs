@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -51,12 +50,17 @@ public class DialogueManager : MonoBehaviour
     private const string LAYOUT_TAG = "layout";
     private const string CHANGE_SCENE_TAG = "change_scene";
 
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
+    private DialogueVariables dialogueVariables;
+
     private void Awake()
     {
         if (instance != null)
         {
             Debug.LogWarning("Hay más de uno Dialogue Manager en la Escena");
         }
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
 
         instance = this; 
     }
@@ -92,7 +96,6 @@ public class DialogueManager : MonoBehaviour
         if (canContinueToNextLine && currentStory.currentChoices.Count == 0 &&
             InputManager.GetInstance().GetSubmitPressed())
         {
-          
             ContinueStory();
         }
     }
@@ -104,7 +107,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-
+        dialogueVariables.StartListening(currentStory);
         //reset portrait, layout , and speaker
         displayNameText.text = "???";
         portaitAnimator.Play("default");
@@ -118,6 +121,8 @@ public class DialogueManager : MonoBehaviour
         //Da un poco espacio al terminar el dialogo
         yield return new WaitForSeconds(0.2f);
 
+
+        dialogueVariables.StopListening(currentStory);
 
 
         dialogueIsPlaying = false;
@@ -244,7 +249,7 @@ public class DialogueManager : MonoBehaviour
                     ChangeScene(tagValue);
                     break;
                 default:
-                    Debug.LogWarning("La etiqueta llegó pero no se está manejando actualmente: " + tag);
+                    Debug.LogWarning("Error de etiqueta : " + tag);
                     break;
             }
 

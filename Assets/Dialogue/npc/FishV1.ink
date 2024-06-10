@@ -1,30 +1,27 @@
-Muy buenas. #speaker:Pez #portrait:fish_neutral #layout:right
+Hola ¡Señor Pez! #speaker:Barbara #portrait:barbara_neutral #layout:left
 
-Buenas. #speaker:Barbara #portrait:barbara_neutral #layout:left
-
-¿Quieres hacerme alguna pregunta? #speaker:Pez #portrait:fish_neutral #layout:right
+Muy buenas Bárbara, ¿En qué puedo ayudarte? #speaker:Pez #portrait:fish_neutral #layout:left
 
 -> main
 
 === repeat ===
-¿Alguna pregunta más?
+¿Alguna otra pregunta?
 
 -> main
 
 === main ===
 
 + [No tengo preguntas]
-    Adios... #speaker:Barbara #portrait:barbara_neutral #layout:left
-    Bye bye ~ #speaker:Pez #portrait:fish_neutral #layout:right
+    Entiendo. ¡Gracias y adiós!. #speaker:Barbara #portrait:barbara_neutral #layout:left
+    ¡Adiós, Bárbara! Que tengas un buen sueño. #speaker:Pez #portrait:fish_neutral #layout:left
    
     -> END
 
-+ [¿Portal azul?]
-    ¿Dónde te lleva este portal? #speaker:Barbara #portrait:barbara_neutral #layout:left
++ [Portal azul]
+    ¿Dónde lleva este portal azul? #speaker:Barbara #portrait:barbara_neutral #layout:left
 
-    Te llevaría una fase de acuática donde podrías golpear a los enemigos a distancia. #speaker:Pez #portrait:fish_neutral #layout:right
+    Este portal te llevaría a un mundo submarino. Controlarías a un pez payaso, un delfín y un tiburón, enfrentando desafíos únicos en cada fase.. #speaker:Pez #portrait:fish_neutral #layout:left
     
-    Bueno... no a tanta distancia. Sería más de evitar obstáculos que dañar al enemigo.
+    Desde evitar ser capturado hasta la emoción de cazar.
     
-
 -> repeat  

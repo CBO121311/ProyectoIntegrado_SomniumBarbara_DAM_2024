@@ -1,27 +1,34 @@
-... #speaker:Mariposa #portrait:butterfly_neutral #layout:right
+INCLUDE global.ink
 
-... #speaker:Barbara #portrait:barbara_neutral #layout:left
+    {firstTimeButterfly:
+        Muy buenas, Mariposa. ¿Podría preguntarte algo? #speaker:Barbara #portrait:barbara_neutral #layout:left
+        Estoy aquí para ayudarte en lo que necesites. #speaker:Mariposa #portrait:butterfly_neutral #layout:left
+    - else:
+        ¡Hola de nuevo, Mariposa! ¿Te puedo preguntar? #speaker:Barbara #portrait:barbara_neutral #layout:left
+        
+        Por supuesto. #speaker:Mariposa #portrait:butterfly_neutral #layout:left
+    }
 
-...¿Deseas preguntarme algo? ... #speaker:Mariposa #portrait:butterfly_neutral #layout:right
+    ~ firstTimeButterfly= false
 
 -> main
 
 === repeat ===
-¿Alguna pregunta más?
+¿Necesitas saber alguna pregunta más?
 
 -> main
 
 === main ===
 
 + [No tengo preguntas]
-    Adiós... #speaker:Barbara #portrait:barbara_neutral #layout:left
-    ... #speaker:Mariposa #portrait:butterfly_neutral #layout:right
+    Entiendo. Hasta luego, Mariposa. #speaker:Barbara #portrait:barbara_neutral #layout:left
+    Mariposa: Adiós, que no tengas pesadillas. #speaker:Mariposa #portrait:butterfly_neutral #layout:left
    
     -> END
 
-+ [¿Portal blanco?]
-    ¿Dónde te lleva este portal? #speaker:Barbara #portrait:barbara_neutral #layout:left
++ [Portal blanco]
+    ¿A dónde lleva este portal blanco? #speaker:Barbara #portrait:barbara_neutral #layout:left
 
-    Te llevaría una fase de vuelo que está como idea. #speaker:Mariposa #portrait:butterfly_neutral #layout:right
-
+     Este portal te llevaría a una serie de fases de vuelo, donde controlarías a una mariposa, un murciélago y un águila.  #speaker:Mariposa #portrait:butterfly_neutral #layout:left
+    Cada fase presenta desafíos únicos, como evitar ser atrapado, navegar utilizando ultrasonido o incluso defenderse.
 -> repeat  

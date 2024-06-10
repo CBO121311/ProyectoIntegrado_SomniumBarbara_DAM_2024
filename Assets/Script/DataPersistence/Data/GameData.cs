@@ -15,6 +15,9 @@ public class GameData
 
     public List<Level> informationLevel;
 
+    public bool firstTime;
+
+
 
     //los valores definidos en este constructor serán los valores predeterminados 
     //el juego comienza cuando no hay datos para cargar
@@ -26,6 +29,7 @@ public class GameData
         playedTime = 0f;
         itemsCollected = new SerializableDictionary<string, bool>();
         informationLevel = new List<Level>();
+        this.firstTime = true;
 
         InitializeLevel();
         InitializeItemsCollected();

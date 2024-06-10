@@ -16,7 +16,6 @@ public class NPC_DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         playerInRange = false;
-
         controllerPlayerSL = FindFirstObjectByType<ControllerPlayerSL>();
         if (controllerPlayerSL == null)
         {
@@ -29,12 +28,11 @@ public class NPC_DialogueTrigger : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
 
-            if (!UIManager_Bedroom.GetInstance().gameIsPaused
+            if (!UIManager_SelectionLevel.GetInstance().gameIsPaused
                 && InputManager.GetInstance().GetSubmitPressed())
             {
                 controllerPlayerSL.DisableSpeechBubble();
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-
             }
             else
             {
@@ -56,6 +54,7 @@ public class NPC_DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            controllerPlayerSL.DisableSpeechBubble();
             playerInRange = false;
         }
     }
