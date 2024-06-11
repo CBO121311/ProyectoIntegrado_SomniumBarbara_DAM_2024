@@ -5,16 +5,42 @@ using UnityEngine;
 
 public class DetectionZone : MonoBehaviour
 {
-    private Collider2D col;
     [SerializeField] private Animator animator;
     [SerializeField] private Minotaur minotaur;
-
-    private void Awake()
+    [SerializeField] private float detectionRadius = 5f;
+    [SerializeField] private LayerMask playerLayer;
+    private bool playerDetected = false;
+    private void Update()
     {
-        col = GetComponent<Collider2D>();
+        DetectPlayer();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void DetectPlayer()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
+
+        if (hit != null && hit.CompareTag("Player"))
+        {
+            if (!playerDetected)
+            {
+                playerDetected = true;
+                animator.SetTrigger("TargetPlayer");
+                minotaur.StartAttacking();
+            }
+        }
+        else
+        {
+            if (playerDetected)
+            {
+                playerDetected = false;
+                animator.ResetTrigger("TargetPlayer");
+                minotaur.StopAttacking();
+            }
+        }
+    }
+
+
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -30,5 +56,11 @@ public class DetectionZone : MonoBehaviour
             animator.ResetTrigger("TargetPlayer");
             minotaur.StopAttacking();
         }
+    }*/
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }

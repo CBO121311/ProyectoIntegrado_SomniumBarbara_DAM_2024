@@ -13,9 +13,6 @@ public class Minotaur : MonoBehaviour
     private Rigidbody2D rb2D;
     private Collider2D col2D;
 
-
-
-
     private bool isDead = false;
     private bool facingRight = true; // Información si está mirando hacia la derecha
     private bool isAttacking = false;

@@ -54,18 +54,18 @@ public class GameData
 
     private void InitializeLevel()
     {
-        var level1A = new Level("Ardilla", 1, "SquirrelLevel1", 5, 120, 3, true);
+        var level1A = new Level("Terrestre", 1, "SquirrelLevel", 5, 120, 3, true);
         level1A.items.AddRange(new List<string> { "1A_01", "1A_02", "1A_03", "1A_04", "1A_05" });
         informationLevel.Add(level1A);
 
-        var level2A = new Level("Ardilla", 2, "SquirrelLevel2", 4, 100, 2, true);
+        var level2A = new Level("Terrestre", 2, "BunnyLevel", 4, 100, 2, true);
         level2A.items.AddRange(new List<string> { "2A_01", "2A_02", "2A_03", "2A_04" });
         informationLevel.Add(level2A);
 
-        informationLevel.Add(new Level("Mariposa", 1, "", 0, 0, 0, false));
-        informationLevel.Add(new Level("Mariposa", 2, "", 0, 0, 0, false));
-        informationLevel.Add(new Level("Pez", 1, "", 0, 0, 0, false));
-        informationLevel.Add(new Level("Pez", 2, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Vuelo", 1, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Vuelo", 2, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Acuático", 1, "", 0, 0, 0, false));
+        informationLevel.Add(new Level("Acuático", 2, "", 0, 0, 0, false));
     }
 
 

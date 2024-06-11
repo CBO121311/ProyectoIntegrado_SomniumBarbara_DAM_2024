@@ -22,6 +22,7 @@ public class Bee : MonoBehaviour
     [SerializeField] private float attackDistance = 2f;
     private Vector2 initialPosition;
     private bool isAttacking = false;
+    private bool isReturning = false;
     private Vector2 attackTargetPosition;
 
     [Header("Raycast")]
@@ -47,21 +48,25 @@ public class Bee : MonoBehaviour
             if (Vector2.Distance(transform.position, attackTargetPosition) < 0.01f)
             {
                 isAttacking = false;
+                isReturning = true;
             }
         }
-        else
+        else if(isReturning)
         {
             transform.position = Vector2.MoveTowards(transform.position, initialPosition, returnSpeed * Time.deltaTime);
             animator.SetBool("Player", false);
             if (Vector2.Distance(transform.position, initialPosition) < 0.01f)
             {
                 transform.position = initialPosition;
-                //rb2D.velocity = Vector2.zero;
+                isReturning = false;
                 
             }
         }
 
-        DetectPlayer();
+        if (!isAttacking && !isReturning)
+        {
+            DetectPlayer();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -89,7 +94,7 @@ public class Bee : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
-            if (!isAttacking)
+            if (!isAttacking && !isReturning)
             {
                 isAttacking = true;
                 animator.SetBool("Player", true);

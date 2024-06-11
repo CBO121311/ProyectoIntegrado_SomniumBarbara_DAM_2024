@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2b1b0c7a2e4c8794cb26bb3bc168a23b
+guid: 4251b70d25dd2074d89f79f9911dc6d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2326709826109463583
-    second: cebollablack 1_0
+      213: -7990750155978559325
+    second: Dust Particle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cebollablack 1_0
+      name: Dust Particle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 735
-        height: 764
+        x: 3
+        y: 3
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e3a5579dbdd5bfd0800000000000000
-      internalID: -2326709826109463583
+      spriteID: 3a03008e1172b1190800000000000000
+      internalID: -7990750155978559325
       vertices: []
       indices: 
       edges: []

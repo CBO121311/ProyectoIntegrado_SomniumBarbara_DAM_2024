@@ -3852,7 +3852,6 @@ MonoBehaviour:
   loadGameDialogueJSON: {fileID: 4900000, guid: 59d5062ee68bccd468dbd90e838edfec,
     type: 3}
   controllerPlayer: {fileID: 1380033307}
-  timeManager: {fileID: 493077414}
 --- !u!4 &650753099
 Transform:
   m_ObjectHideFlags: 0
@@ -6008,7 +6007,6 @@ GameObject:
   - component: {fileID: 1105163763}
   - component: {fileID: 1105163766}
   - component: {fileID: 1105163765}
-  - component: {fileID: 1105163764}
   m_Layer: 5
   m_Name: DayCountText
   m_TagString: Untagged
@@ -6035,18 +6033,6 @@ RectTransform:
   m_AnchoredPosition: {x: 148, y: 0}
   m_SizeDelta: {x: 193.43, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1105163764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105163762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3e21c6273c4648a7baad9d12dae39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1105163765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20779,10 +20765,10 @@ SceneRoots:
   - {fileID: 1380033304}
   - {fileID: 484478582}
   - {fileID: 8310180349739442688}
-  - {fileID: 493077413}
   - {fileID: 1539547951}
   - {fileID: 1953811455}
   - {fileID: 1072934689}
   - {fileID: 1872569741}
+  - {fileID: 493077413}
   - {fileID: 1564610382}
   - {fileID: 650753099}
