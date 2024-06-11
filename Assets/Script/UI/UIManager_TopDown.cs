@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIManager_Bedroom : MonoBehaviour, IDataPersistence
+public class UIManager_TopDown : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI daysGameText;
 
     [Header("Inventory")]
-    private Inventory inventory;
+    [SerializeField] private Inventory inventory;
+
+
+    [Header("Level Game")]
+    [SerializeField] private GameObject levelInfoPanel;
+    private LevelSelection levelSelection;
 
     [Header("Pause Game")]
     [SerializeField] private GameObject panelPause;
@@ -21,17 +26,18 @@ public class UIManager_Bedroom : MonoBehaviour, IDataPersistence
     private float cooldownPause = 0.1f;
 
 
-    private static UIManager_Bedroom instance;
+    private static UIManager_TopDown instance;
     public bool inventoryIsActivated { get; private set; }
+    public bool levelSelectionIsActive { get; private set; }
     public bool gameIsPaused { get; private set; }
 
-
+    private TimeManager timeManager;
 
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.LogWarning("Hay más de un Bedroom_UIManager en la Escena");
+            Debug.LogWarning("Hay más de un UIManager_TopDown en la Escena");
             Destroy(gameObject);
             return;
         }
@@ -42,14 +48,21 @@ public class UIManager_Bedroom : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        timeManager = FindFirstObjectByType<TimeManager>();
         pauseMenu = panelPause.GetComponent<PauseMenuSL>();
-        inventory = FindFirstObjectByType<Inventory>();
 
-        UpdateDaysGameUI();
+        if(levelInfoPanel != null)
+        {
+            levelSelection = levelInfoPanel.GetComponentInChildren<LevelSelection>();
+        }
 
+        if (daysGameText != null)
+        {
+            daysGameText.text = timeManager.currentDay.ToString();
+        }
     }
 
-    public static UIManager_Bedroom GetInstance()
+    public static UIManager_TopDown GetInstance()
     {
         return instance;
     }
@@ -100,17 +113,16 @@ public class UIManager_Bedroom : MonoBehaviour, IDataPersistence
         isCooldown = false;
     }
 
-    public void UpdateDaysGameUI()
+    public void ActivateSelectLevel()
     {
+        levelInfoPanel.SetActive(true);
+        levelSelectionIsActive = true;
     }
 
-    public void LoadData(GameData data)
+    public void DisableSelectLevel()
     {
-        daysGameText.text = data.daysGame.ToString();
+        levelSelectionIsActive = false;
+        levelInfoPanel.SetActive(false);
     }
 
-    public void SaveData(GameData data)
-    {
-        
-    }
 }

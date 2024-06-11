@@ -1377,6 +1377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: ca1001b4c7495d0489d074f3335f2234, type: 3}
+  isNpc: 0
+  spriteRenderer: {fileID: 0}
 --- !u!114 &227051365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3177,11 +3179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05faccff31868ee4c99d045cc2f50beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelDays: {fileID: 0}
-  pauseMenu: {fileID: 3050222435921610531}
+  timeFade: 1
   fadeGameobject: {fileID: 8665395613431469239}
-  audioSource: {fileID: 0}
+  pauseMenu: {fileID: 3050222435921610531}
+  panelDays: {fileID: 5958601977504149538}
   levelInfoPanel: {fileID: 0}
+  audioSource: {fileID: 0}
   inventoryLevel: {fileID: 858710127}
 --- !u!114 &492918310
 MonoBehaviour:
@@ -3242,12 +3245,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493077412}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.9974713, y: -0.57129484, z: -0.040064454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1564610382}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &493077414
 MonoBehaviour:
@@ -3816,6 +3819,55 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1 &650753097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650753099}
+  - component: {fileID: 650753098}
+  m_Layer: 0
+  m_Name: Starter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &650753098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650753097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac928e92e475194a889ffad28b95102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGameDialogueJSON: {fileID: 4900000, guid: c7135ab8b61ba6647b24c305352f622c, type: 3}
+  loadGameDialogueJSON: {fileID: 4900000, guid: 59d5062ee68bccd468dbd90e838edfec,
+    type: 3}
+  controllerPlayer: {fileID: 1380033307}
+  timeManager: {fileID: 493077414}
+--- !u!4 &650753099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650753097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.500193, y: -13.690572, z: -0.022863222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &717921207
 Sprite:
   m_ObjectHideFlags: 0
@@ -6141,6 +6193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: c411af026af3e63499af1081ab058bdd, type: 3}
+  isNpc: 0
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1168092355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6633,7 +6687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1375446014}
-  - component: {fileID: 1375446016}
+  - component: {fileID: 1375446015}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -6656,7 +6710,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564610382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1375446016
+--- !u!114 &1375446015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6665,10 +6719,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375446013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0763691754e4cb408154518f2b85296, type: 3}
+  m_Script: {fileID: 11500000, guid: 132ca6cdb384820458eb74c44ee6c481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   daysGameText: {fileID: 2712609673832931916}
+  inventory: {fileID: 227051366}
+  levelInfoPanel: {fileID: 0}
   panelPause: {fileID: 3050222435921610531}
 --- !u!1 &1380033300
 GameObject:
@@ -7045,6 +7101,7 @@ MonoBehaviour:
   choices:
   - {fileID: 638894628}
   - {fileID: 571852529}
+  loadGlobalsJSON: {fileID: 4900000, guid: 5baeee450863fcb4fba5695067d3afe4, type: 3}
 --- !u!4 &1429047628
 Transform:
   m_ObjectHideFlags: 0
@@ -7310,6 +7367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: ad6d368958a919844bdb5078450e1aac, type: 3}
+  isNpc: 0
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1544045243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7525,7 +7584,6 @@ Transform:
   - {fileID: 1589920147}
   - {fileID: 110866786}
   - {fileID: 1375446014}
-  - {fileID: 493077413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1589920147 stripped
@@ -19903,7 +19961,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1375446016}
+      objectReference: {fileID: 1375446015}
     - target: {fileID: 3123314522457743709, guid: b53589cbf27d9c54a86dbaa629dec326,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -19937,7 +19995,7 @@ PrefabInstance:
     - target: {fileID: 3123314522457743709, guid: b53589cbf27d9c54a86dbaa629dec326,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager_Bedroom, Assembly-CSharp
+      value: UIManager_TopDown, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3123314522457743709, guid: b53589cbf27d9c54a86dbaa629dec326,
         type: 3}
@@ -20166,6 +20224,11 @@ PrefabInstance:
       objectReference: {fileID: 484478583}
     - target: {fileID: 8797707178188723370, guid: b53589cbf27d9c54a86dbaa629dec326,
         type: 3}
+      propertyPath: timeManager
+      value: 
+      objectReference: {fileID: 493077414}
+    - target: {fileID: 8797707178188723370, guid: b53589cbf27d9c54a86dbaa629dec326,
+        type: 3}
       propertyPath: panelSetting
       value: 
       objectReference: {fileID: 0}
@@ -20263,6 +20326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 71568d76c078dcf49b5036defae5c8a4, type: 3}
+  isNpc: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &5958601977504149538
 GameObject:
   m_ObjectHideFlags: 0
@@ -20294,6 +20359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: e388e1ed23c73254b92f6ff32a0e08f4, type: 3}
+  isNpc: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &7030624263738987619
 GameObject:
   m_ObjectHideFlags: 0
@@ -20711,9 +20778,11 @@ SceneRoots:
   - {fileID: 1007578705}
   - {fileID: 1380033304}
   - {fileID: 484478582}
-  - {fileID: 1564610382}
   - {fileID: 8310180349739442688}
+  - {fileID: 493077413}
   - {fileID: 1539547951}
   - {fileID: 1953811455}
   - {fileID: 1072934689}
   - {fileID: 1872569741}
+  - {fileID: 1564610382}
+  - {fileID: 650753099}

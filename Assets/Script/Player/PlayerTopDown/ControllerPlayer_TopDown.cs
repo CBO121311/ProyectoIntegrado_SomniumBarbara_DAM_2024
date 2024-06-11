@@ -1,19 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-
-public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
+public class ControllerPlayer_TopDown : MonoBehaviour
 {
     [Header("Visual Signal")]
     [SerializeField] private GameObject speechBubble;
 
-    public Animator animator;
-    public Rigidbody2D rb2D;
+
+    private bool IsStopPlayer = false;
+    private Animator animator;
+    private Rigidbody2D rb2D;
     private Vector2 moveDirection;
     public float velocidadMovimiento;
     float horizontalInput, verticalInput;
 
+
     private bool hasStoppedMovement = false;
-    private UIManager_SelectionLevel uiManager;
+    private UIManager_TopDown uiManager;
+
     private void Awake()
     {
         speechBubble.SetActive(false);
@@ -24,17 +29,16 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
         animator.SetFloat("Vertical", -1);
         animator.SetFloat("LastX", 0);
         animator.SetFloat("LastY", -1);
-
     }
+
     private void Start()
     {
-        uiManager = UIManager_SelectionLevel.GetInstance();
+        uiManager = UIManager_TopDown.GetInstance();
     }
 
     private void Update()
     {
-
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.inventoryIsActivated || IsStopPlayer)
         {
             return;
         }
@@ -51,7 +55,7 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
         MovePlayer();
 
         //Si hay un dialogo, pausa, o selección de nivel te impido moverte
-        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive || IsStopPlayer)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -75,7 +79,7 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
 
     private void MovePlayer()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive || IsStopPlayer)
         {
             return;
         }
@@ -89,11 +93,12 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
         // Definir un umbral para la dirección
         float umbral = 0.1f;
 
-        if( horizontalInput > umbral)
+        if (horizontalInput > umbral)
         {
             horizontalInput = 1;
 
-        }else if(horizontalInput < -umbral)
+        }
+        else if (horizontalInput < -umbral)
         {
             horizontalInput = -1;
         }
@@ -102,7 +107,7 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
             horizontalInput = 0;
         }
 
-        if(verticalInput > umbral)
+        if (verticalInput > umbral)
         {
             verticalInput = 1;
         }
@@ -114,9 +119,6 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
         {
             verticalInput = 0;
         }
-
-        //Debug.Log("Direccion X: " + horizontalInput);
-        //Debug.Log("Direccion Y: " + verticalInput);
 
         animator.SetFloat("Horizontal", horizontalInput);
         animator.SetFloat("Vertical", verticalInput);
@@ -135,5 +137,10 @@ public class ControllerPlayerSL : MonoBehaviour, IControllerPlayer
     public void DisableSpeechBubble()
     {
         speechBubble.SetActive(false);
+    }
+
+    public void ChangeStatePlayer() 
+    {
+        IsStopPlayer = !IsStopPlayer;
     }
 }

@@ -4,14 +4,25 @@ using UnityEngine.UI;
 
 public class TopDown_Transition : MonoBehaviour
 {
-    [SerializeField] private GameObject panelDays;
-    [SerializeField] private GameObject pauseMenu;
-    Vector3 initPosPauseMenu, initPosInventoryLevel;
+    [Header("Fade")]
+    [SerializeField] private float timeFade = 1f;
     [SerializeField] private GameObject fadeGameobject;
     private Image fadeImage;
-    [SerializeField] private AudioSource audioSource;
+
+    [Header("Panel")]
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject panelDays;
     [SerializeField] private GameObject levelInfoPanel;
+
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    
+
+    [Header("Inventory")]
     [SerializeField] private GameObject inventoryLevel;
+    Vector3 initPosPauseMenu, initPosInventoryLevel;
+
 
     private void Awake()
     {

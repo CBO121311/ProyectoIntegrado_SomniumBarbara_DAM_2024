@@ -125,6 +125,6 @@ public class LevelSelection : Menu
         DisableMenuButtons();
         transition.HideLevelInfoPanel();
         yield return new WaitForSeconds(0.6f);
-        UIManager_SelectionLevel.GetInstance().DisableSelectLevel();
+        UIManager_TopDown.GetInstance().DisableSelectLevel();
     }
 }

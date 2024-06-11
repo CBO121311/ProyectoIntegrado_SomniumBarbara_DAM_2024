@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class OpenInventory : MonoBehaviour
 {
-    private ControllerPlayerBed controllerPlayerBed;
+    private ControllerPlayer_TopDown controllerPlayerBed;
 
     private bool playerInRange = false;
-    private UIManager_Bedroom uiManager;
+    private UIManager_TopDown uiManager;
 
     private void Start()
     {
-        uiManager = UIManager_Bedroom.GetInstance();
+        uiManager = UIManager_TopDown.GetInstance();
 
-        controllerPlayerBed = FindFirstObjectByType<ControllerPlayerBed>();
+        controllerPlayerBed = FindFirstObjectByType<ControllerPlayer_TopDown>();
         if (controllerPlayerBed == null)
         {
             Debug.LogError("ControllerPlayerBed no encontrado en la escena.");

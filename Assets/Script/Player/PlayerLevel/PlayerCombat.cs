@@ -16,7 +16,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private List<Sprite> heartSprites;
 
     private int life = 3;
-    private ControllerPlayerSquirrel playerMovement;
+    private ControllerPlayer_Level playerMovement;
     private Animator squirrelAnimator;
     private SpriteRenderer spriteRenderer;
     private bool isInvulnerable = false;
@@ -29,7 +29,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-        playerMovement = GetComponent<ControllerPlayerSquirrel>();
+        playerMovement = GetComponent<ControllerPlayer_Level>();
         squirrelAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();

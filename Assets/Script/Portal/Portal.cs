@@ -15,10 +15,24 @@ public class Portal : MonoBehaviour, IDataPersistence
     [Header("Level Data")]
     public string levelName = "Ardilla";
 
-    private bool playerInRange = false;
+
+    [Header("Player")]
+    private bool playerInRange;
+    private ControllerPlayer_TopDown controllerPlayer;
 
     private Level levelToShow_1;
     private Level levelToShow_2;
+
+    private void Awake()
+    {
+        playerInRange = false;
+
+        controllerPlayer = FindFirstObjectByType<ControllerPlayer_TopDown>();
+        if (controllerPlayer == null)
+        {
+            Debug.LogError("ControllerPlayer_TopDown no encontrado en la escena.");
+        }
+    }
 
     private void Start()
     {
@@ -27,26 +41,29 @@ public class Portal : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-        if (playerInRange && !UIManager_SelectionLevel.GetInstance().levelSelectionIsActive)
+        if (playerInRange && !UIManager_TopDown.GetInstance().levelSelectionIsActive)
         {
-            if (InputManager.GetInstance().GetSubmitPressed())
+            if (InputManager.GetInstance().GetSubmitPressed() && !UIManager_TopDown.GetInstance().gameIsPaused)
             {
+                controllerPlayer.DisableSpeechBubble();
                 ActivatePortal();
+            }else
+            {
+                controllerPlayer.ActivateSpeechBubble();
             }
         }
+
     }
+
 
     private void ActivatePortal()
     {
-        
-
         if (levelToShow_1 != null && levelToShow_2 != null)
         {
-            UIManager_SelectionLevel.GetInstance().ActivateSelectLevel();
+            UIManager_TopDown.GetInstance().ActivateSelectLevel();
             levelSelection.ShowLevelOptions(levelToShow_1, levelToShow_2);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -61,7 +78,8 @@ public class Portal : MonoBehaviour, IDataPersistence
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = false;
-            portalAnimator.SetBool("Player", false);     
+            portalAnimator.SetBool("Player", false);
+            controllerPlayer.DisableSpeechBubble();
         }
     }
 

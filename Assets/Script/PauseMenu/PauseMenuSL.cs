@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PauseMenuSL : Menu
 {
+    private TimeManager timeManager;
+
     [Header("Menu Buttons")]
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button saveButton;
@@ -23,6 +25,8 @@ public class PauseMenuSL : Menu
 
     private void Start()
     {
+        timeManager = FindFirstObjectByType<TimeManager>();
+
         if(SettingsManager.instance != null)
         {
             SettingsManager.instance.OnSettingsClosed += OnSettingClosed;
@@ -86,6 +90,7 @@ public class PauseMenuSL : Menu
     //Guarda la partida
     public void OnSaveClicked()
     {
+        Debug.Log("GUARDANDO EN PAUSE MENUSL");
         DataPersistenceManager.instance.SaveGame();
 
         StartCoroutine(DisableSaveButtonForSeconds(1f));
@@ -123,6 +128,7 @@ public class PauseMenuSL : Menu
             //Función que se ejecuta si seleccionamos "Confirmar"
             () =>
             {
+                timeManager.StopGame();
                 transition.FadeOutAndLoadScene("MainMenuUI");
             },
 

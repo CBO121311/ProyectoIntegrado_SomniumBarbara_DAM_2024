@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControllerPlayerSquirrel : MonoBehaviour
+public class ControllerPlayer_Level : MonoBehaviour
 {
     [Header("References")]
     private Rigidbody2D rb2D;

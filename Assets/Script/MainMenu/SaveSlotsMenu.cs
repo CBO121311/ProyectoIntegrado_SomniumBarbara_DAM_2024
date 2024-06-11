@@ -63,6 +63,7 @@ public class SaveSlotsMenu : Menu
         {
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
             DataPersistenceManager.instance.NewGame();
+            DataPersistenceManager.instance.SaveGame();
             SaveGameAndLoadScene();
         }
 
@@ -72,7 +73,6 @@ public class SaveSlotsMenu : Menu
     //Método que Guarda el juego en cualquier momento antes de cargar una nueva escena.
     private void SaveGameAndLoadScene()
     {
-        DataPersistenceManager.instance.SaveGame();
         mainMenuTransition.FadeOutAndLoadScene("BedroomScene");
     }
 

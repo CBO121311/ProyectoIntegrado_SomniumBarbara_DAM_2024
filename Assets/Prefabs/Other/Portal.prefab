@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 674836958487893818}
   - component: {fileID: 3367455263799203804}
   - component: {fileID: 7960260362183494765}
-  - component: {fileID: 3858987283543177895}
+  - component: {fileID: 7907572620865158843}
   m_Layer: 0
   m_Name: PortalVisual
   m_TagString: Untagged
@@ -174,8 +174,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &3858987283543177895
-BoxCollider2D:
+--- !u!70 &7907572620865158843
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -208,18 +208,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.038134694, y: -0.9044218}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3, y: 4.4}
-    newSize: {x: 2.3, y: 4.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.2237303, y: 2.537836}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.3, y: 4.4}
+  m_Direction: 0
 --- !u!1 &1208564874656918423
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,8 +451,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.3088094, y: -0.76727176}
-  m_Size: {x: 2.2409098, y: 3.4251733}
+  m_Offset: {x: 0.07891846, y: -0.76727176}
+  m_Size: {x: 3.158081, y: 3.4251733}
   m_Direction: 0
 --- !u!114 &5210233707738674093
 MonoBehaviour:
@@ -478,7 +469,6 @@ MonoBehaviour:
   portalAnimator: {fileID: 3367455263799203804}
   panelInfo: {fileID: 0}
   levelSelection: {fileID: 0}
-  speechBubble: {fileID: 0}
   player: {fileID: 0}
   levelName: Ardilla
 --- !u!1 &8305040125248496336

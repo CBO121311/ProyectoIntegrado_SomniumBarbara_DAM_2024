@@ -1,64 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
-
+    [Header("Player")]
     private bool playerInRange;
-    private Transform playerTransform;
+    private ControllerPlayer_TopDown controllerPlayer;
+
+    [Header("NPC Sprite")]
+    [SerializeField] private bool isNpc = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    private ControllerPlayerSL controllerPlayerSL;
+    private Transform playerTransform;
 
     private void Awake()
     {
         playerInRange = false;
-        controllerPlayerSL = FindFirstObjectByType<ControllerPlayerSL>();
-        if (controllerPlayerSL == null)
+
+        controllerPlayer = FindFirstObjectByType<ControllerPlayer_TopDown>();
+        if (controllerPlayer == null)
         {
-            Debug.LogError("ControllerPlayerBed no encontrado en la escena.");
+            Debug.LogError("ControllerPlayer_TopDown no encontrado en la escena.");
         }
     }
 
     private void Update()
     {
+        //Activar de nuevo el dialogo hasta que finalice
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-
-            if (!UIManager_SelectionLevel.GetInstance().gameIsPaused
+            
+            if (!UIManager_TopDown.GetInstance().gameIsPaused
                 && InputManager.GetInstance().GetSubmitPressed())
             {
-                controllerPlayerSL.DisableSpeechBubble();
+                controllerPlayer.DisableSpeechBubble();
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
             else
             {
-                controllerPlayerSL.ActivateSpeechBubble();
+                controllerPlayer.ActivateSpeechBubble();
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            playerInRange=true;
-            playerTransform = collision.transform;
-            FlipTowardsPlayer();
+            playerInRange = true;
+            if (isNpc)
+            {
+                playerTransform = collision.transform;
+                FlipTowardsPlayer();
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            controllerPlayerSL.DisableSpeechBubble();
+            controllerPlayer.DisableSpeechBubble();
             playerInRange = false;
         }
     }
-
 
     private void FlipTowardsPlayer()
     {

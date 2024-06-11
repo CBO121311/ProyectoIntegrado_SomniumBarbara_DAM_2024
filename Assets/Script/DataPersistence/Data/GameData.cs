@@ -8,14 +8,15 @@ public class GameData
     //Para la última partida de guardado.
     public long lastUpdated;
     public int deathCount;
-    public int daysGame;
+
     public SerializableDictionary<string, bool> itemsCollected;
-    //public Vector3 playerPosition;
     public float playedTime;
 
     public List<Level> informationLevel;
 
-    public bool firstTime;
+    public int daysGame;
+    public bool isNewGame; // Indicar si es una nueva partida
+    public bool shouldShowEndOfDayDialogue; // Mostrar el diálogo de fin de jornada
 
 
 
@@ -29,7 +30,9 @@ public class GameData
         playedTime = 0f;
         itemsCollected = new SerializableDictionary<string, bool>();
         informationLevel = new List<Level>();
-        this.firstTime = true;
+
+        this.isNewGame = true; 
+        this.shouldShowEndOfDayDialogue = false;
 
         InitializeLevel();
         InitializeItemsCollected();

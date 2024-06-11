@@ -542,7 +542,6 @@ GameObject:
   - component: {fileID: 3019625546195390697}
   - component: {fileID: 2133451198299567992}
   - component: {fileID: 2548272380232132640}
-  - component: {fileID: 4585467649288046387}
   m_Layer: 5
   m_Name: TimeCountText
   m_TagString: Untagged
@@ -668,18 +667,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4585467649288046387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6073487791007103566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3e21c6273c4648a7baad9d12dae39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8250646768749185714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,4 +1076,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaab4428d30e73e469d0f3928d015ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalCoins: 2
+  itemParents: {fileID: 0}
