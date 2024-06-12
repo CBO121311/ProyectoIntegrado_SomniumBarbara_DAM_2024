@@ -3,17 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Bee : MonoBehaviour
+public class Bee : Enemy
 {
-    [Header("References")]
-    private SpriteRenderer spr;
-    private Animator animator;
-    //private Rigidbody2D rb2D;
-    private Collider2D col2D;
-
-    [Header("Audio")]
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip audioHit;
 
 
     [Header("Movement")]
@@ -21,7 +12,6 @@ public class Bee : MonoBehaviour
     [SerializeField] private float returnSpeed = 3f;
     [SerializeField] private float attackDistance = 2f;
     private Vector2 initialPosition;
-    private bool isAttacking = false;
     private bool isReturning = false;
     private Vector2 attackTargetPosition;
 
@@ -30,18 +20,17 @@ public class Bee : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
 
-    private void Start()
+    protected override void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
-        col2D = GetComponent<Collider2D>();
-        animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        base.Start(); 
 
         initialPosition = transform.position;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (isAttacking)
         {
             transform.position = Vector2.MoveTowards(transform.position, attackTargetPosition, attackSpeed * Time.deltaTime);
@@ -128,5 +117,10 @@ public class Bee : MonoBehaviour
 
         Gizmos.DrawLine(rayOrigin, rayEnd);
         Gizmos.DrawSphere(rayEnd, 0.1f);
+    }
+
+    protected override void Patrol()
+    {
+        // No implementamos patrullaje para Bee ya que su comportamiento es diferente
     }
 }

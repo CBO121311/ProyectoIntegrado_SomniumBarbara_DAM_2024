@@ -31,7 +31,7 @@ public class UIManager_TopDown : MonoBehaviour
     public bool levelSelectionIsActive { get; private set; }
     public bool gameIsPaused { get; private set; }
 
-    private TimeManager timeManager;
+    //private TimeManager timeManager;
 
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class UIManager_TopDown : MonoBehaviour
 
     private void Start()
     {
-        timeManager = FindFirstObjectByType<TimeManager>();
+        //timeManager = FindFirstObjectByType<TimeManager>();
         pauseMenu = panelPause.GetComponent<PauseMenuSL>();
 
         if(levelInfoPanel != null)
@@ -58,9 +58,10 @@ public class UIManager_TopDown : MonoBehaviour
 
         if (daysGameText != null)
         {
-            daysGameText.text = timeManager.currentDay.ToString();
+            daysGameText.text = TimeManager.currentDay.ToString();
         }
     }
+   
 
     public static UIManager_TopDown GetInstance()
     {

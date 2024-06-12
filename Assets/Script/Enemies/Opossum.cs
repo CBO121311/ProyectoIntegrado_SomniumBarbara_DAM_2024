@@ -1,20 +1,25 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Opossum : MonoBehaviour
+public class Opossum : Enemy
 {
-    [Header("References")]
-    private Animator animator;
-    private Rigidbody2D rb2D;
-    private Collider2D col2D;
-    private PlatformEnemies platformEnemies;
 
-    private void Start()
+    [SerializeField] private float speed;
+    [SerializeField] private Transform controlGround;
+    [SerializeField] private float distance;
+    [SerializeField] private bool moveRight;
+
+    // Método de inicialización
+    protected override void FixedUpdate()
     {
-        rb2D = GetComponent<Rigidbody2D>();
-        col2D = GetComponent<Collider2D>();
-        animator = GetComponent<Animator>();
-        platformEnemies = GetComponent<PlatformEnemies>();
+        base.FixedUpdate();
+        if (isDead)
+        {
+            rb2D.velocity = Vector2.zero; // Asegurarse de que el enemigo esté quieto si está muerto
+            rb2D.isKinematic = true;
+            return;
+        }
+        Patrol();
     }
 
 
@@ -25,7 +30,6 @@ public class Opossum : MonoBehaviour
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
-                platformEnemies.StopMovement();
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
             }
             else
@@ -35,15 +39,44 @@ public class Opossum : MonoBehaviour
         }
     }
 
-    public void Hit()
-    { 
-        col2D.enabled = false;
-        animator.SetTrigger("Death");
+    // Método de patrullaje
+    protected override void Patrol()
+    {
+        RaycastHit2D informGround = Physics2D.Raycast(controlGround.position, Vector2.down, distance);
+
+        rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
+        if (!informGround)
+        {
+            // Girar
+            Rotate();
+        }
     }
 
+    // Método de rotación
+    private void Rotate()
+    {
+        moveRight = !moveRight;
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        speed *= -1;
+    }
+
+    // Método para detener el movimiento
+    public void StopMovement()
+    {
+        isDead = true;
+    }
+
+    // Método para manejar la muerte
     public void Death()
     {
         GameEventsManager.instance.DeadEnemy();
         Destroy(gameObject);
+    }
+
+    // Método para dibujar gizmos en el editor
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(controlGround.transform.position, controlGround.transform.position + Vector3.down * distance);
     }
 }

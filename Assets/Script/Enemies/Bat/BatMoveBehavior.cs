@@ -25,7 +25,7 @@ public class BatMoveBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log(bat.followPlayer);
+        //Debug.Log(bat.followPlayer);
 
         if(bat.followPlayer)
         {

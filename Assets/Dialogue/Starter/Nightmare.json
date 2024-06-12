@@ -1,0 +1,1 @@
+﻿{"inkVersion":21,"root":[["^¿Otra pesadilla más? Debería dejar soñar por un tiempo...  ","#","^speaker:Barbara ","/#","#","^portrait:barbara_adult_neutral ","/#","#","^layout:left","/#","\n",{"->":"main"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"main":["#","^change_day_scene:BedroomScene","/#","end",{"#f":1}],"#f":1}],"listDefs":{}}

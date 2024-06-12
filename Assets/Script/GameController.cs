@@ -137,7 +137,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
     private void HandleFallPlayer()
     {
-        Debug.Log("¡El jugador se ha caído");
+        //Debug.Log("¡El jugador se ha caído");
     }
 
 
@@ -239,7 +239,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 
         while (true)
         {
-            Debug.Log("Esperando");
+            //Debug.Log("Esperando");
 
             if (InputManager.GetInstance().GetSubmitPressed())
             {
@@ -257,7 +257,7 @@ public class GameController : MonoBehaviour, IDataPersistence
 
         /*if (itemsCollected == itemCount)
         {
-            Debug.Log("¡Todos los artículos han sido recolectados!");      
+            Debug.Log("Todos items recogidos");      
         }*/
 
         if (!objectiveCompleted && itemsCollected >= numItemMinComplete)

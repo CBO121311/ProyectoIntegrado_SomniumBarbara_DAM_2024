@@ -8,7 +8,7 @@ public class ReaperAttack : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            Debug.Log("Muerto");
+            //Debug.Log("Muerto");
             ControllerPlayer_Level Squirrelplayer = collision.GetComponent<ControllerPlayer_Level>();
             if (Squirrelplayer != null)
             {

@@ -3157,9 +3157,9 @@ RectTransform:
   - {fileID: 9111605922740101052}
   - {fileID: 1958203118}
   - {fileID: 1820274378}
-  - {fileID: 2588331364042926656}
   - {fileID: 858710126}
   - {fileID: 4418157539098423914}
+  - {fileID: 2588331364042926656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3851,7 +3851,10 @@ MonoBehaviour:
   newGameDialogueJSON: {fileID: 4900000, guid: c7135ab8b61ba6647b24c305352f622c, type: 3}
   loadGameDialogueJSON: {fileID: 4900000, guid: 59d5062ee68bccd468dbd90e838edfec,
     type: 3}
+  wakeUpJSON: {fileID: 4900000, guid: 555229f52fc07d145ad56731d984a132, type: 3}
+  nightmareJSON: {fileID: 4900000, guid: 9d85beadb2b635f45a964d8c80f33708, type: 3}
   controllerPlayer: {fileID: 1380033307}
+  player: {fileID: 1380033304}
 --- !u!4 &650753099
 Transform:
   m_ObjectHideFlags: 0
@@ -7088,6 +7091,7 @@ MonoBehaviour:
   - {fileID: 638894628}
   - {fileID: 571852529}
   loadGlobalsJSON: {fileID: 4900000, guid: 5baeee450863fcb4fba5695067d3afe4, type: 3}
+  isWakeUp: 0
 --- !u!4 &1429047628
 Transform:
   m_ObjectHideFlags: 0

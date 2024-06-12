@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class ControllerPlayer_Level : MonoBehaviour
@@ -20,10 +21,13 @@ public class ControllerPlayer_Level : MonoBehaviour
 
     public bool canMove = true;
     [SerializeField] private Vector2 velocidadRebote;
-    private bool isDead = false; // Variable para controlar si el jugador está muerto
+    private bool isDead = false;
+
+    private LevelSquirrelTransition levelSquirrelTransition;
 
     void Start()
     {
+        levelSquirrelTransition = FindFirstObjectByType<LevelSquirrelTransition>();
         col2D = GetComponent<Collider2D>();
         rb2D = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
@@ -106,6 +110,7 @@ public class ControllerPlayer_Level : MonoBehaviour
         {
             squirrelAnimator.SetTrigger("Death");
             col2D.enabled = false; // Desactiva el colisionador del jugador
+            PlayerState.nightmare = true;
             StartCoroutine(FadeOutAndChangeScene());
             isDead = true;
         }
@@ -125,9 +130,7 @@ public class ControllerPlayer_Level : MonoBehaviour
             yield return null;
         }
 
-        // Cambiar a la escena de selección de nivel
-        //SceneManager.LoadScene("SelectionLevel");
-        SceneManager.LoadScene("LevelSelection");
+        levelSquirrelTransition.FadeOutAndLoadScene("BedroomScene");
     }
 
 }

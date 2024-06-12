@@ -90,7 +90,6 @@ public class PauseMenuSL : Menu
     //Guarda la partida
     public void OnSaveClicked()
     {
-        Debug.Log("GUARDANDO EN PAUSE MENUSL");
         DataPersistenceManager.instance.SaveGame();
 
         StartCoroutine(DisableSaveButtonForSeconds(1f));

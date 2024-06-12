@@ -75,8 +75,6 @@ public class LevelSquirrelTransition : MonoBehaviour
             .setOnComplete(() => SceneManager.LoadScene(sceneName));
     }
 
-
-
     public void OpenPauseMenu()
     {
         Time.timeScale = 0;

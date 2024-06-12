@@ -95,7 +95,7 @@ public class GameData
     public int GetPercentageComplete()
     {
         //calcula cuantos objetos hemos recolectado
-        int totalCollected = 0;
+        int totalCollected = -1;
         foreach(bool collected in itemsCollected.Values)
         {
             if(collected)

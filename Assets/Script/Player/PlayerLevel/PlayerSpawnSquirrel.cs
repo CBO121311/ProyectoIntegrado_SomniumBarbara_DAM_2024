@@ -60,7 +60,6 @@ public class PlayerSpawnSquirrel : MonoBehaviour
     //Cuando el jugador recibe daño, invoca la animación hit. 
     public void PlayerDamaged()
     {
-        Debug.Log("GOOOLPE");
         animator.SetTrigger("Hit");
         Invoke("Death",0.2f);
     }

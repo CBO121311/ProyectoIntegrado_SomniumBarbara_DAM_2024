@@ -49,10 +49,13 @@ public class DialogueManager : MonoBehaviour
     private const string PORTRAIT_TAG = "portrait";
     private const string LAYOUT_TAG = "layout";
     private const string CHANGE_SCENE_TAG = "change_scene";
+    private const string CHANGE_DAY_TAG = "change_day_scene";
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
     private DialogueVariables dialogueVariables;
+
+    [SerializeField] private bool isWakeUp = true;
 
     private void Awake()
     {
@@ -134,25 +137,33 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
-        if (currentStory.canContinue)
+        while (currentStory.canContinue)
         {
-            //Es como sacar linea de pila como tal para dar la siguiente linea de dialogo
-            //Si intentamos parar una corrutina = null dará error.
-            if (displayLineCoroutine!= null)
+            string nextLine = currentStory.Continue().Trim();
+
+            // Si la línea es vacía, omitirla y continuar
+            if (!string.IsNullOrEmpty(nextLine))
             {
-  
-                StopCoroutine(displayLineCoroutine);
+                // Es como sacar linea de pila como tal para dar la siguiente linea de dialogo
+                // Si intentamos parar una corrutina = null dará error.
+                if (displayLineCoroutine != null)
+                {
+                    StopCoroutine(displayLineCoroutine);
+                }
+
+                displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
+
+                // Handle tags
+                HandleTags(currentStory.currentTags);
+                return;
             }
 
-            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-
-            //Handle tags
+            // Handle tags for empty lines
             HandleTags(currentStory.currentTags);
         }
-        else
-        {
-            StartCoroutine(ExitDialogueMode());
-        }
+
+        // Si no hay más contenido, salir del modo diálogo
+        StartCoroutine(ExitDialogueMode());
     }
 
     //para hacer el efecto de dialogo
@@ -248,6 +259,9 @@ public class DialogueManager : MonoBehaviour
                 case CHANGE_SCENE_TAG:
                     ChangeScene(tagValue);
                     break;
+                case CHANGE_DAY_TAG:
+                    ChangeDays(tagValue);
+                    break;
                 default:
                     Debug.LogWarning("Error de etiqueta : " + tag);
                     break;
@@ -255,12 +269,6 @@ public class DialogueManager : MonoBehaviour
 
         }
     }
-
-    private void ChangeScene(string sceneName)
-    {
-        transition.FadeOutAndLoadScene(sceneName);
-    }
-
 
     private void DisplayChoices()
     {
@@ -308,4 +316,28 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         }
     }
+
+    private void ChangeScene(string sceneName)
+    {
+
+        if (isWakeUp)
+        {
+            PlayerState.wakeUp = true;
+        }
+
+        transition.FadeOutAndLoadScene(sceneName);
+    }
+
+    private void ChangeDays(string sceneName)
+    {
+
+        GameData gameData = DataPersistenceManager.instance.GetGameData();
+
+        gameData.daysGame += 2;
+        TimeManager timeManager = FindFirstObjectByType<TimeManager>();
+        timeManager.plusDays(2);
+        DataPersistenceManager.instance.SaveGame();
+        transition.FadeOutAndLoadScene(sceneName);
+    }
+
 }
