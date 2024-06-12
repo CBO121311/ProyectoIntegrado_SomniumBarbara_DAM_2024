@@ -67,6 +67,7 @@ public abstract class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0 && !isDead)
         {
+            Debug.Log("MUERTO");
             Die();
         }
     }
@@ -76,20 +77,6 @@ public abstract class Enemy : MonoBehaviour
         isDead = true;
         
         GameEventsManager.instance.DeadEnemy();
-
-        StartCoroutine(FadeOut());
-    }
-
-    protected virtual IEnumerator FadeOut()
-    {
-        
-        rb2D.velocity = Vector2.zero;
-        rb2D.isKinematic = true;
-        col2D.enabled = false;
-
-
-        yield return new WaitForSeconds(0.5f);
-        animator.SetTrigger("Death");
     }
 
     protected abstract void Patrol();

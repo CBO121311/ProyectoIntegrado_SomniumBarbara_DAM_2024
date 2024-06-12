@@ -5,8 +5,6 @@ using UnityEngine.Audio;
 
 public class Bee : Enemy
 {
-
-
     [Header("Movement")]
     [SerializeField] private float attackSpeed = 5f;
     [SerializeField] private float returnSpeed = 3f;
@@ -85,6 +83,8 @@ public class Bee : Enemy
         {
             if (!isAttacking && !isReturning)
             {
+                Debug.Log("DETECTPLAYER");
+
                 isAttacking = true;
                 animator.SetBool("Player", true);
                 attackTargetPosition = new Vector2(initialPosition.x, initialPosition.y - attackDistance);
@@ -96,7 +96,9 @@ public class Bee : Enemy
 
     private IEnumerator Attack()
     {
-        yield return new WaitForSeconds(1f); 
+        Debug.Log("ATTACK");
+
+        yield return new WaitForSeconds(2f); 
         isAttacking = false;
     }
 

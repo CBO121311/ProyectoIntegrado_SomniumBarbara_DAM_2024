@@ -23,13 +23,23 @@ public class Bat : Enemy
     protected override void Update()
     {
         base.Update();
-        detectDistance = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("Distance", detectDistance);
+
+        if(!isDead)
+        {
+            detectDistance = Vector2.Distance(transform.position, player.position);
+            animator.SetFloat("Distance", detectDistance);
+        }
     }
 
     protected override void Patrol()
     {
         // no se utiliza
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        StartCoroutine(ActiveDeath());
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -71,6 +81,9 @@ public class Bat : Enemy
         }
     }
 
+
+    
+
     IEnumerator ActiveDeath()
     {
         col2D.enabled = false;
@@ -79,13 +92,12 @@ public class Bat : Enemy
             rb2D.velocity = Vector2.zero;
             rb2D.isKinematic = true;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         animator.SetTrigger("Death");
     }
 
     public void Death()
     {
-        GameEventsManager.instance.DeadEnemy();
         Destroy(gameObject);
     }
 

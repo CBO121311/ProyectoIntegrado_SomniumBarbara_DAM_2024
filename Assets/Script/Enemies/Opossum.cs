@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -30,6 +31,7 @@ public class Opossum : Enemy
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
+                TakeDamage(50f);
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
             }
             else
@@ -38,6 +40,8 @@ public class Opossum : Enemy
             }
         }
     }
+
+
 
     // Método de patrullaje
     protected override void Patrol()
@@ -51,6 +55,26 @@ public class Opossum : Enemy
             Rotate();
         }
     }
+
+    protected override void Die()
+    {
+        base.Die();
+        StartCoroutine(ActiveDeath());
+    }
+
+    IEnumerator ActiveDeath()
+    {
+        col2D.enabled = false;
+        if (rb2D != null)
+        {
+            rb2D.velocity = Vector2.zero;
+            rb2D.isKinematic = true;
+        }
+        yield return new WaitForSeconds(0.2f);
+        animator.SetTrigger("Death");
+    }
+
+
 
     // Método de rotación
     private void Rotate()
@@ -66,10 +90,11 @@ public class Opossum : Enemy
         isDead = true;
     }
 
+    
+
     // Método para manejar la muerte
     public void Death()
     {
-        GameEventsManager.instance.DeadEnemy();
         Destroy(gameObject);
     }
 

@@ -51,6 +51,8 @@ public class GameController : MonoBehaviour, IDataPersistence
     private Level currentLevel;
     private int numItemMinComplete;
 
+    [SerializeField] private float timeActivateReaper = 5f;
+
 
     private bool objectiveCompleted = false;
 
@@ -140,6 +142,52 @@ public class GameController : MonoBehaviour, IDataPersistence
         //Debug.Log("¡El jugador se ha caído");
     }
 
+    //Método que se le llama cuando matas a un enemigo
+    private void HandleDeadEnemy()
+    {
+        deathEnemyCount++;
+    }
+
+    // Método llamado cuando se completa el nivel:
+    // - Desactiva al enemigo Reaper.
+    // - Activa la transición de finalización del nivel.
+    // - Pausa el tiempo en el juego.
+    // - Realiza la animación de finalización del nivel.
+    // - Establece los datos del nivel en la pantalla de puntuación.
+    // - Detiene cualquier acción del juego.
+    // - Detecta la tecla para cambiar de escena al siguiente nivel.
+    private void HandleLevelComplete()
+    {
+        DeactivateReaper();
+        levelCompleteTransition.SetActive(true);
+        Time.timeScale = 0;
+
+        levelSquirrelTransition.AnimateLevelComplete();
+        scoreLevel.SetLevelData(levelTime, itemsCollected, deathEnemyCount);
+        isGameRunning = false;
+
+        DetectKeyToChangeScene();
+    }
+
+    //Método que se le llama cuando recoges un item
+    private void HandleItemCollected()
+    {
+        itemsCollected++;
+
+        /*if (itemsCollected == itemCount)
+        {
+            Debug.Log("Todos items recogidos");      
+        }*/
+
+        if (!objectiveCompleted && itemsCollected >= numItemMinComplete)
+        {
+            passLevel.CompleteObjective();
+            levelSquirrelTransition.RotatePassMessage();
+            objectiveCompleted = true;
+        }
+    }
+
+
 
     private void UpdateTimer()
     {
@@ -169,10 +217,21 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
+
+    public int GetCurrentScore()
+    {
+        return (itemsCollected * ScoreLevel.pointsPerItemCollected) + (deathEnemyCount * ScoreLevel.pointsPerEnemyDefeated);
+    }
+
     IEnumerator ActiveReaper()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(timeActivateReaper);
         reaper.SetActive(true);
+    }
+
+    public void DeactivateReaper()
+    {
+        reaper.SetActive(false);
     }
 
     private void ChangeTimerState(bool estado)
@@ -193,33 +252,9 @@ public class GameController : MonoBehaviour, IDataPersistence
         ChangeTimerState(false);
     }
 
-    //Método que se le llama cuando matas a un enemigo
-    private void HandleDeadEnemy()
-    {
-        deathEnemyCount++;
-    }
 
 
-    // Método llamado cuando se completa el nivel:
-    // - Desactiva al enemigo Reaper.
-    // - Activa la transición de finalización del nivel.
-    // - Pausa el tiempo en el juego.
-    // - Realiza la animación de finalización del nivel.
-    // - Establece los datos del nivel en la pantalla de puntuación.
-    // - Detiene cualquier acción del juego.
-    // - Detecta la tecla para cambiar de escena al siguiente nivel.
-    private void HandleLevelComplete()
-    {
-        DeactivateReaper();
-        levelCompleteTransition.SetActive(true);
-        Time.timeScale = 0;
 
-        levelSquirrelTransition.AnimateLevelComplete();
-        scoreLevel.SetLevelData(levelTime,itemsCollected,deathEnemyCount);
-        isGameRunning = false;
-
-        DetectKeyToChangeScene();
-    }
 
 
     void DetectKeyToChangeScene()
@@ -250,23 +285,6 @@ public class GameController : MonoBehaviour, IDataPersistence
         }
     }
 
-    //Método que se le llama cuando recoges un item
-    private void HandleItemCollected()
-    {
-        itemsCollected++;
-
-        /*if (itemsCollected == itemCount)
-        {
-            Debug.Log("Todos items recogidos");      
-        }*/
-
-        if (!objectiveCompleted && itemsCollected >= numItemMinComplete)
-        {
-            passLevel.CompleteObjective();
-            levelSquirrelTransition.RotatePassMessage();
-            objectiveCompleted = true;
-        }
-    }
 
     public void UpdateItemCollectedStatus(string itemId, bool collectedStatus)
     {
@@ -319,11 +337,5 @@ public class GameController : MonoBehaviour, IDataPersistence
                 currentLevel.bestScore = newScore;
             }
         }
-    }
-
-
-    public void DeactivateReaper()
-    {
-        reaper.SetActive(false);
     }
 }

@@ -15,10 +15,10 @@ public class ScoreLevel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI totalScoreLevelText;
 
     [Header("Score Point")]
-    private const int pointsPerEnemyDefeated = 100;
-    private const int pointsPerItemCollected = 1000;
-    private const int timeBonusThresholdInSeconds = 120;
-    private const int pointsPerSecondUnderThreshold = 200;
+    public const int pointsPerEnemyDefeated = 100;
+    public const int pointsPerItemCollected = 1000;
+    public const int timeBonusThresholdInSeconds = 120;
+    public const int pointsPerSecondUnderThreshold = 200;
 
     private int totalScore = 0;
 

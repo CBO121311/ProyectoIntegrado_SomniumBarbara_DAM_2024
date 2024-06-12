@@ -56,23 +56,23 @@ public class Minotaur : Enemy
         isAttacking = false;
     }
 
-    public void ActivateWeaponCollider()
-    {
-        weapon.SetActive(true);
-    }
 
-    public void DeactivateWeaponCollider()
+    protected override void Die()
     {
-        weapon.SetActive(false);
-    }
-
-    public void Death()
-    {
+        base.Die();
         StartCoroutine(FadeOutEnemy());
     }
 
+
     IEnumerator FadeOutEnemy()
     {
+        rb2D.velocity = Vector2.zero;
+        rb2D.isKinematic = true;
+        col2D.enabled = false;
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(0.5f);
+
         Color color = spr.color;
         while (color.a > 0)
         {
@@ -94,13 +94,23 @@ public class Minotaur : Enemy
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
                 TakeDamage(50f);
                 audioSource.PlayOneShot(audioHit);
-                Debug.Log("Golpe");
+                //Debug.Log("Golpe");
             }
             else
             {
                 other.gameObject.GetComponent<PlayerCombat>().takeDamage(1, other.GetContact(0).normal);
             }
         }
+    }
+
+    public void ActivateWeaponCollider()
+    {
+        weapon.SetActive(true);
+    }
+
+    public void DeactivateWeaponCollider()
+    {
+        weapon.SetActive(false);
     }
 
     private void OnDrawGizmos()
