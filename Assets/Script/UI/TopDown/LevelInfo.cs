@@ -14,6 +14,7 @@ public class LevelInfo : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemCollected;
     [SerializeField] private TextMeshProUGUI itemMin;
     [SerializeField] private TextMeshProUGUI bestScore;
+    [SerializeField] private TextMeshProUGUI characterDescription;
     [SerializeField] private GameObject available;
 
     private int itemCount = 0;
@@ -31,6 +32,7 @@ public class LevelInfo : MonoBehaviour
                 itemMin.text = level.minItems.ToString() + " objetos";
                 bestScore.text = level.bestScore.ToString();
                 itemCollected.text = GetCollectedItemsPercentage(level).ToString() + " %";
+                characterDescription.text = level.characterDescription;
             }
             else
             {
@@ -42,11 +44,12 @@ public class LevelInfo : MonoBehaviour
                 bestScore.text = "";
                 itemCollected.text = "";
                 itemCollected.text = "";
+                characterDescription.text = "";
             }
         }
         else
         {
-            Debug.LogWarning("Se intentó establecer la información del nivel con un objeto Level nulo.");
+            Debug.LogWarning("Error, Nivel nulo.");
         }
     }
 

@@ -11,48 +11,20 @@ public class Opossum : Enemy
     [SerializeField] private bool moveRight;
 
     // Método de inicialización
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-        if (isDead)
-        {
-            rb2D.velocity = Vector2.zero; // Asegurarse de que el enemigo esté quieto si está muerto
-            rb2D.isKinematic = true;
-            return;
-        }
-        Patrol();
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (other.GetContact(0).normal.y <= -0.9)
-            {
-                animator.SetTrigger("Hit");
-                TakeDamage(50f);
-                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
-            }
-            else
-            {
-                other.gameObject.GetComponent<PlayerCombat>().takeDamage(1, other.GetContact(0).normal);
-            }
-        }
-    }
 
 
 
     // Método de patrullaje
     protected override void Patrol()
     {
-        RaycastHit2D informGround = Physics2D.Raycast(controlGround.position, Vector2.down, distance);
+        rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y);
 
-        rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
-        if (!informGround)
+        isObstacleAhead = Physics2D.Raycast(obstacleCheck.position, transform.right, obstacleCheckDistance, obstacleLayer);
+        isGrounded = Physics2D.Raycast(groundCheck.position, Vector3.down, groundCheckDistance, groundLayer);
+
+        if (isObstacleAhead || !isGrounded)
         {
-            // Girar
-            Rotate();
+            Turn();
         }
     }
 
@@ -72,6 +44,29 @@ public class Opossum : Enemy
         }
         yield return new WaitForSeconds(0.2f);
         animator.SetTrigger("Death");
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            var playerCombat = other.gameObject.GetComponent<PlayerCombat>();
+
+            if (other.GetContact(0).normal.y <= -0.9)
+            {
+                animator.SetTrigger("Hit");
+                if (playerCombat != null && playerCombat.CanDealDamage())
+                {
+                    TakeDamage(50f);
+                }
+                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
+            }
+            else
+            {
+                playerCombat.TakeDamage(1, other.GetContact(0).normal);
+            }
+        }
     }
 
 
@@ -102,6 +97,7 @@ public class Opossum : Enemy
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(controlGround.transform.position, controlGround.transform.position + Vector3.down * distance);
+        Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
+        Gizmos.DrawLine(obstacleCheck.position, obstacleCheck.position + transform.right * obstacleCheckDistance);
     }
 }

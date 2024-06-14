@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
-
+    [SerializeField] private bool canDealDamage = true; 
     [SerializeField] private int maxLife;
     [SerializeField] private float controlLossTime;
     [SerializeField] private Image heartLifePanel;
@@ -42,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     /// <param name="damage">Cantidad de daño que se aplica al jugador.</param>
     /// <param name="position">Posición del golpe recibido.</param>
-    public void takeDamage(int damage, Vector2 position, bool ignoreInvulnerability = false)
+    public void TakeDamage(int damage, Vector2 position, bool ignoreInvulnerability = false)
     {
         if (isInvulnerable && !ignoreInvulnerability) return;
 
@@ -62,6 +62,11 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         playerMovement.BounceOnDamage(position);
+    }
+
+    public bool CanDealDamage()
+    {
+        return canDealDamage;
     }
 
     private void UpdateLifeSprite()
@@ -121,4 +126,6 @@ public class PlayerCombat : MonoBehaviour
         }
         spriteRenderer.enabled = true; // Asegurarse de que el sprite esté visible al final
     }
+
+
 }

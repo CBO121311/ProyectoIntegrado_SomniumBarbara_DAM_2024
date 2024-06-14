@@ -47,9 +47,15 @@ public class SaveSlotsMenu : Menu
                 + "\n\n¿Estás seguro?",
                 () =>
                 {
+
+
                     DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
                     DataPersistenceManager.instance.NewGame();
+
+                    TimeManager.instance.Reset();
+                    DataPersistenceManager.instance.SaveGame();
                     SaveGameAndLoadScene();
+
                 },
                 //Función que se ejecuta si seleccionamos "Cancelar"
                 () =>
@@ -63,11 +69,10 @@ public class SaveSlotsMenu : Menu
         {
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileID());
             DataPersistenceManager.instance.NewGame();
+            TimeManager.instance.Reset();
             DataPersistenceManager.instance.SaveGame();
             SaveGameAndLoadScene();
         }
-
-        DataPersistenceManager.instance.NewGame();
     }
 
     //Método que Guarda el juego en cualquier momento antes de cargar una nueva escena.

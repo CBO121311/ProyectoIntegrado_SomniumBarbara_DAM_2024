@@ -34,7 +34,6 @@ public class MainMenu : Menu
 
     private void Start()
     {
-        PlayerState.Allfalse();
 
         DisableButtonsDependingOnData();
 
@@ -42,6 +41,8 @@ public class MainMenu : Menu
         {
             SettingsManager.instance.OnSettingsClosed += OnSettingClosed;
         }
+
+        PlayerState.Allfalse();
     }
     private void OnDestroy()
     {

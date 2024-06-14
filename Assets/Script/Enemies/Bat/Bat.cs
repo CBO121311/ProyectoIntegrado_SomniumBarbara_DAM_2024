@@ -46,16 +46,23 @@ public class Bat : Enemy
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            var playerCombat = other.gameObject.GetComponent<PlayerCombat>();
+
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
                 other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
-                TakeDamage(50f);
+
+                if (playerCombat != null && playerCombat.CanDealDamage())
+                {
+                    TakeDamage(50f);
+                }
+
                 audioSource.PlayOneShot(audioHit);
             }
             else
             {
-                other.gameObject.GetComponent<PlayerCombat>().takeDamage(1, other.GetContact(0).normal);
+                playerCombat.TakeDamage(1, other.GetContact(0).normal);
                 followPlayer = false;
                 animator.SetTrigger("Return");
             }

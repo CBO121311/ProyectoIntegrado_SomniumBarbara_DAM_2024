@@ -32,7 +32,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Hay más de un DataPersistenceManager en la escena.");
+            Debug.Log("Hay más de un DataPersistenceManager en la escena. Se destruye el actual");
             Destroy(this.gameObject);
             return;
         }

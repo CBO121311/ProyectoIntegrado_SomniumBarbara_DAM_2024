@@ -69,7 +69,7 @@ public class Bee : Enemy
             }
             else
             {
-                other.gameObject.GetComponent<PlayerCombat>().takeDamage(1, other.GetContact(0).normal);
+                other.gameObject.GetComponent<PlayerCombat>().TakeDamage(1, other.GetContact(0).normal);
             }
         }
     }

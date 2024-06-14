@@ -20,7 +20,7 @@ public class WeaponCollider : MonoBehaviour
                 Vector2 pushDirection = ((Vector2)other.transform.position - contactPoint).normalized;
                 Vector2 pushVector = pushDirection * new Vector2(-2, -2); // Magnitud ajustada
 
-                playerCombat.takeDamage(weaponDamage, pushVector);
+                playerCombat.TakeDamage(weaponDamage, pushVector);
             }
         }
     }

@@ -7,7 +7,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
 {
     public static TimeManager instance;
     public static int currentDay { get; private set; }
-    private float playedTime = 0f;
+    private static float playedTime = 0f;
     private static bool isGameRunning = false;
 
     private void Awake()
@@ -16,12 +16,15 @@ public class TimeManager : MonoBehaviour, IDataPersistence
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            
         }
         else
         {
             Destroy(gameObject);
+            Debug.Log("Hay más de un  TimeManager en la escena. Se destruye el más nuevo");
         }
     }
+
 
     private void Update()
     {
@@ -38,7 +41,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
         int hours = Mathf.FloorToInt(time / 3600f);
         int minutes = Mathf.FloorToInt((time % 3600f) / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);
-        //Debug.Log($"TimeManager : {hours:D2}:{minutes:D2}:{seconds:D2}");
+        Debug.Log($"TimeManager : {hours:D2}:{minutes:D2}:{seconds:D2}");
     }
 
     public void StartGame()
@@ -52,9 +55,16 @@ public class TimeManager : MonoBehaviour, IDataPersistence
 
     public void StopGame()
     {
-        //Debug.Log("Game stopped");
+        Debug.Log("Game stopped");
         isGameRunning = false;
+    }
+
+    public void Reset()
+    {
         playedTime = 0f;
+        currentDay = 0;
+        isGameRunning = false;
+        //Debug.Log("TimeManager reseteado. Tiempo jugado: " + playedTime + ", Día actual: " + currentDay);
     }
 
     public void plusDays(int days)
@@ -72,23 +82,18 @@ public class TimeManager : MonoBehaviour, IDataPersistence
     {
         Debug.Log("isGameRunning" + isGameRunning);
 
-        //Si el juego ha comenzado, no se vuelve a cargar
+        // Si el juego ya está en marcha, no se vuelve a cargar
         if (isGameRunning) return;
 
-        Debug.Log("LO ATRAVEÉS");
-
-
-        //Debug.Log($"Loaded playedTime: {data.playedTime}");
+        Debug.Log("CARGANDO");
         playedTime = data.playedTime;
         currentDay = data.daysGame;
     }
 
     public void SaveData(GameData data)
     {
-        //Debug.Log($"Saving playedTime: {playedTime}");
+        Debug.Log($"Saving playedTime: {playedTime}");
         data.playedTime = playedTime;
-
         data.daysGame = currentDay + 1;
-
     }
 }

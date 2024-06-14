@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 66073bfb776d4884886450d0f577f28b
+guid: e6354e889e962f845bc6fd6ab6f3ca4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8240647794815155146
-    second: bunnyPortrait_0
+      213: -9192638271177797499
+    second: death_0
   - first:
-      213: -3113993931514581810
-    second: bunnyPortrait_1
+      213: 8559509556701815258
+    second: death_1
   - first:
-      213: -4691967569940804952
-    second: bunnyPortrait_2
+      213: -5286180679089938723
+    second: death_2
   - first:
-      213: 2208596046557636083
-    second: bunnyPortrait_3
+      213: -1891855120789479077
+    second: death_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bunnyPortrait_0
+      name: death_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 2
+        y: 1
+        width: 33
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 634cfeecd7653ad80800000000000000
-      internalID: -8240647794815155146
+      spriteID: 58059c172303d6080800000000000000
+      internalID: -9192638271177797499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunnyPortrait_1
+      name: death_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 4
+        y: 20
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecce957940fd8c4d0800000000000000
-      internalID: -3113993931514581810
+      spriteID: ad1e5c2779c79c670800000000000000
+      internalID: 8559509556701815258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunnyPortrait_2
+      name: death_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 28
+        y: 20
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8aa8600ba58c2eeb0800000000000000
-      internalID: -4691967569940804952
+      spriteID: dde9f440ea6b3a6b0800000000000000
+      internalID: -5286180679089938723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunnyPortrait_3
+      name: death_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 38
+        y: 2
+        width: 35
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,8 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f56667176286ae10800000000000000
-      internalID: 2208596046557636083
+      spriteID: b51e6d68ac7ceb5e0800000000000000
+      internalID: -1891855120789479077
       vertices: []
       indices: 
       edges: []
@@ -208,7 +208,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9d00492e1d36fb742a6c2d5142ed9e48
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -216,10 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bunnyPortrait_0: -8240647794815155146
-      bunnyPortrait_1: -3113993931514581810
-      bunnyPortrait_2: -4691967569940804952
-      bunnyPortrait_3: 2208596046557636083
+      death_0: -9192638271177797499
+      death_1: 8559509556701815258
+      death_2: -5286180679089938723
+      death_3: -1891855120789479077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
