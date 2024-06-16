@@ -34,7 +34,7 @@ public class MainMenu : Menu
 
     private void Start()
     {
-
+        AudioManager.Instance.PlayMusic(0);
         DisableButtonsDependingOnData();
 
         if (SettingsManager.instance != null)

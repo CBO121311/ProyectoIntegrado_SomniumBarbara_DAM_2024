@@ -1,81 +1,87 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance { get; private set; }
-    [SerializeField] private AudioSource normalBGM;
-    [SerializeField] private AudioSource terrorBGM;
+    public static AudioManager Instance;
 
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
 
-    [SerializeField] private AudioSource audioSourceSFX;
+    public AudioClip[] backgroundMusicClips;
+    public AudioClip[] sfxClips;
 
-    [SerializeField] private AudioClip[] audioClips;
-    private Dictionary<string, AudioClip> audioClipDict = new Dictionary<string, AudioClip>();
-
-
-    void Awake()
+    private void Awake()
     {
-        if (instance != null)
+        if (Instance == null)
         {
-            Debug.LogError("Se encontró más de un AudioManager en la escena.");
-            Destroy(this.gameObject);
-            return;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        instance = this;
-        //DontDestroyOnLoad(this.gameObject);
-
-        // Precarga todos los clips de audio y los almacena en el diccionario
-        foreach (var clip in audioClips)
+        else
         {
-            audioClipDict.Add(clip.name, clip);
+            Destroy(gameObject);
         }
     }
 
-    private void Start()
+
+    private void OnDestroy()
     {
-        LoadVolume();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void LoadVolume()
+    void Start()
     {
         float volume = PlayerPrefs.GetFloat("setVolume", 0.5f);
-        //Debug.Log("El volumen es " + volume);
 
         AudioListener.volume = volume;
     }
 
-    // Método para obtener un clip de audio precargado por su nombre
-
-    public AudioClip GetAudioClip(string clipName)
+    public void PlayMusic(int clipIndex)
     {
-        if (audioClipDict.ContainsKey(clipName))
-        {
-            return audioClipDict[clipName];
-        }
-        else
-        {
-            Debug.LogWarning($"El clip de audio '{clipName}' no fue encontrado en la lista de precarga.");
-            return null;
-        }
+        if (clipIndex < 0 || clipIndex >= backgroundMusicClips.Length) return;
+        musicSource.clip = backgroundMusicClips[clipIndex];
+        musicSource.Play();
     }
 
-    // Método para cambiar la música (por ejemplo, al presionar un botón)
-    public void ChangeMusicTerror()
+    public void PlaySFX(int clipIndex)
     {
-        normalBGM.Stop(); 
-        terrorBGM.Play();
+        if (clipIndex < 0 || clipIndex >= sfxClips.Length) return;
+        sfxSource.PlayOneShot(sfxClips[clipIndex]);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
     }
 
     public void StopMusic()
     {
-        normalBGM.Stop();
-        terrorBGM.Stop();
+        musicSource.Stop();
     }
 
-    public void PlayOneSound(string clipName)
+    public void StopSFX()
     {
-        audioSourceSFX.PlayOneShot(GetAudioClip(clipName));
+        sfxSource.Stop();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenuUI" || scene.name == "BedroomScene" || scene.name == "SquirrelLevel" ||  scene.name == "BunnyLevel" || scene.name == "LevelSelection")
+        {
+            StopMusic();
+        }
+        else
+        {
+            //Debug.Log("Intentando parar música");
+        }
     }
 }

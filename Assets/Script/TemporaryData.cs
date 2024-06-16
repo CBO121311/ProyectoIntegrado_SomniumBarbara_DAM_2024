@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class TemporaryData
 {
-    public static Vector3 PlayerPosition { get; set; }
+    public static Vector3 lastPortalPosition = Vector3.zero;
     public static bool UseTemporaryPosition { get; set; } = false;
 }

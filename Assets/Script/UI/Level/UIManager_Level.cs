@@ -11,7 +11,7 @@ public class UIManager_Level : MonoBehaviour
     public bool gameIsPaused { get; private set; }
 
     private bool isCooldown = false;
-    private float cooldownPause = 0.1f;
+    private float pauseCooldown = 0.2f;
 
     private static UIManager_Level instance;
 
@@ -19,7 +19,7 @@ public class UIManager_Level : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Hay más de un SelectionLevel_UIManager en la Escena");
+            Debug.LogWarning("Hay más de un SelectionLevel_UIManager en la escena. Se destruye el más nuevo");
             Destroy(gameObject);
             return;
         }
@@ -58,7 +58,7 @@ public class UIManager_Level : MonoBehaviour
             pauseMenu.TooglePause();
         }
 
-        StartCoroutine(CooldownCoroutine(cooldownPause));
+        StartCoroutine(CooldownCoroutine(pauseCooldown));
     }
 
     private IEnumerator CooldownCoroutine(float cooldown)
@@ -66,5 +66,10 @@ public class UIManager_Level : MonoBehaviour
         isCooldown = true;
         yield return new WaitForSecondsRealtime(cooldown);
         isCooldown = false;
+    }
+
+    public bool IsPauseCooldownActive()
+    {
+        return isCooldown;
     }
 }

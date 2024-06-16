@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Portal : MonoBehaviour, IDataPersistence
 {
-
+   
     [SerializeField] private Animator portalAnimator;
     [SerializeField] private GameObject panelInfo;
     [SerializeField] private LevelSelection levelSelection;
@@ -23,15 +19,14 @@ public class Portal : MonoBehaviour, IDataPersistence
     private Level levelToShow_1;
     private Level levelToShow_2;
 
+    //Para colocar al jugador cuando entre en un portal.
+    [SerializeField] private GameObject point;
+    private Vector2 pointPosition;
+
     private void Awake()
     {
         playerInRange = false;
-
         controllerPlayer = FindFirstObjectByType<ControllerPlayer_TopDown>();
-        if (controllerPlayer == null)
-        {
-            Debug.LogError("ControllerPlayer_TopDown no encontrado en la escena.");
-        }
     }
 
     private void Start()
@@ -46,6 +41,7 @@ public class Portal : MonoBehaviour, IDataPersistence
             if (InputManager.GetInstance().GetSubmitPressed() && !UIManager_TopDown.GetInstance().gameIsPaused)
             {
                 controllerPlayer.DisableSpeechBubble();
+                SavePortalPosition();
                 ActivatePortal();
             }else
             {
@@ -53,6 +49,11 @@ public class Portal : MonoBehaviour, IDataPersistence
             }
         }
 
+    }
+
+    private void SavePortalPosition()
+    {
+        TemporaryData.lastPortalPosition = player.transform.position;
     }
 
 

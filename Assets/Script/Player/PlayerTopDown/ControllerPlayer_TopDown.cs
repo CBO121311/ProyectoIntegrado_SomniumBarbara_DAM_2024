@@ -8,7 +8,7 @@ public class ControllerPlayer_TopDown : MonoBehaviour
     [SerializeField] private GameObject speechBubble;
 
 
-    private bool IsStopPlayer = false;
+    [SerializeField]private bool IsStopPlayer = false;
     private Animator animator;
     private Rigidbody2D rb2D;
     private Vector2 moveDirection;
@@ -25,10 +25,17 @@ public class ControllerPlayer_TopDown : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
 
-        animator.SetFloat("Horizontal", 0);
-        animator.SetFloat("Vertical", -1);
+        //animator.SetFloat("Horizontal", 0);
+        //animator.SetFloat("Vertical", -1);
         animator.SetFloat("LastX", 0);
         animator.SetFloat("LastY", -1);
+
+        // Cargar la posición del portal
+        if (TemporaryData.lastPortalPosition != Vector3.zero)
+        {
+            transform.position = TemporaryData.lastPortalPosition;
+            TemporaryData.lastPortalPosition = Vector3.zero;
+        }
     }
 
     private void Start()
@@ -52,10 +59,13 @@ public class ControllerPlayer_TopDown : MonoBehaviour
     private void FixedUpdate()
     {
 
+        if (IsStopPlayer) return;
+
+        //Debug.Log("Me muevooo");
         MovePlayer();
 
         //Si hay un dialogo, pausa, o selección de nivel te impido moverte
-        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive || IsStopPlayer)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive)
         {
             // Solo ejecutar una vez
             if (!hasStoppedMovement)
@@ -65,7 +75,6 @@ public class ControllerPlayer_TopDown : MonoBehaviour
                 verticalInput = 0;
                 animator.SetFloat("Horizontal", horizontalInput);
                 animator.SetFloat("Vertical", verticalInput);
-
                 hasStoppedMovement = true;
             }
             return;
@@ -82,6 +91,12 @@ public class ControllerPlayer_TopDown : MonoBehaviour
         if (DialogueManager.GetInstance().dialogueIsPlaying || uiManager.gameIsPaused || uiManager.levelSelectionIsActive || IsStopPlayer)
         {
             return;
+        }
+
+        if (DataPersistenceManager.instance.GetGameData().isNewGame) {
+
+            Debug.Log("ABRIENDO TUTORIAL");
+        
         }
 
         moveDirection = InputManager.GetInstance().GetMoveDirection();

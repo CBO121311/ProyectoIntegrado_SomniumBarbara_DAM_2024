@@ -15,9 +15,6 @@ public abstract class Enemy : MonoBehaviour
     protected bool facingRight = true;
     protected bool isAttacking = false;
 
-    [Header("Audio")]
-    [SerializeField] protected AudioClip audioHit;
-
     [Header("Health")]
     public float health = 100f;
 

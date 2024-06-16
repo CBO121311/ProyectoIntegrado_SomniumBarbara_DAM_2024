@@ -7,10 +7,6 @@ public class OpenTransition : MonoBehaviour
     [SerializeField] private GameObject groupLogo;
     [SerializeField] private GameObject ringLogo;
     [SerializeField] private GameObject imageLogo;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip boingClip;
-    [SerializeField] private AudioClip finalClip;
-
     [SerializeField] private GameObject fadeGameobject;
     private Image fadeImage;
 
@@ -116,20 +112,12 @@ public class OpenTransition : MonoBehaviour
     // Método para reproducir el sonido del bote
     void PlayBoingSound()
     {
-        if (audioSource != null && boingClip != null)
-        {
-            audioSource.clip = boingClip;
-            audioSource.Play();
-        }
+        AudioManager.Instance.PlaySFX(0);
     }
 
     // Método para reproducir el sonido final
     void PlayFinalSound()
     {
-        if (audioSource != null && finalClip != null)
-        {
-            audioSource.clip = finalClip;
-            audioSource.Play();
-        }
+        AudioManager.Instance.PlaySFX(1);
     }
 }

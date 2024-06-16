@@ -13,21 +13,23 @@ public class BedroomSceneManager : MonoBehaviour
     [SerializeField] private ControllerPlayer_TopDown controllerPlayer;
     private TimeManager timeManager;
     [SerializeField] private Transform player;
+    [SerializeField] private GameObject tutorial;
 
     private void Awake()
     {
         timeManager = FindFirstObjectByType<TimeManager>();
+        //DialogueManager.OnDialogueComplete += HandleDialogueComplete;
     }
 
+    private void OnDestroy()
+    {
+        //DialogueManager.OnDialogueComplete -= HandleDialogueComplete; // Desuscribirse del evento
+    }
 
     private void Start()
     {
 
         timeManager.StartGame();
-        controllerPlayer.ChangeStatePlayer();
-
-        //Invoke("Init",1f);
-
         Init();
     }
 
@@ -51,7 +53,7 @@ public class BedroomSceneManager : MonoBehaviour
 
             if (gameData.isNewGame)
             {
-                //player.position = new Vector2(-4.92f, -13.73f);
+                //OpenTutorial();
                 dialogueJSON = newGameDialogueJSON;
                 gameData.isNewGame = false; // Marcar que ya no es una nueva partida
             }
@@ -63,12 +65,11 @@ public class BedroomSceneManager : MonoBehaviour
         }
 
         Invoke("StartDialogue", 0.5f);
-
-        controllerPlayer.ChangeStatePlayer();
     }
 
     private void StartDialogue()
     {
+        controllerPlayer.ChangeStatePlayer();
         var dialogueManager = DialogueManager.GetInstance();
         if (dialogueManager != null)
         {
@@ -78,6 +79,32 @@ public class BedroomSceneManager : MonoBehaviour
         {
             Debug.LogError("DialogueManager no está disponible.");
         }
+    }
+
+    private void HandleDialogueComplete()
+    {
+        
+    }
+
+    private void OpenTutorial()
+    {
+        tutorial.SetActive(true);
+        Time.timeScale = 0;
+
+        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(1, 1, 1), 0.5f)
+            .setIgnoreTimeScale(true)
+            .setEase(LeanTweenType.easeOutBack);
+    }
+
+    public void CloseTutorial()
+    {
+        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.5f)
+            .setIgnoreTimeScale(true)
+            .setOnComplete(() =>
+            {
+                Time.timeScale = 1;
+                tutorial.SetActive(false);
+            });
     }
 
 }

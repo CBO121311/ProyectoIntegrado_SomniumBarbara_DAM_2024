@@ -31,8 +31,8 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             
-            if (!UIManager_TopDown.GetInstance().gameIsPaused
-                && InputManager.GetInstance().GetSubmitPressed())
+            if (DialogueManager.GetInstance().CanStartDialogue() && !UIManager_TopDown.GetInstance().gameIsPaused
+                && InputManager.GetInstance().GetSubmitPressed() && !UIManager_TopDown.GetInstance().IsPauseCooldownActive())
             {
                 controllerPlayer.DisableSpeechBubble();
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);

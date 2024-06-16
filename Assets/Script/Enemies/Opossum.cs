@@ -58,9 +58,10 @@ public class Opossum : Enemy
                 animator.SetTrigger("Hit");
                 if (playerCombat != null && playerCombat.CanDealDamage())
                 {
+                    AudioManager.Instance.PlaySFX(6);
                     TakeDamage(50f);
                 }
-                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
+                other.gameObject.GetComponent<PlayerJump>().BounceEnemyOnHit();
             }
             else
             {

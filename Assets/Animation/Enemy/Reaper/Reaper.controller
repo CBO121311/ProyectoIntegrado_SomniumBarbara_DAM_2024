@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1acdda872ec7aa4091b724d2da151ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 6
-  distanciaMinima: 1
+  velocidadMovimiento: 10
+  distanciaMinima: 1.5
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

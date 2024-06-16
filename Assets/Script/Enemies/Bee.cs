@@ -64,8 +64,8 @@ public class Bee : Enemy
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
-                audioSource.PlayOneShot(audioHit);
-                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
+                AudioManager.Instance.PlaySFX(6);
+                other.gameObject.GetComponent<PlayerJump>().BounceEnemyOnHit();
             }
             else
             {

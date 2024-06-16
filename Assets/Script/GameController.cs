@@ -133,7 +133,7 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
     private void HandlePlayerDeath()
     {
-        AudioManager.instance.StopMusic();
+        AudioManager.Instance.StopMusic();
         deathPlayer = true;
         DataPersistenceManager.instance.SaveGameDataOnly();
     }
@@ -208,8 +208,12 @@ public class GameController : MonoBehaviour, IDataPersistence
             bgFront.SetTrigger("EndTime");
             bgBack.SetTrigger("EndTime");
 
-            AudioManager.instance.PlayOneSound("AlarmSound");
-            AudioManager.instance.ChangeMusicTerror();
+
+            AudioManager.Instance.PlaySFX(4);
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlayMusic(3);
+            //AudioManager.instance.PlayOneSound("AlarmSound");
+            //AudioManager.instance.ChangeMusicTerror();
 
 
             //Agregar funcionamiento y código en el futuro

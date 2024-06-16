@@ -22,9 +22,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isInvulnerable = false;
 
 
-    [Header("Audio")]
-    [SerializeField] private AudioClip damageSound;
-    [SerializeField] private AudioClip teleportSound;
+
     private AudioSource audioSource;
 
     private void Start()
@@ -32,7 +30,6 @@ public class PlayerCombat : MonoBehaviour
         playerMovement = GetComponent<ControllerPlayer_Level>();
         squirrelAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
         life = maxLife;
     }
 
@@ -46,7 +43,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (isInvulnerable && !ignoreInvulnerability) return;
 
-        audioSource.PlayOneShot(damageSound);
+        AudioManager.Instance.PlaySFX(8);
         life -= damage;
 
         UpdateLifeSprite();
@@ -73,6 +70,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (life >= 0 && life < heartSprites.Count)
         {
+            if (life < 0) life = 0;
             heartLifePanel.sprite = heartSprites[life];
             faceLifePanel.sprite = faceSprites[life];
         }

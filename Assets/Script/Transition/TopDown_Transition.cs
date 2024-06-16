@@ -13,16 +13,12 @@ public class TopDown_Transition : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject panelDays;
     [SerializeField] private GameObject levelInfoPanel;
-
-
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    
+    [SerializeField] private GameObject tutorial;
 
     [Header("Inventory")]
     [SerializeField] private GameObject inventoryLevel;
     Vector3 initPosPauseMenu, initPosInventoryLevel;
-
+    CanvasGroup canvasGroupInventory;
 
     private void Awake()
     {
@@ -39,6 +35,8 @@ public class TopDown_Transition : MonoBehaviour
         if (inventoryLevel != null)
         {
             initPosInventoryLevel = inventoryLevel.GetComponent<RectTransform>().anchoredPosition;
+            canvasGroupInventory = inventoryLevel.GetComponent<CanvasGroup>();
+            canvasGroupInventory.alpha = 0f;
         }
 
         if (pauseMenu != null)
@@ -56,18 +54,18 @@ public class TopDown_Transition : MonoBehaviour
     //Animación al empezar escena
     public void FadeIn()
     {
-        
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1f);
         LeanTween.alpha(fadeImage.rectTransform, 0f, 1f)
             .setEase(LeanTweenType.easeInOutQuad);
 
-        if(audioSource != null)
+        LeanTween.delayedCall(0.5f, () =>
         {
-            LeanTween.delayedCall(0.5f, () =>
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            if (currentSceneName == "LevelSelection")
             {
-                audioSource.Play();
-            });
-        }
+                AudioManager.Instance.PlayMusic(1);
+            }
+        });
     }
 
     //Animación al salir de la escena.
@@ -109,6 +107,7 @@ public class TopDown_Transition : MonoBehaviour
     //Animación al abrir el inventario
     public void OpenInventory()
     {
+        canvasGroupInventory.alpha = 1f;
         Time.timeScale = 0;
         LeanTween.moveY(inventoryLevel.GetComponent<RectTransform>(), 0, 0.5f)
             .setEaseOutQuint()
@@ -120,6 +119,33 @@ public class TopDown_Transition : MonoBehaviour
         LeanTween.moveY(inventoryLevel.GetComponent<RectTransform>(), initPosInventoryLevel.y, 0.5f)
             .setEaseOutQuint()
             .setIgnoreTimeScale(true)
-            .setOnComplete(() => Time.timeScale = 1);
+            .setOnComplete(() =>
+            {
+                Time.timeScale = 1;
+                canvasGroupInventory.alpha = 0f;
+            });
+    }
+
+
+    public void OpenTutorial()
+    {
+        Debug.Log("ABRIENDO TUTORIAL");
+        tutorial.SetActive(true);
+        Time.timeScale = 0;
+
+        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(1, 1, 1), 0.5f)
+            .setIgnoreTimeScale(true)
+            .setEase(LeanTweenType.easeOutBack);
+    }
+
+    public void CloseTutorial()
+    {
+        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.5f)
+            .setIgnoreTimeScale(true)
+            .setOnComplete(() =>
+            {
+                Time.timeScale = 1;
+                tutorial.SetActive(false);
+            });
     }
 }

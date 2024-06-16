@@ -24,7 +24,6 @@ public class LevelSquirrelTransition : MonoBehaviour
     [Header("Other")]
     [SerializeField] private GameObject alarmTimer;
     [SerializeField] private GameObject passMessage;
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject fadeGameobject;
     private Image fadeImage;
 
@@ -50,7 +49,7 @@ public class LevelSquirrelTransition : MonoBehaviour
         LeanTween.alpha(fadeImage.rectTransform, 0f, 0.8f)
             .setEase(LeanTweenType.easeInOutQuad).setOnComplete(()=>
             {
-                audioSource.Play();
+                AudioManager.Instance.PlayMusic(2);
 
                 if (backgroundOpeningLevel.activeSelf && bookImage.activeSelf)
                 {

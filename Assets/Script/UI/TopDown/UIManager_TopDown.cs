@@ -23,7 +23,7 @@ public class UIManager_TopDown : MonoBehaviour
     [Header("Cooldown")]
     private float cooldownInventory = 0.5f;
     private bool isCooldown = false;
-    private float cooldownPause = 0.1f;
+    private float cooldownPause = 0.2f;
 
 
     private static UIManager_TopDown instance;
@@ -112,6 +112,11 @@ public class UIManager_TopDown : MonoBehaviour
         isCooldown = true;
         yield return new WaitForSecondsRealtime(cooldown);
         isCooldown = false;
+    }
+
+    public bool IsPauseCooldownActive()
+    {
+        return isCooldown;
     }
 
     public void ActivateSelectLevel()

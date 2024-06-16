@@ -31,7 +31,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
         if (isGameRunning)
         {
             playedTime += Time.deltaTime;
-            UpdatePlayedTimeText(playedTime);
+            //UpdatePlayedTimeText(playedTime);
         }
     }
 
@@ -80,12 +80,11 @@ public class TimeManager : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        Debug.Log("isGameRunning" + isGameRunning);
+       // Debug.Log("isGameRunning" + isGameRunning);
 
         // Si el juego ya está en marcha, no se vuelve a cargar
         if (isGameRunning) return;
 
-        Debug.Log("CARGANDO");
         playedTime = data.playedTime;
         currentDay = data.daysGame;
     }

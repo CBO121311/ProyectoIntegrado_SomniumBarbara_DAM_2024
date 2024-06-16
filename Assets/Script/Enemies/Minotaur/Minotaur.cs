@@ -93,14 +93,14 @@ public class Minotaur : Enemy
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
-                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
+                other.gameObject.GetComponent<PlayerJump>().BounceEnemyOnHit();
 
                 // Si el jugador puede hacer daño
                 if (playerCombat != null && playerCombat.CanDealDamage())
                 {
                     TakeDamage(50f);
                 }
-                audioSource.PlayOneShot(audioHit);
+                AudioManager.Instance.PlaySFX(6);
                 //Debug.Log("Golpe");
             }
             else

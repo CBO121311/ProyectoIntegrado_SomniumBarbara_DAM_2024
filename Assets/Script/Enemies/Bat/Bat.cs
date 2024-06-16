@@ -9,7 +9,6 @@ public class Bat : Enemy
     [SerializeField] public Transform player;
     [SerializeField] private float detectDistance;
     [SerializeField] private float chaseTime;
-    [SerializeField] private AudioClip detectionSound;
 
     public Vector3 startPoint;
     public bool followPlayer;
@@ -51,14 +50,14 @@ public class Bat : Enemy
             if (other.GetContact(0).normal.y <= -0.9)
             {
                 animator.SetTrigger("Hit");
-                other.gameObject.GetComponent<PlayerDoubleJump>().BounceEnemyOnHit();
+                other.gameObject.GetComponent<PlayerJump>().BounceEnemyOnHit();
 
                 if (playerCombat != null && playerCombat.CanDealDamage())
                 {
                     TakeDamage(50f);
                 }
 
-                audioSource.PlayOneShot(audioHit);
+                AudioManager.Instance.PlaySFX(6);
             }
             else
             {
@@ -82,10 +81,7 @@ public class Bat : Enemy
 
     public void PlayDetectionSound()
     {
-        if (audioSource != null && detectionSound != null)
-        {
-            audioSource.PlayOneShot(detectionSound);
-        }
+        AudioManager.Instance.PlaySFX(3);
     }
 
 

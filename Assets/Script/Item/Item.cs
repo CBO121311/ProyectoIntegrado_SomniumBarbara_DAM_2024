@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour, IDataPersistence
+public class Item : MonoBehaviour
 {
-    public AudioSource clip;
-
     private string id;
     [SerializeField] private GameObject collectAnimation;
     [SerializeField]private ItemTemplate itemTemplate;
@@ -39,8 +37,8 @@ public class Item : MonoBehaviour, IDataPersistence
         visual.gameObject.SetActive(false);
         GameEventsManager.instance.ItemCollect();
         collectAnimation.SetActive(true);
-        clip.Play();
-        Invoke("DisableCollectAnimation", 0.5f); 
+        AudioManager.Instance.PlaySFX(7);
+        Invoke("DisableCollectAnimation", 2f); 
         if (collider2D != null)
         {
             collider2D.enabled = false;
@@ -56,23 +54,5 @@ public class Item : MonoBehaviour, IDataPersistence
     private void DisableCollectAnimation()
     {
         collectAnimation.SetActive(false);
-    }
-
-    // Método para cargar los datos del objeto desde un objeto GameData
-    public void LoadData(GameData data)
-    {
-        //Debug.Log("LoadData de Item");
-        // Intenta obtener el estado de recolección del objeto desde los datos proporcionados
-        //data.itemsCollected.TryGetValue(id, out collected);
-
-        // Si el objeto ya ha sido recolectado, lo oculta visualmente
-        /*if (collected)
-        {
-            visual.gameObject.SetActive(false);
-        }*/
-    }
-
-    public void SaveData(GameData data)
-    {
     }
 }

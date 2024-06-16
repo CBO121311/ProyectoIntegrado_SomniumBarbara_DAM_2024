@@ -50,12 +50,18 @@ public class DialogueManager : MonoBehaviour
     private const string LAYOUT_TAG = "layout";
     private const string CHANGE_SCENE_TAG = "change_scene";
     private const string CHANGE_DAY_TAG = "change_day_scene";
+    private const string TUTORIAL = "first_tutorial";
+
+    private bool canStartDialogue = true;
+    [SerializeField] private float dialogueCooldown = 0.5f;
+
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
     private DialogueVariables dialogueVariables;
 
     [SerializeField] private bool isWakeUp = true;
+    [SerializeField] private GameObject tutorial;
 
     private void Awake()
     {
@@ -118,7 +124,8 @@ public class DialogueManager : MonoBehaviour
 
         ContinueStory();
     }
-   
+    /*public delegate void DialogueComplete();
+    public static event DialogueComplete OnDialogueComplete;*/
     private IEnumerator ExitDialogueMode()
     {
         //Da un poco espacio al terminar el dialogo
@@ -133,7 +140,23 @@ public class DialogueManager : MonoBehaviour
 
         //Lo ponemos vacío por si acaso.
         dialogueText.text = "";
+        
+        StartCoroutine(DialogueCooldown());
     }
+
+
+    private IEnumerator DialogueCooldown()
+    {
+        canStartDialogue = false;
+        yield return new WaitForSeconds(dialogueCooldown);
+        canStartDialogue = true;
+    }
+
+    public bool CanStartDialogue()
+    {
+        return canStartDialogue;
+    }
+
 
     private void ContinueStory()
     {
@@ -262,6 +285,9 @@ public class DialogueManager : MonoBehaviour
                 case CHANGE_DAY_TAG:
                     ChangeDays(tagValue);
                     break;
+                case TUTORIAL:
+                    FirstTutorial();
+                    break;
                 default:
                     Debug.LogWarning("Error de etiqueta : " + tag);
                     break;
@@ -308,12 +334,16 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        if (canContinueToNextLine)
+        if (canContinueToNextLine && choiceIndex < currentStory.currentChoices.Count)
         {
             currentStory.ChooseChoiceIndex(choiceIndex);
 
             InputManager.GetInstance().RegisterSubmitPressed();
             ContinueStory();
+        }
+        else
+        {
+            Debug.LogWarning("Choice index out of range: " + choiceIndex);
         }
     }
 
@@ -340,4 +370,8 @@ public class DialogueManager : MonoBehaviour
         transition.FadeOutAndLoadScene(sceneName);
     }
 
+
+    public void FirstTutorial(){
+        transition.OpenTutorial();
+    }
 }
