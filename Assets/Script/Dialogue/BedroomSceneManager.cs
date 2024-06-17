@@ -55,7 +55,7 @@ public class BedroomSceneManager : MonoBehaviour
             else
             {
                 dialogueJSON = loadGameDialogueJSON;
-                gameData.shouldShowEndOfDayDialogue = false; // Marcar que ya se mostró el diálogo
+                gameData.showEndDayDialogue = false; // Marcar que ya se mostró el diálogo
             }
             AudioManager.Instance.PlaySFX(9);
         }

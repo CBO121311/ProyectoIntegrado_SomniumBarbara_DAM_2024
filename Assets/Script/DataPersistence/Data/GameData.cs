@@ -16,7 +16,7 @@ public class GameData
 
     public int daysGame;
     public bool isNewGame; // Indicar si es una nueva partida
-    public bool shouldShowEndOfDayDialogue; // Mostrar el diálogo de fin de jornada
+    public bool showEndDayDialogue; // Mostrar el diálogo de fin de jornada
 
 
 
@@ -32,7 +32,7 @@ public class GameData
         informationLevel = new List<Level>();
 
         this.isNewGame = true; 
-        this.shouldShowEndOfDayDialogue = false;
+        this.showEndDayDialogue = false;
 
         InitializeLevel();
         InitializeItemsCollected();
