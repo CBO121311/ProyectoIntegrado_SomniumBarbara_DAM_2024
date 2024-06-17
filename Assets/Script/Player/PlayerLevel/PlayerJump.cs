@@ -65,7 +65,7 @@ public class PlayerJump : MonoBehaviour
 
         if (GameController.instance.IsGameRunning && InputManager.GetInstance().GetSubmitPressed() && !UIManager_Level.GetInstance().IsPauseCooldownActive())
         {
-            Debug.Log("Saltó");
+            //Debug.Log("Saltó");
             jumpRequest = true;
         }
 
