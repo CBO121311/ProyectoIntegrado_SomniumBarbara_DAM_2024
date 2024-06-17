@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 390f04f02f002054b89004f674e36e3d
+guid: 256ffc76a6d95aa4e866360204ce621c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8901813452732139850
-    second: fadeHorizontalv2_0
+      213: 2829232388215122354
+    second: unnamed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fadeHorizontalv2_0
+      name: unnamed_0
       rect:
         serializedVersion: 2
-        x: 114
+        x: 0
         y: 0
-        width: 1776
-        height: 1417
+        width: 900
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b67b1d14d7667480800000000000000
-      internalID: -8901813452732139850
+      spriteID: 2b9a79efdd3734720800000000000000
+      internalID: 2829232388215122354
       vertices: []
       indices: 
       edges: []
@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      unnamed_0: 2829232388215122354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

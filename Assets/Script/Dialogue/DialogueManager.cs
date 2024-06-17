@@ -360,10 +360,9 @@ public class DialogueManager : MonoBehaviour
 
     private void ChangeDays(string sceneName)
     {
-
         GameData gameData = DataPersistenceManager.instance.GetGameData();
 
-        gameData.daysGame += 2;
+        gameData.daysGame += 3;
         TimeManager timeManager = FindFirstObjectByType<TimeManager>();
         timeManager.plusDays(2);
         DataPersistenceManager.instance.SaveGame();

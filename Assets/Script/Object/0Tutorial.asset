@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 0Z_00
   image: {fileID: -4366495644553925169, guid: 0713e4e3b3b593b4fb050ad318333e8a, type: 3}
   itemName: Instrucciones
-  description: Consigue todos los objetos
+  description: "Consigue todos los objetos y vuelve a esta habitaci\xF3n"

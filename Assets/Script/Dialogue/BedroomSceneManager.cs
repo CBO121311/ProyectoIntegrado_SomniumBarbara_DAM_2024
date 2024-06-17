@@ -13,17 +13,12 @@ public class BedroomSceneManager : MonoBehaviour
     [SerializeField] private ControllerPlayer_TopDown controllerPlayer;
     private TimeManager timeManager;
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject tutorial;
+    [SerializeField] private GameObject triggerEnd;
+
 
     private void Awake()
     {
         timeManager = FindFirstObjectByType<TimeManager>();
-        //DialogueManager.OnDialogueComplete += HandleDialogueComplete;
-    }
-
-    private void OnDestroy()
-    {
-        //DialogueManager.OnDialogueComplete -= HandleDialogueComplete; // Desuscribirse del evento
     }
 
     private void Start()
@@ -53,7 +48,7 @@ public class BedroomSceneManager : MonoBehaviour
 
             if (gameData.isNewGame)
             {
-                //OpenTutorial();
+
                 dialogueJSON = newGameDialogueJSON;
                 gameData.isNewGame = false; // Marcar que ya no es una nueva partida
             }
@@ -62,7 +57,10 @@ public class BedroomSceneManager : MonoBehaviour
                 dialogueJSON = loadGameDialogueJSON;
                 gameData.shouldShowEndOfDayDialogue = false; // Marcar que ya se mostró el diálogo
             }
+            AudioManager.Instance.PlaySFX(9);
         }
+
+        CheckIfAllItemsCollected();
 
         Invoke("StartDialogue", 0.5f);
     }
@@ -81,30 +79,15 @@ public class BedroomSceneManager : MonoBehaviour
         }
     }
 
-    private void HandleDialogueComplete()
+    //Comprueba si se ha llegado al 100% de colección de objetos.
+    private void CheckIfAllItemsCollected()
     {
+        GameData gameData = DataPersistenceManager.instance.GetGameData();
+
+        Debug.Log(gameData.GetPercentageComplete());
+        bool allItemsCollected = gameData.GetPercentageComplete() == 100;
+
         
+        triggerEnd.SetActive(allItemsCollected);
     }
-
-    private void OpenTutorial()
-    {
-        tutorial.SetActive(true);
-        Time.timeScale = 0;
-
-        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(1, 1, 1), 0.5f)
-            .setIgnoreTimeScale(true)
-            .setEase(LeanTweenType.easeOutBack);
-    }
-
-    public void CloseTutorial()
-    {
-        LeanTween.scale(tutorial.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.5f)
-            .setIgnoreTimeScale(true)
-            .setOnComplete(() =>
-            {
-                Time.timeScale = 1;
-                tutorial.SetActive(false);
-            });
-    }
-
 }

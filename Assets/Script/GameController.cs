@@ -149,13 +149,6 @@ public class GameController : MonoBehaviour, IDataPersistence
     }
 
     // Método llamado cuando se completa el nivel:
-    // - Desactiva al enemigo Reaper.
-    // - Activa la transición de finalización del nivel.
-    // - Pausa el tiempo en el juego.
-    // - Realiza la animación de finalización del nivel.
-    // - Establece los datos del nivel en la pantalla de puntuación.
-    // - Detiene cualquier acción del juego.
-    // - Detecta la tecla para cambiar de escena al siguiente nivel.
     private void HandleLevelComplete()
     {
         DeactivateReaper();
@@ -212,9 +205,6 @@ public class GameController : MonoBehaviour, IDataPersistence
             AudioManager.Instance.PlaySFX(4);
             AudioManager.Instance.StopMusic();
             AudioManager.Instance.PlayMusic(3);
-            //AudioManager.instance.PlayOneSound("AlarmSound");
-            //AudioManager.instance.ChangeMusicTerror();
-
 
             //Agregar funcionamiento y código en el futuro
             ChangeTimerState(false);
@@ -326,7 +316,6 @@ public class GameController : MonoBehaviour, IDataPersistence
 
             if (data.itemsCollected.ContainsKey(itemId) && isCollectedInLevel)
             {
-                // Actualizar el valor en itemsCollected a verdadero
                 data.itemsCollected[itemId] = true;
             }
         }

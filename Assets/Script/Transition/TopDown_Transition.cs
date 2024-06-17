@@ -129,7 +129,7 @@ public class TopDown_Transition : MonoBehaviour
 
     public void OpenTutorial()
     {
-        Debug.Log("ABRIENDO TUTORIAL");
+        //Debug.Log("ABRIENDO TUTORIAL");
         tutorial.SetActive(true);
         Time.timeScale = 0;
 

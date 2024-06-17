@@ -83,7 +83,7 @@ public class Bee : Enemy
         {
             if (!isAttacking && !isReturning)
             {
-                Debug.Log("DETECTPLAYER");
+                //Debug.Log("DETECTPLAYER");
 
                 isAttacking = true;
                 animator.SetBool("Player", true);
@@ -96,7 +96,7 @@ public class Bee : Enemy
 
     private IEnumerator Attack()
     {
-        Debug.Log("ATTACK");
+        //Debug.Log("ATTACK");
 
         yield return new WaitForSeconds(2f); 
         isAttacking = false;

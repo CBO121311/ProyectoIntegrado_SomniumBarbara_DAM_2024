@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7348787c915e0414a9df94424f5bb9b2
+guid: f872caa3caa6252408f7e90d2fe1bcac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8901813452732139850
-    second: fadeHorizontalv2_0
+      213: -8174781553818185805
+    second: UITransitionBunny_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fadeHorizontalv2_0
+      name: UITransitionBunny_0
       rect:
         serializedVersion: 2
-        x: 114
+        x: 0
         y: 0
-        width: 1776
-        height: 1417
+        width: 932
+        height: 855
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b67b1d14d7667480800000000000000
-      internalID: -8901813452732139850
+      spriteID: 3bf40481d775d8e80800000000000000
+      internalID: -8174781553818185805
       vertices: []
       indices: 
       edges: []
@@ -143,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      fadeHorizontalv2_0: -8901813452732139850
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
