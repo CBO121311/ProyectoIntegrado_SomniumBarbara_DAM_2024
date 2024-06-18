@@ -55,19 +55,19 @@ public class DataPersistenceManager : MonoBehaviour
     {
         //actualizar el perfil para usarlo para guardar y cargar
         this.selectedProfileId = newProfileId;
-        //Cargar el juego, que utilizará ese perfil, actualizando nuestros datos del juego en consecuencia.
+        
         LoadGame();
     }
 
     public void DeleteProfileData(string profileId)
     {
-        //eliminar los datos de esta identificación de perfil
+        
         dataHandler.Delete(profileId);
 
-        //inicializar la identificación del perfil seleccionado
+        
         InitializeSelectedProfileId();
 
-        //Vuelva a cargar el juego para que nuestros datos coincidan con la nueva identificación del perfil seleccionado.
+        
         LoadGame();
     }
     private void InitializeSelectedProfileId()
@@ -87,8 +87,6 @@ public class DataPersistenceManager : MonoBehaviour
         this.gameData = new GameData();
     }
 
-
-
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -106,7 +104,6 @@ public class DataPersistenceManager : MonoBehaviour
         //Debug.Log("Ha pasado en OnSceneLoaded");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
 
-        // Carga los datos del juego desde el archivo solo si no se han cargado previamente
         if (!gameLoaded)
         {
             LoadGame();
@@ -135,10 +132,9 @@ public class DataPersistenceManager : MonoBehaviour
             NewGame();
         }
 
-        //Si no se pueden cargar datos, inicialice a un nuevo juego
         if (this.gameData == null)
         {
-            Debug.Log("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder cargar los datos.");
+            Debug.Log("No se encontraron datos.");
             return;
         }
 
@@ -164,12 +160,11 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        Debug.Log("Pasando DataPesistenceManager saveGame");
+        //Debug.Log("Pasando DataPesistenceManager saveGame");
         
-        //Si no tenemos ningún dato para guardado.
         if (this.gameData == null)
         {
-            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
+            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego.");
         }
 
         //pasar los datos a otros scripts para que puedan actualizarlos.
@@ -178,21 +173,19 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.SaveData(gameData);
         }
 
-        //marcar la hora de los datos para que sepamos cuándo se guardaron por última vez
+        //Para que sepamos cuándo se guardó por última vez
         gameData.lastUpdated = DateTime.Now.ToBinary();
 
-        //guarde esos datos en un archivo utilizando el controlador de datos.
         dataHandler.Save(gameData, selectedProfileId);
     }
 
     public void SaveGameDataOnly()
     {
-        Debug.Log("Pasando DataPesistenceManager saveGameDataOnly");
+        //Debug.Log("Pasando DataPesistenceManager saveGameDataOnly");
 
-        // Si no tenemos ningún dato para guardado.
         if (this.gameData == null)
         {
-            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego antes de poder guardar los datos.");
+            Debug.LogWarning("No se encontraron datos. Es necesario iniciar un nuevo juego.");
             return;
         }
 
@@ -205,7 +198,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
-        // FindObjectsofType toma un booleano opcional para incluir objetos de juego inactivos
         IEnumerable<IDataPersistence> dataPersistencesObjects = FindObjectsOfType<MonoBehaviour>(true)
             .OfType<IDataPersistence>();
 

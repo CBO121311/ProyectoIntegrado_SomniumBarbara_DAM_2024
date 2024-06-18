@@ -4,7 +4,7 @@
 
 === main ===
 
-+ [Quedarse Aquí] -> END
++ [Quedarse aquí] -> END
     
 + [Levantarse] 
 -> cambia_escena

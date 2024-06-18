@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e73fbfa09435a43bc8c10415d600b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideSelectedProfileId: 0
+  testSelectedProfileId: test
   fileName: data.json
-  useEncryption: 0
+  useEncryption: 1
+  autoSaveTimeSeconds: 60
+  initializeDataIfNull: 0

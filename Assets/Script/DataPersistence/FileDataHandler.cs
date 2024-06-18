@@ -22,7 +22,7 @@ public class FileDataHandler
     //Cargar datos 
     public GameData Load(string profileId)
     {
-        // Si el ID de perfil es nulo, regrese de inmediato
+
         if (profileId == null)
         {
             return null;
@@ -38,7 +38,7 @@ public class FileDataHandler
             try
             {
 
-                //Load the serialized data from the file
+                
                 string dataToLoad = "";
                 using (FileStream stream = new FileStream(fullPath, FileMode.Open))
                 {
@@ -56,7 +56,7 @@ public class FileDataHandler
 
 
 
-                //deserialize the data from Json back into the C# object
+                
                 loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
 
             }
@@ -71,7 +71,6 @@ public class FileDataHandler
     //Guardar Datos
     public void Save(GameData data, string profileId)
     {
-        // base case - if the profileId is null, return right away
         if (profileId == null)
         {
             return;
@@ -149,7 +148,7 @@ public class FileDataHandler
     {
         Dictionary<String, GameData> profileDictionary = new Dictionary<string, GameData>();
 
-        //recorre todos los nombres de directorio en la ruta del directorio de datos
+        //recorre todos los nombres de directorio 
         IEnumerable<DirectoryInfo> dirInfos = new DirectoryInfo(dataDirPath).EnumerateDirectories();
         foreach (DirectoryInfo dirInfo in dirInfos)
         {
@@ -169,7 +168,7 @@ public class FileDataHandler
             //Cargue los datos del juego para este perfil y póngalos en el diccionario.
             GameData profileData = Load(profileId);
 
-            // Asegura que los datos de perfil no son nulos
+          
             if (profileData != null)
             {
                 profileDictionary.Add(profileId, profileData);
@@ -196,19 +195,18 @@ public class FileDataHandler
             string profileId = pair.Key;
             GameData gameData = pair.Value;
 
-            //Omita esta entrada si los datos del juego son nulos
             if (gameData == null)
             {
                 continue;
             }
 
-            //Si estos son los primeros datos que encontramos, son los más recientes hasta ahora.
+       
             if (mostRecentProfileId == null)
             {
                 mostRecentProfileId = profileId;
             }
 
-            //De lo contrario, compare para ver qué datos son los más recientes
+            //Compare para ver qué datos son los más recientes
             else
             {
                 DateTime mostRecentDateTime = DateTime.FromBinary(profilesGameData[mostRecentProfileId].lastUpdated);
@@ -231,7 +229,6 @@ public class FileDataHandler
         string modifiedData = "";
         for (int i = 0; i < data.Length; i++)
         {
-
             modifiedData += (char)(data[i] ^ encryptionCodeWord[i % encryptionCodeWord.Length]);
         }
         return modifiedData;

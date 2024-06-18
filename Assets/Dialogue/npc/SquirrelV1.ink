@@ -21,11 +21,11 @@ INCLUDE global.ink
 
 === main ===
 
-Claro, deseas hacerme alguna pregunta? #speaker:Ardilla #portrait:squirrel_neutral #layout:left
+Claro, ¿deseas hacerme alguna pregunta? #speaker:Ardilla #portrait:squirrel_neutral #layout:left
 
 + [No tengo más preguntas]
     Entiendo. ¡Gracias y adiós!. #speaker:Barbara #portrait:barbara_neutral #layout:left
-    ¡Adiós, Bárbara! ¡No me olvides!. #speaker:Pez #portrait:squirrel_sad #layout:left
+    ¡Adiós, Bárbara! ¡No me olvides!. #speaker:Ardilla #portrait:squirrel_sad #layout:left
     -> END
 
 + [Portal verde]
